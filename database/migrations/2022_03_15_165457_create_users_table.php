@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('address')->nullable();;
             $table->string('contacts')->nullable();;
             $table->integer('phone_number')->unique();
-            $table->rememberToken();
             $table->timestamps();
         });
     }
