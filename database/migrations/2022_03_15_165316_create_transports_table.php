@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('transports', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->unique();
+            $table->string('location_from')->nullable();
+            $table->string('destination')->nullable();
+            $table->time('time')->nullable();
+            $table->date('date')->nullable();
+            $table->string('contact_person')->nullable();
+            $table->string('contact_info')->nullable();
+            $table->integer('max_person')->nullable();
             $table->timestamps();
         });
     }
