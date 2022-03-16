@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('food', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->unique();
             $table->string('address')->nullable();
             $table->string('name')->nullable();
             $table->string('description')->nullable();
