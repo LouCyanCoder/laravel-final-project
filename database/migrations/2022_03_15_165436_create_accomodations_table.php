@@ -15,6 +15,16 @@ return new class extends Migration
     {
         Schema::create('accomodations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
+            $table->string('area_adress');
+            $table->string('type')->nullable();
+            $table->unsignedInteger('max_person');
+            $table->enum('pet_friendly', ['yes', 'no']);
+            $table->text('description');
+            $table->string('contact_person');
+            $table->string('contact_info');
+            $table->date('start_date');
+            $table->date('end_date');
             $table->timestamps();
         });
     }
