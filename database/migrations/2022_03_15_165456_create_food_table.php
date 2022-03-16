@@ -15,7 +15,20 @@ return new class extends Migration
     {
         Schema::create('food', function (Blueprint $table) {
             $table->id();
+            $table->string('address')->nullable();
+            $table->string('name')->nullable();
+            $table->string('description')->nullable();
+            $table->string('day')->nullable();
             $table->timestamps();
+            // Table food {
+            //     id int[pk]
+            //     user_id int [ref: - users.id]
+            //     address str
+            //     name str
+            //     description varchar
+            //     day str
+            //     time time
+            //   }
         });
     }
 
