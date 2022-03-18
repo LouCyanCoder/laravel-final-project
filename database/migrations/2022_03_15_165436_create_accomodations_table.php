@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('contact_info');
             $table->date('start_date');
             $table->date('end_date');
+            $table->enum('status', ['open', 'closed', 'on demand']);
             $table->timestamps();
         });
     }
