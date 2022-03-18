@@ -20,4 +20,4 @@ const Contact = () => {
 
 export default Contact;
 
-ReactDOM.render(<Contact />, document.getElementById("root2"));
+// ReactDOM.render(<Contact />, document.getElementById("root2"));
