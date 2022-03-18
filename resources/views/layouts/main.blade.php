@@ -8,11 +8,25 @@
     <title>Who cares ?</title>
 </head>
 <body>
-    @include('components.header')
+  <div>
+        @include('components.header')
 
-    @include('components.footer')
+        <div id="root"></div>
+        <div id="root1"></div>
+        <div id="root2"></div>
 
-    @yield('content')
+
+        @include('components.footer')
+    
+        @yield('content')
+
+        <script src="{{mix('js/Landing.js')}}"></script>
+        <script src="{{mix('js/Features.js')}}"></script>
+        <script src="{{mix('js/Contact.js')}}"></script>
+        
+
+  </div>
+
 
 </body>
 </html>
