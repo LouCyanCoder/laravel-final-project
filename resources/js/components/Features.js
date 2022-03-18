@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 const Features = () => {
     return (
@@ -45,3 +46,5 @@ const Features = () => {
 };
 
 export default Features;
+
+ReactDOM.render(<Features />, document.getElementById("root1"));

@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 const Contact = () => {
     return (
@@ -18,3 +19,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+ReactDOM.render(<Contact />, document.getElementById("root2"));
