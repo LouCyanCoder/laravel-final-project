@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 const Landing = () => {
     return (
@@ -25,3 +26,5 @@ const Landing = () => {
 };
 
 export default Landing;
+
+ReactDOM.render(<Landing />, document.getElementById("root"));
