@@ -47,4 +47,4 @@ const Features = () => {
 
 export default Features;
 
-ReactDOM.render(<Features />, document.getElementById("root1"));
+// ReactDOM.render(<Features />, document.getElementById("root1"));
