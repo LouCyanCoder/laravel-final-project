@@ -8,6 +8,9 @@
     <title>Who cares ?</title>
 </head>
 <body>
+    @include('components.header')
+
+    @include('components.footer')
 
     @yield('content')
 
