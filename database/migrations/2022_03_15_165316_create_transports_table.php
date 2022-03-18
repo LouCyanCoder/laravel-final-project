@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('contact_person')->nullable();
             $table->string('contact_info')->nullable();
             $table->integer('max_person')->nullable();
+            $table->enum('status', ['open', 'closed', 'on demand']);
             $table->timestamps();
         });
     }
