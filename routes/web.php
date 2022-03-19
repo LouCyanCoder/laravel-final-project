@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('components.index');
 });
 
 
@@ -29,3 +29,6 @@ Route::get('/auth/login', function () {
 // registration forms setting
 // logout button
 // permissions between user and admin
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
