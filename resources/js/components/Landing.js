@@ -27,4 +27,4 @@ const Landing = () => {
 
 export default Landing;
 
-ReactDOM.render(<Landing />, document.getElementById("root"));
+// ReactDOM.render(<Landing />, document.getElementById("root"));

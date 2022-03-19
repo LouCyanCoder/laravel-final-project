@@ -8,11 +8,26 @@
    <div class="header_nav">
         <nav>
             <ul>
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>Contact</li></a>
-                <a href="#"><li>About</li></a>
-                <a href="#"><li>Register</li></a>
-                <a href="#"><li>Login</li></a>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>                    
+                
+            @auth
+                        
+            <form action="{{ route('logout') }}" method="post">
+                        
+                @csrf
+                        
+                <li><button>Logout</button></li>
+                        
+            </form>
+                
+            @endauth
+                
+            @guest                
+                <li><a href="{{ route('login') }}">Login</a></li>
+                <li><a href="{{ route('register') }}">Register</a></li>               
+             @endguest
             </ul>
         </nav>
    </div>
