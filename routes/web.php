@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('components.index');
 });
 
+
+Route::get('/auth/register', function () {
+    return view('register');
+});
+
+Route::get('/auth/login', function () {
+    return view('login');
+});
+
+// registration forms setting
+// logout button
+// permissions between user and admin
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
