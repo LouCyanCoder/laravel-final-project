@@ -51,7 +51,6 @@
         <br>
 
         <button>Register</button>
-     
     </form>
 </body>
 </html>
