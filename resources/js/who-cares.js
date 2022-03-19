@@ -16,4 +16,3 @@ const loadHelp = async () => {
 }
 
 loadHelp();
-
