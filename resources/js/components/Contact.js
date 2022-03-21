@@ -3,17 +3,17 @@ import ReactDOM from "react-dom";
 
 const Contact = () => {
     return (
-        <section>
-            <div>
+        <section className="contactForm">
+            <div className="contactForm__title">
                 <h3>Any questions? Get in touch with us</h3>
-                <p>lorem</p>
+                <p></p>
             </div>
-            <div>
+            <form action="" method="post">
                 <textarea></textarea>
                 <input type="text" name="email"></input>
                 <input type="text" name="name"></input>
                 <button>Send</button>
-            </div>
+            </form>
         </section>
     );
 };
