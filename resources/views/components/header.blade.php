@@ -1,12 +1,12 @@
+@extends('layouts.app')
 
 <header>
-    <div class="header_logo">
+    <div class="header__logo">
         <img src="../images/wc_logo_small.png" />
         <h2>Who Cares?</h2>
     </div>
-
-   <div class="header_nav">
-        <nav>
+    
+        <nav class="header__nav">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Contact</a></li>
@@ -30,6 +30,5 @@
              @endguest
             </ul>
         </nav>
-   </div>
 
 </header>
