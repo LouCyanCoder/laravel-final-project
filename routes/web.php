@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('components.index');
 });
 
-
 Route::get('/auth/register', function () {
+    dump('test');
     return view('register');
 });
 

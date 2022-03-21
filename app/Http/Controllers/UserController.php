@@ -34,7 +34,7 @@ class FoodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //
     }
 
     /**
