@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header {
+    &__logo {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        padding: 7.5px 30px;
+
+        img {
+            height: 96px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        width: max-content;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            column-gap: 30px;
+
+            a {
+                text-decoration: none;
+                font-size: 22px;
+            }
+        }
+    }
+}
