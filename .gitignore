@@ -15,4 +15,6 @@ yarn-error.log
 /.vscode
 /public/mix-manifest.json
 /public/css/app.css.map
-/public/js/reactapp.js.map
+/public/js
+package.json
+package-lock.json

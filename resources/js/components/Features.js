@@ -11,6 +11,7 @@ const Features = () => {
                     services to the people in need.
                 </p>
             </div>
+
             <div className="features_cards">
                 <div className="features_cards--accommodation">
                     <img src="../images/accomodation.png"></img>
@@ -19,6 +20,7 @@ const Features = () => {
                         <p>If you have a spare place, bedroom or even just a bed to temporarily accomodate, you can provide it to the people in need. Just having a safe place to sleep can help somebody gain a foothold in their life.</p>
                     </div>
                 </div>
+
                 <div className="features_cards--food">
                     <img src="../images/diet.png"></img>
                     <div>
@@ -26,6 +28,7 @@ const Features = () => {
                         <p>Having something to eat is one of the fundamental human rights. If you have any extra food, want to get rid of groceries before expiration date or are a bussiness owner whose food supplies would usually end up in a bin or a landfill, get in touch with us!</p>
                     </div>
                 </div>
+
                 <div className="features_cards--transport">
                     <img src="../images/bus.png"></img>
                     <div>
@@ -33,6 +36,7 @@ const Features = () => {
                         <p>Due to the ongoing war in Ukraine, demand for transportation has recently rised up. If you plan a trip to the Ukrainian borders or want to take part in safely transporting the Ukrainian refugess, You can use our page to post details about the possibilities.</p>
                     </div>
                 </div>
+
                 <div className="features_cards--services">
                     <img src="../images/helping.png"></img>
                     <div>
@@ -41,6 +45,7 @@ const Features = () => {
                         </p>
                     </div>
                 </div>
+
             </div>
         </section>
     );
