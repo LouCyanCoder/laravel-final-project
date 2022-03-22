@@ -8,6 +8,17 @@
 @import "features";
 @import "aboutus";
 @import "contact";
+@import "footer";
 
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    max-width: 80%;
+    margin: auto;
+}

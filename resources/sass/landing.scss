@@ -1,0 +1,23 @@
+.landing_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.landing_img {
+    position: relative;
+    left: -350px;
+}
+
+.landing_intro {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    text-align: center;
+
+    .landing_btn {
+        display: flex;
+        justify-content: space-around;
+    }
+}
