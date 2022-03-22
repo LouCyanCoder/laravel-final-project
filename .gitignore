@@ -16,3 +16,5 @@ yarn-error.log
 /public/mix-manifest.json
 /public/css/app.css.map
 /public/js
+package.json
+package-lock.json
