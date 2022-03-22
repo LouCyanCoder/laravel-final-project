@@ -3,9 +3,9 @@
     <div class="footer_nav">
         <nav>
             <ul>
-                <a href=""><li>Home</li></a>
-                <a href=""><li>Contact</li></a>
-                <a href=""><li>About</li></a>
+                <a href="./"><li>Home</li></a>
+                <a href="./contact"><li>Contact</li></a>
+                <a href="./aboutus"><li>About</li></a>
             </ul>
         </nav>
     </div>

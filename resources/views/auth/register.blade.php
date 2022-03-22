@@ -7,6 +7,9 @@
     <title>Register</title>
 </head>
 <body>
+
+    @include('components.header')
+
     <form action="{{ route('register') }}" method="post">
  
         @csrf
@@ -52,5 +55,8 @@
 
         <button>Register</button>
     </form>
+
+    @include('components.footer')
+    
 </body>
 </html>

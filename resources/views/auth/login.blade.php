@@ -7,6 +7,8 @@
     <title>Login</title>
 </head>
 <body>
+    @include('components.header')
+
     <form action="{{ route('login') }}" method="post">
 
         @csrf
@@ -24,5 +26,7 @@
         <button>Login</button>
         
     </form>
+
+    @include('components.footer')
 </body>
 </html>
