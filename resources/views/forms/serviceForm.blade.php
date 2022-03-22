@@ -14,37 +14,24 @@
  
         @csrf
         
-        <h1>Registration form</h1>
+        <h1>Post a service offer</h1>
 
-        <label for="">Email</label><br>
-        <input type="email" name="email" value="">
-        <br>
-
-        <label for="">Username</label><br>
-        <input type="text" name="username" value="">
-        <br>
-        <br>
-
-        <label for="">Name</label><br>
-        <input type="text" name="name" value="">
+        <select for="name">Select the type of service you would like to provide.<br>
+          <option value="law_service">Law services</option>
+          <option value="translator">Translator</option>
+          <option value="psychology_psychotherapy">Psychology & Psychotherapy</option>
+          <option value="administration">Administration</option>
+          <option value="education_mentoring">Education & mentoring</option>
+        </select>
+        
         <br>
 
-        <label for="">Adress</label><br>
-        <input type="text" name="adress" value="">
+        <label for="description">Description:</label><br>
+        <textarea name="description" value="" id="" cols="30" rows="10"></textarea>
+        <br>
         <br>
 
-        <label for="">Phone</label><br>
-        <input type="number" name="phone_number" value="">
-        <br>
 
-        <label for="">Facebook profile</label><br>
-        <input type="text" name="facebook_link" value="">
-        <br>
-
-        <label for="">Telegram username</label><br>
-        <input type="text" placeholder="@telegram_username" name="telegram_link" value="">
-        <br>
-        <br>
 
         <button>Confirm offer</button>
     </form>
