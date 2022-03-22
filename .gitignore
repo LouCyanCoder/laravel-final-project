@@ -1,10 +1,6 @@
 /node_modules
 /public/hot
 /public/storage
-/public/css
-/public/js
-/public/mix-manifest.json
-/public/mix.js.map
 /storage/*.key
 /vendor
 .env
@@ -19,4 +15,4 @@ yarn-error.log
 /.vscode
 /public/mix-manifest.json
 /public/css/app.css.map
-/public/js/reactapp.js.map
+/public/js

@@ -62,6 +62,67 @@ header {
   justify-content: space-around;
 }
 
+.features {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 25px 0;
+  width: 100%;
+}
+.features img {
+  width: 100px;
+  max-height: 96px;
+  padding: 10px;
+}
+.features_cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.features_cards > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  box-shadow: 0.05rem 0.2rem 0.4rem -0.03rem rgba(0, 0, 0, 0.45);
+  width: 25%;
+}
+.features_cards p {
+  display: flex;
+  padding: 15px;
+  font-size: 17px;
+  text-align: justify;
+}
+.features_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 25px 0;
+}
+.features_title p {
+  font-size: 20px;
+}
+
+.features_cards--accommodation,
+.features_cards--food,
+.features_cards--transport,
+.features_cards--services {
+  display: flex;
+  text-align: center;
+}
+
+.features_cards--accommodation:hover,
+.features_cards--food:hover,
+.features_cards--transport:hover,
+.features_cards--services:hover {
+  background-color: lightblue;
+  transform: scale(1.1);
+}
+
 .aboutUs {
   display: flex;
   align-items: center;
@@ -100,11 +161,17 @@ header {
   width: 100%;
   height: 100px;
   border: 2px solid #024f94;
+  border-radius: 5px;
   font-size: 17px;
   color: #024f94;
   padding: 5px;
 }
-.contactForm .contactForm__text button {
+.contactForm .contactForm__text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.contactForm .contactForm__text--button {
   width: 30px;
   height: 50px;
   position: relative;
@@ -112,7 +179,6 @@ header {
 }
 .contactForm .contactForm__text input {
   width: 50%;
-  border: 2px solid #024f94;
   padding: 5px;
 }
 .contactForm button {

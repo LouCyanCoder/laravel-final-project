@@ -1,9 +1,18 @@
 .leaflet-container {
     width: 80vw;
     height: 80vh;
+<<<<<<< HEAD
   }
   /* or */
   #map {
     width: 80vw;
     height: 80vh;
   }
+=======
+}
+/* or */
+#map {
+    width: 80vw;
+    height: 80vh;
+}
+>>>>>>> db258c78102a0216e9b0b717b0c6701937badfa1

@@ -27,12 +27,19 @@
     },
     "dependencies": {
         "@babel/plugin-transform-spread": "^7.12.1",
+<<<<<<< HEAD
         "@googlemaps/react-wrapper": "^1.1.28",
+=======
+        "@emotion/react": "^11.8.2",
+        "@emotion/styled": "^11.8.1",
+        "@mui/material": "^5.5.2",
+>>>>>>> db258c78102a0216e9b0b717b0c6701937badfa1
         "leaflet": "^1.7.1",
         "luxon": "^2.3.1",
         "node-sass": "^6.0.1",
         "react-leaflet": "^3.2.5",
         "react-bootstrap": "^2.2.1",
+        "react-leaflet": "^3.2.5",
         "react-router-dom": "^6.2.2"
     }
 }
