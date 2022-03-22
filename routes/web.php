@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/{path?}', function () {
     return view('components.index');
-});
+})->where('path', '.*');;
 
 Route::get('/auth/register', function () {
     dump('test');
@@ -32,3 +32,7 @@ Route::get('/auth/login', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+/* Route::get('/{path?}', function () {
+    return view('index');
+})->where('path', '.*'); */
