@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 const Contact = () => {
     return (
@@ -15,10 +17,21 @@ const Contact = () => {
                 </div>
 
                 <div className="contactForm__text">
-                    <input type="text" name="email" placeholder="Email Address"></input>
-                    <input type="text" name="name" placeholder="Full Name"></input>
+
+                    <TextField id="filled-basic" label="Full Name" variant="filled" name="name" />
+                    <TextField id="filled-basic" label="Email Adress" variant="filled" name="email" />
+
+                <Button
+                    size="large"
+                    variant="contained"
+                    color="success"
+                    className=".contactForm__text--button"
+                    >
+                    Send
+                </Button>
+                
                 </div>
-                <button>Send</button>
+                
             </form>
         </section>
     );
