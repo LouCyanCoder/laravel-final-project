@@ -7,79 +7,91 @@ use Illuminate\Http\Request;
 
 class FoodController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $searchString = $request->input('search');
+        $food = Food::where('title', 'like', '%' . $searchString . '%')->get();
+
+        return view('food/index', compact('food'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        $food = new Food();
+        $categories = Category::all();
+
+        return view('food/form', compact('categories', 'food'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $food = new Food();
+
+        $this->validateForm($request);
+
+        $food->address   = $request->input('address');
+        $food->name   = $request->input('name');
+        $food->description   = $request->input('description');
+        $food->day   = $request->input('day');
+        $food->status   = $request->input('status');
+
+        $food->save();
+
+        session()->flash('success_message', 'The food was successfully saved!');
+
+        return redirect()->action('App\Http\Controllers\FoodController@index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Food  $food
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Food $food)
+    public function show($id)
     {
-        //
+        $food = Food::findOrFail($id);
+
+        return view('food/show', compact('food'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Food  $food
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Food $food)
+    public function delete($id)
     {
-        //
+        $food = Food::findOrFail($id);
+        $food->delete();
+
+        return redirect()->action('App\Http\Controllers\FoodController@index');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Food  $food
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Food $food)
+    public function edit($id)
     {
-        //
+        $food = Food::findOrFail($id);
+        $categories = Category::all();
+
+        return view('food/form', compact('categories', 'food'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Food  $food
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Food $food)
+    public function update($id, Request $request)
     {
-        //
+        $food = Food::findOrFail($id);
+
+        $this->validateForm($request);
+
+        $food->address   = $request->input('address');
+        $food->name   = $request->input('name');
+        $food->description   = $request->input('description');
+        $food->day   = $request->input('day');
+        $food->status   = $request->input('status');
+
+        $food->save();
+
+        session()->flash('success_message', 'The food was successfully updated!');
+
+        return redirect()->action('App\Http\Controllers\FoodController@show', ['id' => $food->id]);
+    }
+
+    private function validateForm($request)
+    {
+        $this->validate($request, [
+            'title' => 'required|min:3',
+            'category_id' => 'required',
+        ], [
+            'title.required' => 'What?? the food does not have a title??',
+            'title.min' => 'Title should have at least 3 letters',
+        ]);
     }
 }

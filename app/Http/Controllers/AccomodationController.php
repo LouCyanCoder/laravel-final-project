@@ -2,70 +2,106 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Accomodation;
+use App\Models\Accommodation;
 use Illuminate\Http\Request;
 
-class AccomodationController extends Controller
+class AccommodationController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $accomodations = Accomodation::query()
-            ->orderBy('name', 'asc')
-            ->limit(50)
-            ->get();
+        $searchString = $request->input('search');
+        $accommodations = Accommodation::where('title', 'like', '%' . $searchString . '%')->get();
 
-        return view('accomodations.index', compact('accomodations'));
+        return view('accommodationForm/forms', compact('accommodations'));
     }
 
     public function create()
     {
-        $accomodation = new Accomodation;
+        $accommodation = new Accommodation();
+        $categories = Category::all();
 
-        return view('accomodations.edit', compact('accomodations'));
+        return view('accommodationform/forms', compact('categories', 'accommodation'));
     }
 
-    public function edit($accomodation_id)
+    public function store(Request $request)
     {
-        $accomodation = Accomodation::findOrFail($accomodation_id);
+        $accommodation = new Accommodation();
 
-        return view('accomodations.edit', compact('accomodation'));
+        $this->validateForm($request);
+
+        $accommodation->area_adress   = $request->input('area_adress');
+        $accommodation->type   = $request->input('type');
+        $accommodation->max_person   = $request->input('max_person');
+        $accommodation->pet_friendly   = $request->input('pet_friendly');
+        $accommodation->description   = $request->input('description');
+        $accommodation->contact_person   = $request->input('contact_person');
+        $accommodation->contact_info   = $request->input('contact_info');
+        $accommodation->start_date   = $request->input('start_date');
+        $accommodation->end_date   = $request->input('end_date');
+        $accommodation->status   = $request->input('status');
+
+        $accommodation->save();
+
+        session()->flash('success_message', 'The accommodation was successfully saved!');
+
+        return redirect()->action('App\Http\Controllers\AccommodationController@index');
     }
 
-    public function save(Request $request, $accomodation_id = null)
+    public function show($id)
     {
-        // validate data before proceeding
+        $accommodation = Accommodation::findOrFail($id);
+
+        return view('accommodations/show', compact('accommodation'));
+    }
+
+    public function delete($id)
+    {
+        $accommodation = Accommodation::findOrFail($id);
+        $accommodation->delete();
+
+        return redirect()->action('App\Http\Controllers\AccommodationController@index');
+    }
+
+    public function edit($id)
+    {
+        $accommodation = Accommodation::findOrFail($id);
+        $categories = Category::all();
+
+        return view('accommodationform/forms', compact('categories', 'accommodation'));
+    }
+
+    public function update($id, Request $request)
+    {
+        $accommodation = Accommodation::findOrFail($id);
+
+        $this->validateForm($request);
+
+        $accommodation->area_adress   = $request->input('area_adress');
+        $accommodation->type   = $request->input('type');
+        $accommodation->max_person   = $request->input('max_person');
+        $accommodation->pet_friendly   = $request->input('pet_friendly');
+        $accommodation->description   = $request->input('description');
+        $accommodation->contact_person   = $request->input('contact_person');
+        $accommodation->contact_info   = $request->input('contact_info');
+        $accommodation->start_date   = $request->input('start_date');
+        $accommodation->end_date   = $request->input('end_date');
+        $accommodation->status   = $request->input('status');
+
+        $accommodation->save();
+
+        session()->flash('success_message', 'The accommodation was successfully updated!');
+
+        return redirect()->action('App\Http\Controllers\AccommodationController@show', ['id' => $accommodation->id]);
+    }
+
+    private function validateForm($request)
+    {
         $this->validate($request, [
-            'slug' => [
-                'required',
-                Rule::unique('accomodations')->ignore($accomodation_id)
-            ],
-            'name' => 'required'
+            'title' => 'required|min:3',
+            'category_id' => 'required',
         ], [
-            'slug.required' => 'Just put in the slug, man.',
-            'slug.unique' => 'Trying to insert an existing record, are we?'
+            'title.required' => 'What?? the accommodation does not have a title??',
+            'title.min' => 'Title should have at least 3 letters',
         ]);
-
-        if ($accomodation_id) {
-            // if we have accomodation_id URL parameter
-            // retrieve accomodation from database
-            $accomodation = Accomodation::findOrFail($accomodation_id);
-        } else {
-            // else prepare empty accomodation
-            $accomodation = new Accomodation;
-        }
-
-        // fill the Accomodation object with data from the request
-        $accomodation->slug   = $request->input('slug');
-        $accomodation->name   = $request->input('name');
-
-        // save the object into the database
-        $accomodation->save();
-
-        // flash a success message
-        session()->flash('success_message', 'Accomodation has been successfully saved!');
-
-        // redirect to edit form
-        return redirect()->action('Admin\AccomodationController@edit', $accomodation->id);
     }
 }
-

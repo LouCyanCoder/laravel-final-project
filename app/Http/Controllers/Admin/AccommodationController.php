@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Accomodation;
+use App\Models\Accommodation;
 use Illuminate\Http\Request;
 
-class AccomodationController extends Controller
+class AccommodationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class AccomodationController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Accomodation  $accomodation
+     * @param  \App\Models\Accommodation  $accommodation
      * @return \Illuminate\Http\Response
      */
-    public function show(Accomodation $accomodation)
+    public function show(Accommodation $accommodation)
     {
         //
     }
@@ -52,10 +52,10 @@ class AccomodationController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Accomodation  $accomodation
+     * @param  \App\Models\Accommodation  $accommodation
      * @return \Illuminate\Http\Response
      */
-    public function edit(Accomodation $accomodation)
+    public function edit(Accommodation $accommodation)
     {
         //
     }
@@ -64,10 +64,10 @@ class AccomodationController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Accomodation  $accomodation
+     * @param  \App\Models\Accommodation  $accommodation
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Accomodation $accomodation)
+    public function update(Request $request, Accommodation $accommodation)
     {
         //
     }
@@ -75,10 +75,10 @@ class AccomodationController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Accomodation  $accomodation
+     * @param  \App\Models\Accommodation  $accommodation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Accomodation $accomodation)
+    public function destroy(Accommodation $accommodation)
     {
         //
     }
