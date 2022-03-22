@@ -11,10 +11,10 @@ function Map({ center, zoom }) {
     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   />
-  <Marker position={[51.505, -0.09]}>
+  <Marker position={[50.073658, 14.418540]}>
     <Popup>
-      A pretty CSS3 popup. <br /> Easily customizable.
-    </Popup>
+      Accomodation_test<br /> Olympijska 1/22
+    </Popup> 
   </Marker>
 </MapContainer>
   );

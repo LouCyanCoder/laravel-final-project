@@ -7,79 +7,65 @@ use Illuminate\Http\Request;
 
 class AccomodationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $accomodations = Accomodation::query()
+            ->orderBy('name', 'asc')
+            ->limit(50)
+            ->get();
+
+        return view('accomodations.index', compact('accomodations'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        $accomodation = new Accomodation;
+
+        return view('accomodations.edit', compact('accomodations'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function edit($accomodation_id)
     {
-        //
+        $accomodation = Accomodation::findOrFail($accomodation_id);
+
+        return view('accomodations.edit', compact('accomodation'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Accomodation  $accomodation
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Accomodation $accomodation)
+    public function save(Request $request, $accomodation_id = null)
     {
-        //
-    }
+        // validate data before proceeding
+        $this->validate($request, [
+            'slug' => [
+                'required',
+                Rule::unique('accomodations')->ignore($accomodation_id)
+            ],
+            'name' => 'required'
+        ], [
+            'slug.required' => 'Just put in the slug, man.',
+            'slug.unique' => 'Trying to insert an existing record, are we?'
+        ]);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Accomodation  $accomodation
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Accomodation $accomodation)
-    {
-        //
-    }
+        if ($accomodation_id) {
+            // if we have accomodation_id URL parameter
+            // retrieve accomodation from database
+            $accomodation = Accomodation::findOrFail($accomodation_id);
+        } else {
+            // else prepare empty accomodation
+            $accomodation = new Accomodation;
+        }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Accomodation  $accomodation
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Accomodation $accomodation)
-    {
-        //
-    }
+        // fill the Accomodation object with data from the request
+        $accomodation->slug   = $request->input('slug');
+        $accomodation->name   = $request->input('name');
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Accomodation  $accomodation
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Accomodation $accomodation)
-    {
-        //
+        // save the object into the database
+        $accomodation->save();
+
+        // flash a success message
+        session()->flash('success_message', 'Accomodation has been successfully saved!');
+
+        // redirect to edit form
+        return redirect()->action('Admin\AccomodationController@edit', $accomodation->id);
     }
 }
+

@@ -788,9 +788,9 @@ function Map(_ref) {
       attribution: "\xA9 <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
       url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_6__.Marker, {
-      position: [51.505, -0.09],
+      position: [50.073658, 14.418540],
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_7__.Popup, {
-        children: ["A pretty CSS3 popup. ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), " Easily customizable."]
+        children: ["Accomodation_test", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), " Olympijska 1/22"]
       })
     })]
   });
