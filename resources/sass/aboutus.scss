@@ -1,0 +1,13 @@
+.aboutUs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border-top: 1px solid $mainColor;
+    margin: 25px 0;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+    }
+}

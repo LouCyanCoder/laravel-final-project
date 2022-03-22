@@ -1,0 +1,30 @@
+.footer_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $mainColor;
+
+    nav {
+        display: flex;
+        width: max-content;
+        font-size: 1.2rem;
+        padding-top: 20px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            column-gap: 30px;
+
+            a {
+                text-decoration: none;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+.footer_info {
+    text-align: center;
+    font-size: 1.2rem;
+}
