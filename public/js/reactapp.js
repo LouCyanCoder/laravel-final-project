@@ -20325,11 +20325,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-<<<<<<< HEAD
-___CSS_LOADER_EXPORT___.push([module.id, ".leaflet-container {\r\n    width: 79vw;\r\n    height: 68vh;\r\n    margin: auto;\r\n    margin-bottom: 10px;\r\n  }\r\n  /* or */\r\n  #map {\r\n    width: 79vw;\r\n    height: 68vh;\r\n    margin: auto;\r\n    margin-bottom: 10px;\r\n  }\r\n", "",{"version":3,"sources":["webpack://./resources/js/components/App.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,YAAY;IACZ,mBAAmB;EACrB;EACA,OAAO;EACP;IACE,WAAW;IACX,YAAY;IACZ,YAAY;IACZ,mBAAmB;EACrB","sourcesContent":[".leaflet-container {\r\n    width: 79vw;\r\n    height: 68vh;\r\n    margin: auto;\r\n    margin-bottom: 10px;\r\n  }\r\n  /* or */\r\n  #map {\r\n    width: 79vw;\r\n    height: 68vh;\r\n    margin: auto;\r\n    margin-bottom: 10px;\r\n  }\r\n"],"sourceRoot":""}]);
-=======
 ___CSS_LOADER_EXPORT___.push([module.id, ".leaflet-container {\r\n    width: 80vw;\r\n    height: 80vh;\r\n  }\r\n  /* or */\r\n  #map {\r\n    width: 80vw;\r\n    height: 80vh;\r\n  }\r\n", "",{"version":3,"sources":["webpack://./resources/js/components/App.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;EACd;EACA,OAAO;EACP;IACE,WAAW;IACX,YAAY;EACd","sourcesContent":[".leaflet-container {\r\n    width: 80vw;\r\n    height: 80vh;\r\n  }\r\n  /* or */\r\n  #map {\r\n    width: 80vw;\r\n    height: 80vh;\r\n  }\r\n"],"sourceRoot":""}]);
->>>>>>> lucian
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
