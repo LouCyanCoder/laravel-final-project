@@ -27,6 +27,9 @@
     },
     "dependencies": {
         "@babel/plugin-transform-spread": "^7.12.1",
+        "@emotion/react": "^11.8.2",
+        "@emotion/styled": "^11.8.1",
+        "@mui/material": "^5.5.2",
         "luxon": "^2.3.1",
         "node-sass": "^6.0.1",
         "react-bootstrap": "^2.2.1",

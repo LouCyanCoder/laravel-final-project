@@ -1,4 +1,6 @@
 import React from "react";
+import ReactDOM from 'react-dom';
+import Button from '@mui/material/Button';
 
 const AboutUs = () => {
     return (
@@ -6,7 +8,13 @@ const AboutUs = () => {
             <div className="aboutUs__container">
                 <h3>Why do we do this?</h3>
                 <p></p>
-                <button>Read about us</button>
+                <Button
+                    size="large"
+                    variant="contained"
+                    color="success"
+                >
+                    Read about us
+                </Button>
             </div>
         </section>
     );
