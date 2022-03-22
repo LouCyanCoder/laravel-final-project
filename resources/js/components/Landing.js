@@ -17,7 +17,7 @@ const Landing = () => {
                     </p>
                 </div>
                 <div className="landing_btn">
-                    <button>I'm the on who cares</button>
+                    <button>I'm the one who cares</button>
                     <button>I could use a helping hand</button>
                 </div>
             </div>
