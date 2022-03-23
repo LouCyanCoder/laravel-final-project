@@ -10,7 +10,9 @@
 
     @include('components.header')
 
-    <form action="{{ route('accommodation') }}" method="post">
+    <p>Here should be a form</p>
+
+    <form action="{{ action('AccommodationController@store') }}" method="post">
  
         @csrf
         
@@ -36,11 +38,11 @@
         <br>
 
         <label for="">From: </label><br>
-        <input type="number" name="start_date" value="">
+        <input type="date" name="start_date" value="">
         <br>
 
         <label for="">Untill: </label><br>
-        <input type="number" name="end_date" value="">
+        <input type="date" name="end_date" value="">
         <br>
 
         <label for="">Status of his/her offer: </label><br>
@@ -52,7 +54,7 @@
         <br>
         <br>
 
-        <button>Create accomodation offer</button>
+        <button type="submit">Create accomodation offer</button>
 
     </form>
 

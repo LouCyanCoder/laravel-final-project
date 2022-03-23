@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{path?}', function () {
-    return view('components.index');
-})->where('path', '.*');;
+// Route::get('/{path?}', function () {
+//     return view('components.index');
+// })->where('path', '.*');;
 
 Route::get('/auth/register', function () {
     dump('test');
@@ -36,6 +36,7 @@ Route::get('/accomodation/{id}', 'App\Http\Controllers\AccommodationController@s
 Route::delete('/accomodation/{id}', 'App\Http\Controllers\AccommodationController@delete');
 Route::get('/accomodation/{id}/edit', 'App\Http\Controllers\AccommodationController@edit');
 Route::put('/accomodation/{id}', 'App\Http\Controllers\AccommodationController@update');
+// Route::get('/accomodation/create', 'App\Http\Controllers\AccommodationController@create');
 
 // registration forms setting
 // logout button
