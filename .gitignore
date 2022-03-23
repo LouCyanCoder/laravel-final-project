@@ -19,3 +19,5 @@ yarn-error.log
 package.json
 package-lock.json
 public/js/reactapp.js
+public/js/reactapp.js.map
+public/js/index.js.map
