@@ -18,3 +18,4 @@ yarn-error.log
 /public/js
 package.json
 package-lock.json
+public/js/reactapp.js
