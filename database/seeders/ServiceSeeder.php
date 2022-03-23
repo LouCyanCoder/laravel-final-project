@@ -18,27 +18,27 @@ class ServiceSeeder extends Seeder
 
                 $services = [
                 [
-                'name' => 'Law service',
+                'name' => 'law_service',
                 'description' => "Advice and consultation with legal issues."
                 ],
 
                 [
-                'name' => 'Translator',
+                'name' => 'translator',
                 'description' => "Translation services for dealing with administrative tasks."
                 ],
 
                 [
-                'name' => 'Psychology/Psychotherapy',
+                'name' => 'psychology_psychotherapy',
                 'description' => "Help and advice for coping with stress and maintaining your mental health."
                 ],
 
                 [
-                'name' => 'Administration',
+                'name' => 'administration',
                 'description' => "Advice and services for dealing with local/municipal authorities."
                 ],
 
                 [
-                'name' => 'Education/Mentoring',
+                'name' => 'education_mentoring',
                 'description' => "Education and mentoring in various areas of expertise."
                 ],
         ];

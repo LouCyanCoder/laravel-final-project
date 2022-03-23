@@ -14,7 +14,7 @@ class AccommodationController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
