@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Accomodation form</title>
+    <title>Accommodation form</title>
 </head>
 <body>
 
@@ -16,10 +16,10 @@
  
         @csrf
         
-        <h1>Fill your accomodation info</h1>
+        <h1 class="form__heading">Fill your accommodation info</h1>
 
-        <label for="">Adress: </label><br>
-        <input type="text" name="area_adress" value="">
+        <label for="">Address: </label><br>
+        <input type="text" name="area_address" value="">
         <br>
 
         <label for="">Max persons: </label><br>
@@ -41,11 +41,11 @@
         <input type="date" name="start_date" value="">
         <br>
 
-        <label for="">Untill: </label><br>
+        <label for="">Until: </label><br>
         <input type="date" name="end_date" value="">
         <br>
 
-        <label for="">Status of his/her offer: </label><br>
+        <label for="">Status of the offer: </label><br>
         <select name="status">
             <option value="open">open</option>
             <option value="closed">Closed</option>
