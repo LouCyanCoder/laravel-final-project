@@ -89,8 +89,6 @@ class AccommodationController extends Controller
         $accommodation->max_person   = $request->input('max_person');
         $accommodation->pet_friendly   = $request->input('pet_friendly');
         $accommodation->description   = $request->input('description');
-        $accommodation->contact_person   = $request->input('contact_person');
-        $accommodation->contact_info   = $request->input('contact_info');
         $accommodation->start_date   = $request->input('start_date');
         $accommodation->end_date   = $request->input('end_date');
         $accommodation->status   = $request->input('status');
