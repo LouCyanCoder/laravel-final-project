@@ -93,15 +93,4 @@ class AccommodationController extends Controller
 
         return redirect()->action('App\Http\Controllers\AccommodationController@show', ['id' => $accommodation->id]);
     }
-
-    private function validateForm($request)
-    {
-        $this->validate($request, [
-            'title' => 'required|min:3',
-            'category_id' => 'required',
-        ], [
-            'title.required' => 'What?? the accommodation does not have a title??',
-            'title.min' => 'Title should have at least 3 letters',
-        ]);
-    }
 }

@@ -26,6 +26,17 @@ Route::get('/auth/login', function () {
     return view('login');
 });
 
+Route::get('/forms/accommodationForm', function () {
+    return view('accommodation');
+});
+
+Route::get('/accomodation/create', 'App\Http\Controllers\AccommodationController@create');
+Route::post('/accomodation', 'App\Http\Controllers\AccommodationController@store');
+Route::get('/accomodation/{id}', 'App\Http\Controllers\AccommodationController@show');
+Route::delete('/accomodation/{id}', 'App\Http\Controllers\AccommodationController@delete');
+Route::get('/accomodation/{id}/edit', 'App\Http\Controllers\AccommodationController@edit');
+Route::put('/accomodation/{id}', 'App\Http\Controllers\AccommodationController@update');
+
 // registration forms setting
 // logout button
 // permissions between user and admin

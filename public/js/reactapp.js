@@ -19626,6 +19626,33 @@ function Map(_ref) {
           })]
         })
       })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_8__.Marker, {
+      position: [50.091093, 14.400802],
+      icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_4__.defaultMarker2,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_9__.Popup, {
+        className: "request-popup",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupContent,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+            src: "https://media-exp1.licdn.com/dms/image/D4D35AQGxUmN29K_b5w/profile-framedphoto-shrink_400_400/0/1646341965876?e=1648116000&v=beta&t=IRfbId09WkriYINQQXB2waOGNvtyNd3IkPB9_oCmdXg",
+            width: "150",
+            height: "150"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+            className: "m-2",
+            style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupHead,
+            children: ["Ekin's house", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
+              children: "III. n\xE1dvo\u0159\xED 48/2, 119 01 Praha 1-Hrad\u010Dany"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+            style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupText,
+            children: "Welcome to the club, man!"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            className: "m-2",
+            style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.okText,
+            children: ";)"
+          })]
+        })
+      })
     })]
   });
 }
@@ -19651,13 +19678,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var defaultMarker = new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().icon)({
   iconUrl: "/images/accomodation_marker.png",
-  iconSize: [70, 70],
-  iconAnchor: [13, 0]
+  iconSize: [100, 100],
+  iconAnchor: [0, 0]
 });
 var defaultMarker2 = new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().icon)({
-  iconUrl: "/images/accomodation_marker.png",
-  iconSize: [25, 41],
-  iconAnchor: [13, 0]
+  iconUrl: "/images/new_accomodation_logo.png",
+  iconSize: [110, 70],
+  iconAnchor: [0, 0]
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (defaultMarker);
 

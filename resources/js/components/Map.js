@@ -38,6 +38,28 @@ function Map({ center, zoom }) {
     </Popup>
   </Marker>
 
+  <Marker position={[50.091093,14.400802]} icon={defaultMarker2}>
+    <Popup className="request-popup">
+      <div style={popupContent}>
+        <img
+          src="https://media-exp1.licdn.com/dms/image/D4D35AQGxUmN29K_b5w/profile-framedphoto-shrink_400_400/0/1646341965876?e=1648116000&v=beta&t=IRfbId09WkriYINQQXB2waOGNvtyNd3IkPB9_oCmdXg"
+          width="150"
+          height="150"
+        />
+        <div className="m-2" style={popupHead}>
+          Ekin's house
+          <h2>III. nádvoří 48/2, 119 01 Praha 1-Hradčany</h2>
+        </div>
+        <span style={popupText}>
+          Welcome to the club, man!
+        </span>
+        <div className="m-2" style={okText}>
+          ;)
+        </div>
+      </div>
+    </Popup>
+  </Marker>
+
 
 </MapContainer>
   );
