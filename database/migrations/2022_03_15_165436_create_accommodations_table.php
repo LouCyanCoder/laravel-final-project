@@ -21,11 +21,9 @@ return new class extends Migration
             $table->unsignedInteger('max_person');
             $table->enum('pet_friendly', ['yes', 'no']);
             $table->text('description');
-            $table->string('contact_person');
-            $table->string('contact_info');
             $table->date('start_date');
             $table->date('end_date');
-            $table->enum('status', ['open', 'closed', 'on demand']);
+            $table->enum('status', ['open', 'closed', 'on_demand']);
             $table->timestamps();
         });
     }

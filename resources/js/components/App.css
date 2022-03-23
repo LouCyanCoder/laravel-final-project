@@ -1,9 +1,13 @@
 .leaflet-container {
-    width: 80vw;
-    height: 80vh;
+    width: 79vw;
+    height: 68vh;
+    margin: auto;
+    margin-bottom: 10px;
   }
   /* or */
   #map {
-    width: 80vw;
-    height: 80vh;
+    width: 79vw;
+    height: 68vh;
+    margin: auto;
+    margin-bottom: 10px;
   }

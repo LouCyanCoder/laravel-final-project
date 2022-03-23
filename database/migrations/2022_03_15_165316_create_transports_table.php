@@ -18,12 +18,9 @@ return new class extends Migration
             $table->foreignId('user_id')->unique();
             $table->string('location_from')->nullable();
             $table->string('destination')->nullable();
-            $table->time('time')->nullable();
             $table->date('date')->nullable();
-            $table->string('contact_person')->nullable();
-            $table->string('contact_info')->nullable();
             $table->integer('max_person')->nullable();
-            $table->enum('status', ['open', 'closed', 'on demand']);
+            $table->enum('status', ['open', 'closed', 'on_demand']);
             $table->timestamps();
         });
     }
