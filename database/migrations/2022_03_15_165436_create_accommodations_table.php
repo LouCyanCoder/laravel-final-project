@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('accommodations', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->string('area_adress');
+            $table->string('area_address');
             $table->string('type')->nullable();
             $table->unsignedInteger('max_person');
             $table->enum('pet_friendly', ['yes', 'no']);
