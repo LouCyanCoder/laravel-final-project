@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/{path?}', function () {
-//     return view('components.index');
-// })->where('path', '.*');;
+Route::get('/{path?}', function () {
+    return view('components.index');
+})->where('path', '.*');
 
 Route::get('/auth/register', function () {
     dump('test');
