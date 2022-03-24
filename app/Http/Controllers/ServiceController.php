@@ -14,7 +14,11 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        //
+                // dd('index');
+        $searchString = $request->input('search');
+        $services = Service::where('name', 'like', '%' . $searchString . '%')->get();
+
+        return view('forms.serviceForm', compact('services'));
     }
 
     /**
@@ -24,7 +28,10 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        $service = new Service();
+        // $categories = Category::all();
+
+        return view('forms/serviceForm', compact('service'));
     }
 
     /**
@@ -35,7 +42,19 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $service = new Service($request->except('_token'));
+
+        $this->validateForm($request);
+
+        // $service->name   = $request->input('name');
+        // $service->description   = $request->input('description');
+        // $service->status   = $request->input('status');
+
+        $service->save();
+
+        session()->flash('success_message', 'The service was successfully saved!');
+
+        return redirect()->action('App\Http\Controllers\ServiceController@index');
     }
 
     /**
@@ -46,7 +65,10 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        //
+        dd('Show');
+        $service = Service::findOrFail($id);
+
+        return view('services/show', compact('service'));
     }
 
     /**
@@ -57,7 +79,10 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        //
+        $service = Service::findOrFail($id);
+        $categories = Category::all();
+
+        return view('serviceform/forms', compact('categories', 'service'));
     }
 
     /**
@@ -69,7 +94,15 @@ class ServiceController extends Controller
      */
     public function update(Request $request, Service $service)
     {
-        //
+        $service->name   = $request->input('name');
+        $service->description   = $request->input('description');
+        $service->status   = $request->input('status');
+
+        $service->save();
+
+        session()->flash('success_message', 'The service was successfully updated!');
+
+        return redirect()->action('App\Http\Controllers\ServiceController@show', ['id' => $service->id]);
     }
 
     /**
@@ -80,6 +113,9 @@ class ServiceController extends Controller
      */
     public function destroy(Service $service)
     {
-        //
+        $service = Service::findOrFail($id);
+        $service->delete();
+
+        return redirect()->action('App\Http\Controllers\ServiceController@index');
     }
 }
