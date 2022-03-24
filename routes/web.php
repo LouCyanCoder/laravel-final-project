@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/auth/register', function () {
     dump('test');
     return view('register');
@@ -34,12 +36,36 @@ Route::get('/accommodation/{id}/edit', 'App\Http\Controllers\AccommodationContro
 Route::put('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@update');
 // Route::get('/accommodation/create', 'App\Http\Controllers\AccommodationController@create');
 
+
+Route::get('/transport/create', 'App\Http\Controllers\TransportController@create');
+Route::post('/transport', 'App\Http\Controllers\TransportController@store');
+Route::get('/transport/{id}', 'App\Http\Controllers\TransportController@show');
+Route::delete('/transport/{id}', 'App\Http\Controllers\TransportController@delete');
+Route::get('/transport/{id}/edit', 'App\Http\Controllers\TransportController@edit');
+Route::put('/transport/{id}', 'App\Http\Controllers\TransportController@update');
+
+Route::get('/food/create', 'App\Http\Controllers\FoodController@create');
+Route::post('/food', 'App\Http\Controllers\FoodController@store');
+Route::get('/food/{id}', 'App\Http\Controllers\FoodController@show');
+Route::get('/food/{id}/edit', 'App\Http\Controllers\FoodController@edit');
+Route::put('/food/{id}', 'App\Http\Controllers\FoodController@update');
+
+Route::get('/service/create', 'App\Http\Controllers\ServiceController@create');
+Route::post('/service', 'App\Http\Controllers\ServiceController@store');
+Route::get('/service/{id}', 'App\Http\Controllers\ServiceController@show');
+Route::get('/service/{id}/edit', 'App\Http\Controllers\ServiceController@edit');
+Route::put('/service/{id}', 'App\Http\Controllers\ServiceController@update');
+
+
+
 // registration forms setting
 // logout button
 // permissions between user and admin
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
 
 /* Route::get('/{path?}', function () {
     return view('index');
