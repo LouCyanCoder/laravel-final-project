@@ -43,7 +43,8 @@
         </div>
 
         <div class="">
-            <select for="name">Status<br>
+            <label>Status:</label>
+            <select for="name">
                 <option value="open">open</option>
                 <option value="limited">limited</option>
                 <option value="closed">closed</option>
