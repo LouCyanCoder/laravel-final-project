@@ -23,57 +23,59 @@ function Map({ center, zoom }) {
     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   />
   <LeafletControlGeocoder />
+
   <MarkerClusterGroup>
-  <Marker position={[50.073658, 14.418540]} icon={defaultMarker}>
-    <Popup className="request-popup">
-      <div style={popupContent}>
-        <img
-          src="https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png"
-          width="150"
-          height="150"
-        />
-        <div className="m-2" style={popupHead}>
-          Success!
+
+    <Marker position={[50.073658, 14.418540]} icon={defaultMarker}>
+      <Popup className="request-popup">
+        <div style={popupContent}>
+          <img
+            src="https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png"
+            width="150"
+            height="150"
+          />
+          <div className="m-2" style={popupHead}>
+            Success!
+          </div>
+          <div className="cardonthemap"style={popupText}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </div>
+          <div className="m-2" style={okText}>
+            Okay
+          </div>
         </div>
-        <div className="cardonthemap"style={popupText}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.
-        </div>
-        <div className="m-2" style={okText}>
-          Okay
-        </div>
-      </div>
-    </Popup>
-  </Marker>
+      </Popup>
+    </Marker>
 
 
-  <Marker position={[50.091093,14.400802]} icon={defaultMarker2}>
+    <Marker position={[50.091093,14.400802]} icon={defaultMarker2}>
 
-    <Popup className="request-popup">
-      <div style={popupContent}>
-        <img
-          src="https://media-exp1.licdn.com/dms/image/D4D35AQGxUmN29K_b5w/profile-framedphoto-shrink_400_400/0/1646341965876?e=1648116000&v=beta&t=IRfbId09WkriYINQQXB2waOGNvtyNd3IkPB9_oCmdXg"
-          width="150"
-          height="150"
-        />
-        <div className="m-2" style={popupHead}>
-          Ekin's house
-          <h2>III. nádvoří 48/2, 119 01 Praha 1-Hradčany</h2>
+      <Popup className="request-popup">
+        <div style={popupContent}>
+          <img
+            src="https://media-exp1.licdn.com/dms/image/D4D35AQGxUmN29K_b5w/profile-framedphoto-shrink_800_800/0/1646341965876?e=1648220400&v=beta&t=nj3YDzSiElzCJtz5oPp5tqkDwG7zjFCAQoNaKSOUhG4"
+            width="150"
+            height="150"
+          />
+          <div className="m-2" style={popupHead}>
+            Ekin's house
+            <h2>III. nádvoří 48/2, 119 01 Praha 1-Hradčany</h2>
+          </div>
+          <div style={popupText}>
+            Welcome to the club, man!
+          </div>
+          <div className="m-2" style={okText}>
+            ;)
+          </div>
         </div>
-        <div style={popupText}>
-          Welcome to the club, man!
-        </div>
-        <div className="m-2" style={okText}>
-          ;)
-        </div>
-      </div>
-    </Popup>
+      </Popup>
 
-  </Marker>
+    </Marker>
+
   </MarkerClusterGroup>
-
 
 </MapContainer>
   );
