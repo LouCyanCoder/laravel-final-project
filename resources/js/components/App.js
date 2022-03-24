@@ -14,7 +14,7 @@ const App = () => {
             <Link to="/map">Map</Link>
             &nbsp;
             <Link to="/features">Features</Link>
-            <div className="map">
+            <div className="mapp">
                 <Routes>
                     <Route exact path="/" element={<Landing />} />
                     <Route exact path="/contact" element={<Contact />} />
