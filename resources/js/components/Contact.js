@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Dashboard from "./Dashboard/Dashboard";
 
 const Contact = () => {
     return (
@@ -33,6 +34,8 @@ const Contact = () => {
                 </div>
                 
             </form>
+
+            <Dashboard />
         </section>
     );
 };
