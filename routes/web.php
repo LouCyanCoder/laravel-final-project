@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{path?}', function () {
-    return view('components.index');
-})->where('path', '.*');
+
 
 Route::get('/auth/register', function () {
     dump('test');
@@ -37,6 +35,15 @@ Route::delete('/accomodation/{id}', 'App\Http\Controllers\AccommodationControlle
 Route::get('/accomodation/{id}/edit', 'App\Http\Controllers\AccommodationController@edit');
 Route::put('/accomodation/{id}', 'App\Http\Controllers\AccommodationController@update');
 // Route::get('/accomodation/create', 'App\Http\Controllers\AccommodationController@create');
+
+
+Route::get('/transport/create', 'App\Http\Controllers\TransportController@create');
+Route::post('/transport', 'App\Http\Controllers\TransportController@store');
+Route::get('/transport/{id}', 'App\Http\Controllers\TransportController@show');
+Route::delete('/transport/{id}', 'App\Http\Controllers\TransportController@delete');
+Route::get('/transport/{id}/edit', 'App\Http\Controllers\TransportController@edit');
+Route::put('/transport/{id}', 'App\Http\Controllers\TransportController@update');
+
 
 // registration forms setting
 // logout button
@@ -79,3 +86,7 @@ Route::put('/your_path/users', function () {
 Route::delete('/your_path/users', function () {
     // Matches The "/api/your_path/users" URL
 });
+
+Route::get('/{path?}', function () {
+    return view('components.index');
+})->where('path', '.*');

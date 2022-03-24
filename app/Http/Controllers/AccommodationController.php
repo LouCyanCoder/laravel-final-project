@@ -47,7 +47,7 @@ class AccommodationController extends Controller
         // $accommodation->end_date   = $request->input('end_date');
         // $accommodation->status   = $request->input('status');
 
-        $accommodation->save();
+        // $accommodation->save();
 
         session()->flash('success_message', 'The accommodation was successfully saved!');
 
@@ -73,9 +73,9 @@ class AccommodationController extends Controller
     public function edit($id)
     {
         $accommodation = Accommodation::findOrFail($id);
-        $categories = Category::all();
+        // $categories = Category::all();
 
-        return view('accommodationform/forms', compact('categories', 'accommodation'));
+        return view('accommodationform/forms', compact('accommodation'));
     }
 
     public function update($id, Request $request)
