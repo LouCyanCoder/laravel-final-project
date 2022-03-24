@@ -11,3 +11,20 @@
     margin: auto;
     margin-bottom: 10px;
   }
+
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  body {
+    margin: 0px;
+  }
+
+  .sr-only {
+    display: none;
+  }
+
+  .markercluster-map {
+    height: 90vh;
+  }

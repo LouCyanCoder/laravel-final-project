@@ -10,3 +10,47 @@
 .map .leaflet-container {
     height: 100%;
 }
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  margin: 0px;
+}
+
+.markercluster-map span {
+  height: 5vh;;
+  width: 5vh;
+  border-radius: 50%;
+  display: inline-block;
+  color:black;
+  background-color: greenyellow;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  border-color: blue;
+  border-style: solid;
+  margin: auto;
+  padding: 8.33px;
+  font-size: 20px;
+  opacity: 0.55;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+.sr-only {
+  display: none;
+}
+
+.markercluster-map {
+  height: 90vh;;
+  width: 90vh;
+  background-color: #bbb;
+  border-radius: 2.5%;
+  display: inline-block;
+}

@@ -42,8 +42,8 @@ mix
     })
 
     // add versioning
-    .version();
-
+    .version()
+    /* .disableNotifications(); */
 
     
 // ADD ASSETS TO COMPILE HERE:
