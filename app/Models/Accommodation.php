@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Accommodation extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'area_adress',
+        'type',
+        'max_person',
+        'pet_friendly',
+        'description',
+        'contact_person',
+        'contact_info',
+        'start_date',
+        'end_date',
+        'status',
+    ];
 }

@@ -9,36 +9,41 @@ class AccommodationController extends Controller
 {
     public function index(Request $request)
     {
+        // dd('index');
         $searchString = $request->input('search');
         $accommodations = Accommodation::where('title', 'like', '%' . $searchString . '%')->get();
 
-        return view('accommodationForm/forms', compact('accommodations'));
+        return view('forms.accommodationForm', compact('accommodations'));
     }
 
     public function create()
     {
         $accommodation = new Accommodation();
-        $categories = Category::all();
+        // $categories = Category::all();
 
-        return view('accommodationform/forms', compact('categories', 'accommodation'));
+        return view('forms/accommodationForm', compact('accommodation'));
     }
 
     public function store(Request $request)
     {
-        $accommodation = new Accommodation();
+        // dd($request->except('_token'));
+
+        $accommodation = new Accommodation($request->except('_token'));
+
+        // $accommodation->max_person = $request->input('max_person');
+
+        // dd($accommodation);
 
         $this->validateForm($request);
 
-        $accommodation->area_adress   = $request->input('area_adress');
-        $accommodation->type   = $request->input('type');
-        $accommodation->max_person   = $request->input('max_person');
-        $accommodation->pet_friendly   = $request->input('pet_friendly');
-        $accommodation->description   = $request->input('description');
-        $accommodation->contact_person   = $request->input('contact_person');
-        $accommodation->contact_info   = $request->input('contact_info');
-        $accommodation->start_date   = $request->input('start_date');
-        $accommodation->end_date   = $request->input('end_date');
-        $accommodation->status   = $request->input('status');
+        // $accommodation->area_adress   = $request->input('area_adress');
+        // $accommodation->type   = $request->input('type');
+        // $accommodation->max_person   = $request->input('max_person');
+        // $accommodation->pet_friendly   = $request->input('pet_friendly');
+        // $accommodation->description   = $request->input('description');
+        // $accommodation->start_date   = $request->input('start_date');
+        // $accommodation->end_date   = $request->input('end_date');
+        // $accommodation->status   = $request->input('status');
 
         $accommodation->save();
 
@@ -49,6 +54,7 @@ class AccommodationController extends Controller
 
     public function show($id)
     {
+        dd('Show');
         $accommodation = Accommodation::findOrFail($id);
 
         return view('accommodations/show', compact('accommodation'));
@@ -81,8 +87,6 @@ class AccommodationController extends Controller
         $accommodation->max_person   = $request->input('max_person');
         $accommodation->pet_friendly   = $request->input('pet_friendly');
         $accommodation->description   = $request->input('description');
-        $accommodation->contact_person   = $request->input('contact_person');
-        $accommodation->contact_info   = $request->input('contact_info');
         $accommodation->start_date   = $request->input('start_date');
         $accommodation->end_date   = $request->input('end_date');
         $accommodation->status   = $request->input('status');
@@ -92,16 +96,5 @@ class AccommodationController extends Controller
         session()->flash('success_message', 'The accommodation was successfully updated!');
 
         return redirect()->action('App\Http\Controllers\AccommodationController@show', ['id' => $accommodation->id]);
-    }
-
-    private function validateForm($request)
-    {
-        $this->validate($request, [
-            'title' => 'required|min:3',
-            'category_id' => 'required',
-        ], [
-            'title.required' => 'What?? the accommodation does not have a title??',
-            'title.min' => 'Title should have at least 3 letters',
-        ]);
     }
 }
