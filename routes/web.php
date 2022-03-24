@@ -28,6 +28,10 @@ Route::get('/forms/accommodationForm', function () {
     return view('accommodation');
 });
 
+Route::get('/forms/foodForm', function() {
+    return view('food');
+});
+
 Route::post('/accommodation/create', 'App\Http\Controllers\AccommodationController@create')->name('accommodation');
 Route::get('/accommodation/create', 'App\Http\Controllers\AccommodationController@index')->name('accommodation');
 Route::post('/accommodation', 'App\Http\Controllers\AccommodationController@store');
@@ -45,7 +49,8 @@ Route::delete('/transport/{id}', 'App\Http\Controllers\TransportController@delet
 Route::get('/transport/{id}/edit', 'App\Http\Controllers\TransportController@edit');
 Route::put('/transport/{id}', 'App\Http\Controllers\TransportController@update');
 
-Route::get('/food/create', 'App\Http\Controllers\FoodController@create');
+Route::post('/food/create', 'App\Http\Controllers\FoodController@create')->name('food');
+Route::get('/food/create', 'App\Http\Controllers\FoodController@index')->name('food');
 Route::post('/food', 'App\Http\Controllers\FoodController@store');
 Route::get('/food/{id}', 'App\Http\Controllers\FoodController@show');
 Route::get('/food/{id}/edit', 'App\Http\Controllers\FoodController@edit');

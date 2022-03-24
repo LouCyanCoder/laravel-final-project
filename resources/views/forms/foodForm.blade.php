@@ -1,7 +1,7 @@
 
     @include('components.header')
 
-    <form action="{{ action('FoodController@store') }}" method="post">
+    <form action="{{ route('food') }}" method="post">
  
         @csrf
         
@@ -21,8 +21,7 @@
             value=""
         >
         </div>
-        <br>
-
+        
         <div class="">
         <label for="">Address</label><br>
         <input
@@ -31,6 +30,8 @@
             value=""
         >
         </div>
+
+
 
         <div class="">
         <label for="description">Description:</label><br>
@@ -45,15 +46,14 @@
         <div class="">
             <label>Status:</label>
             <select for="name">
-                <option value="open">open</option>
-                <option value="limited">limited</option>
-                <option value="closed">closed</option>
-                <option value="on demand">on demand</option>
+                <option value="open">Open</option>               
+                <option value="closed">Closed</option>
+                <option value="on_demand">On demand</option>
             </select>
         <br>
-        <br>
+        
 
-        <button>Confirm offer</button>
+        <button type="submit">Confirm offer</button>
     </form>
 
     @include('components.footer')
