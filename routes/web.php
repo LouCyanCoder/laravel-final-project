@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/auth/register', function () {
     dump('test');
     return view('register');
@@ -34,12 +36,23 @@ Route::get('/accommodation/{id}/edit', 'App\Http\Controllers\AccommodationContro
 Route::put('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@update');
 // Route::get('/accommodation/create', 'App\Http\Controllers\AccommodationController@create');
 
+
+Route::get('/transport/create', 'App\Http\Controllers\TransportController@create');
+Route::post('/transport', 'App\Http\Controllers\TransportController@store');
+Route::get('/transport/{id}', 'App\Http\Controllers\TransportController@show');
+Route::delete('/transport/{id}', 'App\Http\Controllers\TransportController@delete');
+Route::get('/transport/{id}/edit', 'App\Http\Controllers\TransportController@edit');
+Route::put('/transport/{id}', 'App\Http\Controllers\TransportController@update');
+
+
 // registration forms setting
 // logout button
 // permissions between user and admin
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
 
 /* Route::get('/{path?}', function () {
     return view('index');
