@@ -43,8 +43,13 @@
         </div>
 
         <div class="">
+<<<<<<< HEAD
             <label for="status">Please select the status of the offer</label><br>
             <select for="status">
+=======
+            <label>Status:</label>
+            <select for="name">
+>>>>>>> ekin
                 <option value="open">open</option>
                 <option value="closed">closed</option>
                 <option value="on_demand">on demand</option>
