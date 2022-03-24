@@ -11,7 +11,7 @@ class AccommodationController extends Controller
     {
         // dd('index');
         $searchString = $request->input('search');
-        $accommodations = Accommodation::where('title', 'like', '%' . $searchString . '%')->get();
+        $accommodations = Accommodation::where('description', 'like', '%' . $searchString . '%')->get();
 
         return view('forms.accommodationForm', compact('accommodations'));
     }
@@ -96,5 +96,16 @@ class AccommodationController extends Controller
         session()->flash('success_message', 'The accommodation was successfully updated!');
 
         return redirect()->action('App\Http\Controllers\AccommodationController@show', ['id' => $accommodation->id]);
+    }
+    
+    private function validateForm($request)
+    {
+        $this->validate($request, [
+            'description' => 'required|min:3',
+            'user_id' => 'required',
+        ], [
+            'description.required' => 'Description is missing',
+            'description.min' => 'Description should have at least 3 letters',
+        ]);
     }
 }
