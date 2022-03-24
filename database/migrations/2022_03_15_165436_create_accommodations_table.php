@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('accommodations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->unique();
+            $table->foreignId('user_id');
             $table->string('area_address')->nullable();
             $table->string('type')->nullable();
             $table->unsignedInteger('max_person')->nullable();

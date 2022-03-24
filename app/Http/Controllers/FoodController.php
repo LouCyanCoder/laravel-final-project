@@ -15,12 +15,13 @@ class FoodController extends Controller
         return view('forms.foodForm', compact('food'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
         $food = new Food();
         $data = $request->all();
 
         $food->insert([
+            'user_id' => '1',
             'address' => $data['address'],
             'name' => $data['name'],
             'description' => $data['description'],
@@ -34,17 +35,17 @@ class FoodController extends Controller
 
     public function store(Request $request)
     {
-        $food = new Food();
+        $food = new Food($request->except('_token'));
 
         $this->validateForm($request);
 
-        $food->address   = $request->input('address');
-        $food->name   = $request->input('name');
-        $food->description   = $request->input('description');
-        $food->day   = $request->input('day');
-        $food->status   = $request->input('status');
+        // $food->address   = $request->input('address');
+        // $food->name   = $request->input('name');
+        // $food->description   = $request->input('description');
+        // $food->day   = $request->input('day');
+        // $food->status   = $request->input('status');
 
-        $food->save();
+        // $food->save();
 
         session()->flash('success_message', 'The food was successfully saved!');
 
@@ -97,7 +98,7 @@ class FoodController extends Controller
     {
         $this->validate($request, [
             'description' => 'required|min:3',
-            'user_id' => 'required',
+            // 'user_id' => 'required',
         ], [
             'description.required' => 'What?? the food does not have a title??',
             'description.min' => 'Description should have at least 3 letters',

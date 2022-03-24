@@ -22,7 +22,7 @@ class AccommodationController extends Controller
         $data = $request->all();
         
         $accommodation->insert([
-            // 'user_id' => $data['user_id'],
+            'user_id' => '1',
             'area_address' => $data['area_address'],
             'pet_friendly' => $data['pet_friendly'],
             'type' => $data['type'],

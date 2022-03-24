@@ -1,4 +1,12 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transport Form</title>
+</head>
+<body>
     @include('components.header')
 
     <form action="{{ route('food') }}" method="post">
@@ -43,19 +51,22 @@
         <input type="date" name="day">
         </div>
 
-        <div class="">
+       
 
-            <label for="status">Please select the status of the offer</label><br>
-            <select for="status">
-                <option value="open">Open</option>               
-                <option value="closed">Closed</option>
-                <option value="on_demand">On demand</option>
-            </select>
+        <label for="">Status</label><br>
+        <select name="status">
+            <option value="open">Open</option>
+            <option value="closed">Closed</option>   
+            <option value="on_demand">On Demand</option>
+        </select>
+        <br>
         <br>
         
 
-        <button type="submit">Confirm offer</button>
+        <button>Confirm offer</button>
     </form>
 
     @include('components.footer')
     
+</body>
+</html>
