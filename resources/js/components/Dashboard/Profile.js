@@ -17,7 +17,7 @@ const Profile = () => {
 
           <h3>username goes here</h3>
           
-            <List sx="" component="nav" aria-label="profile info">
+            <List component="nav" aria-label="profile info">
                 <ListItem button>
                     <ListItemText primary="Address" secondary="" />
                 </ListItem>
