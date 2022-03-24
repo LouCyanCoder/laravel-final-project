@@ -10,7 +10,7 @@
 
     @include('components.header')
 
-    <form action="{{ action('AccommodationController@store') }}" method="post">
+    <form action="{{ action('ServiceController@store') }}" method="post">
  
         @csrf
         

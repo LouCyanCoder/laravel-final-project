@@ -44,6 +44,19 @@ Route::delete('/transport/{id}', 'App\Http\Controllers\TransportController@delet
 Route::get('/transport/{id}/edit', 'App\Http\Controllers\TransportController@edit');
 Route::put('/transport/{id}', 'App\Http\Controllers\TransportController@update');
 
+Route::get('/food/create', 'App\Http\Controllers\FoodController@create');
+Route::post('/food', 'App\Http\Controllers\FoodController@store');
+Route::get('/food/{id}', 'App\Http\Controllers\FoodController@show');
+Route::get('/food/{id}/edit', 'App\Http\Controllers\FoodController@edit');
+Route::put('/food/{id}', 'App\Http\Controllers\FoodController@update');
+
+Route::get('/service/create', 'App\Http\Controllers\ServiceController@create');
+Route::post('/service', 'App\Http\Controllers\ServiceController@store');
+Route::get('/service/{id}', 'App\Http\Controllers\ServiceController@show');
+Route::get('/service/{id}/edit', 'App\Http\Controllers\ServiceController@edit');
+Route::put('/service/{id}', 'App\Http\Controllers\ServiceController@update');
+
+
 
 // registration forms setting
 // logout button
