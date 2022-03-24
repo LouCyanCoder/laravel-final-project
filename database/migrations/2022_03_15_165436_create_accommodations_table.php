@@ -15,15 +15,15 @@ return new class extends Migration
     {
         Schema::create('accommodations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
-            $table->string('area_address');
+            $table->foreignId('user_id')->nullable();
+            $table->string('area_address')->nullable();
             $table->string('type')->nullable();
-            $table->unsignedInteger('max_person');
-            $table->enum('pet_friendly', ['yes', 'no']);
-            $table->text('description');
-            $table->date('start_date');
-            $table->date('end_date');
-            $table->enum('status', ['open', 'closed', 'on_demand']);
+            $table->unsignedInteger('max_person')->nullable();
+            $table->enum('pet_friendly', ['yes', 'no'])->nullable();
+            $table->text('description')->nullable();
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
+            $table->enum('status', ['open', 'closed', 'on_demand'])->nullable();
             $table->timestamps();
         });
     }
