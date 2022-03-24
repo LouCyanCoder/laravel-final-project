@@ -22347,6 +22347,65 @@ var Features = function Features() {
 
 /***/ }),
 
+/***/ "./resources/js/components/FilterServices.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/FilterServices.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var FilterServices = function FilterServices() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Accommodation",
+      name: "services"
+    }), " ", "Accommodation", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Food",
+      name: "services"
+    }), " Food", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Lawyer",
+      name: "services"
+    }), " Lawyer", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Administration",
+      name: "services"
+    }), " ", "Administration", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Translation",
+      name: "services"
+    }), " ", "Translation", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Psychology",
+      name: "services"
+    }), " Psychology", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Education",
+      name: "services"
+    }), " Education", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Mentoring",
+      name: "services"
+    }), " Mentoring"]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FilterServices);
+
+/***/ }),
+
 /***/ "./resources/js/components/Landing.js":
 /*!********************************************!*\
   !*** ./resources/js/components/Landing.js ***!
@@ -22472,17 +22531,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/MapContainer.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/TileLayer.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Marker.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Popup.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/MapContainer.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/TileLayer.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Marker.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Popup.js");
 /* harmony import */ var _Map_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Map.css */ "./resources/js/components/Map.css");
 /* harmony import */ var _popupStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./popupStyles */ "./resources/js/components/popupStyles.js");
 /* harmony import */ var _defaultMarker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./defaultMarker */ "./resources/js/components/defaultMarker.js");
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles.css */ "./resources/js/components/styles.css");
 /* harmony import */ var _LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./LeafletControlGeocoder */ "./resources/js/components/LeafletControlGeocoder.js");
 /* harmony import */ var react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-leaflet-markercluster */ "./node_modules/react-leaflet-markercluster/dist/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _FilterServices__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FilterServices */ "./resources/js/components/FilterServices.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
  // import './leaflet/dist/leaflet.css';
@@ -22495,73 +22555,77 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 function Map(_ref) {
   var center = _ref.center,
       zoom = _ref.zoom;
-  console.log(react_leaflet__WEBPACK_IMPORTED_MODULE_8__.MapContainer);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_8__.MapContainer, {
-    className: "markercluster-map",
-    center: [50.073658, 14.418540],
-    zoom: 12,
-    maxZoom: 18,
-    minZoom: 8,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_9__.TileLayer, {
-      attribution: "\xA9 <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
-      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_5__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_10__.Marker, {
-        position: [50.073658, 14.418540],
-        icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_3__["default"],
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_11__.Popup, {
-          className: "request-popup",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-            style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupContent,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
-              src: "https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png",
-              width: "150",
-              height: "150"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-              className: "m-2",
-              style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupHead,
-              children: "Success!"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-              className: "cardonthemap",
-              style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupText,
-              children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-              className: "m-2",
-              style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.okText,
-              children: "Okay"
-            })]
-          })
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_10__.Marker, {
-        position: [50.091093, 14.400802],
-        icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_3__.defaultMarker2,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_11__.Popup, {
-          className: "request-popup",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-            style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupContent,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
-              src: "https://media-exp1.licdn.com/dms/image/D4D35AQGxUmN29K_b5w/profile-framedphoto-shrink_400_400/0/1646341965876?e=1648116000&v=beta&t=IRfbId09WkriYINQQXB2waOGNvtyNd3IkPB9_oCmdXg",
-              width: "150",
-              height: "150"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-              className: "m-2",
-              style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupHead,
-              children: ["Ekin's house", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h2", {
-                children: "III. n\xE1dvo\u0159\xED 48/2, 119 01 Praha 1-Hrad\u010Dany"
+  console.log(react_leaflet__WEBPACK_IMPORTED_MODULE_9__.MapContainer);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_FilterServices__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_9__.MapContainer, {
+      className: "markercluster-map",
+      center: [50.073658, 14.41854],
+      zoom: 12,
+      maxZoom: 18,
+      minZoom: 8,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_10__.TileLayer, {
+        attribution: "\xA9 <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+        url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_5__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_11__.Marker, {
+          position: [50.073658, 14.41854],
+          icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_3__["default"],
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_12__.Popup, {
+            className: "request-popup",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+              style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupContent,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+                src: "https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png",
+                width: "150",
+                height: "150"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                className: "m-2",
+                style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupHead,
+                children: "Success!"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                className: "cardonthemap",
+                style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupText,
+                children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                className: "m-2",
+                style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.okText,
+                children: "Okay"
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-              style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupText,
-              children: "Welcome to the club, man!"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-              className: "m-2",
-              style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.okText,
-              children: ";)"
-            })]
+            })
           })
-        })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_11__.Marker, {
+          position: [50.091093, 14.400802],
+          icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_3__.defaultMarker2,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_12__.Popup, {
+            className: "request-popup",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+              style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupContent,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+                src: "https://media-exp1.licdn.com/dms/image/D4D35AQGxUmN29K_b5w/profile-framedphoto-shrink_400_400/0/1646341965876?e=1648116000&v=beta&t=IRfbId09WkriYINQQXB2waOGNvtyNd3IkPB9_oCmdXg",
+                width: "150",
+                height: "150"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                className: "m-2",
+                style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupHead,
+                children: ["Ekin's house", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h2", {
+                  children: "III. n\xE1dvo\u0159\xED 48/2, 119 01 Praha 1-Hrad\u010Dany"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupText,
+                children: "Welcome to the club, man!"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                className: "m-2",
+                style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.okText,
+                children: ";)"
+              })]
+            })
+          })
+        })]
       })]
     })]
   });
