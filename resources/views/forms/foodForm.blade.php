@@ -44,8 +44,9 @@
         </div>
 
         <div class="">
-            <label>Status:</label>
-            <select for="name">
+
+            <label for="status">Please select the status of the offer</label><br>
+            <select for="status">
                 <option value="open">Open</option>               
                 <option value="closed">Closed</option>
                 <option value="on_demand">On demand</option>

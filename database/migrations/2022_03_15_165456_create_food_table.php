@@ -22,15 +22,7 @@ return new class extends Migration
             $table->string('day')->nullable();
             $table->enum('status', ['open','closed','on_demand'])->nullable();
             $table->timestamps();
-            // Table food {
-            //     id int[pk]
-            //     user_id int [ref: - users.id]
-            //     address str
-            //     name str
-            //     description varchar
-            //     day str
-            //     time time
-            //   }
+            
         });
     }
 
