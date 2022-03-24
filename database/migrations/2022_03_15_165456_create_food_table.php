@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('description')->nullable();
             $table->string('day')->nullable();
-            $table->enum('status', ['open','limited','closed','on demand']);
+            $table->enum('status', ['open','closed','on demand']);
             $table->timestamps();
             // Table food {
             //     id int[pk]
