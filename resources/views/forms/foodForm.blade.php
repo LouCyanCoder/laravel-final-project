@@ -1,7 +1,7 @@
 
     @include('components.header')
 
-    <form action="{{ route('register') }}" method="post">
+    <form action="{{ action('FoodController@store') }}" method="post">
  
         @csrf
         
