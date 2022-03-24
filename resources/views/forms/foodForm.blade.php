@@ -1,7 +1,15 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transport Form</title>
+</head>
+<body>
     @include('components.header')
 
-    <form action="{{ action('FoodController@store') }}" method="post">
+    <form action="{{ route('food') }}" method="post">
  
         @csrf
         
@@ -21,8 +29,7 @@
             value=""
         >
         </div>
-        <br>
-
+        
         <div class="">
         <label for="">Address</label><br>
         <input
@@ -31,6 +38,8 @@
             value=""
         >
         </div>
+
+
 
         <div class="">
         <label for="description">Description:</label><br>
@@ -42,18 +51,22 @@
         <input type="date" name="day">
         </div>
 
-        <div class="">
-            <label>Status:</label>
-            <select for="name">
-                <option value="open">open</option>
-                <option value="closed">closed</option>
-                <option value="on_demand">on demand</option>
-            </select>
+       
+
+        <label for="">Status</label><br>
+        <select name="status">
+            <option value="open">Open</option>
+            <option value="closed">Closed</option>   
+            <option value="on_demand">On Demand</option>
+        </select>
         <br>
         <br>
+        
 
         <button>Confirm offer</button>
     </form>
 
     @include('components.footer')
     
+</body>
+</html>

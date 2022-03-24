@@ -10,7 +10,9 @@
 
     @include('components.header')
 
-    <form action="{{ action('AccommodationController@store') }}" method="post">
+    <p>Here should be a form</p>
+
+    <form action="{{ route('accommodation') }}" method="post">
  
         @csrf
         
@@ -24,6 +26,16 @@
         <input type="number" name="max_person" value="">
         <br>
 
+        <label for="">Type of Accommodation</label>
+        <select name="type">
+            <option value="flat">Flat</option>
+            <option value="house">House</option>
+            <option value="room">Room</option>
+            <option value="bed">Bed</option>
+            <option value="couch">Couch</option>
+        </select>
+        <br>
+        
         <label for="">Pet friendly?</label><br>
         <select name="pet_friendly">
             <option value="yes">Yes</option>
