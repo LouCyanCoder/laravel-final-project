@@ -14,7 +14,10 @@ class TransportController extends Controller
      */
     public function index()
     {
-        //
+        $searchString = $request->input('search');
+        $transports = Transport::where('title', 'like', '%' . $searchString . '%')->get();
+
+        return view('forms.transportForm', compact('transports'));    
     }
 
     /**
@@ -24,7 +27,9 @@ class TransportController extends Controller
      */
     public function create()
     {
-        //
+        $transport = new Transport();
+
+        return view('forms/transportForm', compact('transport'));
     }
 
     /**
@@ -35,7 +40,13 @@ class TransportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $transport = new Transport($request->expect('_token'));
+
+        $this->validateFrom($request);
+
+        session()->flash('success_message', 'The transportation was successfully saved!');
+
+        return redirect()->action('App\Http\Controllers\TransportController@index');
     }
 
     /**
@@ -44,9 +55,12 @@ class TransportController extends Controller
      * @param  \App\Models\Transport  $transport
      * @return \Illuminate\Http\Response
      */
-    public function show(Transport $transport)
+    public function show($id)
     {
-        //
+        $transport = Transport::findOrFail($id);
+        
+
+        return view('transports/show', compact('transport'));
     }
 
     /**
@@ -55,9 +69,11 @@ class TransportController extends Controller
      * @param  \App\Models\Transport  $transport
      * @return \Illuminate\Http\Response
      */
-    public function edit(Transport $transport)
+    public function edit($id)
     {
-        //
+        $transport = Transport::findOrFail($id);
+
+        return view('transportForm/forms', compact('transport'));
     }
 
     /**
@@ -69,7 +85,21 @@ class TransportController extends Controller
      */
     public function update(Request $request, Transport $transport)
     {
-        //
+        $transport = Transport::findOrFail($id);
+
+        $this->validateForm($request);
+
+        $transport->location_from = $request->input('location_from');
+        $transport->destination = $request->input('destination');
+        $transport->date  = $request->input('date');
+        $transport->max_person = $request->input('max_person');
+        $transport->status = $request->input('status');
+
+        $transport->save();
+
+        session()->flash('success_message', 'The transportation was successfully saved!');
+        
+        return redirect()->action('App\Http\Controllers\TransportController@show', ['id' => $transport->id]);
     }
 
     /**

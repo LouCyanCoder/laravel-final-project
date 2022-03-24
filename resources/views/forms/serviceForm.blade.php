@@ -10,7 +10,7 @@
 
     @include('components.header')
 
-    <form action="{{ route('register') }}" method="post">
+    <form action="{{ action('ServiceController@store') }}" method="post">
  
         @csrf
         
@@ -25,15 +25,22 @@
         </select>
         
         <br>
-
+        
         <label for="description">Description:</label><br>
         <textarea name="description" value="" id="" cols="30" rows="10"></textarea>
         <br>
         <br>
+        <select for="status">Please select the status of the offer.<br>
+          <option value="open">Open</option>
+          <option value="closed">Closed</option>
+          <option value="on_demand">On demand</option>
+        </select>
+        <br>
+        <br>
 
 
 
-        <button>Confirm offer</button>
+        <button type="submit">Confirm offer</button>
     </form>
 
     @include('components.footer')

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('description')->nullable();
+            $table->enum('status', ['open', 'closed', 'on_demand']);
             $table->timestamps();
         });
     }

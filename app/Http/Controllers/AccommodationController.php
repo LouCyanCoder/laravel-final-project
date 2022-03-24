@@ -11,7 +11,7 @@ class AccommodationController extends Controller
     {
         // dd('index');
         $searchString = $request->input('search');
-        $accommodations = Accommodation::where('title', 'like', '%' . $searchString . '%')->get();
+        $accommodations = Accommodation::where('description', 'like', '%' . $searchString . '%')->get();
 
         return view('forms.accommodationForm', compact('accommodations'));
     }
@@ -41,13 +41,11 @@ class AccommodationController extends Controller
         // $accommodation->max_person   = $request->input('max_person');
         // $accommodation->pet_friendly   = $request->input('pet_friendly');
         // $accommodation->description   = $request->input('description');
-        // $accommodation->contact_person   = $request->input('contact_person');
-        // $accommodation->contact_info   = $request->input('contact_info');
         // $accommodation->start_date   = $request->input('start_date');
         // $accommodation->end_date   = $request->input('end_date');
         // $accommodation->status   = $request->input('status');
 
-        $accommodation->save();
+        // $accommodation->save();
 
         session()->flash('success_message', 'The accommodation was successfully saved!');
 
@@ -73,9 +71,9 @@ class AccommodationController extends Controller
     public function edit($id)
     {
         $accommodation = Accommodation::findOrFail($id);
-        $categories = Category::all();
+        // $categories = Category::all();
 
-        return view('accommodationform/forms', compact('categories', 'accommodation'));
+        return view('accommodationform/forms', compact('accommodation'));
     }
 
     public function update($id, Request $request)
@@ -98,5 +96,16 @@ class AccommodationController extends Controller
         session()->flash('success_message', 'The accommodation was successfully updated!');
 
         return redirect()->action('App\Http\Controllers\AccommodationController@show', ['id' => $accommodation->id]);
+    }
+    
+    private function validateForm($request)
+    {
+        $this->validate($request, [
+            'description' => 'required|min:3',
+            'user_id' => 'required',
+        ], [
+            'description.required' => 'Description is missing',
+            'description.min' => 'Description should have at least 3 letters',
+        ]);
     }
 }
