@@ -16,12 +16,26 @@ class AccommodationController extends Controller
         return view('forms.accommodationForm', compact('accommodations'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
         $accommodation = new Accommodation();
+        $data = $request->all();
+        
+        $accommodation->insert([
+            'user_id' => '1',
+            'area_address' => $data['area_address'],
+            'pet_friendly' => $data['pet_friendly'],
+            'type' => $data['type'],
+            'max_person' => $data['max_person'],
+            'description' =>  $data['description'],
+            'start_date' => $data['start_date'],
+            'end_date' => $data['end_date'],
+            'status' => $data['status']
+        ]);
+        
         // $categories = Category::all();
 
-        return view('forms/accommodationForm', compact('accommodation'));
+        return view('forms.accommodationForm', compact('accommodation'));
     }
 
     public function store(Request $request)
@@ -54,7 +68,7 @@ class AccommodationController extends Controller
 
     public function show($id)
     {
-        dd('Show');
+        // dd('Show');
         $accommodation = Accommodation::findOrFail($id);
 
         return view('accommodations/show', compact('accommodation'));
@@ -82,7 +96,7 @@ class AccommodationController extends Controller
 
         $this->validateForm($request);
 
-        $accommodation->area_adress   = $request->input('area_adress');
+        $accommodation->area_address   = $request->input('area_address');
         $accommodation->type   = $request->input('type');
         $accommodation->max_person   = $request->input('max_person');
         $accommodation->pet_friendly   = $request->input('pet_friendly');
@@ -102,7 +116,7 @@ class AccommodationController extends Controller
     {
         $this->validate($request, [
             'description' => 'required|min:3',
-            'user_id' => 'required',
+            'area_address' => 'required',
         ], [
             'description.required' => 'Description is missing',
             'description.min' => 'Description should have at least 3 letters',

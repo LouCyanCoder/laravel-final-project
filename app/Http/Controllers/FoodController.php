@@ -10,32 +10,42 @@ class FoodController extends Controller
     public function index(Request $request)
     {
         $searchString = $request->input('search');
-        $food = Food::where('title', 'like', '%' . $searchString . '%')->get();
+        $food = Food::where('description', 'like', '%' . $searchString . '%')->get();
 
-        return view('food/index', compact('food'));
+        return view('forms.foodForm', compact('food'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
         $food = new Food();
+        $data = $request->all();
+
+        $food->insert([
+            'user_id' => '1',
+            'address' => $data['address'],
+            'name' => $data['name'],
+            'description' => $data['description'],
+            'day' => $data['day'],
+            'status' => $data['status']
+        ]);
       
 
-        return view('forms/foodForm', compact('food'));
+        return view('forms.foodForm', compact('food'));
     }
 
     public function store(Request $request)
     {
-        $food = new Food();
+        $food = new Food($request->except('_token'));
 
         $this->validateForm($request);
 
-        $food->address   = $request->input('address');
-        $food->name   = $request->input('name');
-        $food->description   = $request->input('description');
-        $food->day   = $request->input('day');
-        $food->status   = $request->input('status');
+        // $food->address   = $request->input('address');
+        // $food->name   = $request->input('name');
+        // $food->description   = $request->input('description');
+        // $food->day   = $request->input('day');
+        // $food->status   = $request->input('status');
 
-        $food->save();
+        // $food->save();
 
         session()->flash('success_message', 'The food was successfully saved!');
 
@@ -87,11 +97,11 @@ class FoodController extends Controller
     private function validateForm($request)
     {
         $this->validate($request, [
-            'title' => 'required|min:3',
-            'category_id' => 'required',
+            'description' => 'required|min:3',
+            // 'user_id' => 'required',
         ], [
-            'title.required' => 'What?? the food does not have a title??',
-            'title.min' => 'Title should have at least 3 letters',
+            'description.required' => 'What?? the food does not have a title??',
+            'description.min' => 'Description should have at least 3 letters',
         ]);
     }
 }
