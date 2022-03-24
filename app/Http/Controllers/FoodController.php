@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Food;
+
 use Illuminate\Http\Request;
 
 class FoodController extends Controller
@@ -10,30 +11,44 @@ class FoodController extends Controller
     public function index(Request $request)
     {
         $searchString = $request->input('search');
-        $food = Food::where('title', 'like', '%' . $searchString . '%')->get();
+        $food = Food::where('description', 'like', '%' . $searchString . '%')->get();
 
-        return view('food/index', compact('food'));
+        return view('forms.foodForm', compact('food'));
     }
 
     public function create()
     {
         $food = new Food();
+        $data = $request->all();
+
+        $food->insert([
+            'address'   => $data['address'],
+            'name'   => $data['name'],
+            'description'   => $data['description'],
+            'day'   => $data['day'],
+            'status'   => $data['status'],
+        ]);
       
 
-        return view('forms/foodForm', compact('food'));
+        return view('forms.foodForm', compact('food'));
     }
 
     public function store(Request $request)
     {
         $food = new Food();
 
-        $this->validateForm($request);
+        // $this->validateForm($request);
+
+        // dd('Validation passed');
 
         $food->address   = $request->input('address');
         $food->name   = $request->input('name');
         $food->description   = $request->input('description');
         $food->day   = $request->input('day');
         $food->status   = $request->input('status');
+        $food->user_id = 1;
+
+        // dd($food);
 
         $food->save();
 
@@ -87,11 +102,11 @@ class FoodController extends Controller
     private function validateForm($request)
     {
         $this->validate($request, [
-            'title' => 'required|min:3',
-            'category_id' => 'required',
+            'description' => 'required|min:3',
+            'user_id' => 'required',
         ], [
-            'title.required' => 'What?? the food does not have a title??',
-            'title.min' => 'Title should have at least 3 letters',
+            'description.required' => 'What?? the food does not have a title??',
+            'description.min' => 'Description should have at least 3 letters',
         ]);
     }
 }

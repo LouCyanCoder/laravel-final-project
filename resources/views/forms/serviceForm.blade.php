@@ -30,7 +30,7 @@
         <textarea name="description" value="" id="" cols="30" rows="10"></textarea>
         <br>
         <br>
-        <select for="status">Please select the status of the offer.<br>
+        <select for="status">Select the status of the offer.<br>
           <option value="open">Open</option>
           <option value="closed">Closed</option>
           <option value="on_demand">On demand</option>

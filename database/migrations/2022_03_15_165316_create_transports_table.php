@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('transports', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->unique();
+            $table->foreignId('user_id');
             $table->string('location_from')->nullable();
             $table->string('destination')->nullable();
             $table->date('date')->nullable();

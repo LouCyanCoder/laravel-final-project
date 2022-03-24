@@ -23,7 +23,7 @@ Route::get('/auth/register', function () {
 Route::get('/auth/login', function () {
     return view('login');
 });
-
+// accommodation
 Route::get('/forms/accommodationForm', function () {
     return view('accommodation');
 });
@@ -36,7 +36,7 @@ Route::get('/accommodation/{id}/edit', 'App\Http\Controllers\AccommodationContro
 Route::put('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@update');
 // Route::get('/accommodation/create', 'App\Http\Controllers\AccommodationController@create');
 
-
+// transport
 Route::get('/transport/create', 'App\Http\Controllers\TransportController@create');
 Route::post('/transport', 'App\Http\Controllers\TransportController@store');
 Route::get('/transport/{id}', 'App\Http\Controllers\TransportController@show');
@@ -44,13 +44,17 @@ Route::delete('/transport/{id}', 'App\Http\Controllers\TransportController@delet
 Route::get('/transport/{id}/edit', 'App\Http\Controllers\TransportController@edit');
 Route::put('/transport/{id}', 'App\Http\Controllers\TransportController@update');
 
-Route::get('/food/create', 'App\Http\Controllers\FoodController@create');
+// food
+Route::post('/food/create', 'App\Http\Controllers\FoodController@create')->name('food');
+Route::get('/food/create', 'App\Http\Controllers\FoodController@index')->name('food');
 Route::post('/food', 'App\Http\Controllers\FoodController@store');
 Route::get('/food/{id}', 'App\Http\Controllers\FoodController@show');
 Route::get('/food/{id}/edit', 'App\Http\Controllers\FoodController@edit');
 Route::put('/food/{id}', 'App\Http\Controllers\FoodController@update');
 
-Route::get('/service/create', 'App\Http\Controllers\ServiceController@create');
+// service
+Route::post('/service/create', 'App\Http\Controllers\ServiceController@index')->name('service');
+Route::get('/service/create', 'App\Http\Controllers\ServiceController@create')->name('service');
 Route::post('/service', 'App\Http\Controllers\ServiceController@store');
 Route::get('/service/{id}', 'App\Http\Controllers\ServiceController@show');
 Route::get('/service/{id}/edit', 'App\Http\Controllers\ServiceController@edit');
