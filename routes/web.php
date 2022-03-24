@@ -49,10 +49,7 @@ Route::delete('/transport/{id}', 'App\Http\Controllers\TransportController@delet
 Route::get('/transport/{id}/edit', 'App\Http\Controllers\TransportController@edit');
 Route::put('/transport/{id}', 'App\Http\Controllers\TransportController@update');
 
-<<<<<<< HEAD
 // food
-=======
->>>>>>> main
 Route::post('/food/create', 'App\Http\Controllers\FoodController@create')->name('food');
 Route::get('/food/create', 'App\Http\Controllers\FoodController@index')->name('food');
 Route::post('/food', 'App\Http\Controllers\FoodController@store');
