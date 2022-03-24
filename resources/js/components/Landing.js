@@ -20,7 +20,7 @@ const Landing = () => {
                     <button>I'm the one who cares</button>
                     <button>I could use a helping hand</button>
                 </div>
-            </div>
+            </div>            
         </section>
     );
 };
