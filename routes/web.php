@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{path?}', function () {
-    return view('components.index');
-})->where('path', '.*');
+
 
 Route::get('/auth/register', function () {
     dump('test');
@@ -77,3 +75,7 @@ Route::put('/your_path/users', function () {
 Route::delete('/your_path/users', function () {
     // Matches The "/api/your_path/users" URL
 });
+
+Route::get('/{path?}', function () {
+    return view('components.index');
+})->where('path', '.*');
