@@ -20,7 +20,7 @@ const App = () => {
                     <Route exact path="/contact" element={<Contact />} />
                     <Route exact path="/aboutus" element={<AboutUs />} />
                     <Route exact path="/features" element={<Features />} />
-                    <Route exact path="/map" element={<Map />} />
+                    <Route exact path="/map" element={<React.StrictMode><Map /></React.StrictMode>} />
                 </Routes>
             </div>
         </Router>

@@ -16,17 +16,26 @@ class FoodController extends Controller
         return view('forms.foodForm', compact('food'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
         $food = new Food();
         $data = $request->all();
 
         $food->insert([
+<<<<<<< HEAD
             'address'   => $data['address'],
             'name'   => $data['name'],
             'description'   => $data['description'],
             'day'   => $data['day'],
             'status'   => $data['status'],
+=======
+            'user_id' => '1',
+            'address' => $data['address'],
+            'name' => $data['name'],
+            'description' => $data['description'],
+            'day' => $data['day'],
+            'status' => $data['status']
+>>>>>>> main
         ]);
       
 
@@ -35,12 +44,13 @@ class FoodController extends Controller
 
     public function store(Request $request)
     {
-        $food = new Food();
+        $food = new Food($request->except('_token'));
 
         // $this->validateForm($request);
 
         // dd('Validation passed');
 
+<<<<<<< HEAD
         $food->address   = $request->input('address');
         $food->name   = $request->input('name');
         $food->description   = $request->input('description');
@@ -49,8 +59,15 @@ class FoodController extends Controller
         $food->user_id = 1;
 
         // dd($food);
+=======
+        // $food->address   = $request->input('address');
+        // $food->name   = $request->input('name');
+        // $food->description   = $request->input('description');
+        // $food->day   = $request->input('day');
+        // $food->status   = $request->input('status');
+>>>>>>> main
 
-        $food->save();
+        // $food->save();
 
         session()->flash('success_message', 'The food was successfully saved!');
 
@@ -103,7 +120,7 @@ class FoodController extends Controller
     {
         $this->validate($request, [
             'description' => 'required|min:3',
-            'user_id' => 'required',
+            // 'user_id' => 'required',
         ], [
             'description.required' => 'What?? the food does not have a title??',
             'description.min' => 'Description should have at least 3 letters',

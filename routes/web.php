@@ -28,7 +28,12 @@ Route::get('/forms/accommodationForm', function () {
     return view('accommodation');
 });
 
-Route::get('/accommodation/create', 'App\Http\Controllers\AccommodationController@create');
+Route::get('/forms/foodForm', function() {
+    return view('food');
+});
+
+Route::post('/accommodation/create', 'App\Http\Controllers\AccommodationController@create')->name('accommodation');
+Route::get('/accommodation/create', 'App\Http\Controllers\AccommodationController@index')->name('accommodation');
 Route::post('/accommodation', 'App\Http\Controllers\AccommodationController@store');
 Route::get('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@show');
 Route::delete('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@delete');
@@ -44,7 +49,10 @@ Route::delete('/transport/{id}', 'App\Http\Controllers\TransportController@delet
 Route::get('/transport/{id}/edit', 'App\Http\Controllers\TransportController@edit');
 Route::put('/transport/{id}', 'App\Http\Controllers\TransportController@update');
 
+<<<<<<< HEAD
 // food
+=======
+>>>>>>> main
 Route::post('/food/create', 'App\Http\Controllers\FoodController@create')->name('food');
 Route::get('/food/create', 'App\Http\Controllers\FoodController@index')->name('food');
 Route::post('/food', 'App\Http\Controllers\FoodController@store');
