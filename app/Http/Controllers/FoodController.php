@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Food;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class FoodController extends Controller
 {
@@ -22,20 +23,11 @@ class FoodController extends Controller
         $data = $request->all();
 
         $food->insert([
-<<<<<<< HEAD
             'address'   => $data['address'],
             'name'   => $data['name'],
             'description'   => $data['description'],
             'day'   => $data['day'],
             'status'   => $data['status'],
-=======
-            'user_id' => '1',
-            'address' => $data['address'],
-            'name' => $data['name'],
-            'description' => $data['description'],
-            'day' => $data['day'],
-            'status' => $data['status']
->>>>>>> main
         ]);
       
 
@@ -44,34 +36,28 @@ class FoodController extends Controller
 
     public function store(Request $request)
     {
+
         $food = new Food($request->except('_token'));
 
-        // $this->validateForm($request);
+        $this->validateForm($request);
 
         // dd('Validation passed');
 
-<<<<<<< HEAD
         $food->address   = $request->input('address');
         $food->name   = $request->input('name');
         $food->description   = $request->input('description');
         $food->day   = $request->input('day');
         $food->status   = $request->input('status');
-        $food->user_id = 1;
-
+        $food->user_id = Auth::user()->id;
+        $food->save();
         // dd($food);
-=======
-        // $food->address   = $request->input('address');
-        // $food->name   = $request->input('name');
-        // $food->description   = $request->input('description');
-        // $food->day   = $request->input('day');
-        // $food->status   = $request->input('status');
->>>>>>> main
+        
 
-        // $food->save();
+        
 
         session()->flash('success_message', 'The food was successfully saved!');
 
-        return redirect()->action('App\Http\Controllers\FoodController@index');
+        return redirect()->action('FoodController@index');
     }
 
     public function show($id)

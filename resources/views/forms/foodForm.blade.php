@@ -2,7 +2,7 @@
     
     @include('components.header')
 
-    <form action="{{ route('food') }}" method="post">
+    <form action="{{ route('foodstore') }}" method="post">
  
         @csrf
         
@@ -46,5 +46,3 @@
 
     @include('components.footer')
     
-</body>
-</html>

@@ -21181,6 +21181,29 @@ function useAttribution(map, attribution) {
 
 /***/ }),
 
+/***/ "./node_modules/@react-leaflet/core/esm/circle.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@react-leaflet/core/esm/circle.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "updateCircle": () => (/* binding */ updateCircle)
+/* harmony export */ });
+function updateCircle(layer, props, prevProps) {
+  if (props.center !== prevProps.center) {
+    layer.setLatLng(props.center);
+  }
+
+  if (props.radius != null && props.radius !== prevProps.radius) {
+    layer.setRadius(props.radius);
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/@react-leaflet/core/esm/component.js":
 /*!***********************************************************!*\
   !*** ./node_modules/@react-leaflet/core/esm/component.js ***!
@@ -21354,6 +21377,51 @@ function createDivOverlayHook(useElement, useLifecycle) {
 
 /***/ }),
 
+/***/ "./node_modules/@react-leaflet/core/esm/dom.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@react-leaflet/core/esm/dom.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "addClassName": () => (/* binding */ addClassName),
+/* harmony export */   "removeClassName": () => (/* binding */ removeClassName),
+/* harmony export */   "updateClassName": () => (/* binding */ updateClassName)
+/* harmony export */ });
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function splitClassName(className) {
+  return className.split(' ').filter(Boolean);
+}
+
+function addClassName(element, className) {
+  splitClassName(className).forEach(cls => {
+    leaflet__WEBPACK_IMPORTED_MODULE_0__.DomUtil.addClass(element, cls);
+  });
+}
+function removeClassName(element, className) {
+  splitClassName(className).forEach(cls => {
+    leaflet__WEBPACK_IMPORTED_MODULE_0__.DomUtil.removeClass(element, cls);
+  });
+}
+function updateClassName(element, prevClassName, nextClassName) {
+  if (element != null && nextClassName !== prevClassName) {
+    if (prevClassName != null && prevClassName.length > 0) {
+      removeClassName(element, prevClassName);
+    }
+
+    if (nextClassName != null && nextClassName.length > 0) {
+      addClassName(element, nextClassName);
+    }
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/@react-leaflet/core/esm/element.js":
 /*!*********************************************************!*\
   !*** ./node_modules/@react-leaflet/core/esm/element.js ***!
@@ -21515,6 +21583,77 @@ function updateGridLayer(layer, props, prevProps) {
 
 /***/ }),
 
+/***/ "./node_modules/@react-leaflet/core/esm/index.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@react-leaflet/core/esm/index.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useAttribution": () => (/* reexport safe */ _attribution__WEBPACK_IMPORTED_MODULE_0__.useAttribution),
+/* harmony export */   "updateCircle": () => (/* reexport safe */ _circle__WEBPACK_IMPORTED_MODULE_1__.updateCircle),
+/* harmony export */   "createContainerComponent": () => (/* reexport safe */ _component__WEBPACK_IMPORTED_MODULE_2__.createContainerComponent),
+/* harmony export */   "createDivOverlayComponent": () => (/* reexport safe */ _component__WEBPACK_IMPORTED_MODULE_2__.createDivOverlayComponent),
+/* harmony export */   "createLeafComponent": () => (/* reexport safe */ _component__WEBPACK_IMPORTED_MODULE_2__.createLeafComponent),
+/* harmony export */   "CONTEXT_VERSION": () => (/* reexport safe */ _context__WEBPACK_IMPORTED_MODULE_3__.CONTEXT_VERSION),
+/* harmony export */   "LeafletContext": () => (/* reexport safe */ _context__WEBPACK_IMPORTED_MODULE_3__.LeafletContext),
+/* harmony export */   "LeafletProvider": () => (/* reexport safe */ _context__WEBPACK_IMPORTED_MODULE_3__.LeafletProvider),
+/* harmony export */   "useLeafletContext": () => (/* reexport safe */ _context__WEBPACK_IMPORTED_MODULE_3__.useLeafletContext),
+/* harmony export */   "createControlHook": () => (/* reexport safe */ _control__WEBPACK_IMPORTED_MODULE_4__.createControlHook),
+/* harmony export */   "createDivOverlayHook": () => (/* reexport safe */ _div_overlay__WEBPACK_IMPORTED_MODULE_5__.createDivOverlayHook),
+/* harmony export */   "addClassName": () => (/* reexport safe */ _dom__WEBPACK_IMPORTED_MODULE_6__.addClassName),
+/* harmony export */   "removeClassName": () => (/* reexport safe */ _dom__WEBPACK_IMPORTED_MODULE_6__.removeClassName),
+/* harmony export */   "updateClassName": () => (/* reexport safe */ _dom__WEBPACK_IMPORTED_MODULE_6__.updateClassName),
+/* harmony export */   "createElementHook": () => (/* reexport safe */ _element__WEBPACK_IMPORTED_MODULE_7__.createElementHook),
+/* harmony export */   "useEventHandlers": () => (/* reexport safe */ _events__WEBPACK_IMPORTED_MODULE_8__.useEventHandlers),
+/* harmony export */   "createControlComponent": () => (/* reexport safe */ _generic__WEBPACK_IMPORTED_MODULE_9__.createControlComponent),
+/* harmony export */   "createLayerComponent": () => (/* reexport safe */ _generic__WEBPACK_IMPORTED_MODULE_9__.createLayerComponent),
+/* harmony export */   "createOverlayComponent": () => (/* reexport safe */ _generic__WEBPACK_IMPORTED_MODULE_9__.createOverlayComponent),
+/* harmony export */   "createPathComponent": () => (/* reexport safe */ _generic__WEBPACK_IMPORTED_MODULE_9__.createPathComponent),
+/* harmony export */   "createTileLayerComponent": () => (/* reexport safe */ _generic__WEBPACK_IMPORTED_MODULE_9__.createTileLayerComponent),
+/* harmony export */   "updateGridLayer": () => (/* reexport safe */ _grid_layer__WEBPACK_IMPORTED_MODULE_10__.updateGridLayer),
+/* harmony export */   "createLayerHook": () => (/* reexport safe */ _layer__WEBPACK_IMPORTED_MODULE_11__.createLayerHook),
+/* harmony export */   "useLayerLifecycle": () => (/* reexport safe */ _layer__WEBPACK_IMPORTED_MODULE_11__.useLayerLifecycle),
+/* harmony export */   "updateMediaOverlay": () => (/* reexport safe */ _media_overlay__WEBPACK_IMPORTED_MODULE_12__.updateMediaOverlay),
+/* harmony export */   "withPane": () => (/* reexport safe */ _pane__WEBPACK_IMPORTED_MODULE_13__.withPane),
+/* harmony export */   "createPathHook": () => (/* reexport safe */ _path__WEBPACK_IMPORTED_MODULE_14__.createPathHook),
+/* harmony export */   "usePathOptions": () => (/* reexport safe */ _path__WEBPACK_IMPORTED_MODULE_14__.usePathOptions)
+/* harmony export */ });
+/* harmony import */ var _attribution__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./attribution */ "./node_modules/@react-leaflet/core/esm/attribution.js");
+/* harmony import */ var _circle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./circle */ "./node_modules/@react-leaflet/core/esm/circle.js");
+/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component */ "./node_modules/@react-leaflet/core/esm/component.js");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./context */ "./node_modules/@react-leaflet/core/esm/context.js");
+/* harmony import */ var _control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./control */ "./node_modules/@react-leaflet/core/esm/control.js");
+/* harmony import */ var _div_overlay__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./div-overlay */ "./node_modules/@react-leaflet/core/esm/div-overlay.js");
+/* harmony import */ var _dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./dom */ "./node_modules/@react-leaflet/core/esm/dom.js");
+/* harmony import */ var _element__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./element */ "./node_modules/@react-leaflet/core/esm/element.js");
+/* harmony import */ var _events__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./events */ "./node_modules/@react-leaflet/core/esm/events.js");
+/* harmony import */ var _generic__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./generic */ "./node_modules/@react-leaflet/core/esm/generic.js");
+/* harmony import */ var _grid_layer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./grid-layer */ "./node_modules/@react-leaflet/core/esm/grid-layer.js");
+/* harmony import */ var _layer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./layer */ "./node_modules/@react-leaflet/core/esm/layer.js");
+/* harmony import */ var _media_overlay__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./media-overlay */ "./node_modules/@react-leaflet/core/esm/media-overlay.js");
+/* harmony import */ var _pane__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pane */ "./node_modules/@react-leaflet/core/esm/pane.js");
+/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./path */ "./node_modules/@react-leaflet/core/esm/path.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/@react-leaflet/core/esm/layer.js":
 /*!*******************************************************!*\
   !*** ./node_modules/@react-leaflet/core/esm/layer.js ***!
@@ -21558,6 +21697,37 @@ function createLayerHook(useElement) {
     useLayerLifecycle(elementRef.current, context);
     return elementRef;
   };
+}
+
+/***/ }),
+
+/***/ "./node_modules/@react-leaflet/core/esm/media-overlay.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@react-leaflet/core/esm/media-overlay.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "updateMediaOverlay": () => (/* binding */ updateMediaOverlay)
+/* harmony export */ });
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
+
+function updateMediaOverlay(overlay, props, prevProps) {
+  if (props.bounds instanceof leaflet__WEBPACK_IMPORTED_MODULE_0__.LatLngBounds && props.bounds !== prevProps.bounds) {
+    overlay.setBounds(props.bounds);
+  }
+
+  if (props.opacity != null && props.opacity !== prevProps.opacity) {
+    overlay.setOpacity(props.opacity);
+  }
+
+  if (props.zIndex != null && props.zIndex !== prevProps.zIndex) {
+    // @ts-ignore missing in definition but inherited from ImageOverlay
+    overlay.setZIndex(props.zIndex);
+  }
 }
 
 /***/ }),
@@ -21733,7 +21903,9 @@ var App = function App() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
           exact: true,
           path: "/map",
-          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Map__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react__WEBPACK_IMPORTED_MODULE_0__.StrictMode, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Map__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+          })
         })]
       })
     })]
@@ -22082,6 +22254,65 @@ var Features = function Features() {
 
 /***/ }),
 
+/***/ "./resources/js/components/FilterServices.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/FilterServices.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var FilterServices = function FilterServices() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Accommodation",
+      name: "services"
+    }), " ", "Accommodation", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Food",
+      name: "services"
+    }), " Food", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Lawyer",
+      name: "services"
+    }), " Lawyer", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Administration",
+      name: "services"
+    }), " ", "Administration", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Translation",
+      name: "services"
+    }), " ", "Translation", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Psychology",
+      name: "services"
+    }), " Psychology", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Education",
+      name: "services"
+    }), " Education", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      type: "radio",
+      value: "Mentoring",
+      name: "services"
+    }), " Mentoring"]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FilterServices);
+
+/***/ }),
+
 /***/ "./resources/js/components/Landing.js":
 /*!********************************************!*\
   !*** ./resources/js/components/Landing.js ***!
@@ -22134,6 +22365,66 @@ var Landing = function Landing() {
 
 /***/ }),
 
+/***/ "./resources/js/components/LeafletControlGeocoder.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/LeafletControlGeocoder.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ LeafletControlGeocoder)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/hooks.js");
+/* harmony import */ var leaflet_control_geocoder_dist_Control_Geocoder_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! leaflet-control-geocoder/dist/Control.Geocoder.css */ "./node_modules/leaflet-control-geocoder/dist/Control.Geocoder.css");
+/* harmony import */ var leaflet_control_geocoder_dist_Control_Geocoder_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! leaflet-control-geocoder/dist/Control.Geocoder.js */ "./node_modules/leaflet-control-geocoder/dist/Control.Geocoder.js");
+/* harmony import */ var leaflet_control_geocoder_dist_Control_Geocoder_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(leaflet_control_geocoder_dist_Control_Geocoder_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants */ "./resources/js/components/constants.js");
+
+
+
+
+
+
+function LeafletControlGeocoder() {
+  var map = (0,react_leaflet__WEBPACK_IMPORTED_MODULE_5__.useMap)();
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var geocoder = leaflet__WEBPACK_IMPORTED_MODULE_3___default().Control.Geocoder.nominatim();
+
+    if (typeof URLSearchParams !== "undefined" && location.search) {
+      // parse /?geocoder=nominatim from URL
+      var params = new URLSearchParams(location.search);
+      var geocoderString = params.get("geocoder");
+
+      if (geocoderString && (leaflet__WEBPACK_IMPORTED_MODULE_3___default().Control.Geocoder)[geocoderString]) {
+        geocoder = (leaflet__WEBPACK_IMPORTED_MODULE_3___default().Control.Geocoder)[geocoderString]();
+      } else if (geocoderString) {
+        console.warn("Unsupported geocoder", geocoderString);
+      }
+    }
+
+    leaflet__WEBPACK_IMPORTED_MODULE_3___default().Control.geocoder({
+      query: "",
+      placeholder: "Search here...",
+      defaultMarkGeocode: false,
+      geocoder: geocoder
+    }).on("markgeocode", function (e) {
+      var latlng = e.geocode.center;
+      leaflet__WEBPACK_IMPORTED_MODULE_3___default().marker(latlng, {
+        icon: _constants__WEBPACK_IMPORTED_MODULE_4__["default"]
+      }).addTo(map).bindPopup(e.geocode.name).openPopup();
+      map.fitBounds(e.geocode.bbox);
+    }).addTo(map);
+  }, []);
+  return null;
+}
+
+/***/ }),
+
 /***/ "./resources/js/components/Map.js":
 /*!****************************************!*\
   !*** ./resources/js/components/Map.js ***!
@@ -22146,15 +22437,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/MapContainer.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/TileLayer.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Marker.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Popup.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/MapContainer.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/TileLayer.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Marker.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Popup.js");
 /* harmony import */ var _Map_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Map.css */ "./resources/js/components/Map.css");
-/* harmony import */ var leaflet_dist_leaflet_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! leaflet/dist/leaflet.css */ "./node_modules/leaflet/dist/leaflet.css");
-/* harmony import */ var _popupStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./popupStyles */ "./resources/js/components/popupStyles.js");
-/* harmony import */ var _defaultMarker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./defaultMarker */ "./resources/js/components/defaultMarker.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _popupStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./popupStyles */ "./resources/js/components/popupStyles.js");
+/* harmony import */ var _defaultMarker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./defaultMarker */ "./resources/js/components/defaultMarker.js");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles.css */ "./resources/js/components/styles.css");
+/* harmony import */ var _LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./LeafletControlGeocoder */ "./resources/js/components/LeafletControlGeocoder.js");
+/* harmony import */ var react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-leaflet-markercluster */ "./node_modules/react-leaflet-markercluster/dist/index.js");
+/* harmony import */ var _FilterServices__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FilterServices */ "./resources/js/components/FilterServices.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+ // import './leaflet/dist/leaflet.css';
+
+
 
 
 
@@ -22167,70 +22466,102 @@ __webpack_require__.r(__webpack_exports__);
 function Map(_ref) {
   var center = _ref.center,
       zoom = _ref.zoom;
-  console.log(react_leaflet__WEBPACK_IMPORTED_MODULE_6__.MapContainer);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_6__.MapContainer, {
-    center: [50.073658, 14.418540],
-    zoom: 12,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_7__.TileLayer, {
-      attribution: "\xA9 <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
-      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_8__.Marker, {
-      position: [50.073658, 14.418540],
-      icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_4__["default"],
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_9__.Popup, {
-        className: "request-popup",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-          style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupContent,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-            src: "https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png",
-            width: "150",
-            height: "150"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-            className: "m-2",
-            style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupHead,
-            children: "Success!"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-            style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupText,
-            children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-            className: "m-2",
-            style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.okText,
-            children: "Okay"
-          })]
-        })
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_8__.Marker, {
-      position: [50.091093, 14.400802],
-      icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_4__.defaultMarker2,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_9__.Popup, {
-        className: "request-popup",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-          style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupContent,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-            src: "https://media-exp1.licdn.com/dms/image/D4D35AQGxUmN29K_b5w/profile-framedphoto-shrink_400_400/0/1646341965876?e=1648116000&v=beta&t=IRfbId09WkriYINQQXB2waOGNvtyNd3IkPB9_oCmdXg",
-            width: "150",
-            height: "150"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-            className: "m-2",
-            style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupHead,
-            children: ["Ekin's house", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
-              children: "III. n\xE1dvo\u0159\xED 48/2, 119 01 Praha 1-Hrad\u010Dany"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-            style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupText,
-            children: "Welcome to the club, man!"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-            className: "m-2",
-            style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.okText,
-            children: ";)"
-          })]
-        })
-      })
+  console.log(react_leaflet__WEBPACK_IMPORTED_MODULE_9__.MapContainer);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_FilterServices__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_9__.MapContainer, {
+      className: "markercluster-map",
+      center: [50.073658, 14.41854],
+      zoom: 12,
+      maxZoom: 18,
+      minZoom: 8,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_10__.TileLayer, {
+        attribution: "\xA9 <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+        url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_5__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_11__.Marker, {
+          position: [50.073658, 14.41854],
+          icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_3__["default"],
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_12__.Popup, {
+            className: "request-popup",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+              style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupContent,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+                src: "https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png",
+                width: "150",
+                height: "150"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                className: "m-2",
+                style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupHead,
+                children: "Success!"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                className: "cardonthemap",
+                style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupText,
+                children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                className: "m-2",
+                style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.okText,
+                children: "Okay"
+              })]
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_11__.Marker, {
+          position: [50.091093, 14.400802],
+          icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_3__.defaultMarker2,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_12__.Popup, {
+            className: "request-popup",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+              style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupContent,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+                src: "https://media-exp1.licdn.com/dms/image/D4D35AQGxUmN29K_b5w/profile-framedphoto-shrink_400_400/0/1646341965876?e=1648116000&v=beta&t=IRfbId09WkriYINQQXB2waOGNvtyNd3IkPB9_oCmdXg",
+                width: "150",
+                height: "150"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                className: "m-2",
+                style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupHead,
+                children: ["Ekin's house", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h2", {
+                  children: "III. n\xE1dvo\u0159\xED 48/2, 119 01 Praha 1-Hrad\u010Dany"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.popupText,
+                children: "Welcome to the club, man!"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                className: "m-2",
+                style: _popupStyles__WEBPACK_IMPORTED_MODULE_2__.okText,
+                children: ";)"
+              })]
+            })
+          })
+        })]
+      })]
     })]
   });
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Map);
+
+/***/ }),
+
+/***/ "./resources/js/components/constants.js":
+/*!**********************************************!*\
+  !*** ./resources/js/components/constants.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (leaflet__WEBPACK_IMPORTED_MODULE_0___default().icon({
+  iconSize: [25, 41],
+  iconAnchor: [10, 41],
+  popupAnchor: [2, -40],
+  iconUrl: "https://unpkg.com/leaflet@1.6/dist/images/marker-icon.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.6/dist/images/marker-shadow.png"
+}));
 
 /***/ }),
 
@@ -22372,6 +22703,33 @@ function toVal(mix) {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/leaflet-control-geocoder/dist/Control.Geocoder.css":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/leaflet-control-geocoder/dist/Control.Geocoder.css ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".leaflet-control-geocoder {\n  border-radius: 4px;\n  background: white;\n  min-width: 26px;\n  min-height: 26px;\n}\n\n.leaflet-touch .leaflet-control-geocoder {\n  min-width: 30px;\n  min-height: 30px;\n}\n\n.leaflet-control-geocoder a,\n.leaflet-control-geocoder .leaflet-control-geocoder-icon {\n  border-bottom: none;\n  display: inline-block;\n}\n\n.leaflet-control-geocoder .leaflet-control-geocoder-alternatives a {\n  width: inherit;\n  height: inherit;\n  line-height: inherit;\n}\n\n.leaflet-control-geocoder a:hover,\n.leaflet-control-geocoder .leaflet-control-geocoder-icon:hover {\n  border-bottom: none;\n  display: inline-block;\n}\n\n.leaflet-control-geocoder-form {\n  display: none;\n  vertical-align: middle;\n}\n.leaflet-control-geocoder-expanded .leaflet-control-geocoder-form {\n  display: inline-block;\n}\n.leaflet-control-geocoder-form input {\n  font-size: 120%;\n  border: 0;\n  background-color: transparent;\n  width: 246px;\n}\n\n.leaflet-control-geocoder-icon {\n  border-radius: 4px;\n  width: 26px;\n  height: 26px;\n  border: none;\n  background-color: white;\n  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.2 13l3.4 6.6c.6 1.1 2.5-.4 2-1.2l-4-6.2z'/%3E%3Ccircle cx='10.8' cy='8.9' r='3.9' fill='none' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E\");\n  background-repeat: no-repeat;\n  background-position: center;\n  cursor: pointer;\n}\n\n.leaflet-touch .leaflet-control-geocoder-icon {\n  width: 30px;\n  height: 30px;\n}\n\n.leaflet-control-geocoder-throbber .leaflet-control-geocoder-icon {\n  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='%23000' stroke-linecap='round' stroke-width='1.6' viewBox='0 0 24 24'%3E%3Cdefs/%3E%3Cg%3E%3Cpath stroke-opacity='.1' d='M14 8.4l3-5'/%3E%3Cpath stroke-opacity='.2' d='M15.6 10l5-3'/%3E%3Cpath stroke-opacity='.3' d='M16.2 12H22'/%3E%3Cpath stroke-opacity='.4' d='M15.6 14l5 3m-6.5-1.4l2.9 5'/%3E%3Cpath stroke-opacity='.5' d='M12 16.2V22m-2-6.4l-3 5'/%3E%3Cpath stroke-opacity='.6' d='M8.4 14l-5 3'/%3E%3Cpath stroke-opacity='.7' d='M7.8 12H2'/%3E%3Cpath stroke-opacity='.8' d='M8.4 10l-5-3'/%3E%3Cpath stroke-opacity='.9' d='M10 8.4l-3-5'/%3E%3Cpath d='M12 7.8V2'/%3E%3CanimateTransform attributeName='transform' calcMode='discrete' dur='1s' repeatCount='indefinite' type='rotate' values='0 12 12;30 12 12;60 12 12;90 12 12;120 12 12;150 12 12;180 12 12;210 12 12;240 12 12;270 12 12;300 12 12;330 12 12'/%3E%3C/g%3E%3C/svg%3E\");\n}\n\n.leaflet-control-geocoder-form-no-error {\n  display: none;\n}\n\n.leaflet-control-geocoder-form input:focus {\n  outline: none;\n}\n\n.leaflet-control-geocoder-form button {\n  display: none;\n}\n.leaflet-control-geocoder-error {\n  margin-top: 8px;\n  margin-left: 8px;\n  display: block;\n  color: #444;\n}\n.leaflet-control-geocoder-alternatives {\n  display: block;\n  width: 272px;\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n.leaflet-control-geocoder-alternatives-minimized {\n  display: none;\n  height: 0;\n}\n.leaflet-control-geocoder-alternatives li {\n  white-space: nowrap;\n  display: block;\n  overflow: hidden;\n  padding: 5px 8px;\n  text-overflow: ellipsis;\n  border-bottom: 1px solid #ccc;\n  cursor: pointer;\n}\n\n.leaflet-control-geocoder-alternatives li a,\n.leaflet-control-geocoder-alternatives li a:hover {\n  width: inherit;\n  height: inherit;\n  line-height: inherit;\n  background: inherit;\n  border-radius: inherit;\n  text-align: left;\n}\n\n.leaflet-control-geocoder-alternatives li:last-child {\n  border-bottom: none;\n}\n.leaflet-control-geocoder-alternatives li:hover,\n.leaflet-control-geocoder-selected {\n  background-color: #f5f5f5;\n}\n.leaflet-control-geocoder-address-detail {\n}\n.leaflet-control-geocoder-address-context {\n  color: #666;\n}\n", "",{"version":3,"sources":["webpack://./node_modules/leaflet-control-geocoder/dist/Control.Geocoder.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;;EAEE,mBAAmB;EACnB,qBAAqB;AACvB;;AAEA;EACE,cAAc;EACd,eAAe;EACf,oBAAoB;AACtB;;AAEA;;EAEE,mBAAmB;EACnB,qBAAqB;AACvB;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,eAAe;EACf,SAAS;EACT,6BAA6B;EAC7B,YAAY;AACd;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,YAAY;EACZ,uBAAuB;EACvB,yQAAyQ;EACzQ,4BAA4B;EAC5B,2BAA2B;EAC3B,eAAe;AACjB;;AAEA;EACE,WAAW;EACX,YAAY;AACd;;AAEA;EACE,y5BAAy5B;AAC35B;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;AACf;AACA;EACE,eAAe;EACf,gBAAgB;EAChB,cAAc;EACd,WAAW;AACb;AACA;EACE,cAAc;EACd,YAAY;EACZ,gBAAgB;EAChB,UAAU;EACV,SAAS;AACX;;AAEA;EACE,aAAa;EACb,SAAS;AACX;AACA;EACE,mBAAmB;EACnB,cAAc;EACd,gBAAgB;EAChB,gBAAgB;EAChB,uBAAuB;EACvB,6BAA6B;EAC7B,eAAe;AACjB;;AAEA;;EAEE,cAAc;EACd,eAAe;EACf,oBAAoB;EACpB,mBAAmB;EACnB,sBAAsB;EACtB,gBAAgB;AAClB;;AAEA;EACE,mBAAmB;AACrB;AACA;;EAEE,yBAAyB;AAC3B;AACA;AACA;AACA;EACE,WAAW;AACb","sourcesContent":[".leaflet-control-geocoder {\n  border-radius: 4px;\n  background: white;\n  min-width: 26px;\n  min-height: 26px;\n}\n\n.leaflet-touch .leaflet-control-geocoder {\n  min-width: 30px;\n  min-height: 30px;\n}\n\n.leaflet-control-geocoder a,\n.leaflet-control-geocoder .leaflet-control-geocoder-icon {\n  border-bottom: none;\n  display: inline-block;\n}\n\n.leaflet-control-geocoder .leaflet-control-geocoder-alternatives a {\n  width: inherit;\n  height: inherit;\n  line-height: inherit;\n}\n\n.leaflet-control-geocoder a:hover,\n.leaflet-control-geocoder .leaflet-control-geocoder-icon:hover {\n  border-bottom: none;\n  display: inline-block;\n}\n\n.leaflet-control-geocoder-form {\n  display: none;\n  vertical-align: middle;\n}\n.leaflet-control-geocoder-expanded .leaflet-control-geocoder-form {\n  display: inline-block;\n}\n.leaflet-control-geocoder-form input {\n  font-size: 120%;\n  border: 0;\n  background-color: transparent;\n  width: 246px;\n}\n\n.leaflet-control-geocoder-icon {\n  border-radius: 4px;\n  width: 26px;\n  height: 26px;\n  border: none;\n  background-color: white;\n  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.2 13l3.4 6.6c.6 1.1 2.5-.4 2-1.2l-4-6.2z'/%3E%3Ccircle cx='10.8' cy='8.9' r='3.9' fill='none' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E\");\n  background-repeat: no-repeat;\n  background-position: center;\n  cursor: pointer;\n}\n\n.leaflet-touch .leaflet-control-geocoder-icon {\n  width: 30px;\n  height: 30px;\n}\n\n.leaflet-control-geocoder-throbber .leaflet-control-geocoder-icon {\n  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='%23000' stroke-linecap='round' stroke-width='1.6' viewBox='0 0 24 24'%3E%3Cdefs/%3E%3Cg%3E%3Cpath stroke-opacity='.1' d='M14 8.4l3-5'/%3E%3Cpath stroke-opacity='.2' d='M15.6 10l5-3'/%3E%3Cpath stroke-opacity='.3' d='M16.2 12H22'/%3E%3Cpath stroke-opacity='.4' d='M15.6 14l5 3m-6.5-1.4l2.9 5'/%3E%3Cpath stroke-opacity='.5' d='M12 16.2V22m-2-6.4l-3 5'/%3E%3Cpath stroke-opacity='.6' d='M8.4 14l-5 3'/%3E%3Cpath stroke-opacity='.7' d='M7.8 12H2'/%3E%3Cpath stroke-opacity='.8' d='M8.4 10l-5-3'/%3E%3Cpath stroke-opacity='.9' d='M10 8.4l-3-5'/%3E%3Cpath d='M12 7.8V2'/%3E%3CanimateTransform attributeName='transform' calcMode='discrete' dur='1s' repeatCount='indefinite' type='rotate' values='0 12 12;30 12 12;60 12 12;90 12 12;120 12 12;150 12 12;180 12 12;210 12 12;240 12 12;270 12 12;300 12 12;330 12 12'/%3E%3C/g%3E%3C/svg%3E\");\n}\n\n.leaflet-control-geocoder-form-no-error {\n  display: none;\n}\n\n.leaflet-control-geocoder-form input:focus {\n  outline: none;\n}\n\n.leaflet-control-geocoder-form button {\n  display: none;\n}\n.leaflet-control-geocoder-error {\n  margin-top: 8px;\n  margin-left: 8px;\n  display: block;\n  color: #444;\n}\n.leaflet-control-geocoder-alternatives {\n  display: block;\n  width: 272px;\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n.leaflet-control-geocoder-alternatives-minimized {\n  display: none;\n  height: 0;\n}\n.leaflet-control-geocoder-alternatives li {\n  white-space: nowrap;\n  display: block;\n  overflow: hidden;\n  padding: 5px 8px;\n  text-overflow: ellipsis;\n  border-bottom: 1px solid #ccc;\n  cursor: pointer;\n}\n\n.leaflet-control-geocoder-alternatives li a,\n.leaflet-control-geocoder-alternatives li a:hover {\n  width: inherit;\n  height: inherit;\n  line-height: inherit;\n  background: inherit;\n  border-radius: inherit;\n  text-align: left;\n}\n\n.leaflet-control-geocoder-alternatives li:last-child {\n  border-bottom: none;\n}\n.leaflet-control-geocoder-alternatives li:hover,\n.leaflet-control-geocoder-selected {\n  background-color: #f5f5f5;\n}\n.leaflet-control-geocoder-address-detail {\n}\n.leaflet-control-geocoder-address-context {\n  color: #666;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/leaflet/dist/leaflet.css":
 /*!*********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/leaflet/dist/leaflet.css ***!
@@ -22419,7 +22777,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".leaflet-container {\r\n    width: 79vw;\r\n    height: 68vh;\r\n    margin: auto;\r\n    margin-bottom: 10px;\r\n  }\r\n  /* or */\r\n  #map {\r\n    width: 79vw;\r\n    height: 68vh;\r\n    margin: auto;\r\n    margin-bottom: 10px;\r\n  }\r\n", "",{"version":3,"sources":["webpack://./resources/js/components/App.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,YAAY;IACZ,mBAAmB;EACrB;EACA,OAAO;EACP;IACE,WAAW;IACX,YAAY;IACZ,YAAY;IACZ,mBAAmB;EACrB","sourcesContent":[".leaflet-container {\r\n    width: 79vw;\r\n    height: 68vh;\r\n    margin: auto;\r\n    margin-bottom: 10px;\r\n  }\r\n  /* or */\r\n  #map {\r\n    width: 79vw;\r\n    height: 68vh;\r\n    margin: auto;\r\n    margin-bottom: 10px;\r\n  }\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".leaflet-container {\r\n    width: 79vw;\r\n    height: 68vh;\r\n    margin: auto;\r\n    margin-bottom: 10px;\r\n  }\r\n  /* or */\r\n  #map {\r\n    width: 79vw;\r\n    height: 68vh;\r\n    margin: auto;\r\n    margin-bottom: 10px;\r\n  }\r\n\r\n  .App {\r\n    font-family: sans-serif;\r\n    text-align: center;\r\n  }\r\n  \r\n  body {\r\n    margin: 0px;\r\n  }\r\n\r\n  .sr-only {\r\n    display: none;\r\n  }\r\n\r\n  .markercluster-map {\r\n    height: 90vh;\r\n  }", "",{"version":3,"sources":["webpack://./resources/js/components/App.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,YAAY;IACZ,mBAAmB;EACrB;EACA,OAAO;EACP;IACE,WAAW;IACX,YAAY;IACZ,YAAY;IACZ,mBAAmB;EACrB;;EAEA;IACE,uBAAuB;IACvB,kBAAkB;EACpB;;EAEA;IACE,WAAW;EACb;;EAEA;IACE,aAAa;EACf;;EAEA;IACE,YAAY;EACd","sourcesContent":[".leaflet-container {\r\n    width: 79vw;\r\n    height: 68vh;\r\n    margin: auto;\r\n    margin-bottom: 10px;\r\n  }\r\n  /* or */\r\n  #map {\r\n    width: 79vw;\r\n    height: 68vh;\r\n    margin: auto;\r\n    margin-bottom: 10px;\r\n  }\r\n\r\n  .App {\r\n    font-family: sans-serif;\r\n    text-align: center;\r\n  }\r\n  \r\n  body {\r\n    margin: 0px;\r\n  }\r\n\r\n  .sr-only {\r\n    display: none;\r\n  }\r\n\r\n  .markercluster-map {\r\n    height: 90vh;\r\n  }"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22446,7 +22804,34 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".map {\r\n    height: 500px;\r\n    background-color: white;\r\n    padding: 1rem;\r\n    border-radius: 20px;\r\n    margin-top: 16px;\r\n    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.map .leaflet-container {\r\n    height: 100%;\r\n}\r\n", "",{"version":3,"sources":["webpack://./resources/js/components/Map.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,uBAAuB;IACvB,aAAa;IACb,mBAAmB;IACnB,gBAAgB;IAChB,2CAA2C;AAC/C;;AAEA;IACI,YAAY;AAChB","sourcesContent":[".map {\r\n    height: 500px;\r\n    background-color: white;\r\n    padding: 1rem;\r\n    border-radius: 20px;\r\n    margin-top: 16px;\r\n    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.map .leaflet-container {\r\n    height: 100%;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".map {\r\n    height: 500px;\r\n    background-color: white;\r\n    padding: 1rem;\r\n    border-radius: 20px;\r\n    margin-top: 16px;\r\n    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.map .leaflet-container {\r\n    height: 100%;\r\n}\r\n\r\n.App {\r\n  font-family: sans-serif;\r\n  text-align: center;\r\n}\r\n\r\nbody {\r\n  margin: 0px;\r\n}\r\n\r\n.markercluster-map span {\r\n  height: 5vh;;\r\n  width: 5vh;\r\n  border-radius: 50%;\r\n  display: inline-block;\r\n  color:black;\r\n  background-color: greenyellow;\r\n  font-weight: bold;\r\n  text-align: center;\r\n  align-items: center;\r\n  border-color: blue;\r\n  border-style: solid;\r\n  margin: auto;\r\n  padding: 8.33px;\r\n  font-size: 20px;\r\n  opacity: 0.55;\r\n}\r\n\r\n.leaflet-container {\r\n  height: 100%;\r\n  width: 100%;\r\n}\r\n\r\n.sr-only {\r\n  display: none;\r\n}\r\n\r\n.markercluster-map {\r\n  height: 90vh;;\r\n  width: 90vh;\r\n  background-color: #bbb;\r\n  border-radius: 2.5%;\r\n  display: inline-block;\r\n}", "",{"version":3,"sources":["webpack://./resources/js/components/Map.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,uBAAuB;IACvB,aAAa;IACb,mBAAmB;IACnB,gBAAgB;IAChB,2CAA2C;AAC/C;;AAEA;IACI,YAAY;AAChB;;AAEA;EACE,uBAAuB;EACvB,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,WAAW;EACX,UAAU;EACV,kBAAkB;EAClB,qBAAqB;EACrB,WAAW;EACX,6BAA6B;EAC7B,iBAAiB;EACjB,kBAAkB;EAClB,mBAAmB;EACnB,kBAAkB;EAClB,mBAAmB;EACnB,YAAY;EACZ,eAAe;EACf,eAAe;EACf,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,sBAAsB;EACtB,mBAAmB;EACnB,qBAAqB;AACvB","sourcesContent":[".map {\r\n    height: 500px;\r\n    background-color: white;\r\n    padding: 1rem;\r\n    border-radius: 20px;\r\n    margin-top: 16px;\r\n    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.map .leaflet-container {\r\n    height: 100%;\r\n}\r\n\r\n.App {\r\n  font-family: sans-serif;\r\n  text-align: center;\r\n}\r\n\r\nbody {\r\n  margin: 0px;\r\n}\r\n\r\n.markercluster-map span {\r\n  height: 5vh;;\r\n  width: 5vh;\r\n  border-radius: 50%;\r\n  display: inline-block;\r\n  color:black;\r\n  background-color: greenyellow;\r\n  font-weight: bold;\r\n  text-align: center;\r\n  align-items: center;\r\n  border-color: blue;\r\n  border-style: solid;\r\n  margin: auto;\r\n  padding: 8.33px;\r\n  font-size: 20px;\r\n  opacity: 0.55;\r\n}\r\n\r\n.leaflet-container {\r\n  height: 100%;\r\n  width: 100%;\r\n}\r\n\r\n.sr-only {\r\n  display: none;\r\n}\r\n\r\n.markercluster-map {\r\n  height: 90vh;;\r\n  width: 90vh;\r\n  background-color: #bbb;\r\n  border-radius: 2.5%;\r\n  display: inline-block;\r\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/styles.css":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/styles.css ***!
+  \******************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".App {\r\n    font-family: sans-serif;\r\n    text-align: center;\r\n  }\r\n  \r\n  body {\r\n    margin: 0px;\r\n  }\r\n  ", "",{"version":3,"sources":["webpack://./resources/js/components/styles.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;IACvB,kBAAkB;EACpB;;EAEA;IACE,WAAW;EACb","sourcesContent":[".App {\r\n    font-family: sans-serif;\r\n    text-align: center;\r\n  }\r\n  \r\n  body {\r\n    margin: 0px;\r\n  }\r\n  "],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -23501,6 +23886,4714 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 }
 
 module.exports = hoistNonReactStatics;
+
+
+/***/ }),
+
+/***/ "./node_modules/leaflet-control-geocoder/dist/Control.Geocoder.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/leaflet-control-geocoder/dist/Control.Geocoder.js ***!
+  \************************************************************************/
+/***/ (() => {
+
+var leafletControlGeocoder = (function (exports, L) {
+
+  function _interopNamespace(e) {
+    if (e && e.__esModule) return e;
+    var n = Object.create(null);
+    if (e) {
+      Object.keys(e).forEach(function (k) {
+        if (k !== 'default') {
+          var d = Object.getOwnPropertyDescriptor(e, k);
+          Object.defineProperty(n, k, d.get ? d : {
+            enumerable: true,
+            get: function () {
+              return e[k];
+            }
+          });
+        }
+      });
+    }
+    n['default'] = e;
+    return n;
+  }
+
+  var L__namespace = /*#__PURE__*/_interopNamespace(L);
+
+  function _inheritsLoose(subClass, superClass) {
+    subClass.prototype = Object.create(superClass.prototype);
+    subClass.prototype.constructor = subClass;
+    subClass.__proto__ = superClass;
+  }
+
+  function _assertThisInitialized(self) {
+    if (self === void 0) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return self;
+  }
+
+  /**
+   * @internal
+   */
+
+  function geocodingParams(options, params) {
+    return L__namespace.Util.extend(params, options.geocodingQueryParams);
+  }
+  /**
+   * @internal
+   */
+
+  function reverseParams(options, params) {
+    return L__namespace.Util.extend(params, options.reverseQueryParams);
+  }
+
+  /**
+   * @internal
+   */
+
+  var lastCallbackId = 0; // Adapted from handlebars.js
+  // https://github.com/wycats/handlebars.js/
+
+  /**
+   * @internal
+   */
+
+  var badChars = /[&<>"'`]/g;
+  /**
+   * @internal
+   */
+
+  var possible = /[&<>"'`]/;
+  /**
+   * @internal
+   */
+
+  var escape = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#x27;',
+    '`': '&#x60;'
+  };
+  /**
+   * @internal
+   */
+
+  function escapeChar(chr) {
+    return escape[chr];
+  }
+  /**
+   * @internal
+   */
+
+
+  function htmlEscape(string) {
+    if (string == null) {
+      return '';
+    } else if (!string) {
+      return string + '';
+    } // Force a string conversion as this will be done by the append regardless and
+    // the regex test will do this transparently behind the scenes, causing issues if
+    // an object's to string has escaped characters in it.
+
+
+    string = '' + string;
+
+    if (!possible.test(string)) {
+      return string;
+    }
+
+    return string.replace(badChars, escapeChar);
+  }
+  /**
+   * @internal
+   */
+
+  function jsonp(url, params, callback, context, jsonpParam) {
+    var callbackId = '_l_geocoder_' + lastCallbackId++;
+    params[jsonpParam || 'callback'] = callbackId;
+    window[callbackId] = L__namespace.Util.bind(callback, context);
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url + getParamString(params);
+    script.id = callbackId;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+  /**
+   * @internal
+   */
+
+  function getJSON(url, params, callback) {
+    var xmlHttp = new XMLHttpRequest();
+
+    xmlHttp.onreadystatechange = function () {
+      if (xmlHttp.readyState !== 4) {
+        return;
+      }
+
+      var message;
+
+      if (xmlHttp.status !== 200 && xmlHttp.status !== 304) {
+        message = '';
+      } else if (typeof xmlHttp.response === 'string') {
+        // IE doesn't parse JSON responses even with responseType: 'json'.
+        try {
+          message = JSON.parse(xmlHttp.response);
+        } catch (e) {
+          // Not a JSON response
+          message = xmlHttp.response;
+        }
+      } else {
+        message = xmlHttp.response;
+      }
+
+      callback(message);
+    };
+
+    xmlHttp.open('GET', url + getParamString(params), true);
+    xmlHttp.responseType = 'json';
+    xmlHttp.setRequestHeader('Accept', 'application/json');
+    xmlHttp.send(null);
+  }
+  /**
+   * @internal
+   */
+
+  function template(str, data) {
+    return str.replace(/\{ *([\w_]+) *\}/g, function (str, key) {
+      var value = data[key];
+
+      if (value === undefined) {
+        value = '';
+      } else if (typeof value === 'function') {
+        value = value(data);
+      }
+
+      return htmlEscape(value);
+    });
+  }
+  /**
+   * @internal
+   */
+
+  function getParamString(obj, existingUrl, uppercase) {
+    var params = [];
+
+    for (var i in obj) {
+      var key = encodeURIComponent(uppercase ? i.toUpperCase() : i);
+      var value = obj[i];
+
+      if (!Array.isArray(value)) {
+        params.push(key + '=' + encodeURIComponent(String(value)));
+      } else {
+        for (var j = 0; j < value.length; j++) {
+          params.push(key + '=' + encodeURIComponent(value[j]));
+        }
+      }
+    }
+
+    return (!existingUrl || existingUrl.indexOf('?') === -1 ? '?' : '&') + params.join('&');
+  }
+
+  /**
+   * Implementation of the [ArcGIS geocoder](https://developers.arcgis.com/features/geocoding/)
+   */
+
+  var ArcGis = /*#__PURE__*/function () {
+    function ArcGis(options) {
+      this.options = {
+        serviceUrl: 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer',
+        apiKey: ''
+      };
+      L__namespace.Util.setOptions(this, options);
+    }
+
+    var _proto = ArcGis.prototype;
+
+    _proto.geocode = function geocode(query, cb, context) {
+      var params = geocodingParams(this.options, {
+        token: this.options.apiKey,
+        SingleLine: query,
+        outFields: 'Addr_Type',
+        forStorage: false,
+        maxLocations: 10,
+        f: 'json'
+      });
+      getJSON(this.options.serviceUrl + '/findAddressCandidates', params, function (data) {
+        var results = [];
+
+        if (data.candidates && data.candidates.length) {
+          for (var i = 0; i <= data.candidates.length - 1; i++) {
+            var loc = data.candidates[i];
+            var latLng = L__namespace.latLng(loc.location.y, loc.location.x);
+            var latLngBounds = L__namespace.latLngBounds(L__namespace.latLng(loc.extent.ymax, loc.extent.xmax), L__namespace.latLng(loc.extent.ymin, loc.extent.xmin));
+            results[i] = {
+              name: loc.address,
+              bbox: latLngBounds,
+              center: latLng
+            };
+          }
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    _proto.suggest = function suggest(query, cb, context) {
+      return this.geocode(query, cb, context);
+    };
+
+    _proto.reverse = function reverse(location, scale, cb, context) {
+      var params = reverseParams(this.options, {
+        location: location.lng + ',' + location.lat,
+        distance: 100,
+        f: 'json'
+      });
+      getJSON(this.options.serviceUrl + '/reverseGeocode', params, function (data) {
+        var result = [];
+
+        if (data && !data.error) {
+          var center = L__namespace.latLng(data.location.y, data.location.x);
+          var bbox = L__namespace.latLngBounds(center, center);
+          result.push({
+            name: data.address.Match_addr,
+            center: center,
+            bbox: bbox
+          });
+        }
+
+        cb.call(context, result);
+      });
+    };
+
+    return ArcGis;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link ArcGis}
+   * @param options the options
+   */
+
+  function arcgis(options) {
+    return new ArcGis(options);
+  }
+
+  /**
+   * Implementation of the [Bing Locations API](https://docs.microsoft.com/en-us/bingmaps/rest-services/locations/)
+   */
+
+  var Bing = /*#__PURE__*/function () {
+    function Bing(options) {
+      this.options = {
+        serviceUrl: 'https://dev.virtualearth.net/REST/v1/Locations'
+      };
+      L__namespace.Util.setOptions(this, options);
+    }
+
+    var _proto = Bing.prototype;
+
+    _proto.geocode = function geocode(query, cb, context) {
+      var params = geocodingParams(this.options, {
+        query: query,
+        key: this.options.apiKey
+      });
+      jsonp(this.options.apiKey, params, function (data) {
+        var results = [];
+
+        if (data.resourceSets.length > 0) {
+          for (var i = data.resourceSets[0].resources.length - 1; i >= 0; i--) {
+            var resource = data.resourceSets[0].resources[i],
+                bbox = resource.bbox;
+            results[i] = {
+              name: resource.name,
+              bbox: L__namespace.latLngBounds([bbox[0], bbox[1]], [bbox[2], bbox[3]]),
+              center: L__namespace.latLng(resource.point.coordinates)
+            };
+          }
+        }
+
+        cb.call(context, results);
+      }, this, 'jsonp');
+    };
+
+    _proto.reverse = function reverse(location, scale, cb, context) {
+      var params = reverseParams(this.options, {
+        key: this.options.apiKey
+      });
+      jsonp(this.options.serviceUrl + location.lat + ',' + location.lng, params, function (data) {
+        var results = [];
+
+        for (var i = data.resourceSets[0].resources.length - 1; i >= 0; i--) {
+          var resource = data.resourceSets[0].resources[i],
+              bbox = resource.bbox;
+          results[i] = {
+            name: resource.name,
+            bbox: L__namespace.latLngBounds([bbox[0], bbox[1]], [bbox[2], bbox[3]]),
+            center: L__namespace.latLng(resource.point.coordinates)
+          };
+        }
+
+        cb.call(context, results);
+      }, this, 'jsonp');
+    };
+
+    return Bing;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link Bing}
+   * @param options the options
+   */
+
+  function bing(options) {
+    return new Bing(options);
+  }
+
+  var Google = /*#__PURE__*/function () {
+    function Google(options) {
+      this.options = {
+        serviceUrl: 'https://maps.googleapis.com/maps/api/geocode/json'
+      };
+      L__namespace.Util.setOptions(this, options);
+    }
+
+    var _proto = Google.prototype;
+
+    _proto.geocode = function geocode(query, cb, context) {
+      var params = geocodingParams(this.options, {
+        key: this.options.apiKey,
+        address: query
+      });
+      getJSON(this.options.serviceUrl, params, function (data) {
+        var results = [];
+
+        if (data.results && data.results.length) {
+          for (var i = 0; i <= data.results.length - 1; i++) {
+            var loc = data.results[i];
+            var latLng = L__namespace.latLng(loc.geometry.location);
+            var latLngBounds = L__namespace.latLngBounds(L__namespace.latLng(loc.geometry.viewport.northeast), L__namespace.latLng(loc.geometry.viewport.southwest));
+            results[i] = {
+              name: loc.formatted_address,
+              bbox: latLngBounds,
+              center: latLng,
+              properties: loc.address_components
+            };
+          }
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    _proto.reverse = function reverse(location, scale, cb, context) {
+      var params = reverseParams(this.options, {
+        key: this.options.apiKey,
+        latlng: location.lat + ',' + location.lng
+      });
+      getJSON(this.options.serviceUrl, params, function (data) {
+        var results = [];
+
+        if (data.results && data.results.length) {
+          for (var i = 0; i <= data.results.length - 1; i++) {
+            var loc = data.results[i];
+            var center = L__namespace.latLng(loc.geometry.location);
+            var bbox = L__namespace.latLngBounds(L__namespace.latLng(loc.geometry.viewport.northeast), L__namespace.latLng(loc.geometry.viewport.southwest));
+            results[i] = {
+              name: loc.formatted_address,
+              bbox: bbox,
+              center: center,
+              properties: loc.address_components
+            };
+          }
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    return Google;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link Google}
+   * @param options the options
+   */
+
+  function google(options) {
+    return new Google(options);
+  }
+
+  /**
+   * Implementation of the [HERE Geocoder API](https://developer.here.com/documentation/geocoder/topics/introduction.html)
+   */
+
+  var HERE = /*#__PURE__*/function () {
+    function HERE(options) {
+      this.options = {
+        serviceUrl: 'https://geocoder.api.here.com/6.2/',
+        app_id: '',
+        app_code: '',
+        apiKey: '',
+        maxResults: 5
+      };
+      L__namespace.Util.setOptions(this, options);
+      if (options.apiKey) throw Error('apiKey is not supported, use app_id/app_code instead!');
+    }
+
+    var _proto = HERE.prototype;
+
+    _proto.geocode = function geocode(query, cb, context) {
+      var params = geocodingParams(this.options, {
+        searchtext: query,
+        gen: 9,
+        app_id: this.options.app_id,
+        app_code: this.options.app_code,
+        jsonattributes: 1,
+        maxresults: this.options.maxResults
+      });
+      this.getJSON(this.options.serviceUrl + 'geocode.json', params, cb, context);
+    };
+
+    _proto.reverse = function reverse(location, scale, cb, context) {
+      var prox = location.lat + ',' + location.lng;
+
+      if (this.options.reverseGeocodeProxRadius) {
+        prox += ',' + this.options.reverseGeocodeProxRadius;
+      }
+
+      var params = reverseParams(this.options, {
+        prox: prox,
+        mode: 'retrieveAddresses',
+        app_id: this.options.app_id,
+        app_code: this.options.app_code,
+        gen: 9,
+        jsonattributes: 1,
+        maxresults: this.options.maxResults
+      });
+      this.getJSON(this.options.serviceUrl + 'reversegeocode.json', params, cb, context);
+    };
+
+    _proto.getJSON = function getJSON$1(url, params, cb, context) {
+      getJSON(url, params, function (data) {
+        var results = [];
+
+        if (data.response.view && data.response.view.length) {
+          for (var i = 0; i <= data.response.view[0].result.length - 1; i++) {
+            var loc = data.response.view[0].result[i].location;
+            var center = L__namespace.latLng(loc.displayPosition.latitude, loc.displayPosition.longitude);
+            var bbox = L__namespace.latLngBounds(L__namespace.latLng(loc.mapView.topLeft.latitude, loc.mapView.topLeft.longitude), L__namespace.latLng(loc.mapView.bottomRight.latitude, loc.mapView.bottomRight.longitude));
+            results[i] = {
+              name: loc.address.label,
+              properties: loc.address,
+              bbox: bbox,
+              center: center
+            };
+          }
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    return HERE;
+  }();
+  /**
+   * Implementation of the new [HERE Geocoder API](https://developer.here.com/documentation/geocoding-search-api/api-reference-swagger.html)
+   */
+
+  var HEREv2 = /*#__PURE__*/function () {
+    function HEREv2(options) {
+      this.options = {
+        serviceUrl: 'https://geocode.search.hereapi.com/v1',
+        apiKey: '',
+        app_id: '',
+        app_code: '',
+        maxResults: 10
+      };
+      L__namespace.Util.setOptions(this, options);
+    }
+
+    var _proto2 = HEREv2.prototype;
+
+    _proto2.geocode = function geocode(query, cb, context) {
+      var params = geocodingParams(this.options, {
+        q: query,
+        apiKey: this.options.apiKey,
+        limit: this.options.maxResults
+      });
+
+      if (!params.at && !params["in"]) {
+        throw Error('at / in parameters not found. Please define coordinates (at=latitude,longitude) or other (in) in your geocodingQueryParams.');
+      }
+
+      this.getJSON(this.options.serviceUrl + '/discover', params, cb, context);
+    };
+
+    _proto2.reverse = function reverse(location, scale, cb, context) {
+      var params = reverseParams(this.options, {
+        at: location.lat + ',' + location.lng,
+        limit: this.options.reverseGeocodeProxRadius,
+        apiKey: this.options.apiKey
+      });
+      this.getJSON(this.options.serviceUrl + '/revgeocode', params, cb, context);
+    };
+
+    _proto2.getJSON = function getJSON$1(url, params, cb, context) {
+      getJSON(url, params, function (data) {
+        var results = [];
+
+        if (data.items && data.items.length) {
+          for (var i = 0; i <= data.items.length - 1; i++) {
+            var item = data.items[i];
+            var latLng = L__namespace.latLng(item.position.lat, item.position.lng);
+            var bbox = void 0;
+
+            if (item.mapView) {
+              bbox = L__namespace.latLngBounds(L__namespace.latLng(item.mapView.south, item.mapView.west), L__namespace.latLng(item.mapView.north, item.mapView.east));
+            } else {
+              // Using only position when not provided
+              bbox = L__namespace.latLngBounds(L__namespace.latLng(item.position.lat, item.position.lng), L__namespace.latLng(item.position.lat, item.position.lng));
+            }
+
+            results[i] = {
+              name: item.address.label,
+              properties: item.address,
+              bbox: bbox,
+              center: latLng
+            };
+          }
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    return HEREv2;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link HERE}
+   * @param options the options
+   */
+
+  function here(options) {
+    if (options.apiKey) {
+      return new HEREv2(options);
+    } else {
+      return new HERE(options);
+    }
+  }
+
+  /**
+   * Parses basic latitude/longitude strings such as `'50.06773 14.37742'`, `'N50.06773 W14.37742'`, `'S 50° 04.064 E 014° 22.645'`, or `'S 50° 4′ 03.828″, W 14° 22′ 38.712″'`
+   * @param query the latitude/longitude string to parse
+   * @returns the parsed latitude/longitude
+   */
+
+  function parseLatLng(query) {
+    var match; // regex from https://github.com/openstreetmap/openstreetmap-website/blob/master/app/controllers/geocoder_controller.rb
+
+    if (match = query.match(/^([NS])\s*(\d{1,3}(?:\.\d*)?)\W*([EW])\s*(\d{1,3}(?:\.\d*)?)$/)) {
+      // [NSEW] decimal degrees
+      return L__namespace.latLng((/N/i.test(match[1]) ? 1 : -1) * +match[2], (/E/i.test(match[3]) ? 1 : -1) * +match[4]);
+    } else if (match = query.match(/^(\d{1,3}(?:\.\d*)?)\s*([NS])\W*(\d{1,3}(?:\.\d*)?)\s*([EW])$/)) {
+      // decimal degrees [NSEW]
+      return L__namespace.latLng((/N/i.test(match[2]) ? 1 : -1) * +match[1], (/E/i.test(match[4]) ? 1 : -1) * +match[3]);
+    } else if (match = query.match(/^([NS])\s*(\d{1,3})°?\s*(\d{1,3}(?:\.\d*)?)?['′]?\W*([EW])\s*(\d{1,3})°?\s*(\d{1,3}(?:\.\d*)?)?['′]?$/)) {
+      // [NSEW] degrees, decimal minutes
+      return L__namespace.latLng((/N/i.test(match[1]) ? 1 : -1) * (+match[2] + +match[3] / 60), (/E/i.test(match[4]) ? 1 : -1) * (+match[5] + +match[6] / 60));
+    } else if (match = query.match(/^(\d{1,3})°?\s*(\d{1,3}(?:\.\d*)?)?['′]?\s*([NS])\W*(\d{1,3})°?\s*(\d{1,3}(?:\.\d*)?)?['′]?\s*([EW])$/)) {
+      // degrees, decimal minutes [NSEW]
+      return L__namespace.latLng((/N/i.test(match[3]) ? 1 : -1) * (+match[1] + +match[2] / 60), (/E/i.test(match[6]) ? 1 : -1) * (+match[4] + +match[5] / 60));
+    } else if (match = query.match(/^([NS])\s*(\d{1,3})°?\s*(\d{1,2})['′]?\s*(\d{1,3}(?:\.\d*)?)?["″]?\W*([EW])\s*(\d{1,3})°?\s*(\d{1,2})['′]?\s*(\d{1,3}(?:\.\d*)?)?["″]?$/)) {
+      // [NSEW] degrees, minutes, decimal seconds
+      return L__namespace.latLng((/N/i.test(match[1]) ? 1 : -1) * (+match[2] + +match[3] / 60 + +match[4] / 3600), (/E/i.test(match[5]) ? 1 : -1) * (+match[6] + +match[7] / 60 + +match[8] / 3600));
+    } else if (match = query.match(/^(\d{1,3})°?\s*(\d{1,2})['′]?\s*(\d{1,3}(?:\.\d*)?)?["″]\s*([NS])\W*(\d{1,3})°?\s*(\d{1,2})['′]?\s*(\d{1,3}(?:\.\d*)?)?["″]?\s*([EW])$/)) {
+      // degrees, minutes, decimal seconds [NSEW]
+      return L__namespace.latLng((/N/i.test(match[4]) ? 1 : -1) * (+match[1] + +match[2] / 60 + +match[3] / 3600), (/E/i.test(match[8]) ? 1 : -1) * (+match[5] + +match[6] / 60 + +match[7] / 3600));
+    } else if (match = query.match(/^\s*([+-]?\d+(?:\.\d*)?)\s*[\s,]\s*([+-]?\d+(?:\.\d*)?)\s*$/)) {
+      return L__namespace.latLng(+match[1], +match[2]);
+    }
+  }
+  /**
+   * Parses basic latitude/longitude strings such as `'50.06773 14.37742'`, `'N50.06773 W14.37742'`, `'S 50° 04.064 E 014° 22.645'`, or `'S 50° 4′ 03.828″, W 14° 22′ 38.712″'`
+   */
+
+  var LatLng = /*#__PURE__*/function () {
+    function LatLng(options) {
+      this.options = {
+        next: undefined,
+        sizeInMeters: 10000
+      };
+      L__namespace.Util.setOptions(this, options);
+    }
+
+    var _proto = LatLng.prototype;
+
+    _proto.geocode = function geocode(query, cb, context) {
+      var center = parseLatLng(query);
+
+      if (center) {
+        var results = [{
+          name: query,
+          center: center,
+          bbox: center.toBounds(this.options.sizeInMeters)
+        }];
+        cb.call(context, results);
+      } else if (this.options.next) {
+        this.options.next.geocode(query, cb, context);
+      }
+    };
+
+    return LatLng;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link LatLng}
+   * @param options the options
+   */
+
+  function latLng(options) {
+    return new LatLng(options);
+  }
+
+  /**
+   * Implementation of the [Mapbox Geocoding](https://www.mapbox.com/api-documentation/#geocoding)
+   */
+
+  var Mapbox = /*#__PURE__*/function () {
+    function Mapbox(options) {
+      this.options = {
+        serviceUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places/'
+      };
+      L__namespace.Util.setOptions(this, options);
+    }
+
+    var _proto = Mapbox.prototype;
+
+    _proto._getProperties = function _getProperties(loc) {
+      var properties = {
+        text: loc.text,
+        address: loc.address
+      };
+
+      for (var j = 0; j < (loc.context || []).length; j++) {
+        var id = loc.context[j].id.split('.')[0];
+        properties[id] = loc.context[j].text; // Get country code when available
+
+        if (loc.context[j].short_code) {
+          properties['countryShortCode'] = loc.context[j].short_code;
+        }
+      }
+
+      return properties;
+    };
+
+    _proto.geocode = function geocode(query, cb, context) {
+      var _this = this;
+
+      var params = geocodingParams(this.options, {
+        access_token: this.options.apiKey
+      });
+
+      if (params.proximity !== undefined && params.proximity.lat !== undefined && params.proximity.lng !== undefined) {
+        params.proximity = params.proximity.lng + ',' + params.proximity.lat;
+      }
+
+      getJSON(this.options.serviceUrl + encodeURIComponent(query) + '.json', params, function (data) {
+        var results = [];
+
+        if (data.features && data.features.length) {
+          for (var i = 0; i <= data.features.length - 1; i++) {
+            var loc = data.features[i];
+            var center = L__namespace.latLng(loc.center.reverse());
+            var bbox = void 0;
+
+            if (loc.bbox) {
+              bbox = L__namespace.latLngBounds(L__namespace.latLng(loc.bbox.slice(0, 2).reverse()), L__namespace.latLng(loc.bbox.slice(2, 4).reverse()));
+            } else {
+              bbox = L__namespace.latLngBounds(center, center);
+            }
+
+            results[i] = {
+              name: loc.place_name,
+              bbox: bbox,
+              center: center,
+              properties: _this._getProperties(loc)
+            };
+          }
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    _proto.suggest = function suggest(query, cb, context) {
+      return this.geocode(query, cb, context);
+    };
+
+    _proto.reverse = function reverse(location, scale, cb, context) {
+      var _this2 = this;
+
+      var url = this.options.serviceUrl + location.lng + ',' + location.lat + '.json';
+      var param = reverseParams(this.options, {
+        access_token: this.options.apiKey
+      });
+      getJSON(url, param, function (data) {
+        var results = [];
+
+        if (data.features && data.features.length) {
+          for (var i = 0; i <= data.features.length - 1; i++) {
+            var loc = data.features[i];
+            var center = L__namespace.latLng(loc.center.reverse());
+            var bbox = void 0;
+
+            if (loc.bbox) {
+              bbox = L__namespace.latLngBounds(L__namespace.latLng(loc.bbox.slice(0, 2).reverse()), L__namespace.latLng(loc.bbox.slice(2, 4).reverse()));
+            } else {
+              bbox = L__namespace.latLngBounds(center, center);
+            }
+
+            results[i] = {
+              name: loc.place_name,
+              bbox: bbox,
+              center: center,
+              properties: _this2._getProperties(loc)
+            };
+          }
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    return Mapbox;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link Mapbox}
+   * @param options the options
+   */
+
+  function mapbox(options) {
+    return new Mapbox(options);
+  }
+
+  /**
+   * Implementation of the [MapQuest Geocoding API](http://developer.mapquest.com/web/products/dev-services/geocoding-ws)
+   */
+
+  var MapQuest = /*#__PURE__*/function () {
+    function MapQuest(options) {
+      this.options = {
+        serviceUrl: 'https://www.mapquestapi.com/geocoding/v1'
+      };
+      L__namespace.Util.setOptions(this, options); // MapQuest seems to provide URI encoded API keys,
+      // so to avoid encoding them twice, we decode them here
+
+      this.options.apiKey = decodeURIComponent(this.options.apiKey);
+    }
+
+    var _proto = MapQuest.prototype;
+
+    _proto._formatName = function _formatName() {
+      return [].slice.call(arguments).filter(function (s) {
+        return !!s;
+      }).join(', ');
+    };
+
+    _proto.geocode = function geocode(query, cb, context) {
+      var params = geocodingParams(this.options, {
+        key: this.options.apiKey,
+        location: query,
+        limit: 5,
+        outFormat: 'json'
+      });
+      getJSON(this.options.serviceUrl + '/address', params, L__namespace.Util.bind(function (data) {
+        var results = [];
+
+        if (data.results && data.results[0].locations) {
+          for (var i = data.results[0].locations.length - 1; i >= 0; i--) {
+            var loc = data.results[0].locations[i];
+            var center = L__namespace.latLng(loc.latLng);
+            results[i] = {
+              name: this._formatName(loc.street, loc.adminArea4, loc.adminArea3, loc.adminArea1),
+              bbox: L__namespace.latLngBounds(center, center),
+              center: center
+            };
+          }
+        }
+
+        cb.call(context, results);
+      }, this));
+    };
+
+    _proto.reverse = function reverse(location, scale, cb, context) {
+      var params = reverseParams(this.options, {
+        key: this.options.apiKey,
+        location: location.lat + ',' + location.lng,
+        outputFormat: 'json'
+      });
+      getJSON(this.options.serviceUrl + '/reverse', params, L__namespace.Util.bind(function (data) {
+        var results = [];
+
+        if (data.results && data.results[0].locations) {
+          for (var i = data.results[0].locations.length - 1; i >= 0; i--) {
+            var loc = data.results[0].locations[i];
+            var center = L__namespace.latLng(loc.latLng);
+            results[i] = {
+              name: this._formatName(loc.street, loc.adminArea4, loc.adminArea3, loc.adminArea1),
+              bbox: L__namespace.latLngBounds(center, center),
+              center: center
+            };
+          }
+        }
+
+        cb.call(context, results);
+      }, this));
+    };
+
+    return MapQuest;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link MapQuest}
+   * @param options the options
+   */
+
+  function mapQuest(options) {
+    return new MapQuest(options);
+  }
+
+  /**
+   * Implementation of the [Neutrino API](https://www.neutrinoapi.com/api/geocode-address/)
+   */
+
+  var Neutrino = /*#__PURE__*/function () {
+    function Neutrino(options) {
+      this.options = {
+        userId: undefined,
+        apiKey: undefined,
+        serviceUrl: 'https://neutrinoapi.com/'
+      };
+      L__namespace.Util.setOptions(this, options);
+    } // https://www.neutrinoapi.com/api/geocode-address/
+
+
+    var _proto = Neutrino.prototype;
+
+    _proto.geocode = function geocode(query, cb, context) {
+      var params = geocodingParams(this.options, {
+        apiKey: this.options.apiKey,
+        userId: this.options.userId,
+        //get three words and make a dot based string
+        address: query.split(/\s+/).join('.')
+      });
+      getJSON(this.options.serviceUrl + 'geocode-address', params, function (data) {
+        var results = [];
+
+        if (data.locations) {
+          data.geometry = data.locations[0];
+          var center = L__namespace.latLng(data.geometry['latitude'], data.geometry['longitude']);
+          var bbox = L__namespace.latLngBounds(center, center);
+          results[0] = {
+            name: data.geometry.address,
+            bbox: bbox,
+            center: center
+          };
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    _proto.suggest = function suggest(query, cb, context) {
+      return this.geocode(query, cb, context);
+    } // https://www.neutrinoapi.com/api/geocode-reverse/
+    ;
+
+    _proto.reverse = function reverse(location, scale, cb, context) {
+      var params = reverseParams(this.options, {
+        apiKey: this.options.apiKey,
+        userId: this.options.userId,
+        latitude: location.lat,
+        longitude: location.lng
+      });
+      getJSON(this.options.serviceUrl + 'geocode-reverse', params, function (data) {
+        var results = [];
+
+        if (data.status.status == 200 && data.found) {
+          var center = L__namespace.latLng(location.lat, location.lng);
+          var bbox = L__namespace.latLngBounds(center, center);
+          results[0] = {
+            name: data.address,
+            bbox: bbox,
+            center: center
+          };
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    return Neutrino;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link Neutrino}
+   * @param options the options
+   */
+
+  function neutrino(options) {
+    return new Neutrino(options);
+  }
+
+  /**
+   * Implementation of the [Nominatim](https://wiki.openstreetmap.org/wiki/Nominatim) geocoder.
+   *
+   * This is the default geocoding service used by the control, unless otherwise specified in the options.
+   *
+   * Unless using your own Nominatim installation, please refer to the [Nominatim usage policy](https://operations.osmfoundation.org/policies/nominatim/).
+   */
+
+  var Nominatim = /*#__PURE__*/function () {
+    function Nominatim(options) {
+      this.options = {
+        serviceUrl: 'https://nominatim.openstreetmap.org/',
+        htmlTemplate: function htmlTemplate(r) {
+          var address = r.address;
+          var className;
+          var parts = [];
+
+          if (address.road || address.building) {
+            parts.push('{building} {road} {house_number}');
+          }
+
+          if (address.city || address.town || address.village || address.hamlet) {
+            className = parts.length > 0 ? 'leaflet-control-geocoder-address-detail' : '';
+            parts.push('<span class="' + className + '">{postcode} {city} {town} {village} {hamlet}</span>');
+          }
+
+          if (address.state || address.country) {
+            className = parts.length > 0 ? 'leaflet-control-geocoder-address-context' : '';
+            parts.push('<span class="' + className + '">{state} {country}</span>');
+          }
+
+          return template(parts.join('<br/>'), address);
+        }
+      };
+      L__namespace.Util.setOptions(this, options || {});
+    }
+
+    var _proto = Nominatim.prototype;
+
+    _proto.geocode = function geocode(query, cb, context) {
+      var _this = this;
+
+      var params = geocodingParams(this.options, {
+        q: query,
+        limit: 5,
+        format: 'json',
+        addressdetails: 1
+      });
+      getJSON(this.options.serviceUrl + 'search', params, function (data) {
+        var results = [];
+
+        for (var i = data.length - 1; i >= 0; i--) {
+          var bbox = data[i].boundingbox;
+
+          for (var j = 0; j < 4; j++) {
+            bbox[j] = +bbox[j];
+          }
+
+          results[i] = {
+            icon: data[i].icon,
+            name: data[i].display_name,
+            html: _this.options.htmlTemplate ? _this.options.htmlTemplate(data[i]) : undefined,
+            bbox: L__namespace.latLngBounds([bbox[0], bbox[2]], [bbox[1], bbox[3]]),
+            center: L__namespace.latLng(data[i].lat, data[i].lon),
+            properties: data[i]
+          };
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    _proto.reverse = function reverse(location, scale, cb, context) {
+      var _this2 = this;
+
+      var params = reverseParams(this.options, {
+        lat: location.lat,
+        lon: location.lng,
+        zoom: Math.round(Math.log(scale / 256) / Math.log(2)),
+        addressdetails: 1,
+        format: 'json'
+      });
+      getJSON(this.options.serviceUrl + 'reverse', params, function (data) {
+        var result = [];
+
+        if (data && data.lat && data.lon) {
+          var center = L__namespace.latLng(data.lat, data.lon);
+          var bbox = L__namespace.latLngBounds(center, center);
+          result.push({
+            name: data.display_name,
+            html: _this2.options.htmlTemplate ? _this2.options.htmlTemplate(data) : undefined,
+            center: center,
+            bbox: bbox,
+            properties: data
+          });
+        }
+
+        cb.call(context, result);
+      });
+    };
+
+    return Nominatim;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link Nominatim}
+   * @param options the options
+   */
+
+  function nominatim(options) {
+    return new Nominatim(options);
+  }
+
+  /**
+   * Implementation of the [Plus codes](https://plus.codes/) (formerly OpenLocationCode) (requires [open-location-code](https://www.npmjs.com/package/open-location-code))
+   */
+
+  var OpenLocationCode = /*#__PURE__*/function () {
+    function OpenLocationCode(options) {
+      L__namespace.Util.setOptions(this, options);
+    }
+
+    var _proto = OpenLocationCode.prototype;
+
+    _proto.geocode = function geocode(query, cb, context) {
+      try {
+        var decoded = this.options.OpenLocationCode.decode(query);
+        var result = {
+          name: query,
+          center: L__namespace.latLng(decoded.latitudeCenter, decoded.longitudeCenter),
+          bbox: L__namespace.latLngBounds(L__namespace.latLng(decoded.latitudeLo, decoded.longitudeLo), L__namespace.latLng(decoded.latitudeHi, decoded.longitudeHi))
+        };
+        cb.call(context, [result]);
+      } catch (e) {
+        console.warn(e); // eslint-disable-line no-console
+
+        cb.call(context, []);
+      }
+    };
+
+    _proto.reverse = function reverse(location, scale, cb, context) {
+      try {
+        var code = this.options.OpenLocationCode.encode(location.lat, location.lng, this.options.codeLength);
+        var result = {
+          name: code,
+          center: L__namespace.latLng(location.lat, location.lng),
+          bbox: L__namespace.latLngBounds(L__namespace.latLng(location.lat, location.lng), L__namespace.latLng(location.lat, location.lng))
+        };
+        cb.call(context, [result]);
+      } catch (e) {
+        console.warn(e); // eslint-disable-line no-console
+
+        cb.call(context, []);
+      }
+    };
+
+    return OpenLocationCode;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link OpenLocationCode}
+   * @param options the options
+   */
+
+  function openLocationCode(options) {
+    return new OpenLocationCode(options);
+  }
+
+  /**
+   * Implementation of the [OpenCage Data API](https://opencagedata.com/)
+   */
+
+  var OpenCage = /*#__PURE__*/function () {
+    function OpenCage(options) {
+      this.options = {
+        serviceUrl: 'https://api.opencagedata.com/geocode/v1/json'
+      };
+      L__namespace.Util.setOptions(this, options);
+    }
+
+    var _proto = OpenCage.prototype;
+
+    _proto.geocode = function geocode(query, cb, context) {
+      var params = geocodingParams(this.options, {
+        key: this.options.apiKey,
+        q: query
+      });
+      getJSON(this.options.serviceUrl, params, function (data) {
+        var results = [];
+
+        if (data.results && data.results.length) {
+          for (var i = 0; i < data.results.length; i++) {
+            var loc = data.results[i];
+            var center = L__namespace.latLng(loc.geometry);
+            var bbox = void 0;
+
+            if (loc.annotations && loc.annotations.bounds) {
+              bbox = L__namespace.latLngBounds(L__namespace.latLng(loc.annotations.bounds.northeast), L__namespace.latLng(loc.annotations.bounds.southwest));
+            } else {
+              bbox = L__namespace.latLngBounds(center, center);
+            }
+
+            results.push({
+              name: loc.formatted,
+              bbox: bbox,
+              center: center
+            });
+          }
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    _proto.suggest = function suggest(query, cb, context) {
+      return this.geocode(query, cb, context);
+    };
+
+    _proto.reverse = function reverse(location, scale, cb, context) {
+      var params = reverseParams(this.options, {
+        key: this.options.apiKey,
+        q: [location.lat, location.lng].join(',')
+      });
+      getJSON(this.options.serviceUrl, params, function (data) {
+        var results = [];
+
+        if (data.results && data.results.length) {
+          for (var i = 0; i < data.results.length; i++) {
+            var loc = data.results[i];
+            var center = L__namespace.latLng(loc.geometry);
+            var bbox = void 0;
+
+            if (loc.annotations && loc.annotations.bounds) {
+              bbox = L__namespace.latLngBounds(L__namespace.latLng(loc.annotations.bounds.northeast), L__namespace.latLng(loc.annotations.bounds.southwest));
+            } else {
+              bbox = L__namespace.latLngBounds(center, center);
+            }
+
+            results.push({
+              name: loc.formatted,
+              bbox: bbox,
+              center: center
+            });
+          }
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    return OpenCage;
+  }();
+  function opencage(options) {
+    return new OpenCage(options);
+  }
+
+  /**
+   * Implementation of the [Pelias](https://pelias.io/), [geocode.earth](https://geocode.earth/) geocoder (formerly Mapzen Search)
+   */
+
+  var Pelias = /*#__PURE__*/function () {
+    function Pelias(options) {
+      this.options = {
+        serviceUrl: 'https://api.geocode.earth/v1'
+      };
+      this._lastSuggest = 0;
+      L__namespace.Util.setOptions(this, options);
+    }
+
+    var _proto = Pelias.prototype;
+
+    _proto.geocode = function geocode(query, cb, context) {
+      var _this = this;
+
+      var params = geocodingParams(this.options, {
+        api_key: this.options.apiKey,
+        text: query
+      });
+      getJSON(this.options.serviceUrl + '/search', params, function (data) {
+        cb.call(context, _this._parseResults(data, 'bbox'));
+      });
+    };
+
+    _proto.suggest = function suggest(query, cb, context) {
+      var _this2 = this;
+
+      var params = geocodingParams(this.options, {
+        api_key: this.options.apiKey,
+        text: query
+      });
+      getJSON(this.options.serviceUrl + '/autocomplete', params, function (data) {
+        if (data.geocoding.timestamp > _this2._lastSuggest) {
+          _this2._lastSuggest = data.geocoding.timestamp;
+          cb.call(context, _this2._parseResults(data, 'bbox'));
+        }
+      });
+    };
+
+    _proto.reverse = function reverse(location, scale, cb, context) {
+      var _this3 = this;
+
+      var params = reverseParams(this.options, {
+        api_key: this.options.apiKey,
+        'point.lat': location.lat,
+        'point.lon': location.lng
+      });
+      getJSON(this.options.serviceUrl + '/reverse', params, function (data) {
+        cb.call(context, _this3._parseResults(data, 'bounds'));
+      });
+    };
+
+    _proto._parseResults = function _parseResults(data, bboxname) {
+      var results = [];
+      L__namespace.geoJSON(data, {
+        pointToLayer: function pointToLayer(feature, latlng) {
+          return L__namespace.circleMarker(latlng);
+        },
+        onEachFeature: function onEachFeature(feature, layer) {
+          var result = {};
+          var bbox;
+          var center;
+
+          if (layer.getBounds) {
+            bbox = layer.getBounds();
+            center = bbox.getCenter();
+          } else if (layer.feature.bbox) {
+            center = layer.getLatLng();
+            bbox = L__namespace.latLngBounds(L__namespace.GeoJSON.coordsToLatLng(layer.feature.bbox.slice(0, 2)), L__namespace.GeoJSON.coordsToLatLng(layer.feature.bbox.slice(2, 4)));
+          } else {
+            center = layer.getLatLng();
+            bbox = L__namespace.latLngBounds(center, center);
+          }
+
+          result.name = layer.feature.properties.label;
+          result.center = center;
+          result[bboxname] = bbox;
+          result.properties = layer.feature.properties;
+          results.push(result);
+        }
+      });
+      return results;
+    };
+
+    return Pelias;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link Pelias}
+   * @param options the options
+   */
+
+  function pelias(options) {
+    return new Pelias(options);
+  }
+  var GeocodeEarth = Pelias;
+  var geocodeEarth = pelias;
+  /**
+   * r.i.p.
+   * @deprecated
+   */
+
+  var Mapzen = Pelias;
+  /**
+   * r.i.p.
+   * @deprecated
+   */
+
+  var mapzen = pelias;
+  /**
+   * Implementation of the [Openrouteservice](https://openrouteservice.org/dev/#/api-docs/geocode) geocoder
+   */
+
+  var Openrouteservice = /*#__PURE__*/function (_Pelias) {
+    _inheritsLoose(Openrouteservice, _Pelias);
+
+    function Openrouteservice(options) {
+      return _Pelias.call(this, L__namespace.Util.extend({
+        serviceUrl: 'https://api.openrouteservice.org/geocode'
+      }, options)) || this;
+    }
+
+    return Openrouteservice;
+  }(Pelias);
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link Openrouteservice}
+   * @param options the options
+   */
+
+  function openrouteservice(options) {
+    return new Openrouteservice(options);
+  }
+
+  /**
+   * Implementation of the [Photon](http://photon.komoot.de/) geocoder
+   */
+
+  var Photon = /*#__PURE__*/function () {
+    function Photon(options) {
+      this.options = {
+        serviceUrl: 'https://photon.komoot.io/api/',
+        reverseUrl: 'https://photon.komoot.io/reverse/',
+        nameProperties: ['name', 'street', 'suburb', 'hamlet', 'town', 'city', 'state', 'country']
+      };
+      L__namespace.Util.setOptions(this, options);
+    }
+
+    var _proto = Photon.prototype;
+
+    _proto.geocode = function geocode(query, cb, context) {
+      var params = geocodingParams(this.options, {
+        q: query
+      });
+      getJSON(this.options.serviceUrl, params, L__namespace.Util.bind(function (data) {
+        cb.call(context, this._decodeFeatures(data));
+      }, this));
+    };
+
+    _proto.suggest = function suggest(query, cb, context) {
+      return this.geocode(query, cb, context);
+    };
+
+    _proto.reverse = function reverse(latLng, scale, cb, context) {
+      var params = reverseParams(this.options, {
+        lat: latLng.lat,
+        lon: latLng.lng
+      });
+      getJSON(this.options.reverseUrl, params, L__namespace.Util.bind(function (data) {
+        cb.call(context, this._decodeFeatures(data));
+      }, this));
+    };
+
+    _proto._decodeFeatures = function _decodeFeatures(data) {
+      var results = [];
+
+      if (data && data.features) {
+        for (var i = 0; i < data.features.length; i++) {
+          var f = data.features[i];
+          var c = f.geometry.coordinates;
+          var center = L__namespace.latLng(c[1], c[0]);
+          var extent = f.properties.extent;
+          var bbox = extent ? L__namespace.latLngBounds([extent[1], extent[0]], [extent[3], extent[2]]) : L__namespace.latLngBounds(center, center);
+          results.push({
+            name: this._decodeFeatureName(f),
+            html: this.options.htmlTemplate ? this.options.htmlTemplate(f) : undefined,
+            center: center,
+            bbox: bbox,
+            properties: f.properties
+          });
+        }
+      }
+
+      return results;
+    };
+
+    _proto._decodeFeatureName = function _decodeFeatureName(f) {
+      return (this.options.nameProperties || []).map(function (p) {
+        return f.properties[p];
+      }).filter(function (v) {
+        return !!v;
+      }).join(', ');
+    };
+
+    return Photon;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link Photon}
+   * @param options the options
+   */
+
+  function photon(options) {
+    return new Photon(options);
+  }
+
+  /**
+   * Implementation of the What3Words service
+   */
+
+  var What3Words = /*#__PURE__*/function () {
+    function What3Words(options) {
+      this.options = {
+        serviceUrl: 'https://api.what3words.com/v2/'
+      };
+      L__namespace.Util.setOptions(this, options);
+    }
+
+    var _proto = What3Words.prototype;
+
+    _proto.geocode = function geocode(query, cb, context) {
+      //get three words and make a dot based string
+      getJSON(this.options.serviceUrl + 'forward', geocodingParams(this.options, {
+        key: this.options.apiKey,
+        addr: query.split(/\s+/).join('.')
+      }), function (data) {
+        var results = [];
+
+        if (data.geometry) {
+          var latLng = L__namespace.latLng(data.geometry['lat'], data.geometry['lng']);
+          var latLngBounds = L__namespace.latLngBounds(latLng, latLng);
+          results[0] = {
+            name: data.words,
+            bbox: latLngBounds,
+            center: latLng
+          };
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    _proto.suggest = function suggest(query, cb, context) {
+      return this.geocode(query, cb, context);
+    };
+
+    _proto.reverse = function reverse(location, scale, cb, context) {
+      getJSON(this.options.serviceUrl + 'reverse', reverseParams(this.options, {
+        key: this.options.apiKey,
+        coords: [location.lat, location.lng].join(',')
+      }), function (data) {
+        var results = [];
+
+        if (data.status.status == 200) {
+          var center = L__namespace.latLng(data.geometry['lat'], data.geometry['lng']);
+          var bbox = L__namespace.latLngBounds(center, center);
+          results[0] = {
+            name: data.words,
+            bbox: bbox,
+            center: center
+          };
+        }
+
+        cb.call(context, results);
+      });
+    };
+
+    return What3Words;
+  }();
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link What3Words}
+   * @param options the options
+   */
+
+  function what3words(options) {
+    return new What3Words(options);
+  }
+
+  var geocoders = {
+    __proto__: null,
+    geocodingParams: geocodingParams,
+    reverseParams: reverseParams,
+    ArcGis: ArcGis,
+    arcgis: arcgis,
+    Bing: Bing,
+    bing: bing,
+    Google: Google,
+    google: google,
+    HERE: HERE,
+    HEREv2: HEREv2,
+    here: here,
+    parseLatLng: parseLatLng,
+    LatLng: LatLng,
+    latLng: latLng,
+    Mapbox: Mapbox,
+    mapbox: mapbox,
+    MapQuest: MapQuest,
+    mapQuest: mapQuest,
+    Neutrino: Neutrino,
+    neutrino: neutrino,
+    Nominatim: Nominatim,
+    nominatim: nominatim,
+    OpenLocationCode: OpenLocationCode,
+    openLocationCode: openLocationCode,
+    OpenCage: OpenCage,
+    opencage: opencage,
+    Pelias: Pelias,
+    pelias: pelias,
+    GeocodeEarth: GeocodeEarth,
+    geocodeEarth: geocodeEarth,
+    Mapzen: Mapzen,
+    mapzen: mapzen,
+    Openrouteservice: Openrouteservice,
+    openrouteservice: openrouteservice,
+    Photon: Photon,
+    photon: photon,
+    What3Words: What3Words,
+    what3words: what3words
+  };
+
+  /**
+   * Leaflet mixins https://leafletjs.com/reference-1.7.1.html#class-includes
+   * for TypeScript https://www.typescriptlang.org/docs/handbook/mixins.html
+   * @internal
+   */
+
+  var EventedControl = // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  function EventedControl() {// empty
+  };
+
+  L__namespace.Util.extend(EventedControl.prototype, L__namespace.Control.prototype);
+  L__namespace.Util.extend(EventedControl.prototype, L__namespace.Evented.prototype);
+  /**
+   * This is the geocoder control. It works like any other [Leaflet control](https://leafletjs.com/reference.html#control), and is added to the map.
+   */
+
+  var GeocoderControl = /*#__PURE__*/function (_EventedControl) {
+    _inheritsLoose(GeocoderControl, _EventedControl);
+
+    /**
+     * Instantiates a geocoder control (to be invoked using `new`)
+     * @param options the options
+     */
+    function GeocoderControl(options) {
+      var _this;
+
+      _this = _EventedControl.call(this, options) || this;
+      _this.options = {
+        showUniqueResult: true,
+        showResultIcons: false,
+        collapsed: true,
+        expand: 'touch',
+        position: 'topright',
+        placeholder: 'Search...',
+        errorMessage: 'Nothing found.',
+        iconLabel: 'Initiate a new search',
+        query: '',
+        queryMinLength: 1,
+        suggestMinLength: 3,
+        suggestTimeout: 250,
+        defaultMarkGeocode: true
+      };
+      _this._requestCount = 0;
+      L__namespace.Util.setOptions(_assertThisInitialized(_this), options);
+
+      if (!_this.options.geocoder) {
+        _this.options.geocoder = new Nominatim();
+      }
+
+      return _this;
+    }
+
+    var _proto = GeocoderControl.prototype;
+
+    _proto.addThrobberClass = function addThrobberClass() {
+      L__namespace.DomUtil.addClass(this._container, 'leaflet-control-geocoder-throbber');
+    };
+
+    _proto.removeThrobberClass = function removeThrobberClass() {
+      L__namespace.DomUtil.removeClass(this._container, 'leaflet-control-geocoder-throbber');
+    }
+    /**
+     * Returns the container DOM element for the control and add listeners on relevant map events.
+     * @param map the map instance
+     * @see https://leafletjs.com/reference.html#control-onadd
+     */
+    ;
+
+    _proto.onAdd = function onAdd(map) {
+      var _this2 = this;
+
+      var className = 'leaflet-control-geocoder';
+      var container = L__namespace.DomUtil.create('div', className + ' leaflet-bar');
+      var icon = L__namespace.DomUtil.create('button', className + '-icon', container);
+      var form = this._form = L__namespace.DomUtil.create('div', className + '-form', container);
+      this._map = map;
+      this._container = container;
+      icon.innerHTML = '&nbsp;';
+      icon.type = 'button';
+      icon.setAttribute('aria-label', this.options.iconLabel);
+      var input = this._input = L__namespace.DomUtil.create('input', '', form);
+      input.type = 'text';
+      input.value = this.options.query;
+      input.placeholder = this.options.placeholder;
+      L__namespace.DomEvent.disableClickPropagation(input);
+      this._errorElement = L__namespace.DomUtil.create('div', className + '-form-no-error', container);
+      this._errorElement.innerHTML = this.options.errorMessage;
+      this._alts = L__namespace.DomUtil.create('ul', className + '-alternatives leaflet-control-geocoder-alternatives-minimized', container);
+      L__namespace.DomEvent.disableClickPropagation(this._alts);
+      L__namespace.DomEvent.addListener(input, 'keydown', this._keydown, this);
+
+      if (this.options.geocoder.suggest) {
+        L__namespace.DomEvent.addListener(input, 'input', this._change, this);
+      }
+
+      L__namespace.DomEvent.addListener(input, 'blur', function () {
+        if (_this2.options.collapsed && !_this2._preventBlurCollapse) {
+          _this2._collapse();
+        }
+
+        _this2._preventBlurCollapse = false;
+      });
+
+      if (this.options.collapsed) {
+        if (this.options.expand === 'click') {
+          L__namespace.DomEvent.addListener(container, 'click', function (e) {
+            if (e.button === 0 && e.detail !== 2) {
+              _this2._toggle();
+            }
+          });
+        } else if (this.options.expand === 'touch') {
+          L__namespace.DomEvent.addListener(container, L__namespace.Browser.touch ? 'touchstart mousedown' : 'mousedown', function (e) {
+            _this2._toggle();
+
+            e.preventDefault(); // mobile: clicking focuses the icon, so UI expands and immediately collapses
+
+            e.stopPropagation();
+          }, this);
+        } else {
+          L__namespace.DomEvent.addListener(container, 'mouseover', this._expand, this);
+          L__namespace.DomEvent.addListener(container, 'mouseout', this._collapse, this);
+
+          this._map.on('movestart', this._collapse, this);
+        }
+      } else {
+        this._expand();
+
+        if (L__namespace.Browser.touch) {
+          L__namespace.DomEvent.addListener(container, 'touchstart', function () {
+            return _this2._geocode();
+          });
+        } else {
+          L__namespace.DomEvent.addListener(container, 'click', function () {
+            return _this2._geocode();
+          });
+        }
+      }
+
+      if (this.options.defaultMarkGeocode) {
+        this.on('markgeocode', this.markGeocode, this);
+      }
+
+      this.on('startgeocode', this.addThrobberClass, this);
+      this.on('finishgeocode', this.removeThrobberClass, this);
+      this.on('startsuggest', this.addThrobberClass, this);
+      this.on('finishsuggest', this.removeThrobberClass, this);
+      L__namespace.DomEvent.disableClickPropagation(container);
+      return container;
+    }
+    /**
+     * Sets the query string on the text input
+     * @param string the query string
+     */
+    ;
+
+    _proto.setQuery = function setQuery(string) {
+      this._input.value = string;
+      return this;
+    };
+
+    _proto._geocodeResult = function _geocodeResult(results, suggest) {
+      if (!suggest && this.options.showUniqueResult && results.length === 1) {
+        this._geocodeResultSelected(results[0]);
+      } else if (results.length > 0) {
+        this._alts.innerHTML = '';
+        this._results = results;
+        L__namespace.DomUtil.removeClass(this._alts, 'leaflet-control-geocoder-alternatives-minimized');
+        L__namespace.DomUtil.addClass(this._container, 'leaflet-control-geocoder-options-open');
+
+        for (var i = 0; i < results.length; i++) {
+          this._alts.appendChild(this._createAlt(results[i], i));
+        }
+      } else {
+        L__namespace.DomUtil.addClass(this._container, 'leaflet-control-geocoder-options-error');
+        L__namespace.DomUtil.addClass(this._errorElement, 'leaflet-control-geocoder-error');
+      }
+    }
+    /**
+     * Marks a geocoding result on the map
+     * @param result the geocoding result
+     */
+    ;
+
+    _proto.markGeocode = function markGeocode(event) {
+      var result = event.geocode;
+
+      this._map.fitBounds(result.bbox);
+
+      if (this._geocodeMarker) {
+        this._map.removeLayer(this._geocodeMarker);
+      }
+
+      this._geocodeMarker = new L__namespace.Marker(result.center).bindPopup(result.html || result.name).addTo(this._map).openPopup();
+      return this;
+    };
+
+    _proto._geocode = function _geocode(suggest) {
+      var _this3 = this;
+
+      var value = this._input.value;
+
+      if (!suggest && value.length < this.options.queryMinLength) {
+        return;
+      }
+
+      var requestCount = ++this._requestCount;
+
+      var cb = function cb(results) {
+        if (requestCount === _this3._requestCount) {
+          var _event = {
+            input: value,
+            results: results
+          };
+
+          _this3.fire(suggest ? 'finishsuggest' : 'finishgeocode', _event);
+
+          _this3._geocodeResult(results, suggest);
+        }
+      };
+
+      this._lastGeocode = value;
+
+      if (!suggest) {
+        this._clearResults();
+      }
+
+      var event = {
+        input: value
+      };
+      this.fire(suggest ? 'startsuggest' : 'startgeocode', event);
+
+      if (suggest) {
+        this.options.geocoder.suggest(value, cb);
+      } else {
+        this.options.geocoder.geocode(value, cb);
+      }
+    };
+
+    _proto._geocodeResultSelected = function _geocodeResultSelected(geocode) {
+      var event = {
+        geocode: geocode
+      };
+      this.fire('markgeocode', event);
+    };
+
+    _proto._toggle = function _toggle() {
+      if (L__namespace.DomUtil.hasClass(this._container, 'leaflet-control-geocoder-expanded')) {
+        this._collapse();
+      } else {
+        this._expand();
+      }
+    };
+
+    _proto._expand = function _expand() {
+      L__namespace.DomUtil.addClass(this._container, 'leaflet-control-geocoder-expanded');
+
+      this._input.select();
+
+      this.fire('expand');
+    };
+
+    _proto._collapse = function _collapse() {
+      L__namespace.DomUtil.removeClass(this._container, 'leaflet-control-geocoder-expanded');
+      L__namespace.DomUtil.addClass(this._alts, 'leaflet-control-geocoder-alternatives-minimized');
+      L__namespace.DomUtil.removeClass(this._errorElement, 'leaflet-control-geocoder-error');
+      L__namespace.DomUtil.removeClass(this._container, 'leaflet-control-geocoder-options-open');
+      L__namespace.DomUtil.removeClass(this._container, 'leaflet-control-geocoder-options-error');
+
+      this._input.blur(); // mobile: keyboard shouldn't stay expanded
+
+
+      this.fire('collapse');
+    };
+
+    _proto._clearResults = function _clearResults() {
+      L__namespace.DomUtil.addClass(this._alts, 'leaflet-control-geocoder-alternatives-minimized');
+      this._selection = null;
+      L__namespace.DomUtil.removeClass(this._errorElement, 'leaflet-control-geocoder-error');
+      L__namespace.DomUtil.removeClass(this._container, 'leaflet-control-geocoder-options-open');
+      L__namespace.DomUtil.removeClass(this._container, 'leaflet-control-geocoder-options-error');
+    };
+
+    _proto._createAlt = function _createAlt(result, index) {
+      var _this4 = this;
+
+      var li = L__namespace.DomUtil.create('li', ''),
+          a = L__namespace.DomUtil.create('a', '', li),
+          icon = this.options.showResultIcons && result.icon ? L__namespace.DomUtil.create('img', '', a) : null,
+          text = result.html ? undefined : document.createTextNode(result.name),
+          mouseDownHandler = function mouseDownHandler(e) {
+        // In some browsers, a click will fire on the map if the control is
+        // collapsed directly after mousedown. To work around this, we
+        // wait until the click is completed, and _then_ collapse the
+        // control. Messy, but this is the workaround I could come up with
+        // for #142.
+        _this4._preventBlurCollapse = true;
+        L__namespace.DomEvent.stop(e);
+
+        _this4._geocodeResultSelected(result);
+
+        L__namespace.DomEvent.on(li, 'click touchend', function () {
+          if (_this4.options.collapsed) {
+            _this4._collapse();
+          } else {
+            _this4._clearResults();
+          }
+        });
+      };
+
+      if (icon) {
+        icon.src = result.icon;
+      }
+
+      li.setAttribute('data-result-index', String(index));
+
+      if (result.html) {
+        a.innerHTML = a.innerHTML + result.html;
+      } else if (text) {
+        a.appendChild(text);
+      } // Use mousedown and not click, since click will fire _after_ blur,
+      // causing the control to have collapsed and removed the items
+      // before the click can fire.
+
+
+      L__namespace.DomEvent.addListener(li, 'mousedown touchstart', mouseDownHandler, this);
+      return li;
+    };
+
+    _proto._keydown = function _keydown(e) {
+      var _this5 = this;
+
+      var select = function select(dir) {
+        if (_this5._selection) {
+          L__namespace.DomUtil.removeClass(_this5._selection, 'leaflet-control-geocoder-selected');
+          _this5._selection = _this5._selection[dir > 0 ? 'nextSibling' : 'previousSibling'];
+        }
+
+        if (!_this5._selection) {
+          _this5._selection = _this5._alts[dir > 0 ? 'firstChild' : 'lastChild'];
+        }
+
+        if (_this5._selection) {
+          L__namespace.DomUtil.addClass(_this5._selection, 'leaflet-control-geocoder-selected');
+        }
+      };
+
+      switch (e.keyCode) {
+        // Escape
+        case 27:
+          if (this.options.collapsed) {
+            this._collapse();
+          } else {
+            this._clearResults();
+          }
+
+          break;
+        // Up
+
+        case 38:
+          select(-1);
+          break;
+        // Up
+
+        case 40:
+          select(1);
+          break;
+        // Enter
+
+        case 13:
+          if (this._selection) {
+            var index = parseInt(this._selection.getAttribute('data-result-index'), 10);
+
+            this._geocodeResultSelected(this._results[index]);
+
+            this._clearResults();
+          } else {
+            this._geocode();
+          }
+
+          break;
+
+        default:
+          return;
+      }
+
+      L__namespace.DomEvent.preventDefault(e);
+    };
+
+    _proto._change = function _change() {
+      var _this6 = this;
+
+      var v = this._input.value;
+
+      if (v !== this._lastGeocode) {
+        clearTimeout(this._suggestTimeout);
+
+        if (v.length >= this.options.suggestMinLength) {
+          this._suggestTimeout = setTimeout(function () {
+            return _this6._geocode(true);
+          }, this.options.suggestTimeout);
+        } else {
+          this._clearResults();
+        }
+      }
+    };
+
+    return GeocoderControl;
+  }(EventedControl);
+  /**
+   * [Class factory method](https://leafletjs.com/reference.html#class-class-factories) for {@link GeocoderControl}
+   * @param options the options
+   */
+
+  function geocoder(options) {
+    return new GeocoderControl(options);
+  }
+
+  /* @preserve
+   * Leaflet Control Geocoder
+   * https://github.com/perliedman/leaflet-control-geocoder
+   *
+   * Copyright (c) 2012 sa3m (https://github.com/sa3m)
+   * Copyright (c) 2018 Per Liedman
+   * All rights reserved.
+   */
+  L__namespace.Util.extend(GeocoderControl, geocoders);
+  L__namespace.Util.extend(L__namespace.Control, {
+    Geocoder: GeocoderControl,
+    geocoder: geocoder
+  });
+
+  exports.Geocoder = GeocoderControl;
+  exports.default = GeocoderControl;
+  exports.geocoder = geocoder;
+  exports.geocoders = geocoders;
+
+  return exports;
+
+}({}, L));
+//# sourceMappingURL=Control.Geocoder.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/leaflet.markercluster/dist/leaflet.markercluster-src.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/leaflet.markercluster/dist/leaflet.markercluster-src.js ***!
+  \******************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+/*
+ * Leaflet.markercluster 1.5.3+master.e5124b2,
+ * Provides Beautiful Animated Marker Clustering functionality for Leaflet, a JS library for interactive maps.
+ * https://github.com/Leaflet/Leaflet.markercluster
+ * (c) 2012-2017, Dave Leaver, smartrak
+ */
+(function (global, factory) {
+	 true ? factory(exports) :
+	0;
+}(this, function (exports) { 'use strict';
+
+	/*
+	 * L.MarkerClusterGroup extends L.FeatureGroup by clustering the markers contained within
+	 */
+
+	var MarkerClusterGroup = L.MarkerClusterGroup = L.FeatureGroup.extend({
+
+		options: {
+			maxClusterRadius: 80, //A cluster will cover at most this many pixels from its center
+			iconCreateFunction: null,
+			clusterPane: L.Marker.prototype.options.pane,
+
+			spiderfyOnEveryZoom: false,
+			spiderfyOnMaxZoom: true,
+			showCoverageOnHover: true,
+			zoomToBoundsOnClick: true,
+			singleMarkerMode: false,
+
+			disableClusteringAtZoom: null,
+
+			// Setting this to false prevents the removal of any clusters outside of the viewpoint, which
+			// is the default behaviour for performance reasons.
+			removeOutsideVisibleBounds: true,
+
+			// Set to false to disable all animations (zoom and spiderfy).
+			// If false, option animateAddingMarkers below has no effect.
+			// If L.DomUtil.TRANSITION is falsy, this option has no effect.
+			animate: true,
+
+			//Whether to animate adding markers after adding the MarkerClusterGroup to the map
+			// If you are adding individual markers set to true, if adding bulk markers leave false for massive performance gains.
+			animateAddingMarkers: false,
+
+			// Make it possible to provide custom function to calculate spiderfy shape positions
+			spiderfyShapePositions: null,
+
+			//Increase to increase the distance away that spiderfied markers appear from the center
+			spiderfyDistanceMultiplier: 1,
+
+			// Make it possible to specify a polyline options on a spider leg
+			spiderLegPolylineOptions: { weight: 1.5, color: '#222', opacity: 0.5 },
+
+			// When bulk adding layers, adds markers in chunks. Means addLayers may not add all the layers in the call, others will be loaded during setTimeouts
+			chunkedLoading: false,
+			chunkInterval: 200, // process markers for a maximum of ~ n milliseconds (then trigger the chunkProgress callback)
+			chunkDelay: 50, // at the end of each interval, give n milliseconds back to system/browser
+			chunkProgress: null, // progress callback: function(processed, total, elapsed) (e.g. for a progress indicator)
+
+			//Options to pass to the L.Polygon constructor
+			polygonOptions: {}
+		},
+
+		initialize: function (options) {
+			L.Util.setOptions(this, options);
+			if (!this.options.iconCreateFunction) {
+				this.options.iconCreateFunction = this._defaultIconCreateFunction;
+			}
+
+			this._featureGroup = L.featureGroup();
+			this._featureGroup.addEventParent(this);
+
+			this._nonPointGroup = L.featureGroup();
+			this._nonPointGroup.addEventParent(this);
+
+			this._inZoomAnimation = 0;
+			this._needsClustering = [];
+			this._needsRemoving = []; //Markers removed while we aren't on the map need to be kept track of
+			//The bounds of the currently shown area (from _getExpandedVisibleBounds) Updated on zoom/move
+			this._currentShownBounds = null;
+
+			this._queue = [];
+
+			this._childMarkerEventHandlers = {
+				'dragstart': this._childMarkerDragStart,
+				'move': this._childMarkerMoved,
+				'dragend': this._childMarkerDragEnd,
+			};
+
+			// Hook the appropriate animation methods.
+			var animate = L.DomUtil.TRANSITION && this.options.animate;
+			L.extend(this, animate ? this._withAnimation : this._noAnimation);
+			// Remember which MarkerCluster class to instantiate (animated or not).
+			this._markerCluster = animate ? L.MarkerCluster : L.MarkerClusterNonAnimated;
+		},
+
+		addLayer: function (layer) {
+
+			if (layer instanceof L.LayerGroup) {
+				return this.addLayers([layer]);
+			}
+
+			//Don't cluster non point data
+			if (!layer.getLatLng) {
+				this._nonPointGroup.addLayer(layer);
+				this.fire('layeradd', { layer: layer });
+				return this;
+			}
+
+			if (!this._map) {
+				this._needsClustering.push(layer);
+				this.fire('layeradd', { layer: layer });
+				return this;
+			}
+
+			if (this.hasLayer(layer)) {
+				return this;
+			}
+
+
+			//If we have already clustered we'll need to add this one to a cluster
+
+			if (this._unspiderfy) {
+				this._unspiderfy();
+			}
+
+			this._addLayer(layer, this._maxZoom);
+			this.fire('layeradd', { layer: layer });
+
+			// Refresh bounds and weighted positions.
+			this._topClusterLevel._recalculateBounds();
+
+			this._refreshClustersIcons();
+
+			//Work out what is visible
+			var visibleLayer = layer,
+			    currentZoom = this._zoom;
+			if (layer.__parent) {
+				while (visibleLayer.__parent._zoom >= currentZoom) {
+					visibleLayer = visibleLayer.__parent;
+				}
+			}
+
+			if (this._currentShownBounds.contains(visibleLayer.getLatLng())) {
+				if (this.options.animateAddingMarkers) {
+					this._animationAddLayer(layer, visibleLayer);
+				} else {
+					this._animationAddLayerNonAnimated(layer, visibleLayer);
+				}
+			}
+			return this;
+		},
+
+		removeLayer: function (layer) {
+
+			if (layer instanceof L.LayerGroup) {
+				return this.removeLayers([layer]);
+			}
+
+			//Non point layers
+			if (!layer.getLatLng) {
+				this._nonPointGroup.removeLayer(layer);
+				this.fire('layerremove', { layer: layer });
+				return this;
+			}
+
+			if (!this._map) {
+				if (!this._arraySplice(this._needsClustering, layer) && this.hasLayer(layer)) {
+					this._needsRemoving.push({ layer: layer, latlng: layer._latlng });
+				}
+				this.fire('layerremove', { layer: layer });
+				return this;
+			}
+
+			if (!layer.__parent) {
+				return this;
+			}
+
+			if (this._unspiderfy) {
+				this._unspiderfy();
+				this._unspiderfyLayer(layer);
+			}
+
+			//Remove the marker from clusters
+			this._removeLayer(layer, true);
+			this.fire('layerremove', { layer: layer });
+
+			// Refresh bounds and weighted positions.
+			this._topClusterLevel._recalculateBounds();
+
+			this._refreshClustersIcons();
+
+			layer.off(this._childMarkerEventHandlers, this);
+
+			if (this._featureGroup.hasLayer(layer)) {
+				this._featureGroup.removeLayer(layer);
+				if (layer.clusterShow) {
+					layer.clusterShow();
+				}
+			}
+
+			return this;
+		},
+
+		//Takes an array of markers and adds them in bulk
+		addLayers: function (layersArray, skipLayerAddEvent) {
+			if (!L.Util.isArray(layersArray)) {
+				return this.addLayer(layersArray);
+			}
+
+			var fg = this._featureGroup,
+			    npg = this._nonPointGroup,
+			    chunked = this.options.chunkedLoading,
+			    chunkInterval = this.options.chunkInterval,
+			    chunkProgress = this.options.chunkProgress,
+			    l = layersArray.length,
+			    offset = 0,
+			    originalArray = true,
+			    m;
+
+			if (this._map) {
+				var started = (new Date()).getTime();
+				var process = L.bind(function () {
+					var start = (new Date()).getTime();
+
+					// Make sure to unspiderfy before starting to add some layers
+					if (this._map && this._unspiderfy) {
+						this._unspiderfy();
+					}
+
+					for (; offset < l; offset++) {
+						if (chunked && offset % 200 === 0) {
+							// every couple hundred markers, instrument the time elapsed since processing started:
+							var elapsed = (new Date()).getTime() - start;
+							if (elapsed > chunkInterval) {
+								break; // been working too hard, time to take a break :-)
+							}
+						}
+
+						m = layersArray[offset];
+
+						// Group of layers, append children to layersArray and skip.
+						// Side effects:
+						// - Total increases, so chunkProgress ratio jumps backward.
+						// - Groups are not included in this group, only their non-group child layers (hasLayer).
+						// Changing array length while looping does not affect performance in current browsers:
+						// http://jsperf.com/for-loop-changing-length/6
+						if (m instanceof L.LayerGroup) {
+							if (originalArray) {
+								layersArray = layersArray.slice();
+								originalArray = false;
+							}
+							this._extractNonGroupLayers(m, layersArray);
+							l = layersArray.length;
+							continue;
+						}
+
+						//Not point data, can't be clustered
+						if (!m.getLatLng) {
+							npg.addLayer(m);
+							if (!skipLayerAddEvent) {
+								this.fire('layeradd', { layer: m });
+							}
+							continue;
+						}
+
+						if (this.hasLayer(m)) {
+							continue;
+						}
+
+						this._addLayer(m, this._maxZoom);
+						if (!skipLayerAddEvent) {
+							this.fire('layeradd', { layer: m });
+						}
+
+						//If we just made a cluster of size 2 then we need to remove the other marker from the map (if it is) or we never will
+						if (m.__parent) {
+							if (m.__parent.getChildCount() === 2) {
+								var markers = m.__parent.getAllChildMarkers(),
+								    otherMarker = markers[0] === m ? markers[1] : markers[0];
+								fg.removeLayer(otherMarker);
+							}
+						}
+					}
+
+					if (chunkProgress) {
+						// report progress and time elapsed:
+						chunkProgress(offset, l, (new Date()).getTime() - started);
+					}
+
+					// Completed processing all markers.
+					if (offset === l) {
+
+						// Refresh bounds and weighted positions.
+						this._topClusterLevel._recalculateBounds();
+
+						this._refreshClustersIcons();
+
+						this._topClusterLevel._recursivelyAddChildrenToMap(null, this._zoom, this._currentShownBounds);
+					} else {
+						setTimeout(process, this.options.chunkDelay);
+					}
+				}, this);
+
+				process();
+			} else {
+				var needsClustering = this._needsClustering;
+
+				for (; offset < l; offset++) {
+					m = layersArray[offset];
+
+					// Group of layers, append children to layersArray and skip.
+					if (m instanceof L.LayerGroup) {
+						if (originalArray) {
+							layersArray = layersArray.slice();
+							originalArray = false;
+						}
+						this._extractNonGroupLayers(m, layersArray);
+						l = layersArray.length;
+						continue;
+					}
+
+					//Not point data, can't be clustered
+					if (!m.getLatLng) {
+						npg.addLayer(m);
+						continue;
+					}
+
+					if (this.hasLayer(m)) {
+						continue;
+					}
+
+					needsClustering.push(m);
+				}
+			}
+			return this;
+		},
+
+		//Takes an array of markers and removes them in bulk
+		removeLayers: function (layersArray) {
+			var i, m,
+			    l = layersArray.length,
+			    fg = this._featureGroup,
+			    npg = this._nonPointGroup,
+			    originalArray = true;
+
+			if (!this._map) {
+				for (i = 0; i < l; i++) {
+					m = layersArray[i];
+
+					// Group of layers, append children to layersArray and skip.
+					if (m instanceof L.LayerGroup) {
+						if (originalArray) {
+							layersArray = layersArray.slice();
+							originalArray = false;
+						}
+						this._extractNonGroupLayers(m, layersArray);
+						l = layersArray.length;
+						continue;
+					}
+
+					this._arraySplice(this._needsClustering, m);
+					npg.removeLayer(m);
+					if (this.hasLayer(m)) {
+						this._needsRemoving.push({ layer: m, latlng: m._latlng });
+					}
+					this.fire('layerremove', { layer: m });
+				}
+				return this;
+			}
+
+			if (this._unspiderfy) {
+				this._unspiderfy();
+
+				// Work on a copy of the array, so that next loop is not affected.
+				var layersArray2 = layersArray.slice(),
+				    l2 = l;
+				for (i = 0; i < l2; i++) {
+					m = layersArray2[i];
+
+					// Group of layers, append children to layersArray and skip.
+					if (m instanceof L.LayerGroup) {
+						this._extractNonGroupLayers(m, layersArray2);
+						l2 = layersArray2.length;
+						continue;
+					}
+
+					this._unspiderfyLayer(m);
+				}
+			}
+
+			for (i = 0; i < l; i++) {
+				m = layersArray[i];
+
+				// Group of layers, append children to layersArray and skip.
+				if (m instanceof L.LayerGroup) {
+					if (originalArray) {
+						layersArray = layersArray.slice();
+						originalArray = false;
+					}
+					this._extractNonGroupLayers(m, layersArray);
+					l = layersArray.length;
+					continue;
+				}
+
+				if (!m.__parent) {
+					npg.removeLayer(m);
+					this.fire('layerremove', { layer: m });
+					continue;
+				}
+
+				this._removeLayer(m, true, true);
+				this.fire('layerremove', { layer: m });
+
+				if (fg.hasLayer(m)) {
+					fg.removeLayer(m);
+					if (m.clusterShow) {
+						m.clusterShow();
+					}
+				}
+			}
+
+			// Refresh bounds and weighted positions.
+			this._topClusterLevel._recalculateBounds();
+
+			this._refreshClustersIcons();
+
+			//Fix up the clusters and markers on the map
+			this._topClusterLevel._recursivelyAddChildrenToMap(null, this._zoom, this._currentShownBounds);
+
+			return this;
+		},
+
+		//Removes all layers from the MarkerClusterGroup
+		clearLayers: function () {
+			//Need our own special implementation as the LayerGroup one doesn't work for us
+
+			//If we aren't on the map (yet), blow away the markers we know of
+			if (!this._map) {
+				this._needsClustering = [];
+				this._needsRemoving = [];
+				delete this._gridClusters;
+				delete this._gridUnclustered;
+			}
+
+			if (this._noanimationUnspiderfy) {
+				this._noanimationUnspiderfy();
+			}
+
+			//Remove all the visible layers
+			this._featureGroup.clearLayers();
+			this._nonPointGroup.clearLayers();
+
+			this.eachLayer(function (marker) {
+				marker.off(this._childMarkerEventHandlers, this);
+				delete marker.__parent;
+			}, this);
+
+			if (this._map) {
+				//Reset _topClusterLevel and the DistanceGrids
+				this._generateInitialClusters();
+			}
+
+			return this;
+		},
+
+		//Override FeatureGroup.getBounds as it doesn't work
+		getBounds: function () {
+			var bounds = new L.LatLngBounds();
+
+			if (this._topClusterLevel) {
+				bounds.extend(this._topClusterLevel._bounds);
+			}
+
+			for (var i = this._needsClustering.length - 1; i >= 0; i--) {
+				bounds.extend(this._needsClustering[i].getLatLng());
+			}
+
+			bounds.extend(this._nonPointGroup.getBounds());
+
+			return bounds;
+		},
+
+		//Overrides LayerGroup.eachLayer
+		eachLayer: function (method, context) {
+			var markers = this._needsClustering.slice(),
+				needsRemoving = this._needsRemoving,
+				thisNeedsRemoving, i, j;
+
+			if (this._topClusterLevel) {
+				this._topClusterLevel.getAllChildMarkers(markers);
+			}
+
+			for (i = markers.length - 1; i >= 0; i--) {
+				thisNeedsRemoving = true;
+
+				for (j = needsRemoving.length - 1; j >= 0; j--) {
+					if (needsRemoving[j].layer === markers[i]) {
+						thisNeedsRemoving = false;
+						break;
+					}
+				}
+
+				if (thisNeedsRemoving) {
+					method.call(context, markers[i]);
+				}
+			}
+
+			this._nonPointGroup.eachLayer(method, context);
+		},
+
+		//Overrides LayerGroup.getLayers
+		getLayers: function () {
+			var layers = [];
+			this.eachLayer(function (l) {
+				layers.push(l);
+			});
+			return layers;
+		},
+
+		//Overrides LayerGroup.getLayer, WARNING: Really bad performance
+		getLayer: function (id) {
+			var result = null;
+
+			id = parseInt(id, 10);
+
+			this.eachLayer(function (l) {
+				if (L.stamp(l) === id) {
+					result = l;
+				}
+			});
+
+			return result;
+		},
+
+		//Returns true if the given layer is in this MarkerClusterGroup
+		hasLayer: function (layer) {
+			if (!layer) {
+				return false;
+			}
+
+			var i, anArray = this._needsClustering;
+
+			for (i = anArray.length - 1; i >= 0; i--) {
+				if (anArray[i] === layer) {
+					return true;
+				}
+			}
+
+			anArray = this._needsRemoving;
+			for (i = anArray.length - 1; i >= 0; i--) {
+				if (anArray[i].layer === layer) {
+					return false;
+				}
+			}
+
+			return !!(layer.__parent && layer.__parent._group === this) || this._nonPointGroup.hasLayer(layer);
+		},
+
+		//Zoom down to show the given layer (spiderfying if necessary) then calls the callback
+		zoomToShowLayer: function (layer, callback) {
+
+			var map = this._map;
+
+			if (typeof callback !== 'function') {
+				callback = function () {};
+			}
+
+			var showMarker = function () {
+				// Assumes that map.hasLayer checks for direct appearance on map, not recursively calling
+				// hasLayer on Layer Groups that are on map (typically not calling this MarkerClusterGroup.hasLayer, which would always return true)
+				if ((map.hasLayer(layer) || map.hasLayer(layer.__parent)) && !this._inZoomAnimation) {
+					this._map.off('moveend', showMarker, this);
+					this.off('animationend', showMarker, this);
+
+					if (map.hasLayer(layer)) {
+						callback();
+					} else if (layer.__parent._icon) {
+						this.once('spiderfied', callback, this);
+						layer.__parent.spiderfy();
+					}
+				}
+			};
+
+			if (layer._icon && this._map.getBounds().contains(layer.getLatLng())) {
+				//Layer is visible ond on screen, immediate return
+				callback();
+			} else if (layer.__parent._zoom < Math.round(this._map._zoom)) {
+				//Layer should be visible at this zoom level. It must not be on screen so just pan over to it
+				this._map.on('moveend', showMarker, this);
+				this._map.panTo(layer.getLatLng());
+			} else {
+				this._map.on('moveend', showMarker, this);
+				this.on('animationend', showMarker, this);
+				layer.__parent.zoomToBounds();
+			}
+		},
+
+		//Overrides FeatureGroup.onAdd
+		onAdd: function (map) {
+			this._map = map;
+			var i, l, layer;
+
+			if (!isFinite(this._map.getMaxZoom())) {
+				throw "Map has no maxZoom specified";
+			}
+
+			this._featureGroup.addTo(map);
+			this._nonPointGroup.addTo(map);
+
+			if (!this._gridClusters) {
+				this._generateInitialClusters();
+			}
+
+			this._maxLat = map.options.crs.projection.MAX_LATITUDE;
+
+			//Restore all the positions as they are in the MCG before removing them
+			for (i = 0, l = this._needsRemoving.length; i < l; i++) {
+				layer = this._needsRemoving[i];
+				layer.newlatlng = layer.layer._latlng;
+				layer.layer._latlng = layer.latlng;
+			}
+			//Remove them, then restore their new positions
+			for (i = 0, l = this._needsRemoving.length; i < l; i++) {
+				layer = this._needsRemoving[i];
+				this._removeLayer(layer.layer, true);
+				layer.layer._latlng = layer.newlatlng;
+			}
+			this._needsRemoving = [];
+
+			//Remember the current zoom level and bounds
+			this._zoom = Math.round(this._map._zoom);
+			this._currentShownBounds = this._getExpandedVisibleBounds();
+
+			this._map.on('zoomend', this._zoomEnd, this);
+			this._map.on('moveend', this._moveEnd, this);
+
+			if (this._spiderfierOnAdd) { //TODO FIXME: Not sure how to have spiderfier add something on here nicely
+				this._spiderfierOnAdd();
+			}
+
+			this._bindEvents();
+
+			//Actually add our markers to the map:
+			l = this._needsClustering;
+			this._needsClustering = [];
+			this.addLayers(l, true);
+		},
+
+		//Overrides FeatureGroup.onRemove
+		onRemove: function (map) {
+			map.off('zoomend', this._zoomEnd, this);
+			map.off('moveend', this._moveEnd, this);
+
+			this._unbindEvents();
+
+			//In case we are in a cluster animation
+			this._map._mapPane.className = this._map._mapPane.className.replace(' leaflet-cluster-anim', '');
+
+			if (this._spiderfierOnRemove) { //TODO FIXME: Not sure how to have spiderfier add something on here nicely
+				this._spiderfierOnRemove();
+			}
+
+			delete this._maxLat;
+
+			//Clean up all the layers we added to the map
+			this._hideCoverage();
+			this._featureGroup.remove();
+			this._nonPointGroup.remove();
+
+			this._featureGroup.clearLayers();
+
+			this._map = null;
+		},
+
+		getVisibleParent: function (marker) {
+			var vMarker = marker;
+			while (vMarker && !vMarker._icon) {
+				vMarker = vMarker.__parent;
+			}
+			return vMarker || null;
+		},
+
+		//Remove the given object from the given array
+		_arraySplice: function (anArray, obj) {
+			for (var i = anArray.length - 1; i >= 0; i--) {
+				if (anArray[i] === obj) {
+					anArray.splice(i, 1);
+					return true;
+				}
+			}
+		},
+
+		/**
+		 * Removes a marker from all _gridUnclustered zoom levels, starting at the supplied zoom.
+		 * @param marker to be removed from _gridUnclustered.
+		 * @param z integer bottom start zoom level (included)
+		 * @private
+		 */
+		_removeFromGridUnclustered: function (marker, z) {
+			var map = this._map,
+			    gridUnclustered = this._gridUnclustered,
+				minZoom = Math.floor(this._map.getMinZoom());
+
+			for (; z >= minZoom; z--) {
+				if (!gridUnclustered[z].removeObject(marker, map.project(marker.getLatLng(), z))) {
+					break;
+				}
+			}
+		},
+
+		_childMarkerDragStart: function (e) {
+			e.target.__dragStart = e.target._latlng;
+		},
+
+		_childMarkerMoved: function (e) {
+			if (!this._ignoreMove && !e.target.__dragStart) {
+				var isPopupOpen = e.target._popup && e.target._popup.isOpen();
+
+				this._moveChild(e.target, e.oldLatLng, e.latlng);
+
+				if (isPopupOpen) {
+					e.target.openPopup();
+				}
+			}
+		},
+
+		_moveChild: function (layer, from, to) {
+			layer._latlng = from;
+			this.removeLayer(layer);
+
+			layer._latlng = to;
+			this.addLayer(layer);
+		},
+
+		_childMarkerDragEnd: function (e) {
+			var dragStart = e.target.__dragStart;
+			delete e.target.__dragStart;
+			if (dragStart) {
+				this._moveChild(e.target, dragStart, e.target._latlng);
+			}		
+		},
+
+
+		//Internal function for removing a marker from everything.
+		//dontUpdateMap: set to true if you will handle updating the map manually (for bulk functions)
+		_removeLayer: function (marker, removeFromDistanceGrid, dontUpdateMap) {
+			var gridClusters = this._gridClusters,
+				gridUnclustered = this._gridUnclustered,
+				fg = this._featureGroup,
+				map = this._map,
+				minZoom = Math.floor(this._map.getMinZoom());
+
+			//Remove the marker from distance clusters it might be in
+			if (removeFromDistanceGrid) {
+				this._removeFromGridUnclustered(marker, this._maxZoom);
+			}
+
+			//Work our way up the clusters removing them as we go if required
+			var cluster = marker.__parent,
+				markers = cluster._markers,
+				otherMarker;
+
+			//Remove the marker from the immediate parents marker list
+			this._arraySplice(markers, marker);
+
+			while (cluster) {
+				cluster._childCount--;
+				cluster._boundsNeedUpdate = true;
+
+				if (cluster._zoom < minZoom) {
+					//Top level, do nothing
+					break;
+				} else if (removeFromDistanceGrid && cluster._childCount <= 1) { //Cluster no longer required
+					//We need to push the other marker up to the parent
+					otherMarker = cluster._markers[0] === marker ? cluster._markers[1] : cluster._markers[0];
+
+					//Update distance grid
+					gridClusters[cluster._zoom].removeObject(cluster, map.project(cluster._cLatLng, cluster._zoom));
+					gridUnclustered[cluster._zoom].addObject(otherMarker, map.project(otherMarker.getLatLng(), cluster._zoom));
+
+					//Move otherMarker up to parent
+					this._arraySplice(cluster.__parent._childClusters, cluster);
+					cluster.__parent._markers.push(otherMarker);
+					otherMarker.__parent = cluster.__parent;
+
+					if (cluster._icon) {
+						//Cluster is currently on the map, need to put the marker on the map instead
+						fg.removeLayer(cluster);
+						if (!dontUpdateMap) {
+							fg.addLayer(otherMarker);
+						}
+					}
+				} else {
+					cluster._iconNeedsUpdate = true;
+				}
+
+				cluster = cluster.__parent;
+			}
+
+			delete marker.__parent;
+		},
+
+		_isOrIsParent: function (el, oel) {
+			while (oel) {
+				if (el === oel) {
+					return true;
+				}
+				oel = oel.parentNode;
+			}
+			return false;
+		},
+
+		//Override L.Evented.fire
+		fire: function (type, data, propagate) {
+			if (data && data.layer instanceof L.MarkerCluster) {
+				//Prevent multiple clustermouseover/off events if the icon is made up of stacked divs (Doesn't work in ie <= 8, no relatedTarget)
+				if (data.originalEvent && this._isOrIsParent(data.layer._icon, data.originalEvent.relatedTarget)) {
+					return;
+				}
+				type = 'cluster' + type;
+			}
+
+			L.FeatureGroup.prototype.fire.call(this, type, data, propagate);
+		},
+
+		//Override L.Evented.listens
+		listens: function (type, propagate) {
+			return L.FeatureGroup.prototype.listens.call(this, type, propagate) || L.FeatureGroup.prototype.listens.call(this, 'cluster' + type, propagate);
+		},
+
+		//Default functionality
+		_defaultIconCreateFunction: function (cluster) {
+			var childCount = cluster.getChildCount();
+
+			var c = ' marker-cluster-';
+			if (childCount < 10) {
+				c += 'small';
+			} else if (childCount < 100) {
+				c += 'medium';
+			} else {
+				c += 'large';
+			}
+
+			return new L.DivIcon({ html: '<div><span>' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+		},
+
+		_bindEvents: function () {
+			var map = this._map,
+			    spiderfyOnMaxZoom = this.options.spiderfyOnMaxZoom,
+			    showCoverageOnHover = this.options.showCoverageOnHover,
+			    zoomToBoundsOnClick = this.options.zoomToBoundsOnClick,
+			    spiderfyOnEveryZoom = this.options.spiderfyOnEveryZoom;
+
+			//Zoom on cluster click or spiderfy if we are at the lowest level
+			if (spiderfyOnMaxZoom || zoomToBoundsOnClick || spiderfyOnEveryZoom) {
+				this.on('clusterclick clusterkeypress', this._zoomOrSpiderfy, this);
+			}
+
+			//Show convex hull (boundary) polygon on mouse over
+			if (showCoverageOnHover) {
+				this.on('clustermouseover', this._showCoverage, this);
+				this.on('clustermouseout', this._hideCoverage, this);
+				map.on('zoomend', this._hideCoverage, this);
+			}
+		},
+
+		_zoomOrSpiderfy: function (e) {
+			var cluster = e.layer,
+			    bottomCluster = cluster;
+
+			if (e.type === 'clusterkeypress' && e.originalEvent && e.originalEvent.keyCode !== 13) {
+				return;
+			}
+
+			while (bottomCluster._childClusters.length === 1) {
+				bottomCluster = bottomCluster._childClusters[0];
+			}
+
+			if (bottomCluster._zoom === this._maxZoom &&
+				bottomCluster._childCount === cluster._childCount &&
+				this.options.spiderfyOnMaxZoom) {
+
+				// All child markers are contained in a single cluster from this._maxZoom to this cluster.
+				cluster.spiderfy();
+			} else if (this.options.zoomToBoundsOnClick) {
+				cluster.zoomToBounds();
+			}
+
+			if (this.options.spiderfyOnEveryZoom) {
+				cluster.spiderfy();
+			}
+
+			// Focus the map again for keyboard users.
+			if (e.originalEvent && e.originalEvent.keyCode === 13) {
+				this._map._container.focus();
+			}
+		},
+
+		_showCoverage: function (e) {
+			var map = this._map;
+			if (this._inZoomAnimation) {
+				return;
+			}
+			if (this._shownPolygon) {
+				map.removeLayer(this._shownPolygon);
+			}
+			if (e.layer.getChildCount() > 2 && e.layer !== this._spiderfied) {
+				this._shownPolygon = new L.Polygon(e.layer.getConvexHull(), this.options.polygonOptions);
+				map.addLayer(this._shownPolygon);
+			}
+		},
+
+		_hideCoverage: function () {
+			if (this._shownPolygon) {
+				this._map.removeLayer(this._shownPolygon);
+				this._shownPolygon = null;
+			}
+		},
+
+		_unbindEvents: function () {
+			var spiderfyOnMaxZoom = this.options.spiderfyOnMaxZoom,
+				showCoverageOnHover = this.options.showCoverageOnHover,
+				zoomToBoundsOnClick = this.options.zoomToBoundsOnClick,
+				spiderfyOnEveryZoom = this.options.spiderfyOnEveryZoom,
+				map = this._map;
+
+			if (spiderfyOnMaxZoom || zoomToBoundsOnClick || spiderfyOnEveryZoom) {
+				this.off('clusterclick clusterkeypress', this._zoomOrSpiderfy, this);
+			}
+			if (showCoverageOnHover) {
+				this.off('clustermouseover', this._showCoverage, this);
+				this.off('clustermouseout', this._hideCoverage, this);
+				map.off('zoomend', this._hideCoverage, this);
+			}
+		},
+
+		_zoomEnd: function () {
+			if (!this._map) { //May have been removed from the map by a zoomEnd handler
+				return;
+			}
+			this._mergeSplitClusters();
+
+			this._zoom = Math.round(this._map._zoom);
+			this._currentShownBounds = this._getExpandedVisibleBounds();
+		},
+
+		_moveEnd: function () {
+			if (this._inZoomAnimation) {
+				return;
+			}
+
+			var newBounds = this._getExpandedVisibleBounds();
+
+			this._topClusterLevel._recursivelyRemoveChildrenFromMap(this._currentShownBounds, Math.floor(this._map.getMinZoom()), this._zoom, newBounds);
+			this._topClusterLevel._recursivelyAddChildrenToMap(null, Math.round(this._map._zoom), newBounds);
+
+			this._currentShownBounds = newBounds;
+			return;
+		},
+
+		_generateInitialClusters: function () {
+			var maxZoom = Math.ceil(this._map.getMaxZoom()),
+				minZoom = Math.floor(this._map.getMinZoom()),
+				radius = this.options.maxClusterRadius,
+				radiusFn = radius;
+
+			//If we just set maxClusterRadius to a single number, we need to create
+			//a simple function to return that number. Otherwise, we just have to
+			//use the function we've passed in.
+			if (typeof radius !== "function") {
+				radiusFn = function () { return radius; };
+			}
+
+			if (this.options.disableClusteringAtZoom !== null) {
+				maxZoom = this.options.disableClusteringAtZoom - 1;
+			}
+			this._maxZoom = maxZoom;
+			this._gridClusters = {};
+			this._gridUnclustered = {};
+
+			//Set up DistanceGrids for each zoom
+			for (var zoom = maxZoom; zoom >= minZoom; zoom--) {
+				this._gridClusters[zoom] = new L.DistanceGrid(radiusFn(zoom));
+				this._gridUnclustered[zoom] = new L.DistanceGrid(radiusFn(zoom));
+			}
+
+			// Instantiate the appropriate L.MarkerCluster class (animated or not).
+			this._topClusterLevel = new this._markerCluster(this, minZoom - 1);
+		},
+
+		//Zoom: Zoom to start adding at (Pass this._maxZoom to start at the bottom)
+		_addLayer: function (layer, zoom) {
+			var gridClusters = this._gridClusters,
+			    gridUnclustered = this._gridUnclustered,
+				minZoom = Math.floor(this._map.getMinZoom()),
+			    markerPoint, z;
+
+			if (this.options.singleMarkerMode) {
+				this._overrideMarkerIcon(layer);
+			}
+
+			layer.on(this._childMarkerEventHandlers, this);
+
+			//Find the lowest zoom level to slot this one in
+			for (; zoom >= minZoom; zoom--) {
+				markerPoint = this._map.project(layer.getLatLng(), zoom); // calculate pixel position
+
+				//Try find a cluster close by
+				var closest = gridClusters[zoom].getNearObject(markerPoint);
+				if (closest) {
+					closest._addChild(layer);
+					layer.__parent = closest;
+					return;
+				}
+
+				//Try find a marker close by to form a new cluster with
+				closest = gridUnclustered[zoom].getNearObject(markerPoint);
+				if (closest) {
+					var parent = closest.__parent;
+					if (parent) {
+						this._removeLayer(closest, false);
+					}
+
+					//Create new cluster with these 2 in it
+
+					var newCluster = new this._markerCluster(this, zoom, closest, layer);
+					gridClusters[zoom].addObject(newCluster, this._map.project(newCluster._cLatLng, zoom));
+					closest.__parent = newCluster;
+					layer.__parent = newCluster;
+
+					//First create any new intermediate parent clusters that don't exist
+					var lastParent = newCluster;
+					for (z = zoom - 1; z > parent._zoom; z--) {
+						lastParent = new this._markerCluster(this, z, lastParent);
+						gridClusters[z].addObject(lastParent, this._map.project(closest.getLatLng(), z));
+					}
+					parent._addChild(lastParent);
+
+					//Remove closest from this zoom level and any above that it is in, replace with newCluster
+					this._removeFromGridUnclustered(closest, zoom);
+
+					return;
+				}
+
+				//Didn't manage to cluster in at this zoom, record us as a marker here and continue upwards
+				gridUnclustered[zoom].addObject(layer, markerPoint);
+			}
+
+			//Didn't get in anything, add us to the top
+			this._topClusterLevel._addChild(layer);
+			layer.__parent = this._topClusterLevel;
+			return;
+		},
+
+		/**
+		 * Refreshes the icon of all "dirty" visible clusters.
+		 * Non-visible "dirty" clusters will be updated when they are added to the map.
+		 * @private
+		 */
+		_refreshClustersIcons: function () {
+			this._featureGroup.eachLayer(function (c) {
+				if (c instanceof L.MarkerCluster && c._iconNeedsUpdate) {
+					c._updateIcon();
+				}
+			});
+		},
+
+		//Enqueue code to fire after the marker expand/contract has happened
+		_enqueue: function (fn) {
+			this._queue.push(fn);
+			if (!this._queueTimeout) {
+				this._queueTimeout = setTimeout(L.bind(this._processQueue, this), 300);
+			}
+		},
+		_processQueue: function () {
+			for (var i = 0; i < this._queue.length; i++) {
+				this._queue[i].call(this);
+			}
+			this._queue.length = 0;
+			clearTimeout(this._queueTimeout);
+			this._queueTimeout = null;
+		},
+
+		//Merge and split any existing clusters that are too big or small
+		_mergeSplitClusters: function () {
+			var mapZoom = Math.round(this._map._zoom);
+
+			//In case we are starting to split before the animation finished
+			this._processQueue();
+
+			if (this._zoom < mapZoom && this._currentShownBounds.intersects(this._getExpandedVisibleBounds())) { //Zoom in, split
+				this._animationStart();
+				//Remove clusters now off screen
+				this._topClusterLevel._recursivelyRemoveChildrenFromMap(this._currentShownBounds, Math.floor(this._map.getMinZoom()), this._zoom, this._getExpandedVisibleBounds());
+
+				this._animationZoomIn(this._zoom, mapZoom);
+
+			} else if (this._zoom > mapZoom) { //Zoom out, merge
+				this._animationStart();
+
+				this._animationZoomOut(this._zoom, mapZoom);
+			} else {
+				this._moveEnd();
+			}
+		},
+
+		//Gets the maps visible bounds expanded in each direction by the size of the screen (so the user cannot see an area we do not cover in one pan)
+		_getExpandedVisibleBounds: function () {
+			if (!this.options.removeOutsideVisibleBounds) {
+				return this._mapBoundsInfinite;
+			} else if (L.Browser.mobile) {
+				return this._checkBoundsMaxLat(this._map.getBounds());
+			}
+
+			return this._checkBoundsMaxLat(this._map.getBounds().pad(1)); // Padding expands the bounds by its own dimensions but scaled with the given factor.
+		},
+
+		/**
+		 * Expands the latitude to Infinity (or -Infinity) if the input bounds reach the map projection maximum defined latitude
+		 * (in the case of Web/Spherical Mercator, it is 85.0511287798 / see https://en.wikipedia.org/wiki/Web_Mercator#Formulas).
+		 * Otherwise, the removeOutsideVisibleBounds option will remove markers beyond that limit, whereas the same markers without
+		 * this option (or outside MCG) will have their position floored (ceiled) by the projection and rendered at that limit,
+		 * making the user think that MCG "eats" them and never displays them again.
+		 * @param bounds L.LatLngBounds
+		 * @returns {L.LatLngBounds}
+		 * @private
+		 */
+		_checkBoundsMaxLat: function (bounds) {
+			var maxLat = this._maxLat;
+
+			if (maxLat !== undefined) {
+				if (bounds.getNorth() >= maxLat) {
+					bounds._northEast.lat = Infinity;
+				}
+				if (bounds.getSouth() <= -maxLat) {
+					bounds._southWest.lat = -Infinity;
+				}
+			}
+
+			return bounds;
+		},
+
+		//Shared animation code
+		_animationAddLayerNonAnimated: function (layer, newCluster) {
+			if (newCluster === layer) {
+				this._featureGroup.addLayer(layer);
+			} else if (newCluster._childCount === 2) {
+				newCluster._addToMap();
+
+				var markers = newCluster.getAllChildMarkers();
+				this._featureGroup.removeLayer(markers[0]);
+				this._featureGroup.removeLayer(markers[1]);
+			} else {
+				newCluster._updateIcon();
+			}
+		},
+
+		/**
+		 * Extracts individual (i.e. non-group) layers from a Layer Group.
+		 * @param group to extract layers from.
+		 * @param output {Array} in which to store the extracted layers.
+		 * @returns {*|Array}
+		 * @private
+		 */
+		_extractNonGroupLayers: function (group, output) {
+			var layers = group.getLayers(),
+			    i = 0,
+			    layer;
+
+			output = output || [];
+
+			for (; i < layers.length; i++) {
+				layer = layers[i];
+
+				if (layer instanceof L.LayerGroup) {
+					this._extractNonGroupLayers(layer, output);
+					continue;
+				}
+
+				output.push(layer);
+			}
+
+			return output;
+		},
+
+		/**
+		 * Implements the singleMarkerMode option.
+		 * @param layer Marker to re-style using the Clusters iconCreateFunction.
+		 * @returns {L.Icon} The newly created icon.
+		 * @private
+		 */
+		_overrideMarkerIcon: function (layer) {
+			var icon = layer.options.icon = this.options.iconCreateFunction({
+				getChildCount: function () {
+					return 1;
+				},
+				getAllChildMarkers: function () {
+					return [layer];
+				}
+			});
+
+			return icon;
+		}
+	});
+
+	// Constant bounds used in case option "removeOutsideVisibleBounds" is set to false.
+	L.MarkerClusterGroup.include({
+		_mapBoundsInfinite: new L.LatLngBounds(new L.LatLng(-Infinity, -Infinity), new L.LatLng(Infinity, Infinity))
+	});
+
+	L.MarkerClusterGroup.include({
+		_noAnimation: {
+			//Non Animated versions of everything
+			_animationStart: function () {
+				//Do nothing...
+			},
+			_animationZoomIn: function (previousZoomLevel, newZoomLevel) {
+				this._topClusterLevel._recursivelyRemoveChildrenFromMap(this._currentShownBounds, Math.floor(this._map.getMinZoom()), previousZoomLevel);
+				this._topClusterLevel._recursivelyAddChildrenToMap(null, newZoomLevel, this._getExpandedVisibleBounds());
+
+				//We didn't actually animate, but we use this event to mean "clustering animations have finished"
+				this.fire('animationend');
+			},
+			_animationZoomOut: function (previousZoomLevel, newZoomLevel) {
+				this._topClusterLevel._recursivelyRemoveChildrenFromMap(this._currentShownBounds, Math.floor(this._map.getMinZoom()), previousZoomLevel);
+				this._topClusterLevel._recursivelyAddChildrenToMap(null, newZoomLevel, this._getExpandedVisibleBounds());
+
+				//We didn't actually animate, but we use this event to mean "clustering animations have finished"
+				this.fire('animationend');
+			},
+			_animationAddLayer: function (layer, newCluster) {
+				this._animationAddLayerNonAnimated(layer, newCluster);
+			}
+		},
+
+		_withAnimation: {
+			//Animated versions here
+			_animationStart: function () {
+				this._map._mapPane.className += ' leaflet-cluster-anim';
+				this._inZoomAnimation++;
+			},
+
+			_animationZoomIn: function (previousZoomLevel, newZoomLevel) {
+				var bounds = this._getExpandedVisibleBounds(),
+				    fg = this._featureGroup,
+					minZoom = Math.floor(this._map.getMinZoom()),
+				    i;
+
+				this._ignoreMove = true;
+
+				//Add all children of current clusters to map and remove those clusters from map
+				this._topClusterLevel._recursively(bounds, previousZoomLevel, minZoom, function (c) {
+					var startPos = c._latlng,
+					    markers  = c._markers,
+					    m;
+
+					if (!bounds.contains(startPos)) {
+						startPos = null;
+					}
+
+					if (c._isSingleParent() && previousZoomLevel + 1 === newZoomLevel) { //Immediately add the new child and remove us
+						fg.removeLayer(c);
+						c._recursivelyAddChildrenToMap(null, newZoomLevel, bounds);
+					} else {
+						//Fade out old cluster
+						c.clusterHide();
+						c._recursivelyAddChildrenToMap(startPos, newZoomLevel, bounds);
+					}
+
+					//Remove all markers that aren't visible any more
+					//TODO: Do we actually need to do this on the higher levels too?
+					for (i = markers.length - 1; i >= 0; i--) {
+						m = markers[i];
+						if (!bounds.contains(m._latlng)) {
+							fg.removeLayer(m);
+						}
+					}
+
+				});
+
+				this._forceLayout();
+
+				//Update opacities
+				this._topClusterLevel._recursivelyBecomeVisible(bounds, newZoomLevel);
+				//TODO Maybe? Update markers in _recursivelyBecomeVisible
+				fg.eachLayer(function (n) {
+					if (!(n instanceof L.MarkerCluster) && n._icon) {
+						n.clusterShow();
+					}
+				});
+
+				//update the positions of the just added clusters/markers
+				this._topClusterLevel._recursively(bounds, previousZoomLevel, newZoomLevel, function (c) {
+					c._recursivelyRestoreChildPositions(newZoomLevel);
+				});
+
+				this._ignoreMove = false;
+
+				//Remove the old clusters and close the zoom animation
+				this._enqueue(function () {
+					//update the positions of the just added clusters/markers
+					this._topClusterLevel._recursively(bounds, previousZoomLevel, minZoom, function (c) {
+						fg.removeLayer(c);
+						c.clusterShow();
+					});
+
+					this._animationEnd();
+				});
+			},
+
+			_animationZoomOut: function (previousZoomLevel, newZoomLevel) {
+				this._animationZoomOutSingle(this._topClusterLevel, previousZoomLevel - 1, newZoomLevel);
+
+				//Need to add markers for those that weren't on the map before but are now
+				this._topClusterLevel._recursivelyAddChildrenToMap(null, newZoomLevel, this._getExpandedVisibleBounds());
+				//Remove markers that were on the map before but won't be now
+				this._topClusterLevel._recursivelyRemoveChildrenFromMap(this._currentShownBounds, Math.floor(this._map.getMinZoom()), previousZoomLevel, this._getExpandedVisibleBounds());
+			},
+
+			_animationAddLayer: function (layer, newCluster) {
+				var me = this,
+				    fg = this._featureGroup;
+
+				fg.addLayer(layer);
+				if (newCluster !== layer) {
+					if (newCluster._childCount > 2) { //Was already a cluster
+
+						newCluster._updateIcon();
+						this._forceLayout();
+						this._animationStart();
+
+						layer._setPos(this._map.latLngToLayerPoint(newCluster.getLatLng()));
+						layer.clusterHide();
+
+						this._enqueue(function () {
+							fg.removeLayer(layer);
+							layer.clusterShow();
+
+							me._animationEnd();
+						});
+
+					} else { //Just became a cluster
+						this._forceLayout();
+
+						me._animationStart();
+						me._animationZoomOutSingle(newCluster, this._map.getMaxZoom(), this._zoom);
+					}
+				}
+			}
+		},
+
+		// Private methods for animated versions.
+		_animationZoomOutSingle: function (cluster, previousZoomLevel, newZoomLevel) {
+			var bounds = this._getExpandedVisibleBounds(),
+				minZoom = Math.floor(this._map.getMinZoom());
+
+			//Animate all of the markers in the clusters to move to their cluster center point
+			cluster._recursivelyAnimateChildrenInAndAddSelfToMap(bounds, minZoom, previousZoomLevel + 1, newZoomLevel);
+
+			var me = this;
+
+			//Update the opacity (If we immediately set it they won't animate)
+			this._forceLayout();
+			cluster._recursivelyBecomeVisible(bounds, newZoomLevel);
+
+			//TODO: Maybe use the transition timing stuff to make this more reliable
+			//When the animations are done, tidy up
+			this._enqueue(function () {
+
+				//This cluster stopped being a cluster before the timeout fired
+				if (cluster._childCount === 1) {
+					var m = cluster._markers[0];
+					//If we were in a cluster animation at the time then the opacity and position of our child could be wrong now, so fix it
+					this._ignoreMove = true;
+					m.setLatLng(m.getLatLng());
+					this._ignoreMove = false;
+					if (m.clusterShow) {
+						m.clusterShow();
+					}
+				} else {
+					cluster._recursively(bounds, newZoomLevel, minZoom, function (c) {
+						c._recursivelyRemoveChildrenFromMap(bounds, minZoom, previousZoomLevel + 1);
+					});
+				}
+				me._animationEnd();
+			});
+		},
+
+		_animationEnd: function () {
+			if (this._map) {
+				this._map._mapPane.className = this._map._mapPane.className.replace(' leaflet-cluster-anim', '');
+			}
+			this._inZoomAnimation--;
+			this.fire('animationend');
+		},
+
+		//Force a browser layout of stuff in the map
+		// Should apply the current opacity and location to all elements so we can update them again for an animation
+		_forceLayout: function () {
+			//In my testing this works, infact offsetWidth of any element seems to work.
+			//Could loop all this._layers and do this for each _icon if it stops working
+
+			L.Util.falseFn(document.body.offsetWidth);
+		}
+	});
+
+	L.markerClusterGroup = function (options) {
+		return new L.MarkerClusterGroup(options);
+	};
+
+	var MarkerCluster = L.MarkerCluster = L.Marker.extend({
+		options: L.Icon.prototype.options,
+
+		initialize: function (group, zoom, a, b) {
+
+			L.Marker.prototype.initialize.call(this, a ? (a._cLatLng || a.getLatLng()) : new L.LatLng(0, 0),
+	            { icon: this, pane: group.options.clusterPane });
+
+			this._group = group;
+			this._zoom = zoom;
+
+			this._markers = [];
+			this._childClusters = [];
+			this._childCount = 0;
+			this._iconNeedsUpdate = true;
+			this._boundsNeedUpdate = true;
+
+			this._bounds = new L.LatLngBounds();
+
+			if (a) {
+				this._addChild(a);
+			}
+			if (b) {
+				this._addChild(b);
+			}
+		},
+
+		//Recursively retrieve all child markers of this cluster
+		getAllChildMarkers: function (storageArray, ignoreDraggedMarker) {
+			storageArray = storageArray || [];
+
+			for (var i = this._childClusters.length - 1; i >= 0; i--) {
+				this._childClusters[i].getAllChildMarkers(storageArray, ignoreDraggedMarker);
+			}
+
+			for (var j = this._markers.length - 1; j >= 0; j--) {
+				if (ignoreDraggedMarker && this._markers[j].__dragStart) {
+					continue;
+				}
+				storageArray.push(this._markers[j]);
+			}
+
+			return storageArray;
+		},
+
+		//Returns the count of how many child markers we have
+		getChildCount: function () {
+			return this._childCount;
+		},
+
+		//Zoom to the minimum of showing all of the child markers, or the extents of this cluster
+		zoomToBounds: function (fitBoundsOptions) {
+			var childClusters = this._childClusters.slice(),
+				map = this._group._map,
+				boundsZoom = map.getBoundsZoom(this._bounds),
+				zoom = this._zoom + 1,
+				mapZoom = map.getZoom(),
+				i;
+
+			//calculate how far we need to zoom down to see all of the markers
+			while (childClusters.length > 0 && boundsZoom > zoom) {
+				zoom++;
+				var newClusters = [];
+				for (i = 0; i < childClusters.length; i++) {
+					newClusters = newClusters.concat(childClusters[i]._childClusters);
+				}
+				childClusters = newClusters;
+			}
+
+			if (boundsZoom > zoom) {
+				this._group._map.setView(this._latlng, zoom);
+			} else if (boundsZoom <= mapZoom) { //If fitBounds wouldn't zoom us down, zoom us down instead
+				this._group._map.setView(this._latlng, mapZoom + 1);
+			} else {
+				this._group._map.fitBounds(this._bounds, fitBoundsOptions);
+			}
+		},
+
+		getBounds: function () {
+			var bounds = new L.LatLngBounds();
+			bounds.extend(this._bounds);
+			return bounds;
+		},
+
+		_updateIcon: function () {
+			this._iconNeedsUpdate = true;
+			if (this._icon) {
+				this.setIcon(this);
+			}
+		},
+
+		//Cludge for Icon, we pretend to be an icon for performance
+		createIcon: function () {
+			if (this._iconNeedsUpdate) {
+				this._iconObj = this._group.options.iconCreateFunction(this);
+				this._iconNeedsUpdate = false;
+			}
+			return this._iconObj.createIcon();
+		},
+		createShadow: function () {
+			return this._iconObj.createShadow();
+		},
+
+
+		_addChild: function (new1, isNotificationFromChild) {
+
+			this._iconNeedsUpdate = true;
+
+			this._boundsNeedUpdate = true;
+			this._setClusterCenter(new1);
+
+			if (new1 instanceof L.MarkerCluster) {
+				if (!isNotificationFromChild) {
+					this._childClusters.push(new1);
+					new1.__parent = this;
+				}
+				this._childCount += new1._childCount;
+			} else {
+				if (!isNotificationFromChild) {
+					this._markers.push(new1);
+				}
+				this._childCount++;
+			}
+
+			if (this.__parent) {
+				this.__parent._addChild(new1, true);
+			}
+		},
+
+		/**
+		 * Makes sure the cluster center is set. If not, uses the child center if it is a cluster, or the marker position.
+		 * @param child L.MarkerCluster|L.Marker that will be used as cluster center if not defined yet.
+		 * @private
+		 */
+		_setClusterCenter: function (child) {
+			if (!this._cLatLng) {
+				// when clustering, take position of the first point as the cluster center
+				this._cLatLng = child._cLatLng || child._latlng;
+			}
+		},
+
+		/**
+		 * Assigns impossible bounding values so that the next extend entirely determines the new bounds.
+		 * This method avoids having to trash the previous L.LatLngBounds object and to create a new one, which is much slower for this class.
+		 * As long as the bounds are not extended, most other methods would probably fail, as they would with bounds initialized but not extended.
+		 * @private
+		 */
+		_resetBounds: function () {
+			var bounds = this._bounds;
+
+			if (bounds._southWest) {
+				bounds._southWest.lat = Infinity;
+				bounds._southWest.lng = Infinity;
+			}
+			if (bounds._northEast) {
+				bounds._northEast.lat = -Infinity;
+				bounds._northEast.lng = -Infinity;
+			}
+		},
+
+		_recalculateBounds: function () {
+			var markers = this._markers,
+			    childClusters = this._childClusters,
+			    latSum = 0,
+			    lngSum = 0,
+			    totalCount = this._childCount,
+			    i, child, childLatLng, childCount;
+
+			// Case where all markers are removed from the map and we are left with just an empty _topClusterLevel.
+			if (totalCount === 0) {
+				return;
+			}
+
+			// Reset rather than creating a new object, for performance.
+			this._resetBounds();
+
+			// Child markers.
+			for (i = 0; i < markers.length; i++) {
+				childLatLng = markers[i]._latlng;
+
+				this._bounds.extend(childLatLng);
+
+				latSum += childLatLng.lat;
+				lngSum += childLatLng.lng;
+			}
+
+			// Child clusters.
+			for (i = 0; i < childClusters.length; i++) {
+				child = childClusters[i];
+
+				// Re-compute child bounds and weighted position first if necessary.
+				if (child._boundsNeedUpdate) {
+					child._recalculateBounds();
+				}
+
+				this._bounds.extend(child._bounds);
+
+				childLatLng = child._wLatLng;
+				childCount = child._childCount;
+
+				latSum += childLatLng.lat * childCount;
+				lngSum += childLatLng.lng * childCount;
+			}
+
+			this._latlng = this._wLatLng = new L.LatLng(latSum / totalCount, lngSum / totalCount);
+
+			// Reset dirty flag.
+			this._boundsNeedUpdate = false;
+		},
+
+		//Set our markers position as given and add it to the map
+		_addToMap: function (startPos) {
+			if (startPos) {
+				this._backupLatlng = this._latlng;
+				this.setLatLng(startPos);
+			}
+			this._group._featureGroup.addLayer(this);
+		},
+
+		_recursivelyAnimateChildrenIn: function (bounds, center, maxZoom) {
+			this._recursively(bounds, this._group._map.getMinZoom(), maxZoom - 1,
+				function (c) {
+					var markers = c._markers,
+						i, m;
+					for (i = markers.length - 1; i >= 0; i--) {
+						m = markers[i];
+
+						//Only do it if the icon is still on the map
+						if (m._icon) {
+							m._setPos(center);
+							m.clusterHide();
+						}
+					}
+				},
+				function (c) {
+					var childClusters = c._childClusters,
+						j, cm;
+					for (j = childClusters.length - 1; j >= 0; j--) {
+						cm = childClusters[j];
+						if (cm._icon) {
+							cm._setPos(center);
+							cm.clusterHide();
+						}
+					}
+				}
+			);
+		},
+
+		_recursivelyAnimateChildrenInAndAddSelfToMap: function (bounds, mapMinZoom, previousZoomLevel, newZoomLevel) {
+			this._recursively(bounds, newZoomLevel, mapMinZoom,
+				function (c) {
+					c._recursivelyAnimateChildrenIn(bounds, c._group._map.latLngToLayerPoint(c.getLatLng()).round(), previousZoomLevel);
+
+					//TODO: depthToAnimateIn affects _isSingleParent, if there is a multizoom we may/may not be.
+					//As a hack we only do a animation free zoom on a single level zoom, if someone does multiple levels then we always animate
+					if (c._isSingleParent() && previousZoomLevel - 1 === newZoomLevel) {
+						c.clusterShow();
+						c._recursivelyRemoveChildrenFromMap(bounds, mapMinZoom, previousZoomLevel); //Immediately remove our children as we are replacing them. TODO previousBounds not bounds
+					} else {
+						c.clusterHide();
+					}
+
+					c._addToMap();
+				}
+			);
+		},
+
+		_recursivelyBecomeVisible: function (bounds, zoomLevel) {
+			this._recursively(bounds, this._group._map.getMinZoom(), zoomLevel, null, function (c) {
+				c.clusterShow();
+			});
+		},
+
+		_recursivelyAddChildrenToMap: function (startPos, zoomLevel, bounds) {
+			this._recursively(bounds, this._group._map.getMinZoom() - 1, zoomLevel,
+				function (c) {
+					if (zoomLevel === c._zoom) {
+						return;
+					}
+
+					//Add our child markers at startPos (so they can be animated out)
+					for (var i = c._markers.length - 1; i >= 0; i--) {
+						var nm = c._markers[i];
+
+						if (!bounds.contains(nm._latlng)) {
+							continue;
+						}
+
+						if (startPos) {
+							nm._backupLatlng = nm.getLatLng();
+
+							nm.setLatLng(startPos);
+							if (nm.clusterHide) {
+								nm.clusterHide();
+							}
+						}
+
+						c._group._featureGroup.addLayer(nm);
+					}
+				},
+				function (c) {
+					c._addToMap(startPos);
+				}
+			);
+		},
+
+		_recursivelyRestoreChildPositions: function (zoomLevel) {
+			//Fix positions of child markers
+			for (var i = this._markers.length - 1; i >= 0; i--) {
+				var nm = this._markers[i];
+				if (nm._backupLatlng) {
+					nm.setLatLng(nm._backupLatlng);
+					delete nm._backupLatlng;
+				}
+			}
+
+			if (zoomLevel - 1 === this._zoom) {
+				//Reposition child clusters
+				for (var j = this._childClusters.length - 1; j >= 0; j--) {
+					this._childClusters[j]._restorePosition();
+				}
+			} else {
+				for (var k = this._childClusters.length - 1; k >= 0; k--) {
+					this._childClusters[k]._recursivelyRestoreChildPositions(zoomLevel);
+				}
+			}
+		},
+
+		_restorePosition: function () {
+			if (this._backupLatlng) {
+				this.setLatLng(this._backupLatlng);
+				delete this._backupLatlng;
+			}
+		},
+
+		//exceptBounds: If set, don't remove any markers/clusters in it
+		_recursivelyRemoveChildrenFromMap: function (previousBounds, mapMinZoom, zoomLevel, exceptBounds) {
+			var m, i;
+			this._recursively(previousBounds, mapMinZoom - 1, zoomLevel - 1,
+				function (c) {
+					//Remove markers at every level
+					for (i = c._markers.length - 1; i >= 0; i--) {
+						m = c._markers[i];
+						if (!exceptBounds || !exceptBounds.contains(m._latlng)) {
+							c._group._featureGroup.removeLayer(m);
+							if (m.clusterShow) {
+								m.clusterShow();
+							}
+						}
+					}
+				},
+				function (c) {
+					//Remove child clusters at just the bottom level
+					for (i = c._childClusters.length - 1; i >= 0; i--) {
+						m = c._childClusters[i];
+						if (!exceptBounds || !exceptBounds.contains(m._latlng)) {
+							c._group._featureGroup.removeLayer(m);
+							if (m.clusterShow) {
+								m.clusterShow();
+							}
+						}
+					}
+				}
+			);
+		},
+
+		//Run the given functions recursively to this and child clusters
+		// boundsToApplyTo: a L.LatLngBounds representing the bounds of what clusters to recurse in to
+		// zoomLevelToStart: zoom level to start running functions (inclusive)
+		// zoomLevelToStop: zoom level to stop running functions (inclusive)
+		// runAtEveryLevel: function that takes an L.MarkerCluster as an argument that should be applied on every level
+		// runAtBottomLevel: function that takes an L.MarkerCluster as an argument that should be applied at only the bottom level
+		_recursively: function (boundsToApplyTo, zoomLevelToStart, zoomLevelToStop, runAtEveryLevel, runAtBottomLevel) {
+			var childClusters = this._childClusters,
+			    zoom = this._zoom,
+			    i, c;
+
+			if (zoomLevelToStart <= zoom) {
+				if (runAtEveryLevel) {
+					runAtEveryLevel(this);
+				}
+				if (runAtBottomLevel && zoom === zoomLevelToStop) {
+					runAtBottomLevel(this);
+				}
+			}
+
+			if (zoom < zoomLevelToStart || zoom < zoomLevelToStop) {
+				for (i = childClusters.length - 1; i >= 0; i--) {
+					c = childClusters[i];
+					if (c._boundsNeedUpdate) {
+						c._recalculateBounds();
+					}
+					if (boundsToApplyTo.intersects(c._bounds)) {
+						c._recursively(boundsToApplyTo, zoomLevelToStart, zoomLevelToStop, runAtEveryLevel, runAtBottomLevel);
+					}
+				}
+			}
+		},
+
+		//Returns true if we are the parent of only one cluster and that cluster is the same as us
+		_isSingleParent: function () {
+			//Don't need to check this._markers as the rest won't work if there are any
+			return this._childClusters.length > 0 && this._childClusters[0]._childCount === this._childCount;
+		}
+	});
+
+	/*
+	* Extends L.Marker to include two extra methods: clusterHide and clusterShow.
+	* 
+	* They work as setOpacity(0) and setOpacity(1) respectively, but
+	* don't overwrite the options.opacity
+	* 
+	*/
+
+	L.Marker.include({
+		clusterHide: function () {
+			var backup = this.options.opacity;
+			this.setOpacity(0);
+			this.options.opacity = backup;
+			return this;
+		},
+		
+		clusterShow: function () {
+			return this.setOpacity(this.options.opacity);
+		}
+	});
+
+	L.DistanceGrid = function (cellSize) {
+		this._cellSize = cellSize;
+		this._sqCellSize = cellSize * cellSize;
+		this._grid = {};
+		this._objectPoint = { };
+	};
+
+	L.DistanceGrid.prototype = {
+
+		addObject: function (obj, point) {
+			var x = this._getCoord(point.x),
+			    y = this._getCoord(point.y),
+			    grid = this._grid,
+			    row = grid[y] = grid[y] || {},
+			    cell = row[x] = row[x] || [],
+			    stamp = L.Util.stamp(obj);
+
+			this._objectPoint[stamp] = point;
+
+			cell.push(obj);
+		},
+
+		updateObject: function (obj, point) {
+			this.removeObject(obj);
+			this.addObject(obj, point);
+		},
+
+		//Returns true if the object was found
+		removeObject: function (obj, point) {
+			var x = this._getCoord(point.x),
+			    y = this._getCoord(point.y),
+			    grid = this._grid,
+			    row = grid[y] = grid[y] || {},
+			    cell = row[x] = row[x] || [],
+			    i, len;
+
+			delete this._objectPoint[L.Util.stamp(obj)];
+
+			for (i = 0, len = cell.length; i < len; i++) {
+				if (cell[i] === obj) {
+
+					cell.splice(i, 1);
+
+					if (len === 1) {
+						delete row[x];
+					}
+
+					return true;
+				}
+			}
+
+		},
+
+		eachObject: function (fn, context) {
+			var i, j, k, len, row, cell, removed,
+			    grid = this._grid;
+
+			for (i in grid) {
+				row = grid[i];
+
+				for (j in row) {
+					cell = row[j];
+
+					for (k = 0, len = cell.length; k < len; k++) {
+						removed = fn.call(context, cell[k]);
+						if (removed) {
+							k--;
+							len--;
+						}
+					}
+				}
+			}
+		},
+
+		getNearObject: function (point) {
+			var x = this._getCoord(point.x),
+			    y = this._getCoord(point.y),
+			    i, j, k, row, cell, len, obj, dist,
+			    objectPoint = this._objectPoint,
+			    closestDistSq = this._sqCellSize,
+			    closest = null;
+
+			for (i = y - 1; i <= y + 1; i++) {
+				row = this._grid[i];
+				if (row) {
+
+					for (j = x - 1; j <= x + 1; j++) {
+						cell = row[j];
+						if (cell) {
+
+							for (k = 0, len = cell.length; k < len; k++) {
+								obj = cell[k];
+								dist = this._sqDist(objectPoint[L.Util.stamp(obj)], point);
+								if (dist < closestDistSq ||
+									dist <= closestDistSq && closest === null) {
+									closestDistSq = dist;
+									closest = obj;
+								}
+							}
+						}
+					}
+				}
+			}
+			return closest;
+		},
+
+		_getCoord: function (x) {
+			var coord = Math.floor(x / this._cellSize);
+			return isFinite(coord) ? coord : x;
+		},
+
+		_sqDist: function (p, p2) {
+			var dx = p2.x - p.x,
+			    dy = p2.y - p.y;
+			return dx * dx + dy * dy;
+		}
+	};
+
+	/* Copyright (c) 2012 the authors listed at the following URL, and/or
+	the authors of referenced articles or incorporated external code:
+	http://en.literateprograms.org/Quickhull_(Javascript)?action=history&offset=20120410175256
+
+	Permission is hereby granted, free of charge, to any person obtaining
+	a copy of this software and associated documentation files (the
+	"Software"), to deal in the Software without restriction, including
+	without limitation the rights to use, copy, modify, merge, publish,
+	distribute, sublicense, and/or sell copies of the Software, and to
+	permit persons to whom the Software is furnished to do so, subject to
+	the following conditions:
+
+	The above copyright notice and this permission notice shall be
+	included in all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+	EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+	CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+	TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+	Retrieved from: http://en.literateprograms.org/Quickhull_(Javascript)?oldid=18434
+	*/
+
+	(function () {
+		L.QuickHull = {
+
+			/*
+			 * @param {Object} cpt a point to be measured from the baseline
+			 * @param {Array} bl the baseline, as represented by a two-element
+			 *   array of latlng objects.
+			 * @returns {Number} an approximate distance measure
+			 */
+			getDistant: function (cpt, bl) {
+				var vY = bl[1].lat - bl[0].lat,
+					vX = bl[0].lng - bl[1].lng;
+				return (vX * (cpt.lat - bl[0].lat) + vY * (cpt.lng - bl[0].lng));
+			},
+
+			/*
+			 * @param {Array} baseLine a two-element array of latlng objects
+			 *   representing the baseline to project from
+			 * @param {Array} latLngs an array of latlng objects
+			 * @returns {Object} the maximum point and all new points to stay
+			 *   in consideration for the hull.
+			 */
+			findMostDistantPointFromBaseLine: function (baseLine, latLngs) {
+				var maxD = 0,
+					maxPt = null,
+					newPoints = [],
+					i, pt, d;
+
+				for (i = latLngs.length - 1; i >= 0; i--) {
+					pt = latLngs[i];
+					d = this.getDistant(pt, baseLine);
+
+					if (d > 0) {
+						newPoints.push(pt);
+					} else {
+						continue;
+					}
+
+					if (d > maxD) {
+						maxD = d;
+						maxPt = pt;
+					}
+				}
+
+				return { maxPoint: maxPt, newPoints: newPoints };
+			},
+
+
+			/*
+			 * Given a baseline, compute the convex hull of latLngs as an array
+			 * of latLngs.
+			 *
+			 * @param {Array} latLngs
+			 * @returns {Array}
+			 */
+			buildConvexHull: function (baseLine, latLngs) {
+				var convexHullBaseLines = [],
+					t = this.findMostDistantPointFromBaseLine(baseLine, latLngs);
+
+				if (t.maxPoint) { // if there is still a point "outside" the base line
+					convexHullBaseLines =
+						convexHullBaseLines.concat(
+							this.buildConvexHull([baseLine[0], t.maxPoint], t.newPoints)
+						);
+					convexHullBaseLines =
+						convexHullBaseLines.concat(
+							this.buildConvexHull([t.maxPoint, baseLine[1]], t.newPoints)
+						);
+					return convexHullBaseLines;
+				} else {  // if there is no more point "outside" the base line, the current base line is part of the convex hull
+					return [baseLine[0]];
+				}
+			},
+
+			/*
+			 * Given an array of latlngs, compute a convex hull as an array
+			 * of latlngs
+			 *
+			 * @param {Array} latLngs
+			 * @returns {Array}
+			 */
+			getConvexHull: function (latLngs) {
+				// find first baseline
+				var maxLat = false, minLat = false,
+					maxLng = false, minLng = false,
+					maxLatPt = null, minLatPt = null,
+					maxLngPt = null, minLngPt = null,
+					maxPt = null, minPt = null,
+					i;
+
+				for (i = latLngs.length - 1; i >= 0; i--) {
+					var pt = latLngs[i];
+					if (maxLat === false || pt.lat > maxLat) {
+						maxLatPt = pt;
+						maxLat = pt.lat;
+					}
+					if (minLat === false || pt.lat < minLat) {
+						minLatPt = pt;
+						minLat = pt.lat;
+					}
+					if (maxLng === false || pt.lng > maxLng) {
+						maxLngPt = pt;
+						maxLng = pt.lng;
+					}
+					if (minLng === false || pt.lng < minLng) {
+						minLngPt = pt;
+						minLng = pt.lng;
+					}
+				}
+				
+				if (minLat !== maxLat) {
+					minPt = minLatPt;
+					maxPt = maxLatPt;
+				} else {
+					minPt = minLngPt;
+					maxPt = maxLngPt;
+				}
+
+				var ch = [].concat(this.buildConvexHull([minPt, maxPt], latLngs),
+									this.buildConvexHull([maxPt, minPt], latLngs));
+				return ch;
+			}
+		};
+	}());
+
+	L.MarkerCluster.include({
+		getConvexHull: function () {
+			var childMarkers = this.getAllChildMarkers(),
+				points = [],
+				p, i;
+
+			for (i = childMarkers.length - 1; i >= 0; i--) {
+				p = childMarkers[i].getLatLng();
+				points.push(p);
+			}
+
+			return L.QuickHull.getConvexHull(points);
+		}
+	});
+
+	//This code is 100% based on https://github.com/jawj/OverlappingMarkerSpiderfier-Leaflet
+	//Huge thanks to jawj for implementing it first to make my job easy :-)
+
+	L.MarkerCluster.include({
+
+		_2PI: Math.PI * 2,
+		_circleFootSeparation: 25, //related to circumference of circle
+		_circleStartAngle: 0,
+
+		_spiralFootSeparation:  28, //related to size of spiral (experiment!)
+		_spiralLengthStart: 11,
+		_spiralLengthFactor: 5,
+
+		_circleSpiralSwitchover: 9, //show spiral instead of circle from this marker count upwards.
+									// 0 -> always spiral; Infinity -> always circle
+
+		spiderfy: function () {
+			if (this._group._spiderfied === this || this._group._inZoomAnimation) {
+				return;
+			}
+
+			var childMarkers = this.getAllChildMarkers(null, true),
+				group = this._group,
+				map = group._map,
+				center = map.latLngToLayerPoint(this._latlng),
+				positions;
+
+			this._group._unspiderfy();
+			this._group._spiderfied = this;
+
+			//TODO Maybe: childMarkers order by distance to center
+
+			if (this._group.options.spiderfyShapePositions) {
+				positions = this._group.options.spiderfyShapePositions(childMarkers.length, center);
+			} else if (childMarkers.length >= this._circleSpiralSwitchover) {
+				positions = this._generatePointsSpiral(childMarkers.length, center);
+			} else {
+				center.y += 10; // Otherwise circles look wrong => hack for standard blue icon, renders differently for other icons.
+				positions = this._generatePointsCircle(childMarkers.length, center);
+			}
+
+			this._animationSpiderfy(childMarkers, positions);
+		},
+
+		unspiderfy: function (zoomDetails) {
+			/// <param Name="zoomDetails">Argument from zoomanim if being called in a zoom animation or null otherwise</param>
+			if (this._group._inZoomAnimation) {
+				return;
+			}
+			this._animationUnspiderfy(zoomDetails);
+
+			this._group._spiderfied = null;
+		},
+
+		_generatePointsCircle: function (count, centerPt) {
+			var circumference = this._group.options.spiderfyDistanceMultiplier * this._circleFootSeparation * (2 + count),
+				legLength = circumference / this._2PI,  //radius from circumference
+				angleStep = this._2PI / count,
+				res = [],
+				i, angle;
+
+			legLength = Math.max(legLength, 35); // Minimum distance to get outside the cluster icon.
+
+			res.length = count;
+
+			for (i = 0; i < count; i++) { // Clockwise, like spiral.
+				angle = this._circleStartAngle + i * angleStep;
+				res[i] = new L.Point(centerPt.x + legLength * Math.cos(angle), centerPt.y + legLength * Math.sin(angle))._round();
+			}
+
+			return res;
+		},
+
+		_generatePointsSpiral: function (count, centerPt) {
+			var spiderfyDistanceMultiplier = this._group.options.spiderfyDistanceMultiplier,
+				legLength = spiderfyDistanceMultiplier * this._spiralLengthStart,
+				separation = spiderfyDistanceMultiplier * this._spiralFootSeparation,
+				lengthFactor = spiderfyDistanceMultiplier * this._spiralLengthFactor * this._2PI,
+				angle = 0,
+				res = [],
+				i;
+
+			res.length = count;
+
+			// Higher index, closer position to cluster center.
+			for (i = count; i >= 0; i--) {
+				// Skip the first position, so that we are already farther from center and we avoid
+				// being under the default cluster icon (especially important for Circle Markers).
+				if (i < count) {
+					res[i] = new L.Point(centerPt.x + legLength * Math.cos(angle), centerPt.y + legLength * Math.sin(angle))._round();
+				}
+				angle += separation / legLength + i * 0.0005;
+				legLength += lengthFactor / angle;
+			}
+			return res;
+		},
+
+		_noanimationUnspiderfy: function () {
+			var group = this._group,
+				map = group._map,
+				fg = group._featureGroup,
+				childMarkers = this.getAllChildMarkers(null, true),
+				m, i;
+
+			group._ignoreMove = true;
+
+			this.setOpacity(1);
+			for (i = childMarkers.length - 1; i >= 0; i--) {
+				m = childMarkers[i];
+
+				fg.removeLayer(m);
+
+				if (m._preSpiderfyLatlng) {
+					m.setLatLng(m._preSpiderfyLatlng);
+					delete m._preSpiderfyLatlng;
+				}
+				if (m.setZIndexOffset) {
+					m.setZIndexOffset(0);
+				}
+
+				if (m._spiderLeg) {
+					map.removeLayer(m._spiderLeg);
+					delete m._spiderLeg;
+				}
+			}
+
+			group.fire('unspiderfied', {
+				cluster: this,
+				markers: childMarkers
+			});
+			group._ignoreMove = false;
+			group._spiderfied = null;
+		}
+	});
+
+	//Non Animated versions of everything
+	L.MarkerClusterNonAnimated = L.MarkerCluster.extend({
+		_animationSpiderfy: function (childMarkers, positions) {
+			var group = this._group,
+				map = group._map,
+				fg = group._featureGroup,
+				legOptions = this._group.options.spiderLegPolylineOptions,
+				i, m, leg, newPos;
+
+			group._ignoreMove = true;
+
+			// Traverse in ascending order to make sure that inner circleMarkers are on top of further legs. Normal markers are re-ordered by newPosition.
+			// The reverse order trick no longer improves performance on modern browsers.
+			for (i = 0; i < childMarkers.length; i++) {
+				newPos = map.layerPointToLatLng(positions[i]);
+				m = childMarkers[i];
+
+				// Add the leg before the marker, so that in case the latter is a circleMarker, the leg is behind it.
+				leg = new L.Polyline([this._latlng, newPos], legOptions);
+				map.addLayer(leg);
+				m._spiderLeg = leg;
+
+				// Now add the marker.
+				m._preSpiderfyLatlng = m._latlng;
+				m.setLatLng(newPos);
+				if (m.setZIndexOffset) {
+					m.setZIndexOffset(1000000); //Make these appear on top of EVERYTHING
+				}
+
+				fg.addLayer(m);
+			}
+			this.setOpacity(0.3);
+
+			group._ignoreMove = false;
+			group.fire('spiderfied', {
+				cluster: this,
+				markers: childMarkers
+			});
+		},
+
+		_animationUnspiderfy: function () {
+			this._noanimationUnspiderfy();
+		}
+	});
+
+	//Animated versions here
+	L.MarkerCluster.include({
+
+		_animationSpiderfy: function (childMarkers, positions) {
+			var me = this,
+				group = this._group,
+				map = group._map,
+				fg = group._featureGroup,
+				thisLayerLatLng = this._latlng,
+				thisLayerPos = map.latLngToLayerPoint(thisLayerLatLng),
+				svg = L.Path.SVG,
+				legOptions = L.extend({}, this._group.options.spiderLegPolylineOptions), // Copy the options so that we can modify them for animation.
+				finalLegOpacity = legOptions.opacity,
+				i, m, leg, legPath, legLength, newPos;
+
+			if (finalLegOpacity === undefined) {
+				finalLegOpacity = L.MarkerClusterGroup.prototype.options.spiderLegPolylineOptions.opacity;
+			}
+
+			if (svg) {
+				// If the initial opacity of the spider leg is not 0 then it appears before the animation starts.
+				legOptions.opacity = 0;
+
+				// Add the class for CSS transitions.
+				legOptions.className = (legOptions.className || '') + ' leaflet-cluster-spider-leg';
+			} else {
+				// Make sure we have a defined opacity.
+				legOptions.opacity = finalLegOpacity;
+			}
+
+			group._ignoreMove = true;
+
+			// Add markers and spider legs to map, hidden at our center point.
+			// Traverse in ascending order to make sure that inner circleMarkers are on top of further legs. Normal markers are re-ordered by newPosition.
+			// The reverse order trick no longer improves performance on modern browsers.
+			for (i = 0; i < childMarkers.length; i++) {
+				m = childMarkers[i];
+
+				newPos = map.layerPointToLatLng(positions[i]);
+
+				// Add the leg before the marker, so that in case the latter is a circleMarker, the leg is behind it.
+				leg = new L.Polyline([thisLayerLatLng, newPos], legOptions);
+				map.addLayer(leg);
+				m._spiderLeg = leg;
+
+				// Explanations: https://jakearchibald.com/2013/animated-line-drawing-svg/
+				// In our case the transition property is declared in the CSS file.
+				if (svg) {
+					legPath = leg._path;
+					legLength = legPath.getTotalLength() + 0.1; // Need a small extra length to avoid remaining dot in Firefox.
+					legPath.style.strokeDasharray = legLength; // Just 1 length is enough, it will be duplicated.
+					legPath.style.strokeDashoffset = legLength;
+				}
+
+				// If it is a marker, add it now and we'll animate it out
+				if (m.setZIndexOffset) {
+					m.setZIndexOffset(1000000); // Make normal markers appear on top of EVERYTHING
+				}
+				if (m.clusterHide) {
+					m.clusterHide();
+				}
+				
+				// Vectors just get immediately added
+				fg.addLayer(m);
+
+				if (m._setPos) {
+					m._setPos(thisLayerPos);
+				}
+			}
+
+			group._forceLayout();
+			group._animationStart();
+
+			// Reveal markers and spider legs.
+			for (i = childMarkers.length - 1; i >= 0; i--) {
+				newPos = map.layerPointToLatLng(positions[i]);
+				m = childMarkers[i];
+
+				//Move marker to new position
+				m._preSpiderfyLatlng = m._latlng;
+				m.setLatLng(newPos);
+				
+				if (m.clusterShow) {
+					m.clusterShow();
+				}
+
+				// Animate leg (animation is actually delegated to CSS transition).
+				if (svg) {
+					leg = m._spiderLeg;
+					legPath = leg._path;
+					legPath.style.strokeDashoffset = 0;
+					//legPath.style.strokeOpacity = finalLegOpacity;
+					leg.setStyle({opacity: finalLegOpacity});
+				}
+			}
+			this.setOpacity(0.3);
+
+			group._ignoreMove = false;
+
+			setTimeout(function () {
+				group._animationEnd();
+				group.fire('spiderfied', {
+					cluster: me,
+					markers: childMarkers
+				});
+			}, 200);
+		},
+
+		_animationUnspiderfy: function (zoomDetails) {
+			var me = this,
+				group = this._group,
+				map = group._map,
+				fg = group._featureGroup,
+				thisLayerPos = zoomDetails ? map._latLngToNewLayerPoint(this._latlng, zoomDetails.zoom, zoomDetails.center) : map.latLngToLayerPoint(this._latlng),
+				childMarkers = this.getAllChildMarkers(null, true),
+				svg = L.Path.SVG,
+				m, i, leg, legPath, legLength, nonAnimatable;
+
+			group._ignoreMove = true;
+			group._animationStart();
+
+			//Make us visible and bring the child markers back in
+			this.setOpacity(1);
+			for (i = childMarkers.length - 1; i >= 0; i--) {
+				m = childMarkers[i];
+
+				//Marker was added to us after we were spiderfied
+				if (!m._preSpiderfyLatlng) {
+					continue;
+				}
+
+				//Close any popup on the marker first, otherwise setting the location of the marker will make the map scroll
+				m.closePopup();
+
+				//Fix up the location to the real one
+				m.setLatLng(m._preSpiderfyLatlng);
+				delete m._preSpiderfyLatlng;
+
+				//Hack override the location to be our center
+				nonAnimatable = true;
+				if (m._setPos) {
+					m._setPos(thisLayerPos);
+					nonAnimatable = false;
+				}
+				if (m.clusterHide) {
+					m.clusterHide();
+					nonAnimatable = false;
+				}
+				if (nonAnimatable) {
+					fg.removeLayer(m);
+				}
+
+				// Animate the spider leg back in (animation is actually delegated to CSS transition).
+				if (svg) {
+					leg = m._spiderLeg;
+					legPath = leg._path;
+					legLength = legPath.getTotalLength() + 0.1;
+					legPath.style.strokeDashoffset = legLength;
+					leg.setStyle({opacity: 0});
+				}
+			}
+
+			group._ignoreMove = false;
+
+			setTimeout(function () {
+				//If we have only <= one child left then that marker will be shown on the map so don't remove it!
+				var stillThereChildCount = 0;
+				for (i = childMarkers.length - 1; i >= 0; i--) {
+					m = childMarkers[i];
+					if (m._spiderLeg) {
+						stillThereChildCount++;
+					}
+				}
+
+
+				for (i = childMarkers.length - 1; i >= 0; i--) {
+					m = childMarkers[i];
+
+					if (!m._spiderLeg) { //Has already been unspiderfied
+						continue;
+					}
+
+					if (m.clusterShow) {
+						m.clusterShow();
+					}
+					if (m.setZIndexOffset) {
+						m.setZIndexOffset(0);
+					}
+
+					if (stillThereChildCount > 1) {
+						fg.removeLayer(m);
+					}
+
+					map.removeLayer(m._spiderLeg);
+					delete m._spiderLeg;
+				}
+				group._animationEnd();
+				group.fire('unspiderfied', {
+					cluster: me,
+					markers: childMarkers
+				});
+			}, 200);
+		}
+	});
+
+
+	L.MarkerClusterGroup.include({
+		//The MarkerCluster currently spiderfied (if any)
+		_spiderfied: null,
+
+		unspiderfy: function () {
+			this._unspiderfy.apply(this, arguments);
+		},
+
+		_spiderfierOnAdd: function () {
+			this._map.on('click', this._unspiderfyWrapper, this);
+
+			if (this._map.options.zoomAnimation) {
+				this._map.on('zoomstart', this._unspiderfyZoomStart, this);
+			}
+			//Browsers without zoomAnimation or a big zoom don't fire zoomstart
+			this._map.on('zoomend', this._noanimationUnspiderfy, this);
+
+			if (!L.Browser.touch) {
+				this._map.getRenderer(this);
+				//Needs to happen in the pageload, not after, or animations don't work in webkit
+				//  http://stackoverflow.com/questions/8455200/svg-animate-with-dynamically-added-elements
+				//Disable on touch browsers as the animation messes up on a touch zoom and isn't very noticable
+			}
+		},
+
+		_spiderfierOnRemove: function () {
+			this._map.off('click', this._unspiderfyWrapper, this);
+			this._map.off('zoomstart', this._unspiderfyZoomStart, this);
+			this._map.off('zoomanim', this._unspiderfyZoomAnim, this);
+			this._map.off('zoomend', this._noanimationUnspiderfy, this);
+
+			//Ensure that markers are back where they should be
+			// Use no animation to avoid a sticky leaflet-cluster-anim class on mapPane
+			this._noanimationUnspiderfy();
+		},
+
+		//On zoom start we add a zoomanim handler so that we are guaranteed to be last (after markers are animated)
+		//This means we can define the animation they do rather than Markers doing an animation to their actual location
+		_unspiderfyZoomStart: function () {
+			if (!this._map) { //May have been removed from the map by a zoomEnd handler
+				return;
+			}
+
+			this._map.on('zoomanim', this._unspiderfyZoomAnim, this);
+		},
+
+		_unspiderfyZoomAnim: function (zoomDetails) {
+			//Wait until the first zoomanim after the user has finished touch-zooming before running the animation
+			if (L.DomUtil.hasClass(this._map._mapPane, 'leaflet-touching')) {
+				return;
+			}
+
+			this._map.off('zoomanim', this._unspiderfyZoomAnim, this);
+			this._unspiderfy(zoomDetails);
+		},
+
+		_unspiderfyWrapper: function () {
+			/// <summary>_unspiderfy but passes no arguments</summary>
+			this._unspiderfy();
+		},
+
+		_unspiderfy: function (zoomDetails) {
+			if (this._spiderfied) {
+				this._spiderfied.unspiderfy(zoomDetails);
+			}
+		},
+
+		_noanimationUnspiderfy: function () {
+			if (this._spiderfied) {
+				this._spiderfied._noanimationUnspiderfy();
+			}
+		},
+
+		//If the given layer is currently being spiderfied then we unspiderfy it so it isn't on the map anymore etc
+		_unspiderfyLayer: function (layer) {
+			if (layer._spiderLeg) {
+				this._featureGroup.removeLayer(layer);
+
+				if (layer.clusterShow) {
+					layer.clusterShow();
+				}
+					//Position will be fixed up immediately in _animationUnspiderfy
+				if (layer.setZIndexOffset) {
+					layer.setZIndexOffset(0);
+				}
+
+				this._map.removeLayer(layer._spiderLeg);
+				delete layer._spiderLeg;
+			}
+		}
+	});
+
+	/**
+	 * Adds 1 public method to MCG and 1 to L.Marker to facilitate changing
+	 * markers' icon options and refreshing their icon and their parent clusters
+	 * accordingly (case where their iconCreateFunction uses data of childMarkers
+	 * to make up the cluster icon).
+	 */
+
+
+	L.MarkerClusterGroup.include({
+		/**
+		 * Updates the icon of all clusters which are parents of the given marker(s).
+		 * In singleMarkerMode, also updates the given marker(s) icon.
+		 * @param layers L.MarkerClusterGroup|L.LayerGroup|Array(L.Marker)|Map(L.Marker)|
+		 * L.MarkerCluster|L.Marker (optional) list of markers (or single marker) whose parent
+		 * clusters need to be updated. If not provided, retrieves all child markers of this.
+		 * @returns {L.MarkerClusterGroup}
+		 */
+		refreshClusters: function (layers) {
+			if (!layers) {
+				layers = this._topClusterLevel.getAllChildMarkers();
+			} else if (layers instanceof L.MarkerClusterGroup) {
+				layers = layers._topClusterLevel.getAllChildMarkers();
+			} else if (layers instanceof L.LayerGroup) {
+				layers = layers._layers;
+			} else if (layers instanceof L.MarkerCluster) {
+				layers = layers.getAllChildMarkers();
+			} else if (layers instanceof L.Marker) {
+				layers = [layers];
+			} // else: must be an Array(L.Marker)|Map(L.Marker)
+			this._flagParentsIconsNeedUpdate(layers);
+			this._refreshClustersIcons();
+
+			// In case of singleMarkerMode, also re-draw the markers.
+			if (this.options.singleMarkerMode) {
+				this._refreshSingleMarkerModeMarkers(layers);
+			}
+
+			return this;
+		},
+
+		/**
+		 * Simply flags all parent clusters of the given markers as having a "dirty" icon.
+		 * @param layers Array(L.Marker)|Map(L.Marker) list of markers.
+		 * @private
+		 */
+		_flagParentsIconsNeedUpdate: function (layers) {
+			var id, parent;
+
+			// Assumes layers is an Array or an Object whose prototype is non-enumerable.
+			for (id in layers) {
+				// Flag parent clusters' icon as "dirty", all the way up.
+				// Dumb process that flags multiple times upper parents, but still
+				// much more efficient than trying to be smart and make short lists,
+				// at least in the case of a hierarchy following a power law:
+				// http://jsperf.com/flag-nodes-in-power-hierarchy/2
+				parent = layers[id].__parent;
+				while (parent) {
+					parent._iconNeedsUpdate = true;
+					parent = parent.__parent;
+				}
+			}
+		},
+
+		/**
+		 * Re-draws the icon of the supplied markers.
+		 * To be used in singleMarkerMode only.
+		 * @param layers Array(L.Marker)|Map(L.Marker) list of markers.
+		 * @private
+		 */
+		_refreshSingleMarkerModeMarkers: function (layers) {
+			var id, layer;
+
+			for (id in layers) {
+				layer = layers[id];
+
+				// Make sure we do not override markers that do not belong to THIS group.
+				if (this.hasLayer(layer)) {
+					// Need to re-create the icon first, then re-draw the marker.
+					layer.setIcon(this._overrideMarkerIcon(layer));
+				}
+			}
+		}
+	});
+
+	L.Marker.include({
+		/**
+		 * Updates the given options in the marker's icon and refreshes the marker.
+		 * @param options map object of icon options.
+		 * @param directlyRefreshClusters boolean (optional) true to trigger
+		 * MCG.refreshClustersOf() right away with this single marker.
+		 * @returns {L.Marker}
+		 */
+		refreshIconOptions: function (options, directlyRefreshClusters) {
+			var icon = this.options.icon;
+
+			L.setOptions(icon, options);
+
+			this.setIcon(icon);
+
+			// Shortcut to refresh the associated MCG clusters right away.
+			// To be used when refreshing a single marker.
+			// Otherwise, better use MCG.refreshClusters() once at the end with
+			// the list of modified markers.
+			if (directlyRefreshClusters && this.__parent) {
+				this.__parent._group.refreshClusters(this);
+			}
+
+			return this;
+		}
+	});
+
+	exports.MarkerClusterGroup = MarkerClusterGroup;
+	exports.MarkerCluster = MarkerCluster;
+
+	Object.defineProperty(exports, '__esModule', { value: true });
+
+}));
+//# sourceMappingURL=leaflet.markercluster-src.js.map
 
 
 /***/ }),
@@ -65004,6 +70097,17 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-leaflet-markercluster/dist/index.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-leaflet-markercluster/dist/index.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", ({value:true}));exports["default"]=void 0;var _core=__webpack_require__(/*! @react-leaflet/core */ "./node_modules/@react-leaflet/core/esm/index.js");var _leaflet=_interopRequireDefault(__webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js"));function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.getOwnPropertySymbols){var symbols=Object.getOwnPropertySymbols(object);if(enumerableOnly)symbols=symbols.filter((function(sym){return Object.getOwnPropertyDescriptor(object,sym).enumerable}));keys.push.apply(keys,symbols)}return keys}function _objectSpread(target){for(var i=1;i<arguments.length;i++){var source=arguments[i]!=null?arguments[i]:{};if(i%2){ownKeys(Object(source),true).forEach((function(key){_defineProperty(target,key,source[key])}))}else if(Object.getOwnPropertyDescriptors){Object.defineProperties(target,Object.getOwnPropertyDescriptors(source))}else{ownKeys(Object(source)).forEach((function(key){Object.defineProperty(target,key,Object.getOwnPropertyDescriptor(source,key))}))}}return target}function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true})}else{obj[key]=value}return obj}function _slicedToArray(arr,i){return _arrayWithHoles(arr)||_iterableToArrayLimit(arr,i)||_unsupportedIterableToArray(arr,i)||_nonIterableRest()}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}function _unsupportedIterableToArray(o,minLen){if(!o)return;if(typeof o==="string")return _arrayLikeToArray(o,minLen);var n=Object.prototype.toString.call(o).slice(8,-1);if(n==="Object"&&o.constructor)n=o.constructor.name;if(n==="Map"||n==="Set")return Array.from(o);if(n==="Arguments"||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return _arrayLikeToArray(o,minLen)}function _arrayLikeToArray(arr,len){if(len==null||len>arr.length)len=arr.length;for(var i=0,arr2=new Array(len);i<len;i++){arr2[i]=arr[i]}return arr2}function _iterableToArrayLimit(arr,i){if(typeof Symbol==="undefined"||!(Symbol.iterator in Object(arr)))return;var _arr=[];var _n=true;var _d=false;var _e=undefined;try{for(var _i=arr[Symbol.iterator](),_s;!(_n=(_s=_i.next()).done);_n=true){_arr.push(_s.value);if(i&&_arr.length===i)break}}catch(err){_d=true;_e=err}finally{try{if(!_n&&_i["return"]!=null)_i["return"]()}finally{if(_d)throw _e}}return _arr}function _arrayWithHoles(arr){if(Array.isArray(arr))return arr}function _objectWithoutProperties(source,excluded){if(source==null)return{};var target=_objectWithoutPropertiesLoose(source,excluded);var key,i;if(Object.getOwnPropertySymbols){var sourceSymbolKeys=Object.getOwnPropertySymbols(source);for(i=0;i<sourceSymbolKeys.length;i++){key=sourceSymbolKeys[i];if(excluded.indexOf(key)>=0)continue;if(!Object.prototype.propertyIsEnumerable.call(source,key))continue;target[key]=source[key]}}return target}function _objectWithoutPropertiesLoose(source,excluded){if(source==null)return{};var target={};var sourceKeys=Object.keys(source);var key,i;for(i=0;i<sourceKeys.length;i++){key=sourceKeys[i];if(excluded.indexOf(key)>=0)continue;target[key]=source[key]}return target}__webpack_require__(/*! leaflet.markercluster */ "./node_modules/leaflet.markercluster/dist/leaflet.markercluster-src.js");var MarkerClusterGroup=(0,_core.createPathComponent)((function(_ref,ctx){var _c=_ref.children,props=_objectWithoutProperties(_ref,["children"]);var clusterProps={};var clusterEvents={};Object.entries(props).forEach((function(_ref2){var _ref3=_slicedToArray(_ref2,2),propName=_ref3[0],prop=_ref3[1];return propName.startsWith("on")?clusterEvents[propName]=prop:clusterProps[propName]=prop}));var markerClusterGroup=new _leaflet.default.markerClusterGroup(clusterProps);Object.entries(clusterEvents).forEach((function(_ref4){var _ref5=_slicedToArray(_ref4,2),eventAsProp=_ref5[0],callback=_ref5[1];var clusterEvent="cluster".concat(eventAsProp.substring(2).toLowerCase());markerClusterGroup.on(clusterEvent,callback)}));return{instance:markerClusterGroup,context:_objectSpread(_objectSpread({},ctx),{},{layerContainer:markerClusterGroup})}}));var _default=MarkerClusterGroup;exports["default"]=_default;
+
+/***/ }),
+
 /***/ "./node_modules/react-leaflet/esm/MapContainer.js":
 /*!********************************************************!*\
   !*** ./node_modules/react-leaflet/esm/MapContainer.js ***!
@@ -65254,6 +70358,51 @@ const TileLayer = (0,_react_leaflet_core__WEBPACK_IMPORTED_MODULE_1__.createTile
     context
   };
 }, _react_leaflet_core__WEBPACK_IMPORTED_MODULE_3__.updateGridLayer);
+
+/***/ }),
+
+/***/ "./node_modules/react-leaflet/esm/hooks.js":
+/*!*************************************************!*\
+  !*** ./node_modules/react-leaflet/esm/hooks.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useMap": () => (/* binding */ useMap),
+/* harmony export */   "useMapEvent": () => (/* binding */ useMapEvent),
+/* harmony export */   "useMapEvents": () => (/* binding */ useMapEvents)
+/* harmony export */ });
+/* harmony import */ var _react_leaflet_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @react-leaflet/core */ "./node_modules/@react-leaflet/core/esm/context.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+function useMap() {
+  return (0,_react_leaflet_core__WEBPACK_IMPORTED_MODULE_1__.useLeafletContext)().map;
+}
+function useMapEvent(type, handler) {
+  const map = useMap();
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function addMapEventHandler() {
+    // @ts-ignore event type
+    map.on(type, handler);
+    return function removeMapEventHandler() {
+      // @ts-ignore event type
+      map.off(type, handler);
+    };
+  }, [map, type, handler]);
+  return map;
+}
+function useMapEvents(handlers) {
+  const map = useMap();
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function addMapEventHandlers() {
+    map.on(handlers);
+    return function removeMapEventHandlers() {
+      map.off(handlers);
+    };
+  }, [map, handlers]);
+  return map;
+}
 
 /***/ }),
 
@@ -72435,6 +77584,36 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/leaflet-control-geocoder/dist/Control.Geocoder.css":
+/*!*************************************************************************!*\
+  !*** ./node_modules/leaflet-control-geocoder/dist/Control.Geocoder.css ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Control_Geocoder_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./Control.Geocoder.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/leaflet-control-geocoder/dist/Control.Geocoder.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Control_Geocoder_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Control_Geocoder_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/leaflet/dist/leaflet.css":
 /*!***********************************************!*\
   !*** ./node_modules/leaflet/dist/leaflet.css ***!
@@ -72522,6 +77701,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Map_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/components/styles.css":
+/*!********************************************!*\
+  !*** ./resources/js/components/styles.css ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./styles.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/styles.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_styles_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_styles_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 

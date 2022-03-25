@@ -52,7 +52,7 @@ Route::put('/transport/{id}', 'App\Http\Controllers\TransportController@update')
 // food
 Route::post('/food/create', 'App\Http\Controllers\FoodController@create')->name('food');
 Route::get('/food/create', 'App\Http\Controllers\FoodController@index')->name('food');
-Route::post('/food', 'App\Http\Controllers\FoodController@store');
+Route::post('/food', 'App\Http\Controllers\FoodController@store')->name('foodstore');
 Route::get('/food/{id}', 'App\Http\Controllers\FoodController@show');
 Route::get('/food/{id}/edit', 'App\Http\Controllers\FoodController@edit');
 Route::put('/food/{id}', 'App\Http\Controllers\FoodController@update');
