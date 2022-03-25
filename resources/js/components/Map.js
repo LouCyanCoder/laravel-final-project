@@ -10,6 +10,7 @@ import MarkerClusterGroup from "react-leaflet-markercluster";
 import FilterServices from "./FilterServices";
 
 function Map({ center, zoom }) {
+
     console.log(MapContainer);
     return (
         <>

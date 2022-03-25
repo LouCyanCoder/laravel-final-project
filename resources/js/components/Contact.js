@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactDOM from "react-dom";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Dashboard from "./Dashboard/Dashboard";
 
 const Contact = () => {
+    
+    
+
     return (
         <section className="contactForm">
             <div className="contactForm__title">
@@ -35,7 +38,6 @@ const Contact = () => {
                 
             </form>
 
-            <Dashboard />
         </section>
     );
 };

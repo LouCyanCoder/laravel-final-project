@@ -42,7 +42,8 @@ Route::put('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@
 // Route::get('/accommodation/create', 'App\Http\Controllers\AccommodationController@create');
 
 // transport
-Route::get('/transport/create', 'App\Http\Controllers\TransportController@create');
+Route::post('/transport/create', 'App\Http\Controllers\TransportController@create')->name('transport');
+Route::get('/transport/create', 'App\Http\Controllers\TransportController@index')->name('transport');
 Route::post('/transport', 'App\Http\Controllers\TransportController@store');
 Route::get('/transport/{id}', 'App\Http\Controllers\TransportController@show');
 Route::delete('/transport/{id}', 'App\Http\Controllers\TransportController@delete');
@@ -75,6 +76,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+Route::get('/user','Api\UserController@show');
 
 /* Route::get('/{path?}', function () {
     return view('index');
