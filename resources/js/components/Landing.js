@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const Landing = () => {
+
+    console.log(document.querySelector("meta[name='totally-not-user-id']").content)
+
     return (
         <section className="landing_container">
             <div className="landing_img">
