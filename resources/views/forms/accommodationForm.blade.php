@@ -33,7 +33,7 @@
         </select>
         <br>
     
-        <label for="description">Description of the offer: </label><br>
+        <label for="description">Description of the offer</label><br>
         <input type="text" name="description" value="">
         <br>
 
@@ -45,7 +45,7 @@
         <input type="date" name="end_date" value="">
         <br>
 
-        <label for="status">Status of the offer: </label><br>
+        <label for="status">Select the status of the offer</label><br>
         <select id="status" name="status">
             <option value="open">Open</option>
             <option value="closed">Closed</option>

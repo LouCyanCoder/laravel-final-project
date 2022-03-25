@@ -2,13 +2,14 @@
 
     @include('components.header')
 
-    <form action="{{ action('ServiceController@store') }}" method="post">
+    <form action="{{ route('service') }}" method="post">
  
         @csrf
         
         <h1>Post a service offer</h1>
 
-        <select for="name">Select the type of service you would like to provide.<br>
+        <label for="name">Select the type of service you would like to provide</label><br>
+        <select id="name" name="name">
           <option value="law_service">Law services</option>
           <option value="translator">Translator</option>
           <option value="psychology_psychotherapy">Psychology & Psychotherapy</option>
