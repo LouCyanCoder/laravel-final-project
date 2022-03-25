@@ -41,8 +41,8 @@ Route::get('/accommodation/{id}/edit', 'App\Http\Controllers\AccommodationContro
 Route::put('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@update');
 // Route::get('/accommodation/create', 'App\Http\Controllers\AccommodationController@create');
 
-
-Route::get('/transport/create', 'App\Http\Controllers\TransportController@create');
+Route::post('/transport/create', 'App\Http\Controllers\TransportController@create')->name('transport');
+Route::get('/transport/create', 'App\Http\Controllers\TransportController@index')->name('transport');
 Route::post('/transport', 'App\Http\Controllers\TransportController@store');
 Route::get('/transport/{id}', 'App\Http\Controllers\TransportController@show');
 Route::delete('/transport/{id}', 'App\Http\Controllers\TransportController@delete');
