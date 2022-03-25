@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Food;
+
 use Illuminate\Http\Request;
+use Auth;
 
 class FoodController extends Controller
 {
@@ -21,12 +23,11 @@ class FoodController extends Controller
         $data = $request->all();
 
         $food->insert([
-            'user_id' => '1',
-            'address' => $data['address'],
-            'name' => $data['name'],
-            'description' => $data['description'],
-            'day' => $data['day'],
-            'status' => $data['status']
+            'address'   => $data['address'],
+            'name'   => $data['name'],
+            'description'   => $data['description'],
+            'day'   => $data['day'],
+            'status'   => $data['status'],
         ]);
       
 
@@ -35,21 +36,28 @@ class FoodController extends Controller
 
     public function store(Request $request)
     {
+
         $food = new Food($request->except('_token'));
 
         $this->validateForm($request);
 
-        // $food->address   = $request->input('address');
-        // $food->name   = $request->input('name');
-        // $food->description   = $request->input('description');
-        // $food->day   = $request->input('day');
-        // $food->status   = $request->input('status');
+        // dd('Validation passed');
 
-        // $food->save();
+        $food->address   = $request->input('address');
+        $food->name   = $request->input('name');
+        $food->description   = $request->input('description');
+        $food->day   = $request->input('day');
+        $food->status   = $request->input('status');
+        $food->user_id = Auth::user()->id;
+        $food->save();
+        // dd($food);
+        
+
+        
 
         session()->flash('success_message', 'The food was successfully saved!');
 
-        return redirect()->action('App\Http\Controllers\FoodController@index');
+        return redirect()->action('FoodController@index');
     }
 
     public function show($id)
