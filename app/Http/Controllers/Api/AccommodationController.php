@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 
 class AccommodationController extends Controller
 {
-    public function index()
+    public function show(Request $request, $id)
     {
-        dd('NOW YOU SEE ME');
+        dd('asda');
+
+        $accommodation = Accommodation::findOrFail($id);
+        return $accommodation->toJson();    
     }
 }
