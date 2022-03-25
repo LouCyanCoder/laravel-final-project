@@ -22130,7 +22130,7 @@ var PostOffer = function PostOffer() {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "postoffer__container",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
-        className: "postoffer_card accommodation",
+        className: "postoffer__card--accommodation",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "",
           alt: ""
@@ -22138,7 +22138,7 @@ var PostOffer = function PostOffer() {
           children: "Accommodation"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
-        className: "postoffer_card food",
+        className: "postoffer__card--food",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "",
           alt: ""
@@ -22146,7 +22146,7 @@ var PostOffer = function PostOffer() {
           children: "Food"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
-        className: "postoffer_card transport",
+        className: "postoffer__card--transport",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "",
           alt: ""
@@ -22154,7 +22154,7 @@ var PostOffer = function PostOffer() {
           children: "Transport"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
-        className: "postoffer_card services",
+        className: "postoffer__card--services",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "",
           alt: ""
@@ -22216,45 +22216,48 @@ var Profile = function Profile() {
       }
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
       children: user.username
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_mui_material_List__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      component: "nav",
-      "aria-label": "profile info",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        button: true,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          primary: "Address",
-          secondary: user.address
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_Divider__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        button: true,
-        divider: true,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          primary: "Telephone nr",
-          secondary: user.phone_number
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        button: true,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          primary: "Facebook",
-          secondary: user.facebook_link
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_Divider__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        light: true
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        button: true,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          primary: "Telegram",
-          secondary: user.telegram_link
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_Divider__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        light: true
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        button: true,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          primary: "Email",
-          secondary: user.email
-        })
-      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "profile_container",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_mui_material_List__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        component: "nav",
+        "aria-label": "profile info",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          button: true,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            primary: "Address",
+            secondary: user.address
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_Divider__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          button: true,
+          divider: true,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            primary: "Telephone nr",
+            secondary: user.phone_number
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          button: true,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            primary: "Facebook",
+            secondary: user.facebook_link
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_Divider__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          light: true
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          button: true,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            primary: "Telegram",
+            secondary: user.telegram_link
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_Divider__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          light: true
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          button: true,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            primary: "Email",
+            secondary: user.email
+          })
+        })]
+      })
     })]
   });
 };

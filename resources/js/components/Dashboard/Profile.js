@@ -26,34 +26,36 @@ const Profile = () => {
 
       <h3>{ user.username }</h3>
           
-            <List component="nav" aria-label="profile info">
-                <ListItem button>
-          <ListItemText primary="Address" secondary={ user. address } />
-                </ListItem>
-                
-                <Divider />
-                
-                <ListItem button divider>
-                    <ListItemText primary="Telephone nr" secondary={ user.phone_number } />
-                </ListItem>
-                
-                <ListItem button>
-                    <ListItemText primary="Facebook" secondary={ user.facebook_link } />
-                </ListItem>
-                
-                <Divider light />
-                
-                <ListItem button>
-                    <ListItemText primary="Telegram" secondary={ user.telegram_link } />
-                </ListItem>
-                
-                <Divider light />
-                
-                <ListItem button>
-                    <ListItemText primary="Email" secondary={ user.email } />
-                </ListItem>
-                
-            </List>
+           <div className='profile_container'>
+              <List component="nav" aria-label="profile info">
+                  <ListItem button>
+            <ListItemText primary="Address" secondary={ user. address } />
+                  </ListItem>
+                  
+                  <Divider />
+                  
+                  <ListItem button divider>
+                      <ListItemText primary="Telephone nr" secondary={ user.phone_number } />
+                  </ListItem>
+                  
+                  <ListItem button>
+                      <ListItemText primary="Facebook" secondary={ user.facebook_link } />
+                  </ListItem>
+                  
+                  <Divider light />
+                  
+                  <ListItem button>
+                      <ListItemText primary="Telegram" secondary={ user.telegram_link } />
+                  </ListItem>
+                  
+                  <Divider light />
+                  
+                  <ListItem button>
+                      <ListItemText primary="Email" secondary={ user.email } />
+                  </ListItem>
+                  
+              </List>
+           </div>
     </section>
   )
 }
