@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('description')->nullable();
             $table->string('day')->nullable();
-            $table->enum('status', ['open','closed','on_demand'])->nullable();
+            $table->enum('status', ['open','closed','on_demand']);
             $table->timestamps();
             
         });

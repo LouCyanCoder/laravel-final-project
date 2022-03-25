@@ -31,7 +31,7 @@ class ServiceController extends Controller
         $service = new Service();
         // $categories = Category::all();
 
-        return view('forms/serviceForm', compact('service'));
+        return view('forms.serviceForm', compact('service'));
     }
 
     /**

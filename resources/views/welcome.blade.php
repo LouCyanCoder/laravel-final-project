@@ -29,20 +29,7 @@
     <body class="antialiased">
        
         <nav>
-            @if (Gate::allows('admin'))
-                
-           
-                <a href="{{ route('author.index') }}">List of authors</a>
-                <a href="{{ action('Admin\AuthorController@create') }}">Create an author</a>
-    
-             @endif
-    
-            @can('role', 'editor')
-    
-                <a href="{{ route('publisher.index') }}">List of publishers</a>
-                <a href="{{ action('Admin\PublisherController@create') }}">Create an publisher</a>
-                
-            @endcan
+
             
     
             @auth
