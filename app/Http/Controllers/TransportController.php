@@ -12,10 +12,10 @@ class TransportController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $searchString = $request->input('search');
-        $transports = Transport::where('title', 'like', '%' . $searchString . '%')->get();
+        $transports = Transport::where('destination', 'like', '%' . $searchString . '%')->get();
 
         return view('forms.transportForm', compact('transports'));    
     }
@@ -25,9 +25,20 @@ class TransportController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         $transport = new Transport();
+        $data = $request->all();
+
+        $transport->insert([
+            'user_id' => '1',
+            'location_from' => $data['location_from'],
+            'destination' => $data['destination'],
+            'date' => $data['date'],
+            'max_person' => $data['max_person'],
+            'status' => $data['status']
+        ]);
+
 
         return view('forms/transportForm', compact('transport'));
     }
@@ -111,5 +122,16 @@ class TransportController extends Controller
     public function destroy(Transport $transport)
     {
         //
+    }
+
+    private function validateForm($request)
+    {
+        $this->validate($request, [
+            'destination' => 'required|min:1',
+            'date' => 'required',
+        ], [
+            'destination.required' => 'Destination is missing',
+            'destination.min' => 'You should fill this area'
+        ]);
     }
 }
