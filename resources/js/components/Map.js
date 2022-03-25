@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "./Map.css";
 // import './leaflet/dist/leaflet.css';
@@ -8,10 +8,25 @@ import "./styles.css";
 import LeafletControlGeocoder from "./LeafletControlGeocoder";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import FilterServices from "./FilterServices";
+import axios from "axios";
+import AccommodationMarker from "./AccommodationMarker";
+
 
 function Map({ center, zoom }) {
 
-    console.log(MapContainer);
+  const [accommodations, setAccommodations] = useState([])
+
+    const fetchAccommotations = async () => {
+      const res = await axios.get('/api/accomodation');
+      setAccommodations(res.data)
+    }
+
+
+    useEffect(() => {
+      fetchAccommotations()
+    }, [])
+
+
     return (
         <>
             <FilterServices />
@@ -28,6 +43,11 @@ function Map({ center, zoom }) {
                 />
                 <LeafletControlGeocoder />
                 <MarkerClusterGroup>
+
+
+                  {
+                    !!accommodations.length && accommodations.map((element, index) => <AccommodationMarker data={element} key={index} />)
+                  }
                     <Marker
                         position={[50.073658, 14.41854]}
                         icon={defaultMarker}
@@ -52,34 +72,6 @@ function Map({ center, zoom }) {
                                 </div>
                                 <div className="m-2" style={okText}>
                                     Okay
-                                </div>
-                            </div>
-                        </Popup>
-                    </Marker>
-
-                    <Marker
-                        position={[50.091093, 14.400802]}
-                        icon={defaultMarker2}
-                    >
-                        <Popup className="request-popup">
-                            <div style={popupContent}>
-                                <img
-                                    src="https://media-exp1.licdn.com/dms/image/D4D35AQGxUmN29K_b5w/profile-framedphoto-shrink_400_400/0/1646341965876?e=1648116000&v=beta&t=IRfbId09WkriYINQQXB2waOGNvtyNd3IkPB9_oCmdXg"
-                                    width="150"
-                                    height="150"
-                                />
-                                <div className="m-2" style={popupHead}>
-                                    Ekin's house
-                                    <h2>
-                                        III. nádvoří 48/2, 119 01 Praha
-                                        1-Hradčany
-                                    </h2>
-                                </div>
-                                <div style={popupText}>
-                                    Welcome to the club, man!
-                                </div>
-                                <div className="m-2" style={okText}>
-                                    ;)
                                 </div>
                             </div>
                         </Popup>

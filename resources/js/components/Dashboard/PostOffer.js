@@ -3,28 +3,37 @@ import React from 'react'
 const PostOffer = () => {
   return (
       <section className='postoffer'>
-          <h2>Post a new offer</h2>
+              <h2>Post a new offer</h2>
+              
           <div className='postoffer__container'>
 
-            <article className='postoffer__card--accommodation'>
-                  <img src='' alt='' />
+            <a href="#">
+            <article className='postoffer__card accommodation'>
+                  <img src='../../images/accomodation.png' alt='' />
                   <h3>Accommodation</h3>
             </article>
+            </a>
               
-            <article className='postoffer__card--food'>
-                  <img src='' alt='' />
+            <a href="#">
+            <article className='postoffer__card food'>
+                  <img src='../../images/diet.png' alt='' />
                   <h3>Food</h3>
             </article>
+            </a>
             
-            <article className='postoffer__card--transport'>
-                  <img src='' alt='' />
+            <a href="#">
+            <article className='postoffer__card transport'>
+                  <img src='../../images/bus.png' alt='' />
                   <h3>Transport</h3>
             </article>
+            </a>
             
-            <article className='postoffer__card--services'>
-                  <img src='' alt='' />
+            <a href="#">
+            <article className='postoffer__card services'>
+                  <img src='../../images/helping.png' alt='' />
                   <h3>Services</h3>
               </article>
+            </a>
               
           </div>
           
