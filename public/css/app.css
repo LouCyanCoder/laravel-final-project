@@ -16,8 +16,8 @@ header {
        column-gap: 15px;
   padding: 7.5px 30px;
 }
-.header__logo img {
-  height: 96px;
+.header__logo--whocares {
+  height: 69px;
 }
 .header__nav {
   display: flex;
@@ -191,13 +191,13 @@ header {
   height: 37px;
 }
 
-.footer_nav {
+.footer__nav {
   display: flex;
   align-items: center;
   justify-content: center;
   border-top: 1px solid #050814;
 }
-.footer_nav nav {
+.footer__nav nav {
   display: flex;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -205,19 +205,22 @@ header {
   font-size: 1.2rem;
   padding-top: 20px;
 }
-.footer_nav nav ul {
+.footer__nav nav ul {
   list-style: none;
   padding: 0;
   display: flex;
   -moz-column-gap: 30px;
        column-gap: 30px;
 }
-.footer_nav nav ul a {
+.footer__nav nav ul a {
   text-decoration: none;
   font-size: 22px;
 }
-
-.footer_info {
+.footer__logo--leaflet {
+  height: 50px;
+  margin: 10px 0;
+}
+.footer__info {
   text-align: center;
   font-size: 1.2rem;
 }
