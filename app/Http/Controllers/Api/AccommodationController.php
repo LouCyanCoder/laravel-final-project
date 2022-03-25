@@ -4,14 +4,13 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Accommodation;
 
 class AccommodationController extends Controller
 {
-    public function show(Request $request, $id)
+    public function index(Request $request)
     {
-        dd('asda');
-
-        $accommodation = Accommodation::findOrFail($id);
-        return $accommodation->toJson();    
+        $accommodation = Accommodation::get();
+        return $accommodation;
     }
 }
