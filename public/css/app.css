@@ -122,7 +122,7 @@ header {
 .features_cards--food:hover,
 .features_cards--transport:hover,
 .features_cards--services:hover {
-  background-color: lightblue;
+  background-color: #85aac5;
   transform: scale(1.1);
 }
 
@@ -220,6 +220,59 @@ header {
 .footer_info {
   text-align: center;
   font-size: 1.2rem;
+}
+
+.profile__container {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.profile__avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.profile__avatar p {
+  font-size: 1.8rem;
+}
+
+.postoffer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.postoffer h2, .postoffer .h2 {
+  margin: 20px;
+}
+.postoffer__container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+}
+.postoffer a {
+  text-decoration: none;
+  color: #024f94;
+}
+.postoffer__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #024f94;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.postoffer__card img {
+  width: 150px;
+  padding-bottom: 15px;
+}
+.postoffer__card:hover {
+  background-color: #85aac5;
+  transform: scale(1.1);
 }
 
 /*!

@@ -7,6 +7,6 @@
     <title>Map</title>
 </head>
 <body>
-    <div id="mappp"></div>
+    <div id="map"></div> 
 </body>
 </html>

@@ -1,72 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Transport Form</title>
-</head>
-<body>
+
+    
     @include('components.header')
 
-    <form action="{{ route('food') }}" method="post">
+    <form action="{{ route('foodstore') }}" method="post">
  
         @csrf
         
         <h1>Food offer</h1>
 
-         {{-- $table->foreignId('user_id')->unique();
-            $table->string('address')->nullable();
-            $table->string('name')->nullable();
-            $table->string('description')->nullable();
-            $table->string('day')->nullable();
-            $table->enum('status', ['open','limited','closed','on demand']); --}}
-        <div class="">
-        <label for="">Name</label><br>
+        <label for="name">Name</label><br />
         <input
             type="text"
             name="name"
             value=""
-        >
-        </div>
-        
-        <div class="">
-        <label for="">Address</label><br>
+        />
+        <br />
+
+
+        <label for="address">Address</label><br>
         <input
             type="text"
             name="address"
             value=""
-        >
-        </div>
-
-
-
-        <div class="">
+        />
+        <br />
+        
         <label for="description">Description:</label><br>
         <textarea name="description" value="" id="" cols="30" rows="10"></textarea>
-        </div>
+        <br />
 
-        <div class="">
-        <label for="day">Day:</label>
-        <input type="date" name="day">
-        </div>
+        <label for="day">Day</label><br>
+        <input type="date" name="day" />
+        <br />
 
-       
-
-        <label for="">Status</label><br>
-        <select name="status">
-            <option value="open">Open</option>
-            <option value="closed">Closed</option>   
-            <option value="on_demand">On Demand</option>
-        </select>
-        <br>
-        <br>
-        
-
-        <button>Confirm offer</button>
+        <label for="status">Select the status of the offer</label><br>
+            <select id="status" name="status">
+                <option value="open">Open</option>
+                <option value="closed">Closed</option>
+                <option value="on_demand">On demand</option>
+            </select>
+        <br />
+        <br />
+        <button type="submit">Confirm offer</button>
     </form>
 
     @include('components.footer')
     
-</body>
-</html>

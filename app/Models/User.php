@@ -8,6 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+use App\Models\Transport;
+use App\Models\Food;
+use App\Models\Service;
+use App\Models\Accommodation;
+use App\Models\Language;
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -45,4 +51,29 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function accommodations()
+    {
+       return $this->hasMany(Accommodation::class); 
+    }
+
+    public function transports()
+    {
+       return $this->hasMany(Transport::class); 
+    }
+
+    public function foods()
+    {
+       return $this->hasMany(Food::class); 
+    }
+
+    public function services()
+    {
+       return $this->hasMany(Service::class); 
+    }
+
+    public function languages()
+    {
+       return $this->hasMany(Language::class); 
+    }
 }
