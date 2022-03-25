@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Food;
-
 use Illuminate\Http\Request;
 use Auth;
 
@@ -23,6 +22,7 @@ class FoodController extends Controller
         $data = $request->all();
 
         $food->insert([
+            'user_id' => $data['user_id'],
             'address'   => $data['address'],
             'name'   => $data['name'],
             'description'   => $data['description'],

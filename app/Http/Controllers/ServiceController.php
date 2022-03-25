@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Auth;
 
 class ServiceController extends Controller
 {
@@ -12,13 +13,13 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
                 // dd('index');
         $searchString = $request->input('search');
         $services = Service::where('name', 'like', '%' . $searchString . '%')->get();
 
-        return view('forms.serviceForm', compact('services'));
+        return view('forms/serviceForm', compact('services'));
     }
 
     /**
@@ -26,12 +27,21 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         $service = new Service();
-        // $categories = Category::all();
+        $data = $request->all();
 
-        return view('forms.serviceForm', compact('service'));
+        $service->insert([
+            'name'   => $data['name'],
+            'description'   => $data['description'],
+            'status'   => $data['status'],
+        ]);
+        
+
+        $service->save();
+
+        return view('forms/serviceForm', compact('service'));
     }
 
     /**
@@ -42,19 +52,20 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
+         $this->validateForm($request);
+
         $service = new Service($request->except('_token'));
 
-        $this->validateForm($request);
-
+       
         // $service->name   = $request->input('name');
         // $service->description   = $request->input('description');
         // $service->status   = $request->input('status');
-
+        $service->user_id = Auth::user()->id;
         $service->save();
 
         session()->flash('success_message', 'The service was successfully saved!');
 
-        return redirect()->action('App\Http\Controllers\ServiceController@index');
+        return redirect()->action('ServiceController@index');
     }
 
     /**
@@ -63,9 +74,9 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(Service $service)
+    public function show(Request $request)
     {
-        dd('Show');
+        // dd('Show');
         $service = Service::findOrFail($id);
 
         return view('services/show', compact('service'));
@@ -77,12 +88,11 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit(Request $request)
     {
         $service = Service::findOrFail($id);
-        $categories = Category::all();
-
-        return view('serviceform/forms', compact('categories', 'service'));
+       
+        return view('forms.serviceForm', compact('service'));
     }
 
     /**
@@ -94,6 +104,9 @@ class ServiceController extends Controller
      */
     public function update(Request $request, Service $service)
     {
+        $service = Service::findOrFail($id);
+        $this->validateForm($request);
+
         $service->name   = $request->input('name');
         $service->description   = $request->input('description');
         $service->status   = $request->input('status');
@@ -111,11 +124,22 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function delete($id)
     {
         $service = Service::findOrFail($id);
         $service->delete();
 
         return redirect()->action('App\Http\Controllers\ServiceController@index');
+    }
+
+    private function validateForm($request)
+    {
+        $this->validate($request, [
+            'description' => 'required|min:3',
+            'date' => 'required',
+        ], [
+            'description.required' => 'What?? the services does not have a title??',
+            'description.min' => 'Description should have at least 3 letters',
+        ]);
     }
 }

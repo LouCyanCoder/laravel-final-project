@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Transport;
 use Illuminate\Http\Request;
+use Auth;
 
 class TransportController extends Controller
 {
@@ -31,13 +32,13 @@ class TransportController extends Controller
         $data = $request->all();
 
         $transport->insert([
-            'user_id' => '1',
             'location_from' => $data['location_from'],
             'destination' => $data['destination'],
             'date' => $data['date'],
             'max_person' => $data['max_person'],
             'status' => $data['status']
         ]);
+
 
 
         return view('forms/transportForm', compact('transport'));
@@ -51,13 +52,30 @@ class TransportController extends Controller
      */
     public function store(Request $request)
     {
-        $transport = new Transport($request->expect('_token'));
+        // dd($request->all());
+        // dd($request->except('_token'));
+        $this->validateForm($request);
 
-        $this->validateFrom($request);
+        $transport = new Transport($request->except('_token'));
+        // dd($transport);
+        // $transport = new Transport;
+
+        
+
+        // $transport->location_from = $request->input('location_from');
+        // $transport->destination = $request->input('destination');
+        // $transport->date  = $request->input('date');
+        // $transport->max_person = $request->input('max_person');
+        // $transport->status = $request->input('status');
+        $transport->user_id = Auth::user()->id;
+
+        // dd($transport);
+
+        $transport->save();
 
         session()->flash('success_message', 'The transportation was successfully saved!');
 
-        return redirect()->action('App\Http\Controllers\TransportController@index');
+        return redirect()->action('TransportController@index');
     }
 
     /**

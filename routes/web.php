@@ -34,7 +34,7 @@ Route::get('/forms/foodForm', function() {
 
 Route::post('/accommodation/create', 'App\Http\Controllers\AccommodationController@create')->name('accommodation');
 Route::get('/accommodation/create', 'App\Http\Controllers\AccommodationController@index')->name('accommodation');
-Route::post('/accommodation', 'App\Http\Controllers\AccommodationController@store');
+Route::post('/accommodation', 'App\Http\Controllers\AccommodationController@store')->name('accommodation');
 Route::get('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@show');
 Route::delete('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@delete');
 Route::get('/accommodation/{id}/edit', 'App\Http\Controllers\AccommodationController@edit');
@@ -44,7 +44,7 @@ Route::put('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@
 // transport
 Route::post('/transport/create', 'App\Http\Controllers\TransportController@create')->name('transport');
 Route::get('/transport/create', 'App\Http\Controllers\TransportController@index')->name('transport');
-Route::post('/transport', 'App\Http\Controllers\TransportController@store');
+Route::post('/transport', 'App\Http\Controllers\TransportController@store')->name('transport');
 Route::get('/transport/{id}', 'App\Http\Controllers\TransportController@show');
 Route::delete('/transport/{id}', 'App\Http\Controllers\TransportController@delete');
 Route::get('/transport/{id}/edit', 'App\Http\Controllers\TransportController@edit');
@@ -59,8 +59,8 @@ Route::get('/food/{id}/edit', 'App\Http\Controllers\FoodController@edit');
 Route::put('/food/{id}', 'App\Http\Controllers\FoodController@update');
 
 // service
-Route::post('/service/create', 'App\Http\Controllers\ServiceController@index')->name('service');
-Route::get('/service/create', 'App\Http\Controllers\ServiceController@create')->name('service');
+Route::post('/service/create', 'App\Http\Controllers\ServiceController@create')->name('service');
+Route::get('/service/create', 'App\Http\Controllers\ServiceController@index')->name('service');
 Route::post('/service', 'App\Http\Controllers\ServiceController@store');
 Route::get('/service/{id}', 'App\Http\Controllers\ServiceController@show');
 Route::get('/service/{id}/edit', 'App\Http\Controllers\ServiceController@edit');
