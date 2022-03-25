@@ -11,8 +11,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { UserContext } from "../context/context";
 
 const App = () => {
-    const url = `http://www.who-cares.test/api/accommodation`;
-
     const [user, setUser] = useState({});
 
     const fetchUser = async () => {
