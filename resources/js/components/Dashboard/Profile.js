@@ -17,16 +17,19 @@ const Profile = () => {
   return (
     
     <section className='profile__container'>
+      <div className='profile__avatar'>
           <Avatar
-            className='profile_avatar'
+            
             alt="#"
             src="#"
-            sx={{ width: 56, height: 56 }}
+            sx={{ width: 100, height: 100 }}
           />
 
-      <h3>{ user.username }</h3>
-          
-           <div className='profile_container'>
+          <p>{ user.username }</p>
+      
+      </div>
+      
+        <div className='profile__list'>
               <List component="nav" aria-label="profile info">
                   <ListItem button>
             <ListItemText primary="Address" secondary={ user. address } />
@@ -55,7 +58,7 @@ const Profile = () => {
                   </ListItem>
                   
               </List>
-           </div>
+          </div>
     </section>
   )
 }

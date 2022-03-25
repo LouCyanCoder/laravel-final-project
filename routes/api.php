@@ -25,6 +25,13 @@ Route::middleware('auth:sanctum')->get('/accommodation', function (Request $requ
 // Route::get('/accommodation','Api\AccommodationController@index');
 
 Route::get('/accommodation/{id}', 'Api\AccommodationController@show');
+Route::get('/accomodation','Api\AccommodationController@index');
+
+Route::get('/food','Api\FoodController@index');
+
+Route::get('/transport','Api\TransportController@index');
+
+Route::get('/service','Api\ServiceController@index');
 
 Route::get('/users/{id}','Api\UserController@show');
 
