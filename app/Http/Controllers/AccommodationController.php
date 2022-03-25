@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Accommodation;
 use Illuminate\Http\Request;
+use Auth;
 
 class AccommodationController extends Controller
 {
@@ -22,7 +23,7 @@ class AccommodationController extends Controller
         $data = $request->all();
         
         $accommodation->insert([
-            'user_id' => '1',
+            // 'user_id' => $data['user_id'],
             'area_address' => $data['area_address'],
             'pet_friendly' => $data['pet_friendly'],
             'type' => $data['type'],
@@ -33,7 +34,6 @@ class AccommodationController extends Controller
             'status' => $data['status']
         ]);
         
-        // $categories = Category::all();
 
         return view('forms.accommodationForm', compact('accommodation'));
     }
@@ -41,14 +41,12 @@ class AccommodationController extends Controller
     public function store(Request $request)
     {
         // dd($request->except('_token'));
+        $this->validateForm($request);
 
         $accommodation = new Accommodation($request->except('_token'));
-
-        // $accommodation->max_person = $request->input('max_person');
-
         // dd($accommodation);
 
-        $this->validateForm($request);
+        
 
         // $accommodation->area_adress   = $request->input('area_adress');
         // $accommodation->type   = $request->input('type');
@@ -58,12 +56,13 @@ class AccommodationController extends Controller
         // $accommodation->start_date   = $request->input('start_date');
         // $accommodation->end_date   = $request->input('end_date');
         // $accommodation->status   = $request->input('status');
+        $accommodation->user_id = Auth::user()->id;
 
-        // $accommodation->save();
+        $accommodation->save();
 
         session()->flash('success_message', 'The accommodation was successfully saved!');
 
-        return redirect()->action('App\Http\Controllers\AccommodationController@index');
+        return redirect()->action('AccommodationController@index');
     }
 
     public function show($id)

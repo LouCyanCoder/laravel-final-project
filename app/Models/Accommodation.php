@@ -18,7 +18,7 @@ class Accommodation extends Model
 
     protected $fillable = [
         'user_id',
-        'area_adress',
+        'area_address',
         'type',
         'max_person',
         'pet_friendly',
