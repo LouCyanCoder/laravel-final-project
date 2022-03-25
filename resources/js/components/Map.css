@@ -29,13 +29,14 @@ body {
   background-color: greenyellow;
   font-weight: bold;
   text-align: center;
-  align-items: center;
   border-color: blue;
   border-style: solid;
   margin: auto;
   padding: 8.33px;
   font-size: 20px;
   opacity: 0.55;
+  /* border opacity etc */
+  box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);
 }
 
 .leaflet-container {

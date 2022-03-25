@@ -14,9 +14,8 @@ const App = () => {
 
 
     
-
+// here we are fetching
     const [user, setUser] = useState({});
-
 
 
     const fetchUser = async () => {
@@ -26,6 +25,8 @@ const App = () => {
         console.log(result);
     }
     console.log(user)
+
+
 
     useEffect(() => {
         fetchUser();
