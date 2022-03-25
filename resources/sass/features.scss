@@ -60,6 +60,6 @@
 .features_cards--food:hover,
 .features_cards--transport:hover,
 .features_cards--services:hover {
-    background-color: lightblue;
+    background-color: $tertiaryColor;
     transform: scale(1.1);
 }
