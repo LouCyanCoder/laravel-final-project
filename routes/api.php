@@ -20,5 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/accommodation','Api\AccommodationController@index');
 
+Route::get('/users/{id}','Api\UserController@show');
 
 

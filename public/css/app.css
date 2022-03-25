@@ -48,6 +48,9 @@ header {
   position: relative;
   left: -350px;
 }
+.landing_img img {
+  height: 60vh;
+}
 
 .landing_intro {
   display: flex;
