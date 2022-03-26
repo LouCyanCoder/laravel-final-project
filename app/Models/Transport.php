@@ -16,4 +16,12 @@ class Transport extends Model
             return $this->belongsTo(User::class);
         }
 
+    protected $fillable = [
+        'user_id',
+        'location_from',
+        'destination',
+        'date',
+        'max_person',
+        'status',
+    ];
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Accommodation;
 use Illuminate\Http\Request;
+use Auth;
 
 class AccommodationController extends Controller
 {
@@ -22,18 +23,17 @@ class AccommodationController extends Controller
         $data = $request->all();
         
         $accommodation->insert([
-            'user_id' => '1',
-            'area_address' => $data['area_address'],
-            'pet_friendly' => $data['pet_friendly'],
-            'type' => $data['type'],
-            'max_person' => $data['max_person'],
-            'description' =>  $data['description'],
-            'start_date' => $data['start_date'],
-            'end_date' => $data['end_date'],
-            'status' => $data['status']
+            // 'user_id' => $data['user_id'],
+            'area_address'  => $data['area_address'],
+            'pet_friendly'  => $data['pet_friendly'],
+            'type'          => $data['type'],
+            'max_person'    => $data['max_person'],
+            'description'   => $data['description'],
+            'start_date'    => $data['start_date'],
+            'end_date'      => $data['end_date'],
+            'status'        => $data['status']
         ]);
         
-        // $categories = Category::all();
 
         return view('forms.accommodationForm', compact('accommodation'));
     }
@@ -41,29 +41,19 @@ class AccommodationController extends Controller
     public function store(Request $request)
     {
         // dd($request->except('_token'));
-
-        $accommodation = new Accommodation($request->except('_token'));
-
-        // $accommodation->max_person = $request->input('max_person');
-
-        // dd($accommodation);
-
         $this->validateForm($request);
 
-        // $accommodation->area_adress   = $request->input('area_adress');
-        // $accommodation->type   = $request->input('type');
-        // $accommodation->max_person   = $request->input('max_person');
-        // $accommodation->pet_friendly   = $request->input('pet_friendly');
-        // $accommodation->description   = $request->input('description');
-        // $accommodation->start_date   = $request->input('start_date');
-        // $accommodation->end_date   = $request->input('end_date');
-        // $accommodation->status   = $request->input('status');
+        $accommodation = new Accommodation($request->except('_token'));
+        // dd($accommodation);
 
-        // $accommodation->save();
+        
+        $accommodation->user_id = Auth::user()->id;
+
+        $accommodation->save();
 
         session()->flash('success_message', 'The accommodation was successfully saved!');
 
-        return redirect()->action('App\Http\Controllers\AccommodationController@index');
+        return redirect()->action('AccommodationController@index');
     }
 
     public function show($id)

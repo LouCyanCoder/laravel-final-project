@@ -1,6 +1,6 @@
 
 <div>
-    <div class="footer_nav">
+    <div class="footer__nav">
         <nav>
             <ul>
                 <a href="./"><li>Home</li></a>
@@ -10,8 +10,9 @@
         </nav>
     </div>
     
-    <div class="footer_info">
+    <div class="footer__info">
         <p>HubHub offices, Perlova, Prague CZ</p>
+        <img src="../images/leaflet-logo.png" class="footer__logo--leaflet"/>
         <p>&copy; Who Cares</p>
     </div>
 </div>
