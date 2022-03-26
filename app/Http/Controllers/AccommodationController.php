@@ -24,14 +24,14 @@ class AccommodationController extends Controller
         
         $accommodation->insert([
             // 'user_id' => $data['user_id'],
-            'area_address' => $data['area_address'],
-            'pet_friendly' => $data['pet_friendly'],
-            'type' => $data['type'],
-            'max_person' => $data['max_person'],
-            'description' =>  $data['description'],
-            'start_date' => $data['start_date'],
-            'end_date' => $data['end_date'],
-            'status' => $data['status']
+            'area_address'  => $data['area_address'],
+            'pet_friendly'  => $data['pet_friendly'],
+            'type'          => $data['type'],
+            'max_person'    => $data['max_person'],
+            'description'   => $data['description'],
+            'start_date'    => $data['start_date'],
+            'end_date'      => $data['end_date'],
+            'status'        => $data['status']
         ]);
         
 
@@ -47,15 +47,6 @@ class AccommodationController extends Controller
         // dd($accommodation);
 
         
-
-        // $accommodation->area_adress   = $request->input('area_adress');
-        // $accommodation->type   = $request->input('type');
-        // $accommodation->max_person   = $request->input('max_person');
-        // $accommodation->pet_friendly   = $request->input('pet_friendly');
-        // $accommodation->description   = $request->input('description');
-        // $accommodation->start_date   = $request->input('start_date');
-        // $accommodation->end_date   = $request->input('end_date');
-        // $accommodation->status   = $request->input('status');
         $accommodation->user_id = Auth::user()->id;
 
         $accommodation->save();

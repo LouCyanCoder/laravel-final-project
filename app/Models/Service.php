@@ -17,8 +17,9 @@ class Service extends Model
         }
 
     protected $fillable = [
+        'user_id',
         'name',
-        'destination',
+        'description',
         'status',
     ];
 }
