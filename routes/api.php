@@ -32,6 +32,7 @@ Route::get('/food','Api\FoodController@index');
 Route::get('/transport','Api\TransportController@index');
 
 Route::get('/service','Api\ServiceController@index');
+Route::get('/accommodation','Api\AccommodationController@index');
 
 Route::get('/users/{id}','Api\UserController@show');
 

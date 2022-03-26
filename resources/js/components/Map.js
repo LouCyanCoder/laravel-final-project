@@ -11,21 +11,17 @@ import FilterServices from "./FilterServices";
 import axios from "axios";
 import AccommodationMarker from "./AccommodationMarker";
 
-
 function Map({ center, zoom }) {
-
-  const [accommodations, setAccommodations] = useState([])
+    const [accommodations, setAccommodations] = useState([]);
 
     const fetchAccommotations = async () => {
-      const res = await axios.get('/api/accomodation');
-      setAccommodations(res.data)
-    }
-
+        const res = await axios.get("/api/accomodation");
+        setAccommodations(res.data);
+    };
 
     useEffect(() => {
-      fetchAccommotations()
-    }, [])
-
+        fetchAccommotations();
+    }, []);
 
     return (
         <>
@@ -35,7 +31,7 @@ function Map({ center, zoom }) {
                 center={[50.073658, 14.41854]}
                 zoom={12}
                 maxZoom={18}
-                minZoom={8}
+                // minZoom={8}
             >
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -43,11 +39,10 @@ function Map({ center, zoom }) {
                 />
                 <LeafletControlGeocoder />
                 <MarkerClusterGroup>
-
-
-                  {
-                    !!accommodations.length && accommodations.map((element, index) => <AccommodationMarker data={element} key={index} />)
-                  }
+                    {!!accommodations.length &&
+                        accommodations.map((element, index) => (
+                            <AccommodationMarker data={element} key={index} />
+                        ))}
                     <Marker
                         position={[50.073658, 14.41854]}
                         icon={defaultMarker}
