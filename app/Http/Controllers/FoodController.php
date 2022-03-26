@@ -22,12 +22,12 @@ class FoodController extends Controller
         $data = $request->all();
 
         $food->insert([
-            'user_id' => $data['user_id'],
-            'address'   => $data['address'],
-            'name'   => $data['name'],
+            // 'user_id'       => $data['user_id'],
+            'address'       => $data['address'],
+            'name'          => $data['name'],
             'description'   => $data['description'],
-            'day'   => $data['day'],
-            'status'   => $data['status'],
+            'day'           => $data['day'],
+            'status'        => $data['status'],
         ]);
       
 
@@ -43,12 +43,12 @@ class FoodController extends Controller
 
         // dd('Validation passed');
 
-        $food->address   = $request->input('address');
-        $food->name   = $request->input('name');
-        $food->description   = $request->input('description');
-        $food->day   = $request->input('day');
-        $food->status   = $request->input('status');
-        $food->user_id = Auth::user()->id;
+        $food->address      = $request->input('address');
+        $food->name         = $request->input('name');
+        $food->description  = $request->input('description');
+        $food->day          = $request->input('day');
+        $food->status       = $request->input('status');
+        $food->user_id      = Auth::user()->id;
         $food->save();
         // dd($food);
         
