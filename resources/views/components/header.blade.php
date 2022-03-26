@@ -2,8 +2,9 @@
 
 <header>
     <div class="header__logo">
-        <img src="../images/wc_logo_small_v2.png.png" />
+        <img src="../images/wc_logo_small_v2.png.png" class="header__logo--whocares"/>
         <h2>Who Cares?</h2>
+
     </div>
     
         <nav class="header__nav">

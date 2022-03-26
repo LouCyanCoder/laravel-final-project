@@ -19,14 +19,6 @@
         <input type="date" name="date" value="">
         <br>
 
-        <label for="contact_person">Contact Person</label><br>
-        <input type="text" name="contact_person" value="">
-        <br>
-
-        <label for="contact_info">Contact Info</label><br>
-        <input type="text" name="contact_info" value="">
-        <br>
-
         <label for="max_person">Max Person</label><br>
         <input type="number" name="max_person" value="">
         <br>
@@ -40,7 +32,7 @@
         <br>
         <br>
 
-        <button type="submit">Apply</button>
+        <button type="submit">Confirm offer</button>
     </form>
 
     @include('components.footer')
