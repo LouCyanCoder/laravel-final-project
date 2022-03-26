@@ -46,7 +46,7 @@ header {
 
 .landing_img {
   position: relative;
-  left: -350px;
+  left: -250px;
 }
 .landing_img img {
   height: 60vh;
@@ -255,6 +255,7 @@ header {
   width: 80%;
   margin: auto;
   justify-content: space-around;
+  gap: 15px;
 }
 .postoffer a {
   text-decoration: none;
@@ -262,20 +263,53 @@ header {
 }
 .postoffer__card {
   display: flex;
+  background-color: #f8fafc;
   flex-direction: column;
+  width: 18vw;
   align-items: center;
   padding: 15px;
-  border: 1px solid #024f94;
+  border: 2px solid #050814;
   border-radius: 10px;
   margin: 20px 0;
 }
 .postoffer__card img {
-  width: 150px;
+  width: 130px;
   padding-bottom: 15px;
 }
 .postoffer__card:hover {
   background-color: #85aac5;
+  color: #ba7735;
   transform: scale(1.1);
+}
+
+.nav_filter {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.offer_form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+}
+.offer_form h2, .offer_form .h2 {
+  text-align: center;
+}
+.offer_form .confirm {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: darkgreen;
+  color: white;
+  font-weight: bold;
+}
+.offer_form .confirm:hover {
+  background-color: #ba7735;
+  color: #050814;
 }
 
 /*!

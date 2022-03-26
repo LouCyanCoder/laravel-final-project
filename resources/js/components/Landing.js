@@ -22,7 +22,7 @@ const Landing = () => {
                 </div>
                 <div className="landing_btn">
 
-                    <a href="">
+                    <a href="/register">
                     <Button
                     size="large"
                     variant="contained"
