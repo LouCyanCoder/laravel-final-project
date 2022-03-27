@@ -2,11 +2,11 @@
     
     @include('components.header')
 
-    <form action="{{ route('foodstore') }}" method="post">
+    <form action="{{ route('foodstore') }}" method="post" class="offer_form">
  
         @csrf
         
-        <h1>Food offer</h1>
+        <h2>Post a food offer</h2>
 
         <label for="name">Name</label><br />
         <input
@@ -41,7 +41,7 @@
             </select>
         <br />
         <br />
-        <button type="submit">Confirm offer</button>
+        <button type="submit" class="confirm">Confirm offer</button>
     </form>
 
     @include('components.footer')

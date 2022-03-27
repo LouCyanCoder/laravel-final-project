@@ -33,7 +33,9 @@
         width: 80%;
         margin: auto;
         justify-content: space-around;
+        gap: 15px;
     }
+
     a {
         text-decoration: none;
         color: $quadriaryColor;
@@ -41,20 +43,23 @@
 
     &__card {
         display: flex;
+        background-color: $body-bg;
         flex-direction: column;
+        width: 18vw;
         align-items: center;
         padding: 15px;
-        border: 1px solid $quadriaryColor;
+        border: 2px solid $mainColor;
         border-radius: 10px;
         margin: 20px 0;
 
         img {
-            width: 150px;
+            width: 130px;
             padding-bottom: 15px;
         }
     }
     &__card:hover {
         background-color: $tertiaryColor;
+        color: $primaryColor;
         transform: scale(1.1);
     }
 }
