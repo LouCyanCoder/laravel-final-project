@@ -10,11 +10,11 @@
 
     @include('components.header')
 
-    <form action="{{ route('register') }}" method="post">
+    <form action="{{ route('register') }}" method="post" class="offer_form">
  
         @csrf
         
-        <h1>Registration form</h1>
+        <h2>Registration form</h2>
 
         <label for="">Email</label><br>
         <input type="email" name="email" value="">
@@ -53,7 +53,7 @@
         <br>
         <br>
 
-        <button>Register</button>
+        <button  class="confirm">Register</button>
     </form>
 
     @include('components.footer')

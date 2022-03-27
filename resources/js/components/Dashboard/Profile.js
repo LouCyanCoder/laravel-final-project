@@ -20,8 +20,8 @@ const Profile = () => {
       <div className='profile__avatar'>
 
           <Avatar
-            alt="#"
-            src="#"
+            alt="avatar picture"
+            src="../../images/user_avatar.png"
             sx={{ width: 100, height: 100 }}
           />
 

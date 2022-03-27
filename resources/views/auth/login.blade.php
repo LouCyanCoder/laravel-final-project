@@ -9,7 +9,7 @@
 <body>
     @include('components.header')
 
-    <form action="{{ route('login') }}" method="post">
+    <form action="{{ route('login') }}" method="post" class="offer_form">
 
         @csrf
         

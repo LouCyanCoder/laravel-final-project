@@ -231,6 +231,7 @@ header {
   margin: auto;
   justify-content: space-around;
   align-items: center;
+  border-bottom: 2px solid darkgrey;
 }
 .profile__avatar {
   display: flex;
@@ -248,7 +249,7 @@ header {
   align-items: center;
 }
 .postoffer h2, .postoffer .h2 {
-  margin: 20px;
+  margin: 40px;
 }
 .postoffer__container {
   display: flex;
@@ -277,8 +278,8 @@ header {
   padding-bottom: 15px;
 }
 .postoffer__card:hover {
-  background-color: #85aac5;
-  color: #ba7735;
+  background-color: #024f94;
+  color: #f8fafc;
   transform: scale(1.1);
 }
 
@@ -296,6 +297,9 @@ header {
 }
 .offer_form h2, .offer_form .h2 {
   text-align: center;
+}
+.offer_form label {
+  font-weight: bold;
 }
 .offer_form .confirm {
   width: 50%;
