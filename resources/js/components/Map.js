@@ -13,14 +13,16 @@ import AccommodationMarker from "./AccommodationMarker";
 
 function Map({ center, zoom }) {
     const [accommodations, setAccommodations] = useState([]);
+    const [services, setServices] = useState([]);
+    const [food, setFood] = useState([]);
 
-    const fetchAccommotations = async () => {
+    const fetchAccommodations = async () => {
         const res = await axios.get("/api/accomodation");
         setAccommodations(res.data);
     };
 
     useEffect(() => {
-        fetchAccommotations();
+        fetchAccommodations();
     }, []);
 
     return (
