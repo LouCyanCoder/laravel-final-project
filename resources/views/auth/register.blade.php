@@ -36,8 +36,8 @@
         <input type="text" name="name" value="">
         <br>
 
-        <label for="">Adress</label><br>
-        <input type="text" name="adress" value="">
+        <label for="">Address</label><br>
+        <input type="text" name="address" value="">
         <br>
 
         <label for="">Phone</label><br>

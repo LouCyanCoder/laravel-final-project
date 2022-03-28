@@ -49,9 +49,9 @@ body {
 }
 
 .markercluster-map {
-    height: 90vh;
-    width: 90vh;
-    background-color: #bbb;
-    border-radius: 18px;
-    display: inline-block;
+  height: 90vh;;
+  width: 90vh;
+  background-color: #bbb;
+  border-radius: 10px;
+  display: inline-block;
 }
