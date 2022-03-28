@@ -5,22 +5,27 @@ const AccommodationList = ({ element }) => {
     return (
         <div>
             <div className="offerslisted__list">
-                <article className="offerslisted__listitem">
+                <article className="offerslisted__listitem--accommodation">
                     <div className="offerslisted__listitem--type">
-                        <p>Type: {element.type}</p>
+                        <p><strong>Type:</strong></p>
+                        <p>{element.type}</p>
                     </div>
 
                     <div className="offerslisted__listitem--description">
-                        <p>Description: {element.description}</p>
+                        <p><strong>Description:</strong></p>
+                        <p>{element.description}</p>
                     </div>
 
                     <div className="offerslisted__listitem--dateadded">
-                        <p>Offer Created Time: {element.created_at}</p>
+                        <p><strong>Offer Created Time:</strong></p>
+                        <p>{element.created_at}</p>
                     </div>
 
-                    <Button variant="outlined">Options</Button>
-                    <Button variant="outlined">Details</Button>
-                    <hr></hr>
+                    <div className="offerslisted__listitem--buttons">
+                        <Button variant="outlined">Update</Button>
+                        <Button variant="contained" color="error">Delete</Button>
+                    </div>
+                   
                 </article>
             </div>
         </div>

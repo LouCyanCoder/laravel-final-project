@@ -17,7 +17,7 @@ const Contact = () => {
             <form action="" method="post">
                 
                 <div className="contactForm__textarea">
-                    <textarea placeholder="Message"></textarea>
+                    <textarea placeholder="Message" rows="20" cols="50"></textarea>
                 </div>
 
                 <div className="contactForm__text">
