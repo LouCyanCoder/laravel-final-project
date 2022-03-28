@@ -28,6 +28,7 @@ class User extends Authenticatable
         'email',
         'password',
         'username',
+        'address',
         'phone_number',
         'telegram_link',
         'facebook_link'

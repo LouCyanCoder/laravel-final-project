@@ -14,6 +14,6 @@ class UserController extends Controller
         // dd($id);
 
         $user = User::findOrFail($id);
-        return view('components.index');
+        return $user;
     }
 }
