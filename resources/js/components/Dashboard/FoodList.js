@@ -5,34 +5,41 @@ const FoodList = ({ element }) => {
     return (
         <div>
             <div className="offerslisted__list">
-                <article className="offerslisted__listitem">
+                <article className="offerslisted__listitem--food">
                     <div className="offerslisted__listitem--type">
-                        <p>Food Name: {element.name}</p>
+                        <p><strong>Food Name:</strong></p>
+                        <p>{element.name}</p>
                     </div>
 
                     <div className="offerslisted__listitem--type">
-                        <p>Address: {element.address}</p>
+                        <p><strong>Address:</strong></p>
+                        <p>{element.address}</p>
                     </div>
 
                     <div className="offerslisted__listitem--description">
-                        <p>Description: {element.description}</p>
+                        <p><strong>Description:</strong></p>
+                        <p>{element.description}</p>
                     </div>
 
                     <div className="offerslisted__listitem--type">
-                        <p>Day: {element.day}</p>
+                        <p><strong>Day:</strong></p>
+                        <p>{element.day}</p>
                     </div>
 
                     <div className="offerslisted__listitem--type">
-                        <p>Status: {element.status}</p>
+                        <p><strong>Status:</strong></p>
+                        <p>{element.status}</p>
                     </div>
 
                     <div className="offerslisted__listitem--dateadded">
-                        <p>Offer Created Time: {element.created_at}</p>
+                        <p><strong>Offer Created Time:</strong></p>
+                        <p>{element.created_at}</p>
                     </div>
 
-                    <Button variant="outlined">Options</Button>
-                    <Button variant="outlined">Details</Button>
-                    <hr></hr>
+                    <div className="offerslisted__listitem--buttons">
+                        <Button variant="outlined">Update</Button>
+                        <Button variant="contained" color="error">Delete</Button>
+                    </div>
                 </article>
             </div>
         </div>

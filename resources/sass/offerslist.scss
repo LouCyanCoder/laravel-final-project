@@ -1,0 +1,31 @@
+.offerslisted__listitem {
+    &--food {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+        width: 100%;
+        justify-content: center;
+    }
+    &--accommodation {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+        justify-content: center;
+    }
+    &--service {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        width: 100%;
+        justify-content: center;
+    }
+    &--transport {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+        width: 100%;
+        justify-content: center;
+    }
+    &--buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
