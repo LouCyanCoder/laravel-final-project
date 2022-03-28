@@ -57,28 +57,28 @@ const FoodMarker = ({ data }) => {
                 >
                     <Popup className="request-popup">
                         <div style={popupContent}>
+                        <div className="m-2" style={popupHead}>
+                                Food offer
+                            </div>
                             <img
-                                src="https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png"
+                                src="/images/diet.png"
                                 width="150"
                                 height="150"
                             />
-                            <div className="m-2" style={popupHead}>
-                                Success!
-                            </div>
                             <div className="cardonthemap" style={popupText}>
-                                {address}
+                                <strong>Address: </strong>{address}
                                 <br/>
-                                {name}
+                                <strong>Establishment: </strong>{name}
                                 <br/>
-                                {description}
+                                <strong>Description: </strong>{description}
                                 <br/>
-                                {day}
+                                <strong>Date: </strong>{day}
                                 <br/>
-                                {status}
+                                <strong>Offer status: </strong>{status}
                                 <br/>
                             </div>
                             <div className="m-2" style={okText}>
-                                Okay
+                                {/* Okay */}
                             </div>
                         </div>
                     </Popup>
