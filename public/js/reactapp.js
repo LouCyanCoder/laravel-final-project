@@ -74734,7 +74734,6 @@ if (false) {} else {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -74943,8 +74942,6 @@ if (false) {} else {
 
 /***/ }),
 
-=======
->>>>>>> main
 /***/ "./node_modules/react-leaflet-markercluster/dist/index.js":
 /*!****************************************************************!*\
   !*** ./node_modules/react-leaflet-markercluster/dist/index.js ***!
