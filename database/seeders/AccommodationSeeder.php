@@ -8,6 +8,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Accommodation;
 use DB;
 
+
 class AccommodationSeeder extends Seeder
 {
     /**
@@ -26,8 +27,6 @@ class AccommodationSeeder extends Seeder
         $accommodation->max_person = 2;
         $accommodation->pet_friendly = "yes";
         $accommodation->description = "Poor, but it's something";
-        // $accommodation->contact_person = "Yes";
-        // $accommodation->contact_info = "Dunno";
         $accommodation->status = "open";
         $accommodation->start_date = new \DateTime;
         $accommodation->end_date = new \DateTime;
@@ -41,8 +40,6 @@ class AccommodationSeeder extends Seeder
         $accommodation->max_person = 10;
         $accommodation->pet_friendly = "no";
         $accommodation->description = "Terrible";
-        // $accommodation->contact_person = "Yes";
-        // $accommodation->contact_info = "Dunno";
         $accommodation->status = "closed";
         $accommodation->start_date = new \DateTime;
         $accommodation->end_date = new \DateTime;
@@ -56,8 +53,6 @@ class AccommodationSeeder extends Seeder
         $accommodation->max_person = 1;
         $accommodation->pet_friendly = "no";
         $accommodation->description = "Exclusive accomodation for pretty young woman";
-        // $accommodation->contact_person = "Yes";
-        // $accommodation->contact_info = "Dunno";
         $accommodation->status = "open";
         $accommodation->start_date = new \DateTime;
         $accommodation->end_date = new \DateTime;
@@ -71,8 +66,6 @@ class AccommodationSeeder extends Seeder
         $accommodation->max_person = 1;
         $accommodation->pet_friendly = "no";
         $accommodation->description = "Exclusive accomodation for pretty young woman";
-        // $accommodation->contact_person = "Yes";
-        // $accommodation->contact_info = "Dunno";
         $accommodation->status = "open";
         $accommodation->start_date = new \DateTime;
         $accommodation->end_date = new \DateTime;

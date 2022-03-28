@@ -16,7 +16,7 @@ const AboutUs = () => {
                 </p>
 
                 <p>
-                    ...is to be the one who cares.
+                    ...is to be the one <strong>who cares.</strong>
                 </p>
             </div>
             <div className="aboutus__team">
