@@ -54,14 +54,14 @@ const AccommodationMarker = ({ data }) => {
                 >
                     <Popup className="request-popup">
                         <div style={popupContent}>
+                        <div className="m-2" style={popupHead}>
+                                Accommodation
+                            </div>
                             <img
-                                src="https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png"
+                                src="/images/accomodation.png"
                                 width="150"
                                 height="150"
                             />
-                            <div className="m-2" style={popupHead}>
-                                Success!
-                            </div>
                             <div className="cardonthemap" style={popupText}>
                                 <strong>Description:</strong>{description}
                                 <br/>
@@ -87,7 +87,7 @@ const AccommodationMarker = ({ data }) => {
                                 <br/>
                             </div>
                             <div className="m-2" style={okText}>
-                                Okay
+                                {/* Okay */}
                             </div>
                         </div>
                     </Popup>
