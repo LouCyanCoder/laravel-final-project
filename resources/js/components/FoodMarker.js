@@ -12,7 +12,7 @@ import axios from "axios";
 
 
 
-const AccommodationMarker = ({ data }) => {
+const FoodMarker = ({ data }) => {
 
     const [address, setAddress] = useState(null)
 
@@ -35,7 +35,7 @@ const AccommodationMarker = ({ data }) => {
 
     }
 
-    const { description, type, pet_friendly, max_person, status  } = data;
+    const { address, name, description, day, status  } = data;
     
 
     useEffect(() => {
@@ -50,7 +50,7 @@ const AccommodationMarker = ({ data }) => {
             <Fragment>
                 <Marker
                     position={[address.lat, address.lng]}
-                    icon={defaultMarker}
+                    icon={defaultMarker2}
                 >
                     <Popup className="request-popup">
                         <div style={popupContent}>
@@ -63,13 +63,13 @@ const AccommodationMarker = ({ data }) => {
                                 Success!
                             </div>
                             <div className="cardonthemap" style={popupText}>
+                                {address}
+                                <br/>
+                                {name}
+                                <br/>
                                 {description}
                                 <br/>
-                                {type}
-                                <br/>
-                                {pet_friendly}
-                                <br/>
-                                {max_person}
+                                {day}
                                 <br/>
                                 {status}
                                 <br/>
@@ -88,4 +88,4 @@ const AccommodationMarker = ({ data }) => {
 
 }
 
-export default AccommodationMarker;
+export default FoodMarker;

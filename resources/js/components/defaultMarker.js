@@ -7,7 +7,7 @@ const defaultMarker = new L.icon({
 });
 
 export const defaultMarker2 = new L.icon({
-  iconUrl: "/images/new_accomodation_logo.png",
+  iconUrl: "/images/.png",
   iconSize: [110, 70],
   iconAnchor: [0, 0]
 });

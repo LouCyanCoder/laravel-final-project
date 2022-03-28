@@ -25178,7 +25178,7 @@ var defaultMarker = new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().icon)({
   iconAnchor: [0, 0]
 });
 var defaultMarker2 = new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().icon)({
-  iconUrl: "/images/new_accomodation_logo.png",
+  iconUrl: "/images/.png",
   iconSize: [110, 70],
   iconAnchor: [0, 0]
 });
