@@ -52,12 +52,7 @@ const FilterServices = ({ selection, setSelection }) => {
                     all: true,
                     accommodation: true,
                     food: true,
-                    lawyer: true,
-                    administration: true,
-                    translation: true,
-                    psychology: true,
-                    education: true,
-                    mentoring: true,
+                    service: true,
                 });
             }
         }
@@ -102,44 +97,9 @@ const FilterServices = ({ selection, setSelection }) => {
                 />
                 <Form.Check
                     type="switch"
-                    label="Lawyer"
-                    checked={selection.lawyer}
-                    name="lawyer"
-                    onChange={handleChange}
-                />
-                <Form.Check
-                    type="switch"
-                    label="Administration"
-                    checked={selection.administration}
-                    name="administration"
-                    onChange={handleChange}
-                />
-                <Form.Check
-                    type="switch"
-                    label="Translation"
-                    checked={selection.translation}
-                    name="translation"
-                    onChange={handleChange}
-                />
-                <Form.Check
-                    type="switch"
-                    label="Psychology"
-                    checked={selection.psychology}
-                    name="psychology"
-                    onChange={handleChange}
-                />
-                <Form.Check
-                    type="switch"
-                    label="Education"
-                    checked={selection.education}
-                    name="education"
-                    onChange={handleChange}
-                />
-                <Form.Check
-                    type="switch"
-                    label="Mentoring"
-                    checked={selection.mentoring}
-                    name="mentoring"
+                    label="Service"
+                    checked={selection.service}
+                    name="service"
                     onChange={handleChange}
                 />
             </Form>
