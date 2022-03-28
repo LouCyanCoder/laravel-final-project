@@ -12,18 +12,19 @@ import axios from "axios";
 
 
 
-const AccommodationMarker = ({ data }) => {
+const ServiceMarker = ({ data }) => {
 
-    const [address, setAddress] = useState(null)
+    const [serviceAddress, setServiceAddress] = useState(null)
 
     const key = "AIzaSyAjX6oTLphVZDKXvWPAmzOiFRx6lEwK_Sw";
 
+    console.log(data)
 
-    const getAddress = async () => {
+    const getServiceAddress = async () => {
         
         const options = {
             params: {
-                address: data.area_address, 
+                address: data.address, 
                 key
             }
         }
@@ -31,26 +32,28 @@ const AccommodationMarker = ({ data }) => {
         const res = await axios.get('https://maps.googleapis.com/maps/api/geocode/json', options)
     
         // console.log(address) // res.data.results.geometry.location
-        setAddress(res.data.results[0].geometry.location)
+        console.log(res.data.results[0].geometry.location)
+        setServiceAddress(res.data.results[0].geometry.location)
 
     }
 
-    const { description, type, pet_friendly, max_person, status  } = data;
+    const { address, name, description, day, status  } = data;
     
 
     useEffect(() => {
-        if (data.area_address) {
-            getAddress()
+        console.log(data.address)
+        if (data.address) {
+            getServiceAddress()
         }
-    }, [data.area_address])
+    }, [data.address])
 
     
-    if (address) {
+    if (serviceAddress) {
         return (
             <Fragment>
                 <Marker
-                    position={[address.lat, address.lng]}
-                    icon={defaultMarker}
+                    position={[serviceAddress.lat, serviceAddress.lng]}
+                    icon={defaultMarker2}
                 >
                     <Popup className="request-popup">
                         <div style={popupContent}>
@@ -63,27 +66,15 @@ const AccommodationMarker = ({ data }) => {
                                 Success!
                             </div>
                             <div className="cardonthemap" style={popupText}>
-                                <strong>Description:</strong>{description}
+                                {address}
                                 <br/>
-                                <strong>
-                                    Type:
-                                </strong>
-                                    {type}
+                                {name}
                                 <br/>
-                                <strong>
-                                    Pet friendly:
-                                </strong>
-                                    {pet_friendly}
+                                {description}
                                 <br/>
-                                <strong>
-                                    Max nr. of people:
-                                </strong>
-                                    {max_person}
+                                {day}
                                 <br/>
-                                <strong>
-                                    Offer status:
-                                </strong>
-                                    {status}
+                                {status}
                                 <br/>
                             </div>
                             <div className="m-2" style={okText}>
@@ -100,4 +91,4 @@ const AccommodationMarker = ({ data }) => {
 
 }
 
-export default AccommodationMarker;
+export default ServiceMarker;

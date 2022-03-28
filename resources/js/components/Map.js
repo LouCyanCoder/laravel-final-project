@@ -10,10 +10,12 @@ import MarkerClusterGroup from "react-leaflet-markercluster";
 import FilterServices from "./FilterServices";
 import axios from "axios";
 import AccommodationMarker from "./AccommodationMarker";
+import FoodMarker from "./FoodMarker";
+import ServiceMarker from "./ServiceMarker";
 
 function Map({ center, zoom }) {
     const [accommodations, setAccommodations] = useState([]);
-    const [services, setServices] = useState([]);
+    const [users, setUsers] = useState([]);
     const [food, setFood] = useState([]);
 
     const fetchAccommodations = async () => {
@@ -21,8 +23,19 @@ function Map({ center, zoom }) {
         setAccommodations(res.data);
     };
 
+    const fetchFood = async () => {
+      const res = await axios.get("/api/food");
+      setFood(res.data);
+  };
+
+    const fetchUsers = async () => {
+      const res = await axios.get("/api/food");
+      setFood(res.data);
+  };
+
     useEffect(() => {
         fetchAccommodations();
+        fetchFood();
     }, []);
 
     return (
@@ -45,34 +58,17 @@ function Map({ center, zoom }) {
                         accommodations.map((element, index) => (
                             <AccommodationMarker data={element} key={index} />
                         ))}
-                    <Marker
-                        position={[50.073658, 14.41854]}
-                        icon={defaultMarker}
-                    >
-                        <Popup className="request-popup">
-                            <div style={popupContent}>
-                                <img
-                                    src="https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png"
-                                    width="150"
-                                    height="150"
-                                />
-                                <div className="m-2" style={popupHead}>
-                                    Success!
-                                </div>
-                                <div className="cardonthemap" style={popupText}>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat.
-                                </div>
-                                <div className="m-2" style={okText}>
-                                    Okay
-                                </div>
-                            </div>
-                        </Popup>
-                    </Marker>
+                    
+                    {!!food.length &&
+                        food.map((element, index) => (
+                            <FoodMarker data={element} key={index} />
+                        ))}
+
+                    {!!users.length &&
+                        users.map((element, index) => (
+                            <ServiceMarker data={element} key={index} />
+                        ))}
+
                 </MarkerClusterGroup>
             </MapContainer>
         </>
