@@ -25269,6 +25269,7 @@ function LeafletControlGeocoder() {
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+<<<<<<< HEAD
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -25473,6 +25474,9 @@ function Map(_ref) {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Map);
+=======
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\grish\\web\\laravel-final-project\\resources\\js\\components\\Map.js: Unexpected token (25:1)\n\n\u001b[0m \u001b[90m 23 |\u001b[39m         setAccommodations(res\u001b[33m.\u001b[39mdata)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m     }\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m \u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m     console\u001b[33m.\u001b[39mlog(accommodations)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 27 |\u001b[39m \u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m\u001b[0m\n    at Object._raise (C:\\Users\\grish\\web\\laravel-final-project\\node_modules\\@babel\\parser\\lib\\index.js:476:17)\n    at Object.raiseWithData (C:\\Users\\grish\\web\\laravel-final-project\\node_modules\\@babel\\parser\\lib\\index.js:469:17)\n    at Object.raise (C:\\Users\\grish\\web\\laravel-final-project\\node_modules\\@babel\\parser\\lib\\index.js:430:17)\n    at Object.unexpected (C:\\Users\\grish\\web\\laravel-final-project\\node_modules\\@babel\\parser\\lib\\index.js:3789:16)\n    at Object.jsxParseIdentifier (C:\\Users\\grish\\web\\laravel-final-project\\node_modules\\@babel\\parser\\lib\\index.js:7559:12)\n    at Object.jsxParseNamespacedName (C:\\Users\\grish\\web\\laravel-final-project\\node_modules\\@babel\\parser\\lib\\index.js:7569:23)\n    at Object.jsxParseElementName (C:\\Users\\grish\\web\\laravel-final-project\\node_modules\\@babel\\parser\\lib\\index.js:7580:21)\n    at Object.jsxParseOpeningElementAt (C:\\Users\\grish\\web\\laravel-final-project\\node_modules\\@babel\\parser\\lib\\index.js:7677:22)\n    at Object.jsxParseElementAt (C:\\Users\\grish\\web\\laravel-final-project\\node_modules\\@babel\\parser\\lib\\index.js:7710:33)\n    at Object.jsxParseElement (C:\\Users\\grish\\web\\laravel-final-project\\node_modules\\@babel\\parser\\lib\\index.js:7793:17)");
+>>>>>>> f54cf29d616a28ff0eb62aa50a45dfcd8f4866a2
 
 /***/ }),
 
