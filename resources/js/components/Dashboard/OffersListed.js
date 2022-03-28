@@ -3,6 +3,7 @@ import AccommodationList from "./AccommodationList";
 import FoodList from "./FoodList";
 import TransportList from "./TransportList";
 import ServiceList from "./ServiceList";
+import MapComponents from "../MapComponents";
 
 const OffersListed = () => {
     const [selected_accommodation, setSelectedAccommodation] = useState([]);
@@ -52,12 +53,10 @@ const OffersListed = () => {
             <div>
                 <h3>Accommodation</h3>
                 {selected_accommodation.length ? (
-                    selected_accommodation.map((accommodation, id) => (
-                        <AccommodationList
-                            key={id}
-                            accommodation={accommodation}
-                        />
-                    ))
+                    <MapComponents
+                        Component={AccommodationList}
+                        arry={selected_accommodation}
+                    />
                 ) : (
                     <p>Loading...</p>
                 )}
@@ -67,7 +66,7 @@ const OffersListed = () => {
                 <h3>Transport</h3>
                 {selected_transport.length ? (
                     selected_transport.map((transport, id) => (
-                        <TransportList key={id} transport={transport} />
+                        <TransportList key={id} element={transport} />
                     ))
                 ) : (
                     <p>Loading...</p>
@@ -78,7 +77,7 @@ const OffersListed = () => {
                 <h3>Food</h3>
                 {selected_food.length ? (
                     selected_food.map((food, id) => (
-                        <FoodList key={id} food={food} />
+                        <FoodList key={id} element={food} />
                     ))
                 ) : (
                     <p>Loading...</p>
@@ -89,7 +88,7 @@ const OffersListed = () => {
                 <h3>Service</h3>
                 {selected_service.length ? (
                     selected_service.map((service, id) => (
-                        <ServiceList key={id} service={service} />
+                        <ServiceList key={id} element={service} />
                     ))
                 ) : (
                     <p>Loading...</p>
