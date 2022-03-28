@@ -22,9 +22,6 @@ function Map({ center, zoom }) {
         const res = await axios.get("/api/accomodation");
         setAccommodations(res.data);
     };
-<<<<<<< HEAD
-    console.log(accommodations);
-=======
 
     const fetchFood = async () => {
       const res = await axios.get("/api/food");
@@ -36,7 +33,6 @@ function Map({ center, zoom }) {
       setServices(res.data);
   };
 
->>>>>>> d7bf2ddfda4743c464fef0dc314fcc24d23fef41
     useEffect(() => {
         fetchAccommodations();
         fetchFood();
