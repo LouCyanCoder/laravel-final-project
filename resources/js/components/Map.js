@@ -16,7 +16,7 @@ import ServiceMarker from "./ServiceMarker";
 function Map({ center, zoom }) {
     const [accommodations, setAccommodations] = useState([]);
     const [services, setServices] = useState([]);
-    const [food, setFood] = useState([]);
+    const [foods, setFoods] = useState([]);
 
     const fetchAccommodations = async () => {
         const res = await axios.get("/api/accomodation");
@@ -25,7 +25,8 @@ function Map({ center, zoom }) {
 
     const fetchFood = async () => {
         const res = await axios.get("/api/food");
-        setFood(res.data);
+        setFoods(res.data);
+        console.log(res);
     };
 
     const fetchServices = async () => {
@@ -63,12 +64,14 @@ function Map({ center, zoom }) {
                             <AccommodationMarker data={element} key={index} />
                         ))}
 
-                    {!!food.length &&
-                        food.map((element, index) => (
+                    {selection.food &&
+                        !!foods.length &&
+                        foods.map((element, index) => (
                             <FoodMarker data={element} key={index} />
                         ))}
 
-                    {!!services.length &&
+                    {selection.service &&
+                        !!services.length &&
                         services.map((element, index) => (
                             <ServiceMarker data={element} key={index} />
                         ))}
