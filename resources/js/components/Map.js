@@ -12,11 +12,13 @@ import axios from "axios";
 import AccommodationMarker from "./AccommodationMarker";
 import FoodMarker from "./FoodMarker";
 import ServiceMarker from "./ServiceMarker";
+import MapTransportList from "./MapTransportList";
 
 function Map({ center, zoom }) {
     const [accommodations, setAccommodations] = useState([]);
     const [services, setServices] = useState([]);
     const [foods, setFoods] = useState([]);
+    const [transports, setTransports] = useState([]);
 
     const fetchAccommodations = async () => {
         const res = await axios.get("/api/accomodation");
@@ -26,7 +28,6 @@ function Map({ center, zoom }) {
     const fetchFood = async () => {
         const res = await axios.get("/api/food");
         setFoods(res.data);
-        console.log(res);
     };
 
     const fetchServices = async () => {
@@ -34,10 +35,16 @@ function Map({ center, zoom }) {
         setServices(res.data);
     };
 
+    const fetchTransport = async () => {
+        const res = await axios.get("/api/transport");
+        setTransports(res.data);
+    };
+
     useEffect(() => {
         fetchAccommodations();
         fetchFood();
         fetchServices();
+        fetchTransport();
     }, []);
 
     const [selection, setSelection] = useState({});
@@ -77,6 +84,17 @@ function Map({ center, zoom }) {
                         ))}
                 </MarkerClusterGroup>
             </MapContainer>
+
+            <div>
+                <h3>Transport</h3>
+                {transports.length ? (
+                    transports.map((transport, id) => (
+                        <MapTransportList key={id} element={transport} />
+                    ))
+                ) : (
+                    <p>Loading...</p>
+                )}
+            </div>
         </>
     );
 }
