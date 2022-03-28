@@ -6,16 +6,22 @@ const FilterServices = () => {
     const [selected_accommodation, setSelectedAccommodation] = useState(null);
 
     const fetchAccommodation = async () => {
-        const response = await fetch("/api/accommodation");
+        const response = await fetch("/api/accomodation");
         const result = await response.json();
-        result && setSelectedAccommodation(result[0].area_address);
-        console.log(result);
+        result && setSelectedAccommodation(result);
+        // console.log(result);
     };
     console.log(selected_accommodation);
 
     useEffect(() => {
         fetchAccommodation();
     }, []);
+
+    const handleAccommodation = (e) => {
+        const val = e.target.value;
+        if (val === Accommodation) {
+        }
+    };
 
     return (
         <div>
@@ -31,7 +37,7 @@ const FilterServices = () => {
                     label="Accommodation"
                     value="Accommodation"
                     name="services"
-                    onClick={setSelectedAccommodation}
+                    onClick={handleAccommodation}
                 />
                 <Form.Check
                     type="switch"

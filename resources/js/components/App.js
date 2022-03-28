@@ -17,9 +17,9 @@ const App = () => {
         const response = await fetch("/api/user");
         const result = await response.json();
         result && setUser(result);
-        console.log(result);
+        // console.log(result);
     };
-    console.log(user);
+    // console.log(user);
 
     useEffect(() => {
         fetchUser();
