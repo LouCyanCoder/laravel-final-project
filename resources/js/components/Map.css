@@ -52,6 +52,6 @@ body {
   height: 90vh;;
   width: 90vh;
   background-color: #bbb;
-  border-radius: 2.5%;
+  border-radius: 10px;
   display: inline-block;
 }

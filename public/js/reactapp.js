@@ -24484,8 +24484,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/MapContainer.js");
 /* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/TileLayer.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Marker.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Popup.js");
 /* harmony import */ var _Map_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Map.css */ "./resources/js/components/Map.css");
 /* harmony import */ var _popupStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./popupStyles */ "./resources/js/components/popupStyles.js");
 /* harmony import */ var _defaultMarker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./defaultMarker */ "./resources/js/components/defaultMarker.js");
@@ -24580,38 +24578,12 @@ function Map(_ref) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_13__.TileLayer, {
         attribution: "\xA9 <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
         url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_6__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        children: [!!accommodations.length && accommodations.map(function (element, index) {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_6__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        children: !!accommodations.length && accommodations.map(function (element, index) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_AccommodationMarker__WEBPACK_IMPORTED_MODULE_10__["default"], {
             data: element
           }, index);
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_14__.Marker, {
-          position: [50.073658, 14.41854],
-          icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_4__["default"],
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_15__.Popup, {
-            className: "request-popup",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-              style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupContent,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
-                src: "https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png",
-                width: "150",
-                height: "150"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-                className: "m-2",
-                style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupHead,
-                children: "Success!"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-                className: "cardonthemap",
-                style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupText,
-                children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-                className: "m-2",
-                style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.okText,
-                children: "Okay"
-              })]
-            })
-          })
-        })]
+        })
       })]
     })]
   });
@@ -24968,7 +24940,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".map {\r\n    height: 500px;\r\n    background-color: white;\r\n    padding: 1rem;\r\n    border-radius: 20px;\r\n    margin-top: 16px;\r\n    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.map .leaflet-container {\r\n    height: 100%;\r\n}\r\n\r\n.App {\r\n  font-family: sans-serif;\r\n  text-align: center;\r\n}\r\n\r\nbody {\r\n  margin: 0px;\r\n}\r\n\r\n.markercluster-map span {\r\n  height: 5vh;;\r\n  width: 5vh;\r\n  border-radius: 50%;\r\n  display: inline-block;\r\n  color:black;\r\n  background-color: greenyellow;\r\n  font-weight: bold;\r\n  text-align: center;\r\n  border-color: blue;\r\n  border-style: solid;\r\n  margin: auto;\r\n  padding: 8.33px;\r\n  font-size: 20px;\r\n  opacity: 0.55;\r\n  /* border opacity etc */\r\n  box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);\r\n}\r\n\r\n.leaflet-container {\r\n  height: 100%;\r\n  width: 100%;\r\n}\r\n\r\n.sr-only {\r\n  display: none;\r\n}\r\n\r\n.markercluster-map {\r\n  height: 90vh;;\r\n  width: 90vh;\r\n  background-color: #bbb;\r\n  border-radius: 2.5%;\r\n  display: inline-block;\r\n}", "",{"version":3,"sources":["webpack://./resources/js/components/Map.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,uBAAuB;IACvB,aAAa;IACb,mBAAmB;IACnB,gBAAgB;IAChB,2CAA2C;AAC/C;;AAEA;IACI,YAAY;AAChB;;AAEA;EACE,uBAAuB;EACvB,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,WAAW;EACX,UAAU;EACV,kBAAkB;EAClB,qBAAqB;EACrB,WAAW;EACX,6BAA6B;EAC7B,iBAAiB;EACjB,kBAAkB;EAClB,kBAAkB;EAClB,mBAAmB;EACnB,YAAY;EACZ,eAAe;EACf,eAAe;EACf,aAAa;EACb,uBAAuB;EACvB,2CAA2C;AAC7C;;AAEA;EACE,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,sBAAsB;EACtB,mBAAmB;EACnB,qBAAqB;AACvB","sourcesContent":[".map {\r\n    height: 500px;\r\n    background-color: white;\r\n    padding: 1rem;\r\n    border-radius: 20px;\r\n    margin-top: 16px;\r\n    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.map .leaflet-container {\r\n    height: 100%;\r\n}\r\n\r\n.App {\r\n  font-family: sans-serif;\r\n  text-align: center;\r\n}\r\n\r\nbody {\r\n  margin: 0px;\r\n}\r\n\r\n.markercluster-map span {\r\n  height: 5vh;;\r\n  width: 5vh;\r\n  border-radius: 50%;\r\n  display: inline-block;\r\n  color:black;\r\n  background-color: greenyellow;\r\n  font-weight: bold;\r\n  text-align: center;\r\n  border-color: blue;\r\n  border-style: solid;\r\n  margin: auto;\r\n  padding: 8.33px;\r\n  font-size: 20px;\r\n  opacity: 0.55;\r\n  /* border opacity etc */\r\n  box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);\r\n}\r\n\r\n.leaflet-container {\r\n  height: 100%;\r\n  width: 100%;\r\n}\r\n\r\n.sr-only {\r\n  display: none;\r\n}\r\n\r\n.markercluster-map {\r\n  height: 90vh;;\r\n  width: 90vh;\r\n  background-color: #bbb;\r\n  border-radius: 2.5%;\r\n  display: inline-block;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".map {\r\n    height: 500px;\r\n    background-color: white;\r\n    padding: 1rem;\r\n    border-radius: 20px;\r\n    margin-top: 16px;\r\n    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.map .leaflet-container {\r\n    height: 100%;\r\n}\r\n\r\n.App {\r\n  font-family: sans-serif;\r\n  text-align: center;\r\n}\r\n\r\nbody {\r\n  margin: 0px;\r\n}\r\n\r\n.markercluster-map span {\r\n  height: 5vh;;\r\n  width: 5vh;\r\n  border-radius: 50%;\r\n  display: inline-block;\r\n  color:black;\r\n  background-color: greenyellow;\r\n  font-weight: bold;\r\n  text-align: center;\r\n  border-color: blue;\r\n  border-style: solid;\r\n  margin: auto;\r\n  padding: 8.33px;\r\n  font-size: 20px;\r\n  opacity: 0.55;\r\n  /* border opacity etc */\r\n  box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);\r\n}\r\n\r\n.leaflet-container {\r\n  height: 100%;\r\n  width: 100%;\r\n}\r\n\r\n.sr-only {\r\n  display: none;\r\n}\r\n\r\n.markercluster-map {\r\n  height: 90vh;;\r\n  width: 90vh;\r\n  background-color: #bbb;\r\n  border-radius: 10px;\r\n  display: inline-block;\r\n}", "",{"version":3,"sources":["webpack://./resources/js/components/Map.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,uBAAuB;IACvB,aAAa;IACb,mBAAmB;IACnB,gBAAgB;IAChB,2CAA2C;AAC/C;;AAEA;IACI,YAAY;AAChB;;AAEA;EACE,uBAAuB;EACvB,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,WAAW;EACX,UAAU;EACV,kBAAkB;EAClB,qBAAqB;EACrB,WAAW;EACX,6BAA6B;EAC7B,iBAAiB;EACjB,kBAAkB;EAClB,kBAAkB;EAClB,mBAAmB;EACnB,YAAY;EACZ,eAAe;EACf,eAAe;EACf,aAAa;EACb,uBAAuB;EACvB,2CAA2C;AAC7C;;AAEA;EACE,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,sBAAsB;EACtB,mBAAmB;EACnB,qBAAqB;AACvB","sourcesContent":[".map {\r\n    height: 500px;\r\n    background-color: white;\r\n    padding: 1rem;\r\n    border-radius: 20px;\r\n    margin-top: 16px;\r\n    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.map .leaflet-container {\r\n    height: 100%;\r\n}\r\n\r\n.App {\r\n  font-family: sans-serif;\r\n  text-align: center;\r\n}\r\n\r\nbody {\r\n  margin: 0px;\r\n}\r\n\r\n.markercluster-map span {\r\n  height: 5vh;;\r\n  width: 5vh;\r\n  border-radius: 50%;\r\n  display: inline-block;\r\n  color:black;\r\n  background-color: greenyellow;\r\n  font-weight: bold;\r\n  text-align: center;\r\n  border-color: blue;\r\n  border-style: solid;\r\n  margin: auto;\r\n  padding: 8.33px;\r\n  font-size: 20px;\r\n  opacity: 0.55;\r\n  /* border opacity etc */\r\n  box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);\r\n}\r\n\r\n.leaflet-container {\r\n  height: 100%;\r\n  width: 100%;\r\n}\r\n\r\n.sr-only {\r\n  display: none;\r\n}\r\n\r\n.markercluster-map {\r\n  height: 90vh;;\r\n  width: 90vh;\r\n  background-color: #bbb;\r\n  border-radius: 10px;\r\n  display: inline-block;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
