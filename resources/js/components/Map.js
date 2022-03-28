@@ -10,10 +10,12 @@ import MarkerClusterGroup from "react-leaflet-markercluster";
 import FilterServices from "./FilterServices";
 import axios from "axios";
 import AccommodationMarker from "./AccommodationMarker";
+import FoodMarker from "./FoodMarker";
+import ServiceMarker from "./ServiceMarker";
 
 function Map({ center, zoom }) {
     const [accommodations, setAccommodations] = useState([]);
-    const [services, setServices] = useState([]);
+    const [users, setUsers] = useState([]);
     const [food, setFood] = useState([]);
 
     const fetchAccommodations = async () => {
@@ -21,8 +23,19 @@ function Map({ center, zoom }) {
         setAccommodations(res.data);
     };
 
+    const fetchFood = async () => {
+      const res = await axios.get("/api/food");
+      setFood(res.data);
+  };
+
+    const fetchUsers = async () => {
+      const res = await axios.get("/api/food");
+      setFood(res.data);
+  };
+
     useEffect(() => {
         fetchAccommodations();
+        fetchFood();
     }, []);
 
     return (
@@ -46,6 +59,16 @@ function Map({ center, zoom }) {
                             <AccommodationMarker data={element} key={index} />
                         ))}
                     
+                    {!!food.length &&
+                        food.map((element, index) => (
+                            <FoodMarker data={element} key={index} />
+                        ))}
+
+                    {!!users.length &&
+                        users.map((element, index) => (
+                            <ServiceMarker data={element} key={index} />
+                        ))}
+
                 </MarkerClusterGroup>
             </MapContainer>
         </>

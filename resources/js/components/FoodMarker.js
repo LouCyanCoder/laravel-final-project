@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "./Map.css";
 // import './leaflet/dist/leaflet.css';
 import { popupContent, popupHead, popupText, okText } from "./popupStyles";
-import defaultMarker, { defaultMarker2 } from "./defaultMarker";
+import defaultMarker, { defaultMarker3 } from "./defaultMarker";
 import "./styles.css";
 import LeafletControlGeocoder from "./LeafletControlGeocoder";
 import MarkerClusterGroup from "react-leaflet-markercluster";
@@ -14,16 +14,17 @@ import axios from "axios";
 
 const FoodMarker = ({ data }) => {
 
-    const [address, setAddress] = useState(null)
+    const [foodAddress, setFoodAddress] = useState(null)
 
-    const key = "AIzaSyChehty7au22eyCkTPzqEF4u4FvvPSEb9g";
+    const key = "AIzaSyAjX6oTLphVZDKXvWPAmzOiFRx6lEwK_Sw";
 
+    console.log(data)
 
-    const getAddress = async () => {
+    const getFoodAddress = async () => {
         
         const options = {
             params: {
-                address: data.area_address, 
+                address: data.address, 
                 key
             }
         }
@@ -31,7 +32,8 @@ const FoodMarker = ({ data }) => {
         const res = await axios.get('https://maps.googleapis.com/maps/api/geocode/json', options)
     
         // console.log(address) // res.data.results.geometry.location
-        setAddress(res.data.results[0].geometry.location)
+        console.log(res.data.results[0].geometry.location)
+        setFoodAddress(res.data.results[0].geometry.location)
 
     }
 
@@ -39,18 +41,19 @@ const FoodMarker = ({ data }) => {
     
 
     useEffect(() => {
-        if (data.area_address) {
-            getAddress()
+        console.log(data.address)
+        if (data.address) {
+            getFoodAddress()
         }
-    }, [data.area_address])
+    }, [data.address])
 
     
-    if (address) {
+    if (foodAddress) {
         return (
             <Fragment>
                 <Marker
-                    position={[address.lat, address.lng]}
-                    icon={defaultMarker2}
+                    position={[foodAddress.lat, foodAddress.lng]}
+                    icon={defaultMarker3}
                 >
                     <Popup className="request-popup">
                         <div style={popupContent}>
