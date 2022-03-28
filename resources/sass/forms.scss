@@ -1,0 +1,29 @@
+.offer_form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+
+    h2 {
+        text-align: center;
+    }
+
+    label {
+        font-weight: bold;
+    }
+    .confirm {
+        width: 50%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background-color: darkgreen;
+        color: white;
+        font-weight: bold;
+
+        &:hover {
+            background-color: $primaryColor;
+            color: $mainColor;
+        }
+    }
+}
