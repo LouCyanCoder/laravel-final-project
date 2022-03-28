@@ -5,6 +5,7 @@
         margin: auto;
         justify-content: space-around;
         align-items: center;
+        border-bottom: 2px solid darkgrey;
     }
 
     &__avatar {
@@ -25,7 +26,7 @@
     align-items: center;
 
     h2 {
-        margin: 20px;
+        margin: 40px;
     }
 
     &__container {
@@ -33,7 +34,9 @@
         width: 80%;
         margin: auto;
         justify-content: space-around;
+        gap: 15px;
     }
+
     a {
         text-decoration: none;
         color: $quadriaryColor;
@@ -41,20 +44,23 @@
 
     &__card {
         display: flex;
+        background-color: $body-bg;
         flex-direction: column;
+        width: 18vw;
         align-items: center;
         padding: 15px;
-        border: 1px solid $quadriaryColor;
+        border: 2px solid $mainColor;
         border-radius: 10px;
         margin: 20px 0;
 
         img {
-            width: 150px;
+            width: 130px;
             padding-bottom: 15px;
         }
     }
     &__card:hover {
-        background-color: $tertiaryColor;
+        background-color: $quadriaryColor;
+        color: $body-bg;
         transform: scale(1.1);
     }
 }

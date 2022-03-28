@@ -7,21 +7,21 @@ import Divider from '@mui/material/Divider';
 import { UserContext } from "../../context/context";
 
 
+
 const Profile = () => {
 
-    const { user } = useContext(UserContext);
+  const { user } = useContext(UserContext);
   console.log(user)
-  
-  
   
   return (
     
     <section className='profile__container'>
+
       <div className='profile__avatar'>
+
           <Avatar
-            
-            alt="#"
-            src="#"
+            alt="avatar picture"
+            src="../../images/user_avatar.png"
             sx={{ width: 100, height: 100 }}
           />
 

@@ -1,16 +1,16 @@
-import React from 'react';
-import PostOffer from './PostOffer';
-import Profile from './Profile';
+import React from "react";
+import OffersListed from "./OffersListed";
+import PostOffer from "./PostOffer";
+import Profile from "./Profile";
 
 const Dashboard = () => {
-  return (
-    <section className='dashboard'>
-          <Profile />
-          <PostOffer />
-          
+    return (
+        <section className="dashboard">
+            <Profile />
+            <PostOffer />
+            <OffersListed />
+        </section>
+    );
+};
 
-    </section>
-  )
-}
-
-export default Dashboard
+export default Dashboard;

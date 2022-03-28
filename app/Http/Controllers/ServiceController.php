@@ -33,17 +33,16 @@ class ServiceController extends Controller
         $data = $request->all();
 
         $service->insert([
-            'name'   => $data['name'],
+             'user_id'       => Auth::user()->id,
+            'name'          => $data['name'],
             'description'   => $data['description'],
-            'status'   => $data['status'],
+            'status'        => $data['status'],
         ]);
         
-
-        $service->save();
-
+        
         return view('forms/serviceForm', compact('service'));
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -52,14 +51,14 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-         $this->validateForm($request);
-
+        
+        $this->validateForm($request);
+        
         $service = new Service($request->except('_token'));
-
-       
+        
         // $service->name   = $request->input('name');
         // $service->description   = $request->input('description');
-        // $service->status   = $request->input('status');
+        $service->status   = $request->input('status');
         $service->user_id = Auth::user()->id;
         $service->save();
 
@@ -107,10 +106,10 @@ class ServiceController extends Controller
         $service = Service::findOrFail($id);
         $this->validateForm($request);
 
-        $service->name   = $request->input('name');
+        $service->name          = $request->input('name');
         $service->description   = $request->input('description');
-        $service->status   = $request->input('status');
-
+        $service->status        = $request->input('status');
+        $food->user_id      = Auth::user()->id;
         $service->save();
 
         session()->flash('success_message', 'The service was successfully updated!');
