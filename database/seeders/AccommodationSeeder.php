@@ -23,10 +23,10 @@ class AccommodationSeeder extends Seeder
         $accommodation = new Accommodation;
         $accommodation->user_id = 1;
         $accommodation->area_address = "Prague, Olympijska 21";
-        $accommodation->type = "flat";
+        $accommodation->type = "couch";
         $accommodation->max_person = 2;
         $accommodation->pet_friendly = "yes";
-        $accommodation->description = "Poor, but it's something";
+        $accommodation->description = "We can offer you just a couch because we're poor, but it's something";
         $accommodation->status = "open";
         $accommodation->start_date = new \DateTime;
         $accommodation->end_date = new \DateTime;
@@ -35,11 +35,11 @@ class AccommodationSeeder extends Seeder
 
         $accommodation = new Accommodation;
         $accommodation->user_id = 1;
-        $accommodation->area_address = "Prague, Olympijska 22";
+        $accommodation->area_address = "Prague, Bryksova";
         $accommodation->type = "garage";
         $accommodation->max_person = 10;
         $accommodation->pet_friendly = "no";
-        $accommodation->description = "Terrible";
+        $accommodation->description = "Bring your own mat and sleeping bag, it gets cold out there.";
         $accommodation->status = "closed";
         $accommodation->start_date = new \DateTime;
         $accommodation->end_date = new \DateTime;
@@ -52,7 +52,7 @@ class AccommodationSeeder extends Seeder
         $accommodation->type = "villa";
         $accommodation->max_person = 1;
         $accommodation->pet_friendly = "no";
-        $accommodation->description = "Exclusive accomodation for pretty young woman";
+        $accommodation->description = "Exclusive accomodation for pretty young woman.";
         $accommodation->status = "open";
         $accommodation->start_date = new \DateTime;
         $accommodation->end_date = new \DateTime;
@@ -61,11 +61,24 @@ class AccommodationSeeder extends Seeder
 
         $accommodation = new Accommodation;
         $accommodation->user_id = 2;
-        $accommodation->area_address = "Prague, Olympijska 2";
-        $accommodation->type = "villa";
+        $accommodation->area_address = "Prague, Nýdecká 447";
+        $accommodation->type = "flat";
         $accommodation->max_person = 1;
         $accommodation->pet_friendly = "no";
-        $accommodation->description = "Exclusive accomodation for pretty young woman";
+        $accommodation->description = "We have a flat with a spare bedroom.";
+        $accommodation->status = "open";
+        $accommodation->start_date = new \DateTime;
+        $accommodation->end_date = new \DateTime;
+
+        $accommodation->save();
+
+        $accommodation = new Accommodation;
+        $accommodation->user_id = 1;
+        $accommodation->area_address = "Prague, Na šťáhlavce 2003";
+        $accommodation->type = "house";
+        $accommodation->max_person = 6;
+        $accommodation->pet_friendly = "yes";
+        $accommodation->description = "We can offer you a nice housing for a whole family. With a garden for the pets and kids to run around.";
         $accommodation->status = "open";
         $accommodation->start_date = new \DateTime;
         $accommodation->end_date = new \DateTime;
