@@ -63,8 +63,9 @@
         <br>
 
         <button type="submit" class="confirm">Confirm offer</button>
-
+        
     </form>
 
     @include('components.footer')
+    
     
