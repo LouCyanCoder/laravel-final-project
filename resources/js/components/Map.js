@@ -15,8 +15,8 @@ import ServiceMarker from "./ServiceMarker";
 
 function Map({ center, zoom }) {
     const [accommodations, setAccommodations] = useState([]);
-    const [users, setUsers] = useState([]);
-    const [food, setFood] = useState([]);
+    const [services, setServices] = useState([]);
+    const [foods, setFoods] = useState([]);
 
     const fetchAccommodations = async () => {
         const res = await axios.get("/api/accomodation");
@@ -24,29 +24,33 @@ function Map({ center, zoom }) {
     };
 
     const fetchFood = async () => {
-      const res = await axios.get("/api/food");
-      setFood(res.data);
-  };
+        const res = await axios.get("/api/food");
+        setFoods(res.data);
+        console.log(res);
+    };
 
-    const fetchUsers = async () => {
-      const res = await axios.get("/api/food");
-      setFood(res.data);
-  };
+    const fetchServices = async () => {
+        const res = await axios.get("/api/service");
+        setServices(res.data);
+    };
 
     useEffect(() => {
         fetchAccommodations();
         fetchFood();
+        fetchServices();
     }, []);
+
+    const [selection, setSelection] = useState({});
 
     return (
         <>
-            <FilterServices />
+            <FilterServices selection={selection} setSelection={setSelection} />
             <MapContainer
                 className="markercluster-map"
                 center={[50.073658, 14.41854]}
                 zoom={12}
                 maxZoom={18}
-                // minZoom={8}
+                minZoom={8}
             >
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -54,21 +58,23 @@ function Map({ center, zoom }) {
                 />
                 <LeafletControlGeocoder />
                 <MarkerClusterGroup>
-                    {!!accommodations.length &&
+                    {selection.accommodation &&
+                        !!accommodations.length &&
                         accommodations.map((element, index) => (
                             <AccommodationMarker data={element} key={index} />
                         ))}
-                    
-                    {!!food.length &&
-                        food.map((element, index) => (
+
+                    {selection.food &&
+                        !!foods.length &&
+                        foods.map((element, index) => (
                             <FoodMarker data={element} key={index} />
                         ))}
 
-                    {!!users.length &&
-                        users.map((element, index) => (
+                    {selection.service &&
+                        !!services.length &&
+                        services.map((element, index) => (
                             <ServiceMarker data={element} key={index} />
                         ))}
-
                 </MarkerClusterGroup>
             </MapContainer>
         </>

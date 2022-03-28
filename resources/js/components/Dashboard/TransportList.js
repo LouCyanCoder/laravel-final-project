@@ -1,33 +1,33 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-const TransportList = ({ transport }) => {
+const TransportList = ({ element }) => {
     return (
         <div>
             <div className="offerslisted__list">
                 <article className="offerslisted__listitem">
                     <div className="offerslisted__listitem--locationfrom">
-                        <p>Location From: {transport.location_from}</p>
+                        <p>Location From: {element.location_from}</p>
                     </div>
 
                     <div className="offerslisted__listitem--destination">
-                        <p>Destination: {transport.destination}</p>
+                        <p>Destination: {element.destination}</p>
                     </div>
 
                     <div className="offerslisted__listitem--date">
-                        <p>Transport Date: {transport.date}</p>
+                        <p>Transport Date: {element.date}</p>
                     </div>
 
                     <div className="offerslisted__listitem--maxperson">
-                        <p>Max Person: {transport.max_person}</p>
+                        <p>Max Person: {element.max_person}</p>
                     </div>
 
                     <div className="offerslisted__listitem--status">
-                        <p>Status: {transport.status}</p>
+                        <p>Status: {element.status}</p>
                     </div>
 
                     <div className="offerslisted__listitem--dateadded">
-                        <p>Offer Created Time: {transport.created_at}</p>
+                        <p>Offer Created Time: {element.created_at}</p>
                     </div>
                     <Button variant="outlined">Options</Button>
                     <Button variant="outlined">Details</Button>

@@ -1,25 +1,25 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-const ServiceList = ({ service }) => {
+const ServiceList = ({ element }) => {
     return (
         <div>
             <div className="offerslisted__list">
                 <article className="offerslisted__listitem">
                     <div className="offerslisted__listitem--type">
-                        <p>Service Name: {service.name}</p>
+                        <p>Service Name: {element.name}</p>
                     </div>
 
                     <div className="offerslisted__listitem--description">
-                        <p>Description: {service.description}</p>
+                        <p>Description: {element.description}</p>
                     </div>
 
                     <div className="offerslisted__listitem--status">
-                        <p>Status: {service.status}</p>
+                        <p>Status: {element.status}</p>
                     </div>
 
                     <div className="offerslisted__listitem--dateadded">
-                        <p>Offer Created Time{service.created_at}</p>
+                        <p>Offer Created Time{element.created_at}</p>
                     </div>
 
                     <Button variant="outlined">Options</Button>

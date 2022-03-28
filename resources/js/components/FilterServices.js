@@ -2,8 +2,10 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import { useState, useEffect } from "react";
 
-const FilterServices = () => {
+const FilterServices = ({ selection, setSelection }) => {
     const [selected_accommodation, setSelectedAccommodation] = useState(null);
+    const [selected_food, setSelectedFood] = useState(null);
+    const [selected_services, setSelectedServices] = useState(null);
 
     const fetchAccommodation = async () => {
         const response = await fetch("/api/accomodation");
@@ -11,75 +13,94 @@ const FilterServices = () => {
         result && setSelectedAccommodation(result);
         // console.log(result);
     };
-    console.log(selected_accommodation);
+
+    const fetchFood = async () => {
+        const response = await fetch("/api/food");
+        const result = await response.json();
+        result && setSelectedFood(result);
+        // console.log(result);
+    };
+
+    const fetchServices = async () => {
+        const response = await fetch("/api/services");
+        const result = await response.json();
+        result && setSelectedServices(result);
+        // console.log(result);
+    };
 
     useEffect(() => {
         fetchAccommodation();
+        fetchFood();
+        fetchServices();
     }, []);
 
     const handleAccommodation = (e) => {
         const val = e.target.value;
-        if (val === Accommodation) {
+        if (val === setSelectedAccommodation) {
         }
+        console.log(val);
     };
 
+    const handleChange = (e) => {
+        if (e.target.name === "all") {
+            if (selection.all) {
+                return setSelection({
+                    [e.target.name]: e.target.checked,
+                });
+            } else {
+                return setSelection({
+                    all: true,
+                    accommodation: true,
+                    food: true,
+                    service: true,
+                });
+            }
+        }
+
+        if (selection.all && e.target.name !== "all" && !e.target.checked) {
+            return setSelection({
+                ...selection,
+                [e.target.name]: e.target.checked,
+                all: false,
+            });
+        }
+        return setSelection({
+            ...selection,
+            [e.target.name]: e.target.checked,
+        });
+    };
+
+    console.log(selection);
     return (
         <div>
             <Form className="nav_filter">
                 <Form.Check
                     type="switch"
                     label="All"
-                    value="All"
-                    name="services"
+                    checked={selection.all}
+                    name="all"
+                    onChange={handleChange}
                 />
                 <Form.Check
                     type="switch"
                     label="Accommodation"
-                    value="Accommodation"
-                    name="services"
-                    onClick={handleAccommodation}
+                    checked={selection.accommodation}
+                    name="accommodation"
+                    onChange={handleChange}
                 />
                 <Form.Check
                     type="switch"
                     label="Food"
-                    value="Food"
-                    name="services"
+                    checked={selection.food}
+                    name="food"
+                    onChange={handleChange}
                 />
                 <Form.Check
                     type="switch"
-                    label="Lawyer"
-                    value="Lawyer"
-                    name="services"
-                />
-                <Form.Check
-                    type="switch"
-                    label="Administration"
-                    value="Administration"
-                    name="services"
-                />
-                <Form.Check
-                    type="switch"
-                    label="Translation"
-                    value="Translation"
-                    name="services"
-                />
-                <Form.Check
-                    type="switch"
-                    label="Psychology"
-                    value="Psychology"
-                    name="services"
-                />
-                <Form.Check
-                    type="switch"
-                    label="Education"
-                    value="Education"
-                    name="services"
-                />
-                <Form.Check
-                    type="switch"
-                    label="Mentoring"
-                    value="Mentoring"
-                    name="services"
+                    label="Service"
+                    checked={selection.service}
+                    name="service"
+                    onChange={handleChange}
                 />
             </Form>
         </div>
