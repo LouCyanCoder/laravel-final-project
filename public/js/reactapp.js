@@ -24109,7 +24109,7 @@ var AccommodationMarker = function AccommodationMarker(_ref) {
       address = _useState2[0],
       setAddress = _useState2[1];
 
-  var key = "AIzaSyChehty7au22eyCkTPzqEF4u4FvvPSEb9g";
+  var key = "AIzaSyAjX6oTLphVZDKXvWPAmzOiFRx6lEwK_Sw";
 
   var getAddress = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -25385,6 +25385,164 @@ var FilterServices = function FilterServices() {
 
 /***/ }),
 
+/***/ "./resources/js/components/FoodMarker.js":
+/*!***********************************************!*\
+  !*** ./resources/js/components/FoodMarker.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Marker.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Popup.js");
+/* harmony import */ var _Map_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Map.css */ "./resources/js/components/Map.css");
+/* harmony import */ var _popupStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./popupStyles */ "./resources/js/components/popupStyles.js");
+/* harmony import */ var _defaultMarker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./defaultMarker */ "./resources/js/components/defaultMarker.js");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles.css */ "./resources/js/components/styles.css");
+/* harmony import */ var _LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./LeafletControlGeocoder */ "./resources/js/components/LeafletControlGeocoder.js");
+/* harmony import */ var react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-leaflet-markercluster */ "./node_modules/react-leaflet-markercluster/dist/index.js");
+/* harmony import */ var _FilterServices__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FilterServices */ "./resources/js/components/FilterServices.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+ // import './leaflet/dist/leaflet.css';
+
+
+
+
+
+
+
+
+
+
+
+var FoodMarker = function FoodMarker(_ref) {
+  var data = _ref.data;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      foodAddress = _useState2[0],
+      setFoodAddress = _useState2[1];
+
+  var key = "AIzaSyAjX6oTLphVZDKXvWPAmzOiFRx6lEwK_Sw";
+  console.log(data);
+
+  var getFoodAddress = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      var options, res;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              options = {
+                params: {
+                  address: data.address,
+                  key: key
+                }
+              };
+              _context.next = 3;
+              return axios__WEBPACK_IMPORTED_MODULE_9___default().get('https://maps.googleapis.com/maps/api/geocode/json', options);
+
+            case 3:
+              res = _context.sent;
+              // console.log(address) // res.data.results.geometry.location
+              console.log(res.data.results[0].geometry.location);
+              setFoodAddress(res.data.results[0].geometry.location);
+
+            case 6:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function getFoodAddress() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var address = data.address,
+      name = data.name,
+      description = data.description,
+      day = data.day,
+      status = data.status;
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    console.log(data.address);
+
+    if (data.address) {
+      getFoodAddress();
+    }
+  }, [data.address]);
+
+  if (foodAddress) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_11__.Marker, {
+        position: [foodAddress.lat, foodAddress.lng],
+        icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_4__.defaultMarker3,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_12__.Popup, {
+          className: "request-popup",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+            style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupContent,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+              src: "https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png",
+              width: "150",
+              height: "150"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+              className: "m-2",
+              style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupHead,
+              children: "Success!"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+              className: "cardonthemap",
+              style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupText,
+              children: [address, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), description, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), day, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), status, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {})]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+              className: "m-2",
+              style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.okText,
+              children: "Okay"
+            })]
+          })
+        })
+      })
+    });
+  } else {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
+      children: "loading..."
+    });
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FoodMarker);
+
+/***/ }),
+
 /***/ "./resources/js/components/Landing.js":
 /*!********************************************!*\
   !*** ./resources/js/components/Landing.js ***!
@@ -25528,10 +25686,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/MapContainer.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/TileLayer.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Marker.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Popup.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/MapContainer.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/TileLayer.js");
 /* harmony import */ var _Map_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Map.css */ "./resources/js/components/Map.css");
 /* harmony import */ var _popupStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./popupStyles */ "./resources/js/components/popupStyles.js");
 /* harmony import */ var _defaultMarker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./defaultMarker */ "./resources/js/components/defaultMarker.js");
@@ -25542,7 +25698,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _AccommodationMarker__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./AccommodationMarker */ "./resources/js/components/AccommodationMarker.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _FoodMarker__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./FoodMarker */ "./resources/js/components/FoodMarker.js");
+/* harmony import */ var _ServiceMarker__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ServiceMarker */ "./resources/js/components/ServiceMarker.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -25577,6 +25735,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+
 function Map(_ref) {
   var center = _ref.center,
       zoom = _ref.zoom;
@@ -25586,7 +25746,17 @@ function Map(_ref) {
       accommodations = _useState2[0],
       setAccommodations = _useState2[1];
 
-  var fetchAccommotations = /*#__PURE__*/function () {
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      users = _useState4[0],
+      setUsers = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      food = _useState6[0],
+      setFood = _useState6[1];
+
+  var fetchAccommodations = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
       var res;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
@@ -25608,55 +25778,92 @@ function Map(_ref) {
       }, _callee);
     }));
 
-    return function fetchAccommotations() {
+    return function fetchAccommodations() {
       return _ref2.apply(this, arguments);
     };
   }();
 
+  var fetchFood = /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+      var res;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/food");
+
+            case 2:
+              res = _context2.sent;
+              setFood(res.data);
+
+            case 4:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function fetchFood() {
+      return _ref3.apply(this, arguments);
+    };
+  }();
+
+  var fetchUsers = /*#__PURE__*/function () {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+      var res;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              _context3.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/food");
+
+            case 2:
+              res = _context3.sent;
+              setFood(res.data);
+
+            case 4:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+
+    return function fetchUsers() {
+      return _ref4.apply(this, arguments);
+    };
+  }();
+
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    fetchAccommotations();
+    fetchAccommodations();
+    fetchFood();
   }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_FilterServices__WEBPACK_IMPORTED_MODULE_8__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_12__.MapContainer, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_FilterServices__WEBPACK_IMPORTED_MODULE_8__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_14__.MapContainer, {
       className: "markercluster-map",
       center: [50.073658, 14.41854],
       zoom: 12,
       maxZoom: 18 // minZoom={8}
       ,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_13__.TileLayer, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_15__.TileLayer, {
         attribution: "\xA9 <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
         url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_6__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_6__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)(react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_7__["default"], {
         children: [!!accommodations.length && accommodations.map(function (element, index) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_AccommodationMarker__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_AccommodationMarker__WEBPACK_IMPORTED_MODULE_10__["default"], {
             data: element
           }, index);
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_14__.Marker, {
-          position: [50.073658, 14.41854],
-          icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_4__["default"],
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_15__.Popup, {
-            className: "request-popup",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-              style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupContent,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
-                src: "https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png",
-                width: "150",
-                height: "150"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-                className: "m-2",
-                style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupHead,
-                children: "Success!"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-                className: "cardonthemap",
-                style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupText,
-                children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-                className: "m-2",
-                style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.okText,
-                children: "Okay"
-              })]
-            })
-          })
+        }), !!food.length && food.map(function (element, index) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_FoodMarker__WEBPACK_IMPORTED_MODULE_11__["default"], {
+            data: element
+          }, index);
+        }), !!users.length && users.map(function (element, index) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_ServiceMarker__WEBPACK_IMPORTED_MODULE_12__["default"], {
+            data: element
+          }, index);
         })]
       })]
     })]
@@ -25664,6 +25871,164 @@ function Map(_ref) {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Map);
+
+/***/ }),
+
+/***/ "./resources/js/components/ServiceMarker.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/ServiceMarker.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Marker.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Popup.js");
+/* harmony import */ var _Map_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Map.css */ "./resources/js/components/Map.css");
+/* harmony import */ var _popupStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./popupStyles */ "./resources/js/components/popupStyles.js");
+/* harmony import */ var _defaultMarker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./defaultMarker */ "./resources/js/components/defaultMarker.js");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles.css */ "./resources/js/components/styles.css");
+/* harmony import */ var _LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./LeafletControlGeocoder */ "./resources/js/components/LeafletControlGeocoder.js");
+/* harmony import */ var react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-leaflet-markercluster */ "./node_modules/react-leaflet-markercluster/dist/index.js");
+/* harmony import */ var _FilterServices__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FilterServices */ "./resources/js/components/FilterServices.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+ // import './leaflet/dist/leaflet.css';
+
+
+
+
+
+
+
+
+
+
+
+var ServiceMarker = function ServiceMarker(_ref) {
+  var data = _ref.data;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      serviceAddress = _useState2[0],
+      setServiceAddress = _useState2[1];
+
+  var key = "AIzaSyAjX6oTLphVZDKXvWPAmzOiFRx6lEwK_Sw";
+  console.log(data);
+
+  var getServiceAddress = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      var options, res;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              options = {
+                params: {
+                  address: data.address,
+                  key: key
+                }
+              };
+              _context.next = 3;
+              return axios__WEBPACK_IMPORTED_MODULE_9___default().get('https://maps.googleapis.com/maps/api/geocode/json', options);
+
+            case 3:
+              res = _context.sent;
+              // console.log(address) // res.data.results.geometry.location
+              console.log(res.data.results[0].geometry.location);
+              setServiceAddress(res.data.results[0].geometry.location);
+
+            case 6:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function getServiceAddress() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var address = data.address,
+      name = data.name,
+      description = data.description,
+      day = data.day,
+      status = data.status;
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    console.log(data.address);
+
+    if (data.address) {
+      getServiceAddress();
+    }
+  }, [data.address]);
+
+  if (serviceAddress) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_11__.Marker, {
+        position: [serviceAddress.lat, serviceAddress.lng],
+        icon: _defaultMarker__WEBPACK_IMPORTED_MODULE_4__.defaultMarker2,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_12__.Popup, {
+          className: "request-popup",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+            style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupContent,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+              src: "https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/149_check_ok-512.png",
+              width: "150",
+              height: "150"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+              className: "m-2",
+              style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupHead,
+              children: "Success!"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+              className: "cardonthemap",
+              style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupText,
+              children: [address, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), description, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), day, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), status, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {})]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+              className: "m-2",
+              style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.okText,
+              children: "Okay"
+            })]
+          })
+        })
+      })
+    });
+  } else {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
+      children: "loading..."
+    });
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ServiceMarker);
 
 /***/ }),
 
@@ -25701,6 +26066,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "defaultMarker2": () => (/* binding */ defaultMarker2),
+/* harmony export */   "defaultMarker3": () => (/* binding */ defaultMarker3),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
@@ -25712,8 +26078,13 @@ var defaultMarker = new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().icon)({
   iconAnchor: [0, 0]
 });
 var defaultMarker2 = new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().icon)({
-  iconUrl: "/images/new_accomodation_logo.png",
-  iconSize: [110, 70],
+  iconUrl: "/images/service_marker.png",
+  iconSize: [100, 100],
+  iconAnchor: [0, 0]
+});
+var defaultMarker3 = new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().icon)({
+  iconUrl: "/images/food_marker.png",
+  iconSize: [100, 100],
   iconAnchor: [0, 0]
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (defaultMarker);
@@ -26014,7 +26385,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".map {\r\n    height: 500px;\r\n    background-color: white;\r\n    padding: 1rem;\r\n    border-radius: 20px;\r\n    margin-top: 16px;\r\n    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.map .leaflet-container {\r\n    height: 100%;\r\n}\r\n\r\n.App {\r\n    font-family: sans-serif;\r\n    text-align: center;\r\n}\r\n\r\nbody {\r\n    margin: 0px;\r\n}\r\n\r\n.markercluster-map span {\r\n    height: 5vh;\r\n    width: 5vh;\r\n    border-radius: 50%;\r\n    display: inline-block;\r\n    color: black;\r\n    background-color: greenyellow;\r\n    font-weight: bold;\r\n    text-align: center;\r\n    border-color: blue;\r\n    border-style: solid;\r\n    margin: auto;\r\n    padding: 8.33px;\r\n    font-size: 20px;\r\n    opacity: 0.55;\r\n    /* border opacity etc */\r\n    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.leaflet-container {\r\n    height: 100%;\r\n    width: 100%;\r\n}\r\n\r\n.sr-only {\r\n    display: none;\r\n}\r\n\r\n.markercluster-map {\r\n    height: 90vh;\r\n    width: 90vh;\r\n    background-color: #bbb;\r\n    border-radius: 18px;\r\n    display: inline-block;\r\n}\r\n", "",{"version":3,"sources":["webpack://./resources/js/components/Map.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,uBAAuB;IACvB,aAAa;IACb,mBAAmB;IACnB,gBAAgB;IAChB,2CAA2C;AAC/C;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,WAAW;IACX,UAAU;IACV,kBAAkB;IAClB,qBAAqB;IACrB,YAAY;IACZ,6BAA6B;IAC7B,iBAAiB;IACjB,kBAAkB;IAClB,kBAAkB;IAClB,mBAAmB;IACnB,YAAY;IACZ,eAAe;IACf,eAAe;IACf,aAAa;IACb,uBAAuB;IACvB,8CAA8C;AAClD;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,sBAAsB;IACtB,mBAAmB;IACnB,qBAAqB;AACzB","sourcesContent":[".map {\r\n    height: 500px;\r\n    background-color: white;\r\n    padding: 1rem;\r\n    border-radius: 20px;\r\n    margin-top: 16px;\r\n    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.map .leaflet-container {\r\n    height: 100%;\r\n}\r\n\r\n.App {\r\n    font-family: sans-serif;\r\n    text-align: center;\r\n}\r\n\r\nbody {\r\n    margin: 0px;\r\n}\r\n\r\n.markercluster-map span {\r\n    height: 5vh;\r\n    width: 5vh;\r\n    border-radius: 50%;\r\n    display: inline-block;\r\n    color: black;\r\n    background-color: greenyellow;\r\n    font-weight: bold;\r\n    text-align: center;\r\n    border-color: blue;\r\n    border-style: solid;\r\n    margin: auto;\r\n    padding: 8.33px;\r\n    font-size: 20px;\r\n    opacity: 0.55;\r\n    /* border opacity etc */\r\n    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.leaflet-container {\r\n    height: 100%;\r\n    width: 100%;\r\n}\r\n\r\n.sr-only {\r\n    display: none;\r\n}\r\n\r\n.markercluster-map {\r\n    height: 90vh;\r\n    width: 90vh;\r\n    background-color: #bbb;\r\n    border-radius: 18px;\r\n    display: inline-block;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".map {\r\n    height: 500px;\r\n    background-color: white;\r\n    padding: 1rem;\r\n    border-radius: 20px;\r\n    margin-top: 16px;\r\n    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.map .leaflet-container {\r\n    height: 100%;\r\n}\r\n\r\n.App {\r\n    font-family: sans-serif;\r\n    text-align: center;\r\n}\r\n\r\nbody {\r\n    margin: 0px;\r\n}\r\n\r\n.markercluster-map span {\r\n    height: 5vh;\r\n    width: 5vh;\r\n    border-radius: 50%;\r\n    display: inline-block;\r\n    color: black;\r\n    background-color: greenyellow;\r\n    font-weight: bold;\r\n    text-align: center;\r\n    border-color: blue;\r\n    border-style: solid;\r\n    margin: auto;\r\n    padding: 8.33px;\r\n    font-size: 20px;\r\n    opacity: 0.55;\r\n    /* border opacity etc */\r\n    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.leaflet-container {\r\n    height: 100%;\r\n    width: 100%;\r\n}\r\n\r\n.sr-only {\r\n    display: none;\r\n}\r\n\r\n.markercluster-map {\r\n  height: 90vh;;\r\n  width: 90vh;\r\n  background-color: #bbb;\r\n  border-radius: 10px;\r\n  display: inline-block;\r\n}\r\n", "",{"version":3,"sources":["webpack://./resources/js/components/Map.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,uBAAuB;IACvB,aAAa;IACb,mBAAmB;IACnB,gBAAgB;IAChB,2CAA2C;AAC/C;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,WAAW;IACX,UAAU;IACV,kBAAkB;IAClB,qBAAqB;IACrB,YAAY;IACZ,6BAA6B;IAC7B,iBAAiB;IACjB,kBAAkB;IAClB,kBAAkB;IAClB,mBAAmB;IACnB,YAAY;IACZ,eAAe;IACf,eAAe;IACf,aAAa;IACb,uBAAuB;IACvB,8CAA8C;AAClD;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;;AAEA;IACI,aAAa;AACjB;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,sBAAsB;EACtB,mBAAmB;EACnB,qBAAqB;AACvB","sourcesContent":[".map {\r\n    height: 500px;\r\n    background-color: white;\r\n    padding: 1rem;\r\n    border-radius: 20px;\r\n    margin-top: 16px;\r\n    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.map .leaflet-container {\r\n    height: 100%;\r\n}\r\n\r\n.App {\r\n    font-family: sans-serif;\r\n    text-align: center;\r\n}\r\n\r\nbody {\r\n    margin: 0px;\r\n}\r\n\r\n.markercluster-map span {\r\n    height: 5vh;\r\n    width: 5vh;\r\n    border-radius: 50%;\r\n    display: inline-block;\r\n    color: black;\r\n    background-color: greenyellow;\r\n    font-weight: bold;\r\n    text-align: center;\r\n    border-color: blue;\r\n    border-style: solid;\r\n    margin: auto;\r\n    padding: 8.33px;\r\n    font-size: 20px;\r\n    opacity: 0.55;\r\n    /* border opacity etc */\r\n    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.leaflet-container {\r\n    height: 100%;\r\n    width: 100%;\r\n}\r\n\r\n.sr-only {\r\n    display: none;\r\n}\r\n\r\n.markercluster-map {\r\n  height: 90vh;;\r\n  width: 90vh;\r\n  background-color: #bbb;\r\n  border-radius: 10px;\r\n  display: inline-block;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -74363,6 +74734,7 @@ if (false) {} else {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -74571,6 +74943,8 @@ if (false) {} else {
 
 /***/ }),
 
+=======
+>>>>>>> main
 /***/ "./node_modules/react-leaflet-markercluster/dist/index.js":
 /*!****************************************************************!*\
   !*** ./node_modules/react-leaflet-markercluster/dist/index.js ***!
