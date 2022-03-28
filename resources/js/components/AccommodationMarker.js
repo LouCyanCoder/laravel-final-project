@@ -63,15 +63,27 @@ const AccommodationMarker = ({ data }) => {
                                 Success!
                             </div>
                             <div className="cardonthemap" style={popupText}>
-                                {description}
+                                <strong>Description:</strong>{description}
                                 <br/>
-                                {type}
+                                <strong>
+                                    Type:
+                                </strong>
+                                    {type}
                                 <br/>
-                                {pet_friendly}
+                                <strong>
+                                    Pet friendly:
+                                </strong>
+                                    {pet_friendly}
                                 <br/>
-                                {max_person}
+                                <strong>
+                                    Max nr. of people:
+                                </strong>
+                                    {max_person}
                                 <br/>
-                                {status}
+                                <strong>
+                                    Offer status:
+                                </strong>
+                                    {status}
                                 <br/>
                             </div>
                             <div className="m-2" style={okText}>

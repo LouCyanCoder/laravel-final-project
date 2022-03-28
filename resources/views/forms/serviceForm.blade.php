@@ -2,11 +2,11 @@
 
     @include('components.header')
 
-    <form action="{{ route('service') }}" method="post">
+    <form action="{{ route('service') }}" method="post" class="offer_form">
  
         @csrf
         
-        <h1>Post a service offer</h1>
+        <h2>Post a service offer</h2>
 
         <label for="name">Select the type of service you would like to provide</label><br>
         <select id="name" name="name">
@@ -32,7 +32,7 @@
             </select>
         <br />
         <br />
-        <button type="submit">Confirm offer</button>
+        <button type="submit" class="confirm">Confirm offer</button>
     </form>
 
     @include('components.footer')

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Button from '@mui/material/Button';
 
 const Landing = () => {
 
@@ -20,8 +21,29 @@ const Landing = () => {
                     </p>
                 </div>
                 <div className="landing_btn">
-                    <button>I'm the one who cares</button>
-                    <button>I could use a helping hand</button>
+
+                    <a href="/register">
+                    <Button
+                    size="large"
+                    variant="contained"
+                    color="success"
+                    className=""
+                    >
+                    I am the one who cares
+                    </Button> 
+                    </a>
+
+                    <a href="">
+                    <Button
+                    size="large"
+                    variant="contained"
+                    color="secondary"
+                    className=""
+                    >
+                    I could use a helping hand
+                    </Button>
+                    </a>
+
                 </div>
             </div>            
         </section>
