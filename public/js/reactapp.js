@@ -25422,12 +25422,7 @@ var FilterServices = function FilterServices(_ref) {
           all: true,
           accommodation: true,
           food: true,
-          lawyer: true,
-          administration: true,
-          translation: true,
-          psychology: true,
-          education: true,
-          mentoring: true
+          service: true
         });
       }
     }
@@ -25465,39 +25460,9 @@ var FilterServices = function FilterServices(_ref) {
         onChange: handleChange
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
         type: "switch",
-        label: "Lawyer",
-        checked: selection.lawyer,
-        name: "lawyer",
-        onChange: handleChange
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
-        type: "switch",
-        label: "Administration",
-        checked: selection.administration,
-        name: "administration",
-        onChange: handleChange
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
-        type: "switch",
-        label: "Translation",
-        checked: selection.translation,
-        name: "translation",
-        onChange: handleChange
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
-        type: "switch",
-        label: "Psychology",
-        checked: selection.psychology,
-        name: "psychology",
-        onChange: handleChange
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
-        type: "switch",
-        label: "Education",
-        checked: selection.education,
-        name: "education",
-        onChange: handleChange
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
-        type: "switch",
-        label: "Mentoring",
-        checked: selection.mentoring,
-        name: "mentoring",
+        label: "Service",
+        checked: selection.service,
+        name: "service",
         onChange: handleChange
       })]
     })
@@ -25885,8 +25850,8 @@ function Map(_ref) {
 
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
       _useState6 = _slicedToArray(_useState5, 2),
-      food = _useState6[0],
-      setFood = _useState6[1];
+      foods = _useState6[0],
+      setFoods = _useState6[1];
 
   var fetchAccommodations = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -25927,9 +25892,10 @@ function Map(_ref) {
 
             case 2:
               res = _context2.sent;
-              setFood(res.data);
+              setFoods(res.data);
+              console.log(res);
 
-            case 4:
+            case 5:
             case "end":
               return _context2.stop();
           }
@@ -25998,11 +25964,11 @@ function Map(_ref) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_AccommodationMarker__WEBPACK_IMPORTED_MODULE_10__["default"], {
             data: element
           }, index);
-        }), !!food.length && food.map(function (element, index) {
+        }), selection.food && !!foods.length && foods.map(function (element, index) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_FoodMarker__WEBPACK_IMPORTED_MODULE_11__["default"], {
             data: element
           }, index);
-        }), !!services.length && services.map(function (element, index) {
+        }), selection.service && !!services.length && services.map(function (element, index) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_ServiceMarker__WEBPACK_IMPORTED_MODULE_12__["default"], {
             data: element
           }, index);
