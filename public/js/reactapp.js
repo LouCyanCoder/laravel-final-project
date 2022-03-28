@@ -23931,7 +23931,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AccommodationList = function AccommodationList(_ref) {
-  var accommodation = _ref.accommodation;
+  var element = _ref.element;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "offerslisted__list",
@@ -23940,17 +23940,17 @@ var AccommodationList = function AccommodationList(_ref) {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--type",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Type: ", accommodation.type]
+            children: ["Type: ", element.type]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--description",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Description: ", accommodation.description]
+            children: ["Description: ", element.description]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--dateadded",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Offer Created Time: ", accommodation.created_at]
+            children: ["Offer Created Time: ", element.created_at]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
           variant: "outlined",
@@ -24022,7 +24022,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var FoodList = function FoodList(_ref) {
-  var food = _ref.food;
+  var element = _ref.element;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "offerslisted__list",
@@ -24031,32 +24031,32 @@ var FoodList = function FoodList(_ref) {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--type",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Food Name: ", food.name]
+            children: ["Food Name: ", element.name]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--type",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Address: ", food.address]
+            children: ["Address: ", element.address]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--description",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Description: ", food.description]
+            children: ["Description: ", element.description]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--type",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Day: ", food.day]
+            children: ["Day: ", element.day]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--type",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Status: ", food.status]
+            children: ["Status: ", element.status]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--dateadded",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Offer Created Time: ", food.created_at]
+            children: ["Offer Created Time: ", element.created_at]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
           variant: "outlined",
@@ -24092,7 +24092,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FoodList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FoodList */ "./resources/js/components/Dashboard/FoodList.js");
 /* harmony import */ var _TransportList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TransportList */ "./resources/js/components/Dashboard/TransportList.js");
 /* harmony import */ var _ServiceList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ServiceList */ "./resources/js/components/Dashboard/ServiceList.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _MapComponents__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../MapComponents */ "./resources/js/components/MapComponents.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -24110,6 +24111,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -24275,48 +24277,47 @@ var OffersListed = function OffersListed() {
     fetchFood();
     fetchService();
   }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("section", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("section", {
     className: "offerslisted__container",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h2", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h2", {
       children: "Posted Offers"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h3", {
         children: "Accommodation"
-      }), selected_accommodation.length ? selected_accommodation.map(function (accommodation, id) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_AccommodationList__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          accommodation: accommodation
-        }, id);
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+      }), selected_accommodation.length ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_MapComponents__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        Component: _AccommodationList__WEBPACK_IMPORTED_MODULE_2__["default"],
+        arry: selected_accommodation
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
         children: "Loading..."
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h3", {
         children: "Transport"
       }), selected_transport.length ? selected_transport.map(function (transport, id) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_TransportList__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          transport: transport
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_TransportList__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          element: transport
         }, id);
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
         children: "Loading..."
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h3", {
         children: "Food"
       }), selected_food.length ? selected_food.map(function (food, id) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_FoodList__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          food: food
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_FoodList__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          element: food
         }, id);
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
         children: "Loading..."
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h3", {
         children: "Service"
       }), selected_service.length ? selected_service.map(function (service, id) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_ServiceList__WEBPACK_IMPORTED_MODULE_5__["default"], {
-          service: service
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_ServiceList__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          element: service
         }, id);
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
         children: "Loading..."
       })]
     })]
@@ -24522,7 +24523,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ServiceList = function ServiceList(_ref) {
-  var service = _ref.service;
+  var element = _ref.element;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "offerslisted__list",
@@ -24531,22 +24532,22 @@ var ServiceList = function ServiceList(_ref) {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--type",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Service Name: ", service.name]
+            children: ["Service Name: ", element.name]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--description",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Description: ", service.description]
+            children: ["Description: ", element.description]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--status",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Status: ", service.status]
+            children: ["Status: ", element.status]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--dateadded",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Offer Created Time", service.created_at]
+            children: ["Offer Created Time", element.created_at]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
           variant: "outlined",
@@ -24584,7 +24585,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var TransportList = function TransportList(_ref) {
-  var transport = _ref.transport;
+  var element = _ref.element;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "offerslisted__list",
@@ -24593,32 +24594,32 @@ var TransportList = function TransportList(_ref) {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--locationfrom",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Location From: ", transport.location_from]
+            children: ["Location From: ", element.location_from]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--destination",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Destination: ", transport.destination]
+            children: ["Destination: ", element.destination]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--date",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Transport Date: ", transport.date]
+            children: ["Transport Date: ", element.date]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--maxperson",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Max Person: ", transport.max_person]
+            children: ["Max Person: ", element.max_person]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--status",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Status: ", transport.status]
+            children: ["Status: ", element.status]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "offerslisted__listitem--dateadded",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Offer Created Time: ", transport.created_at]
+            children: ["Offer Created Time: ", element.created_at]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
           variant: "outlined",
@@ -24736,6 +24737,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap/Form */ "./node_modules/react-bootstrap/esm/Form.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -24760,14 +24767,27 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var FilterServices = function FilterServices() {
+var FilterServices = function FilterServices(_ref) {
+  var selection = _ref.selection,
+      setSelection = _ref.setSelection;
+
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
       selected_accommodation = _useState2[0],
       setSelectedAccommodation = _useState2[1];
 
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      selected_food = _useState4[0],
+      setSelectedFood = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
+      _useState6 = _slicedToArray(_useState5, 2),
+      selected_services = _useState6[0],
+      setSelectedServices = _useState6[1];
+
   var fetchAccommodation = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
       var response, result;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
@@ -24794,70 +24814,174 @@ var FilterServices = function FilterServices() {
     }));
 
     return function fetchAccommodation() {
-      return _ref.apply(this, arguments);
+      return _ref2.apply(this, arguments);
     };
   }();
 
-  console.log(selected_accommodation);
+  var fetchFood = /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+      var response, result;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return fetch("/api/food");
+
+            case 2:
+              response = _context2.sent;
+              _context2.next = 5;
+              return response.json();
+
+            case 5:
+              result = _context2.sent;
+              result && setSelectedFood(result); // console.log(result);
+
+            case 7:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function fetchFood() {
+      return _ref3.apply(this, arguments);
+    };
+  }();
+
+  var fetchServices = /*#__PURE__*/function () {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+      var response, result;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              _context3.next = 2;
+              return fetch("/api/services");
+
+            case 2:
+              response = _context3.sent;
+              _context3.next = 5;
+              return response.json();
+
+            case 5:
+              result = _context3.sent;
+              result && setSelectedServices(result); // console.log(result);
+
+            case 7:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+
+    return function fetchServices() {
+      return _ref4.apply(this, arguments);
+    };
+  }();
+
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     fetchAccommodation();
+    fetchFood();
+    fetchServices();
   }, []);
 
   var handleAccommodation = function handleAccommodation(e) {
     var val = e.target.value;
 
-    if (val === Accommodation) {}
+    if (val === setSelectedAccommodation) {}
+
+    console.log(val);
   };
 
+  var handleChange = function handleChange(e) {
+    if (e.target.name === "all") {
+      if (selection.all) {
+        return setSelection(_defineProperty({}, e.target.name, e.target.checked));
+      } else {
+        return setSelection({
+          all: true,
+          accommodation: true,
+          food: true,
+          lawyer: true,
+          administration: true,
+          translation: true,
+          psychology: true,
+          education: true,
+          mentoring: true
+        });
+      }
+    }
+
+    if (selection.all && e.target.name !== "all" && !e.target.checked) {
+      var _objectSpread2;
+
+      return setSelection(_objectSpread(_objectSpread({}, selection), {}, (_objectSpread2 = {}, _defineProperty(_objectSpread2, e.target.name, e.target.checked), _defineProperty(_objectSpread2, "all", false), _objectSpread2)));
+    }
+
+    return setSelection(_objectSpread(_objectSpread({}, selection), {}, _defineProperty({}, e.target.name, e.target.checked)));
+  };
+
+  console.log(selection);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"], {
       className: "nav_filter",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
         type: "switch",
         label: "All",
-        value: "All",
-        name: "services"
+        checked: selection.all,
+        name: "all",
+        onChange: handleChange
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
         type: "switch",
         label: "Accommodation",
-        value: "Accommodation",
-        name: "services",
-        onClick: handleAccommodation
+        checked: selection.accommodation,
+        name: "accommodation",
+        onChange: handleChange
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
         type: "switch",
         label: "Food",
-        value: "Food",
-        name: "services"
+        checked: selection.food,
+        name: "food",
+        onChange: handleChange
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
         type: "switch",
         label: "Lawyer",
-        value: "Lawyer",
-        name: "services"
+        checked: selection.lawyer,
+        name: "lawyer",
+        onChange: handleChange
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
         type: "switch",
         label: "Administration",
-        value: "Administration",
-        name: "services"
+        checked: selection.administration,
+        name: "administration",
+        onChange: handleChange
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
         type: "switch",
         label: "Translation",
-        value: "Translation",
-        name: "services"
+        checked: selection.translation,
+        name: "translation",
+        onChange: handleChange
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
         type: "switch",
         label: "Psychology",
-        value: "Psychology",
-        name: "services"
+        checked: selection.psychology,
+        name: "psychology",
+        onChange: handleChange
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
         type: "switch",
         label: "Education",
-        value: "Education",
-        name: "services"
+        checked: selection.education,
+        name: "education",
+        onChange: handleChange
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"].Check, {
         type: "switch",
         label: "Mentoring",
-        value: "Mentoring",
-        name: "services"
+        checked: selection.mentoring,
+        name: "mentoring",
+        onChange: handleChange
       })]
     })
   });
@@ -25095,11 +25219,21 @@ function Map(_ref) {
     };
   }();
 
+  console.log(accommodations);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     fetchAccommotations();
   }, []);
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({}),
+      _useState4 = _slicedToArray(_useState3, 2),
+      selection = _useState4[0],
+      setSelection = _useState4[1];
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_FilterServices__WEBPACK_IMPORTED_MODULE_8__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_12__.MapContainer, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_FilterServices__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      selection: selection,
+      setSelection: setSelection
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_12__.MapContainer, {
       className: "markercluster-map",
       center: [50.073658, 14.41854],
       zoom: 12,
@@ -25109,7 +25243,7 @@ function Map(_ref) {
         attribution: "\xA9 <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
         url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_6__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        children: [!!accommodations.length && accommodations.map(function (element, index) {
+        children: [selection.accommodation && !!accommodations.length && accommodations.map(function (element, index) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_AccommodationMarker__WEBPACK_IMPORTED_MODULE_10__["default"], {
             data: element
           }, index);
@@ -25146,6 +25280,38 @@ function Map(_ref) {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Map);
+
+/***/ }),
+
+/***/ "./resources/js/components/MapComponents.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/MapComponents.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var MapComponents = function MapComponents(_ref) {
+  var Component = _ref.Component,
+      arry = _ref.arry;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: arry.map(function (element, index) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Component, {
+        element: element
+      }, index);
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MapComponents);
 
 /***/ }),
 

@@ -1,33 +1,33 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-const FoodList = ({ food }) => {
+const FoodList = ({ element }) => {
     return (
         <div>
             <div className="offerslisted__list">
                 <article className="offerslisted__listitem">
                     <div className="offerslisted__listitem--type">
-                        <p>Food Name: {food.name}</p>
+                        <p>Food Name: {element.name}</p>
                     </div>
 
                     <div className="offerslisted__listitem--type">
-                        <p>Address: {food.address}</p>
+                        <p>Address: {element.address}</p>
                     </div>
 
                     <div className="offerslisted__listitem--description">
-                        <p>Description: {food.description}</p>
+                        <p>Description: {element.description}</p>
                     </div>
 
                     <div className="offerslisted__listitem--type">
-                        <p>Day: {food.day}</p>
+                        <p>Day: {element.day}</p>
                     </div>
 
                     <div className="offerslisted__listitem--type">
-                        <p>Status: {food.status}</p>
+                        <p>Status: {element.status}</p>
                     </div>
 
                     <div className="offerslisted__listitem--dateadded">
-                        <p>Offer Created Time: {food.created_at}</p>
+                        <p>Offer Created Time: {element.created_at}</p>
                     </div>
 
                     <Button variant="outlined">Options</Button>

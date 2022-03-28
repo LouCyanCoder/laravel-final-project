@@ -18,14 +18,16 @@ function Map({ center, zoom }) {
         const res = await axios.get("/api/accomodation");
         setAccommodations(res.data);
     };
-
+    console.log(accommodations);
     useEffect(() => {
         fetchAccommotations();
     }, []);
 
+    const [selection, setSelection] = useState({});
+
     return (
         <>
-            <FilterServices />
+            <FilterServices selection={selection} setSelection={setSelection} />
             <MapContainer
                 className="markercluster-map"
                 center={[50.073658, 14.41854]}
@@ -39,7 +41,8 @@ function Map({ center, zoom }) {
                 />
                 <LeafletControlGeocoder />
                 <MarkerClusterGroup>
-                    {!!accommodations.length &&
+                    {selection.accommodation &&
+                        !!accommodations.length &&
                         accommodations.map((element, index) => (
                             <AccommodationMarker data={element} key={index} />
                         ))}
