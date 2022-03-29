@@ -11,14 +11,10 @@ const MapAccommodationList = ({ element }) => {
         const res = await axios.get("/api/users/" + element.user_id);
         setUser(res.data);
     };
-    console.log(element);
 
     useEffect(() => {
         fetchUser();
     }, []);
-
-    let date = new Date(element.created_at);
-    date = date.toISOString().slice(0, 10);
 
     const handleClick = () => {
         return setSelection(!selection);
@@ -43,9 +39,16 @@ const MapAccommodationList = ({ element }) => {
 
                     <div className="offerslisted__listitem--dateadded">
                         <p>
-                            <strong>Offer Created Date: </strong>
+                            <strong>Available From: </strong>
                         </p>
-                        <p>{date}</p>
+                        <p>{element.start_date}</p>
+                    </div>
+
+                    <div className="offerslisted__listitem--dateadded">
+                        <p>
+                            <strong>Available To: </strong>
+                        </p>
+                        <p>{element.end_date}</p>
                     </div>
 
                     <Button variant="outlined" onClick={handleClick}>
