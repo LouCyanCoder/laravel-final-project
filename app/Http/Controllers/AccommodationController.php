@@ -72,12 +72,25 @@ class AccommodationController extends Controller
         return redirect()->action('App\Http\Controllers\AccommodationController@index');
     }
 
-    public function edit($id)
+    public function edit($id, Request $request)
     {
         $accommodation = Accommodation::findOrFail($id);
-        // $categories = Category::all();
+       
+        $this->validateForm($request);
+        $accommodation->area_address   = $request->input('area_address');
+        $accommodation->type   = $request->input('type');
+        $accommodation->max_person   = $request->input('max_person');
+        $accommodation->pet_friendly   = $request->input('pet_friendly');
+        $accommodation->description   = $request->input('description');
+        $accommodation->start_date   = $request->input('start_date');
+        $accommodation->end_date   = $request->input('end_date');
+        $accommodation->status   = $request->input('status');
 
-        return view('accommodationform/forms', compact('accommodation'));
+        $accommodation->save();
+
+        
+        session()->flash('success_message', 'The accommodation was successfully saved!');
+        return view('forms/accommodationform', compact('accommodation'));
     }
 
     public function update($id, Request $request)

@@ -30,8 +30,8 @@ const FoodList = ({ element }) => {
                         <p>Offer Created Time: {element.created_at}</p>
                     </div>
 
-                    <Button variant="outlined">Options</Button>
-                    <Button variant="outlined">Details</Button>
+                    <Button variant="outlined">Edit</Button>
+                    <Button variant="outlined">Delete</Button>
                     <hr></hr>
                 </article>
             </div>
