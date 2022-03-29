@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 const ContactInfoList = ({ element }) => {
     return (
         <div>
-            <Fragment className="userslisted_list">
+            <section className="userslisted_list">
                 <article className="userslisted_listitem">
                     <div className="userslisted_list--name">
                         <p>Name: {element.name}</p>
@@ -21,7 +21,7 @@ const ContactInfoList = ({ element }) => {
                         <p>Telegram: {element.telegram_link}</p>
                     </div>
                 </article>
-            </Fragment>
+            </section>
         </div>
     );
 };

@@ -102,7 +102,7 @@ class TransportController extends Controller
     {
         $transport = Transport::findOrFail($id);
 
-        return view('transportForm/forms', compact('transport'));
+        return view('/forms/transportform', compact('transport'));
     }
 
     /**

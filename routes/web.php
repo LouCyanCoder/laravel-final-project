@@ -37,7 +37,7 @@ Route::get('/accommodation/create', 'App\Http\Controllers\AccommodationControlle
 Route::post('/accommodation', 'App\Http\Controllers\AccommodationController@store')->name('accommodation');
 Route::get('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@show');
 Route::delete('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@delete');
-Route::get('/accommodation/{id}/edit', 'App\Http\Controllers\AccommodationController@edit');
+Route::get('/accommodation/{id}/edit', 'App\Http\Controllers\AccommodationController@edit')->name('accommodationedit');
 Route::put('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@update');
 // Route::get('/accommodation/create', 'App\Http\Controllers\AccommodationController@create');
 
@@ -75,8 +75,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-Route::get('/user','Api\UserController@show');
+Route::get('/user',function(){
+    return redirect('/dashboard');
+});
+// Route::get('/user','Api\UserController@show');
 
 /* Route::get('/{path?}', function () {
     return view('index');

@@ -17,6 +17,9 @@ const MapServiceList = ({ element }) => {
         fetchUsers();
     }, []);
 
+    let date = new Date(element.created_at);
+    date = date.toISOString().slice(0, 10);
+
     const handleClick = () => {
         return setSelection(!selection);
     };
@@ -48,9 +51,9 @@ const MapServiceList = ({ element }) => {
 
                         <div className="offerslisted__listitem--dateadded">
                             <p>
-                                <strong>Offer Created Time</strong>
+                                <strong>Offer Created Date: </strong>
                             </p>
-                            <p>{element.created_at}</p>
+                            <p>{date}</p>
                         </div>
 
                         <Button variant="outlined" onClick={handleClick}>
@@ -65,6 +68,7 @@ const MapServiceList = ({ element }) => {
                             <p></p>
                         )}
                     </article>
+                    <hr></hr>
                 </div>
             </div>
         </div>

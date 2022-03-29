@@ -25,7 +25,6 @@ const AccommodationList = ({ element }) => {
                         <Button variant="outlined"><a href="#">Edit</a></Button>
                         <Button variant="contained" color="error"><a href="#">Delete</a></Button>
                     </div>
-                   
                 </article>
             </div>
         </div>
