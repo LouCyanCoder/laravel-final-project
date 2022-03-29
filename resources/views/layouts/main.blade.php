@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
      <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
     
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
     <title>Who cares ?</title>
 </head>
 <body>
