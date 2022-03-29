@@ -87,7 +87,12 @@ function Map({ center, zoom }) {
                         ))}
                 </MarkerClusterGroup>
             </MapContainer>
-
+            <div>
+              <input />
+              <input />
+              <input />
+              <input />
+            </div>
             <div>
                 <h3>Accommodation</h3>
                 {accommodations.length ? (
