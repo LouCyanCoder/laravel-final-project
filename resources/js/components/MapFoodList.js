@@ -4,20 +4,18 @@ import axios from "axios";
 import ContactInfoList from "./ContactInfoList";
 
 const MapFoodList = ({ element }) => {
-    const [users, setUsers] = useState([]);
+    const [user, setUser] = useState(null);
     const [selection, setSelection] = useState(false);
 
-    const fetchUsers = async () => {
-        const res = await axios.get("/api/users");
-        setUsers(res.data);
+    const fetchUser = async () => {
+        const res = await axios.get("/api/users/" + element.user_id);
+        setUser(res.data);
     };
+    console.log(element);
 
     useEffect(() => {
-        fetchUsers();
+        fetchUser();
     }, []);
-
-    let date = new Date(element.created_at);
-    date = date.toISOString().slice(0, 10);
 
     const handleClick = () => {
         return setSelection(!selection);
@@ -49,7 +47,7 @@ const MapFoodList = ({ element }) => {
 
                     <div className="offerslisted__listitem--type">
                         <p>
-                            <strong>Day:</strong>
+                            <strong>Available Date:</strong>
                         </p>
                         <p>{element.day}</p>
                     </div>
@@ -61,23 +59,12 @@ const MapFoodList = ({ element }) => {
                         <p>{element.status}</p>
                     </div>
 
-                    <div className="offerslisted__listitem--dateadded">
-                        <p>
-                            <strong>Offer Created Date:</strong>
-                        </p>
-                        <p>{date}</p>
-                    </div>
-
                     <Button variant="outlined" onClick={handleClick}>
                         Contact Info
                     </Button>
 
-                    {selection && users.length ? (
-                        users.map((user, user_id) => (
-                            <ContactInfoList element={user} key={user_id} />
-                        ))
-                    ) : (
-                        <p></p>
+                    {selection && user && (
+                        <ContactInfoList element={user} key={user.id} />
                     )}
                 </article>
                 <hr></hr>

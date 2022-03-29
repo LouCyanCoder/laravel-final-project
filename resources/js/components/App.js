@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, Fragment } from "react";
 import Landing from "./Landing";
 import Features from "./Features";
 import Contact from "./Contact";
@@ -16,8 +16,8 @@ const App = () => {
     const fetchUser = async () => {
         const response = await fetch("/api/user", {
             headers: {
-                'Accept': 'application/json',
-            }
+                Accept: "application/json",
+            },
         });
         const result = await response.json();
         result && setUser(result);
@@ -34,15 +34,12 @@ const App = () => {
     return (
         <Router>
             <UserContext.Provider value={userData}>
-                <Link to="/map">Map</Link>
-                &nbsp;
-                <Link to="/features">Features</Link>
                 <div className="mapp">
                     <Routes>
                         <Route exact path="/" element={<Landing />} />
                         <Route exact path="/contact" element={<Contact />} />
                         <Route exact path="/aboutus" element={<AboutUs />} />
-                        <Route exact path="/features" element={<Features />} />
+
                         <Route exact path="/map" element={<Map />} />
                         <Route
                             exact
@@ -51,6 +48,7 @@ const App = () => {
                         />
                     </Routes>
                 </div>
+                <Features />
             </UserContext.Provider>
         </Router>
     );

@@ -24280,7 +24280,7 @@ var App = function App() {
               _context.next = 2;
               return fetch("/api/user", {
                 headers: {
-                  'Accept': 'application/json'
+                  Accept: "application/json"
                 }
               });
 
@@ -24319,13 +24319,7 @@ var App = function App() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.BrowserRouter, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_context_context__WEBPACK_IMPORTED_MODULE_10__.UserContext.Provider, {
       value: userData,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link, {
-        to: "/map",
-        children: "Map"
-      }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link, {
-        to: "/features",
-        children: "Features"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
         className: "mapp",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Routes, {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
@@ -24342,10 +24336,6 @@ var App = function App() {
             element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_AboutUs__WEBPACK_IMPORTED_MODULE_5__["default"], {})
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
             exact: true,
-            path: "/features",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Features__WEBPACK_IMPORTED_MODULE_3__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
-            exact: true,
             path: "/map",
             element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Map__WEBPACK_IMPORTED_MODULE_6__["default"], {})
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
@@ -24354,7 +24344,7 @@ var App = function App() {
             element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Dashboard_Dashboard__WEBPACK_IMPORTED_MODULE_7__["default"], {})
           })]
         })
-      })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Features__WEBPACK_IMPORTED_MODULE_3__["default"], {})]
     })
   });
 };
@@ -25611,7 +25601,6 @@ var FilterServices = function FilterServices(_ref) {
     return setSelection(_objectSpread(_objectSpread({}, selection), {}, _defineProperty({}, e.target.name, e.target.checked)));
   };
 
-  console.log(selection);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_3__["default"], {
       className: "nav_filter",
@@ -26367,12 +26356,9 @@ var MapAccommodationList = function MapAccommodationList(_ref) {
     };
   }();
 
-  console.log(element);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     fetchUser();
   }, []);
-  var date = new Date(element.created_at);
-  date = date.toISOString().slice(0, 10);
 
   var handleClick = function handleClick() {
     return setSelection(!selection);
@@ -26405,10 +26391,19 @@ var MapAccommodationList = function MapAccommodationList(_ref) {
           className: "offerslisted__listitem--dateadded",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
-              children: "Offer Created Date: "
+              children: "Available From: "
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-            children: date
+            children: element.start_date
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: "offerslisted__listitem--dateadded",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
+              children: "Available To: "
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+            children: element.end_date
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
           variant: "outlined",
@@ -26505,17 +26500,17 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var MapFoodList = function MapFoodList(_ref) {
   var element = _ref.element;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
-      users = _useState2[0],
-      setUsers = _useState2[1];
+      user = _useState2[0],
+      setUser = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
       _useState4 = _slicedToArray(_useState3, 2),
       selection = _useState4[0],
       setSelection = _useState4[1];
 
-  var fetchUsers = /*#__PURE__*/function () {
+  var fetchUser = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
       var res;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
@@ -26523,11 +26518,11 @@ var MapFoodList = function MapFoodList(_ref) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_2___default().get("/api/users");
+              return axios__WEBPACK_IMPORTED_MODULE_2___default().get("/api/users/" + element.user_id);
 
             case 2:
               res = _context.sent;
-              setUsers(res.data);
+              setUser(res.data);
 
             case 4:
             case "end":
@@ -26537,16 +26532,15 @@ var MapFoodList = function MapFoodList(_ref) {
       }, _callee);
     }));
 
-    return function fetchUsers() {
+    return function fetchUser() {
       return _ref2.apply(this, arguments);
     };
   }();
 
+  console.log(element);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    fetchUsers();
+    fetchUser();
   }, []);
-  var date = new Date(element.created_at);
-  date = date.toISOString().slice(0, 10);
 
   var handleClick = function handleClick() {
     return setSelection(!selection);
@@ -26588,7 +26582,7 @@ var MapFoodList = function MapFoodList(_ref) {
           className: "offerslisted__listitem--type",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
-              children: "Day:"
+              children: "Available Date:"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: element.day
@@ -26602,24 +26596,13 @@ var MapFoodList = function MapFoodList(_ref) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: element.status
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "offerslisted__listitem--dateadded",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
-              children: "Offer Created Date:"
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-            children: date
-          })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
           variant: "outlined",
           onClick: handleClick,
           children: "Contact Info"
-        }), selection && users.length ? users.map(function (user, user_id) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_3__["default"], {
-            element: user
-          }, user_id);
-        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {})]
+        }), selection && user && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          element: user
+        }, user.id)]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("hr", {})]
     })
   });
@@ -26677,17 +26660,17 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var MapServiceList = function MapServiceList(_ref) {
   var element = _ref.element;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
-      users = _useState2[0],
-      setUsers = _useState2[1];
+      user = _useState2[0],
+      setUser = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
       _useState4 = _slicedToArray(_useState3, 2),
       selection = _useState4[0],
       setSelection = _useState4[1];
 
-  var fetchUsers = /*#__PURE__*/function () {
+  var fetchUser = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
       var res;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
@@ -26695,11 +26678,11 @@ var MapServiceList = function MapServiceList(_ref) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_3___default().get("/api/users");
+              return axios__WEBPACK_IMPORTED_MODULE_3___default().get("/api/users/" + element.user_id);
 
             case 2:
               res = _context.sent;
-              setUsers(res.data);
+              setUser(res.data);
 
             case 4:
             case "end":
@@ -26709,13 +26692,14 @@ var MapServiceList = function MapServiceList(_ref) {
       }, _callee);
     }));
 
-    return function fetchUsers() {
+    return function fetchUser() {
       return _ref2.apply(this, arguments);
     };
   }();
 
+  console.log(element);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    fetchUsers();
+    fetchUser();
   }, []);
   var date = new Date(element.created_at);
   date = date.toISOString().slice(0, 10);
@@ -26770,11 +26754,9 @@ var MapServiceList = function MapServiceList(_ref) {
             variant: "outlined",
             onClick: handleClick,
             children: "Contact Info"
-          }), selection && users.length ? users.map(function (user, user_id) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_2__["default"], {
-              element: user
-            }, user_id);
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {})]
+          }), selection && user && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            element: user
+          }, user.id)]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("hr", {})]
       })
     })
@@ -26833,17 +26815,17 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var MapTransportList = function MapTransportList(_ref) {
   var element = _ref.element;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
-      users = _useState2[0],
-      setUsers = _useState2[1];
+      user = _useState2[0],
+      setUser = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
       _useState4 = _slicedToArray(_useState3, 2),
       selection = _useState4[0],
       setSelection = _useState4[1];
 
-  var fetchUsers = /*#__PURE__*/function () {
+  var fetchUser = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
       var res;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
@@ -26851,11 +26833,11 @@ var MapTransportList = function MapTransportList(_ref) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_3___default().get("/api/users");
+              return axios__WEBPACK_IMPORTED_MODULE_3___default().get("/api/users/" + element.user_id);
 
             case 2:
               res = _context.sent;
-              setUsers(res.data);
+              setUser(res.data);
 
             case 4:
             case "end":
@@ -26865,16 +26847,15 @@ var MapTransportList = function MapTransportList(_ref) {
       }, _callee);
     }));
 
-    return function fetchUsers() {
+    return function fetchUser() {
       return _ref2.apply(this, arguments);
     };
   }();
 
+  console.log(element);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    fetchUsers();
+    fetchUser();
   }, []);
-  var date = new Date(element.created_at);
-  date = date.toISOString().slice(0, 10);
 
   var handleClick = function handleClick() {
     return setSelection(!selection);
@@ -26930,24 +26911,13 @@ var MapTransportList = function MapTransportList(_ref) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: element.status
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "offerslisted__listitem--dateadded",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
-              children: "Offer Created Date:"
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-            children: date
-          })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
           variant: "outlined",
           onClick: handleClick,
           children: "Contact Info"
-        }), selection && users.length ? users.map(function (user, user_id) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            element: user
-          }, user_id);
-        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {})]
+        }), selection && user && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          element: user
+        }, user.id)]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("hr", {})]
     })
   });
