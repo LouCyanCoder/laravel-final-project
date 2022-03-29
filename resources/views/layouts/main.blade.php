@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="totally-not-user-id" content="{{ \Auth::user() !== null ? \Auth::user()->id : 0 }}">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
     <title>Who cares ?</title>
 </head>
 <body>

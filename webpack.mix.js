@@ -49,7 +49,7 @@ mix
 // ADD ASSETS TO COMPILE HERE:
 mix.sass("resources/sass/app.scss", "public/css");
 mix.js("resources/js/reactapp.js", "public/js").react();
-mix.js('resources/js/index.js', 'public/js').react();
+// mix.js('resources/js/index.js', 'public/js');
 // mix.js("resources/js/components/Contact.js", "public/js").react();
 // mix.js("resources/js/app.js", "public/js");
 // mix.sass('resources/css/app.css', 'public/css');

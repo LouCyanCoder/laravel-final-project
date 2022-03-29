@@ -32,7 +32,7 @@ const Profile = () => {
         <div className='profile__list'>
               <List component="nav" aria-label="profile info">
                   <ListItem button>
-            <ListItemText primary="Address" secondary={ user. address } />
+            <ListItemText primary="Address" secondary={ user.address } />
                   </ListItem>
                   
                   <Divider />

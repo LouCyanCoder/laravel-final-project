@@ -1,7 +1,10 @@
 import React from "react";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const AccommodationList = ({ element }) => {
+
+    const navigate = useNavigate();
     return (
         <div>
             <div className="offerslisted__list">
@@ -22,7 +25,7 @@ const AccommodationList = ({ element }) => {
                     </div>
 
                     <div className="offerslisted__listitem--buttons">
-                        <Button variant="outlined"><a href="#">Edit</a></Button>
+                        <Button variant="outlined" href={"/accommodation/"+element.id+"/edit"}>Edit</Button>
                         <Button variant="contained" color="error"><a href="#">Delete</a></Button>
                     </div>
                 </article>

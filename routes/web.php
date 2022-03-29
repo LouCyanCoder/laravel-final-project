@@ -24,15 +24,15 @@ Route::get('/auth/login', function () {
     return view('login');
 });
 // accommodation
-Route::get('/forms/accommodationForm', function () {
+/* Route::get('/forms/accommodationForm', function () {
     return view('accommodation');
 });
-
+ */
 Route::get('/forms/foodForm', function() {
     return view('food');
 });
 
-Route::post('/accommodation/create', 'App\Http\Controllers\AccommodationController@create')->name('accommodation');
+//Route::post('/accommodation/create', 'App\Http\Controllers\AccommodationController@create')->name('accommodation');
 Route::get('/accommodation/create', 'App\Http\Controllers\AccommodationController@index')->name('accommodation');
 Route::post('/accommodation', 'App\Http\Controllers\AccommodationController@store')->name('accommodation');
 Route::get('/accommodation/{id}', 'App\Http\Controllers\AccommodationController@show');
@@ -85,33 +85,9 @@ Route::get('/user',function(){
 })->where('path', '.*'); */
 
 
-Route::prefix('your_path')->group(function () {
-    Route::get('/users', function () {
-        // Matches The "/api/your_path/users" URL
-    });
-    Route::post('/users', function () {
-        // Matches The "/api/your_path/users" URL
-    });
-    Route::put('/users', function () {
-        // Matches The "/api/your_path/users" URL
-    });
-    Route::delete('/users', function () {
-        // Matches The "/api/your_path/users" URL
-    });
-});
 
 Route::post('/users', 'Controller@create');
 
-
-Route::get('/your_path/users', function () {
-    // Matches The "/api/your_path/users" URL
-});
-Route::put('/your_path/users', function () {
-    // Matches The "/api/your_path/users" URL
-});
-Route::delete('/your_path/users', function () {
-    // Matches The "/api/your_path/users" URL
-});
 
 Route::get('/{path?}', function () {
     return view('components.index');
