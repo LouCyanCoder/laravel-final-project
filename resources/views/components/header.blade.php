@@ -14,12 +14,12 @@
                 <li><a href="./aboutus">About</a></li>                    
                 
             @auth
-                        
+                <li><a href="./dashboard">Dashboard</a></li>      
             <form action="{{ route('logout') }}" method="post">
                         
                 @csrf
                         
-                <li><button>Logout</button></li>
+                <li><button class="logout__button">Logout</button></li>
                         
             </form>
                 
