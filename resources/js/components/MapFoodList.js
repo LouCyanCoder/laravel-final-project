@@ -17,9 +17,6 @@ const MapFoodList = ({ element }) => {
         fetchUser();
     }, []);
 
-    let date = new Date(element.created_at);
-    date = date.toISOString().slice(0, 10);
-
     const handleClick = () => {
         return setSelection(!selection);
     };
@@ -50,7 +47,7 @@ const MapFoodList = ({ element }) => {
 
                     <div className="offerslisted__listitem--type">
                         <p>
-                            <strong>Day:</strong>
+                            <strong>Available Date:</strong>
                         </p>
                         <p>{element.day}</p>
                     </div>
@@ -60,13 +57,6 @@ const MapFoodList = ({ element }) => {
                             <strong>Status:</strong>
                         </p>
                         <p>{element.status}</p>
-                    </div>
-
-                    <div className="offerslisted__listitem--dateadded">
-                        <p>
-                            <strong>Offer Created Date:</strong>
-                        </p>
-                        <p>{date}</p>
                     </div>
 
                     <Button variant="outlined" onClick={handleClick}>

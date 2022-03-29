@@ -33,10 +33,11 @@ class ServiceController extends Controller
         $data = $request->all();
 
         $service->insert([
-             'user_id'       => Auth::user()->id,
+            'user_id'       => Auth::user()->id,
             'name'          => $data['name'],
             'description'   => $data['description'],
             'status'        => $data['status'],
+            'address'       => $data['address'],
         ]);
         
         
@@ -109,6 +110,7 @@ class ServiceController extends Controller
         $service->name          = $request->input('name');
         $service->description   = $request->input('description');
         $service->status        = $request->input('status');
+        $service->address       = $request->input('address');
         $food->user_id      = Auth::user()->id;
         $service->save();
 
