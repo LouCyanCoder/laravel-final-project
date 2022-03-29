@@ -1,9 +1,9 @@
 
     @include('components.header')
 
-    {{-- @if ($accommodation->id)
+    @if ($accommodation->id)
 
-        <h1>{{ $accommodation->user_id }} - edit accommodation</h1>
+        <h1>{{ $accommodation->user }} - edit accommodation</h1>
 
         <form action="{{ route('accommodation', $accommodation->id) }}" method="put">
             @method('PUT')
@@ -14,22 +14,22 @@
 
         <form action="{{ route('accommodation.store') }}" method="post">
 
-    @endif --}}
+    @endif
 
 
 
-    <form action="{{ route('accommodation') }}" method="post" class="offer_form">
+    {{-- <form action="{{ route('accommodation') }}" method="post" class="offer_form"> --}}
  
         @csrf
         
         <h2 class="form__heading">Fill your accommodation info</h2>
 
         <label for="area_address">Address: </label><br>
-        <input type="text" name="area_address" value="">
+        <input type="text" name="area_address" value="{{ old('area_address', $accommodation->area_address) }}">
         <br>
 
         <label for="max_person">Max persons: </label><br>
-        <input type="number" name="max_person" value="">
+        <input type="number" name="max_person" value="{{ old('max_person', $accommodation->max_person) }}">
         <br>
         <br>
 
@@ -55,17 +55,17 @@
         <br>
     
         <label for="description">Description of the offer</label><br>
-        <input type="text" name="description" value="">
+        <input type="text" name="description" value="  {{ old('description', $accommodation->description) }}">
         <br>
         <br>
 
         <label for="start_date">From: </label><br>
-        <input type="date" name="start_date" value="">
+        <input type="date" name="start_date" value="{{ old('start_date', $accommodation->start_date) }}">
         <br>
         <br>
 
         <label for="end_date">Until: </label><br>
-        <input type="date" name="end_date" value="">
+        <input type="date" name="end_date" value="{{ old('end_date', $accommodation->end_date) }}">
         <br>
         <br>
 
@@ -84,14 +84,14 @@
 
     @if(session()->has('success'))
     <div class="alert alert-success text-center">
-        {{ session()->get('success_message') }}
+         {{ session()->get('success_message') }}
         </div>
     @endif
 
     @include('components.footer')
     
-    {{-- {{ old('area_address', $accommodation->area_address) }}
-    {{ old('max_person', $accommodation->max_person) }}
-    {{ old('description', $accommodation->description) }}
-    {{ old('start_date', $accommodation->start_date) }}
-    {{ old('end_date', $accommodation->end_date) }} --}}
+    
+    
+  
+    
+    

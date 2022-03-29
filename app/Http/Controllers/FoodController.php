@@ -78,9 +78,8 @@ class FoodController extends Controller
     public function edit($id)
     {
         $food = Food::findOrFail($id);
-        
 
-        return view('food/form', compact('food'));
+        return view('forms/foodform', compact('food'));
     }
 
     public function update($id, Request $request)
