@@ -23965,10 +23965,16 @@ var AccommodationList = function AccommodationList(_ref) {
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
           variant: "outlined",
-          children: "Options"
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "#",
+            children: "Edit"
+          })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
           variant: "outlined",
-          children: "Details"
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "#",
+            children: "Delete"
+          })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("hr", {})]
       })
     })
@@ -24071,10 +24077,16 @@ var FoodList = function FoodList(_ref) {
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
           variant: "outlined",
-          children: "Options"
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "#",
+            children: "Edit"
+          })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
           variant: "outlined",
-          children: "Details"
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "#",
+            children: "Delete"
+          })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("hr", {})]
       })
     })
@@ -24562,10 +24574,16 @@ var ServiceList = function ServiceList(_ref) {
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
           variant: "outlined",
-          children: "Options"
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "#",
+            children: "Edit"
+          })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
           variant: "outlined",
-          children: "Details"
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "#",
+            children: "Delete"
+          })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("hr", {})]
       })
     })
@@ -24634,10 +24652,16 @@ var TransportList = function TransportList(_ref) {
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
           variant: "outlined",
-          children: "Options"
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "#",
+            children: "Edit"
+          })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
           variant: "outlined",
-          children: "Details"
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "#",
+            children: "Delete"
+          })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("hr", {})]
       })
     })
@@ -25718,17 +25742,20 @@ __webpack_require__.r(__webpack_exports__);
 var defaultMarker = new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().icon)({
   iconUrl: "/images/accomodation_marker.png",
   iconSize: [100, 100],
-  iconAnchor: [0, 0]
+  iconAnchor: [50, 100],
+  popupAnchor: [0, -80]
 });
 var defaultMarker2 = new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().icon)({
   iconUrl: "/images/service_marker.png",
   iconSize: [100, 100],
-  iconAnchor: [0, 0]
+  iconAnchor: [50, 100],
+  popupAnchor: [0, -80]
 });
 var defaultMarker3 = new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().icon)({
   iconUrl: "/images/food_marker.png",
   iconSize: [100, 100],
-  iconAnchor: [0, 0]
+  iconAnchor: [50, 100],
+  popupAnchor: [0, -80]
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (defaultMarker);
 

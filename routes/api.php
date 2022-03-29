@@ -2,6 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AccommodationController;
+use App\Http\Controllers\FoodController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TransportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +38,7 @@ Route::get('/transport','Api\TransportController@index');
 Route::get('/service','Api\ServiceController@index');
 
 Route::get('/users/{id}','Api\UserController@show');
+
+
 
 
