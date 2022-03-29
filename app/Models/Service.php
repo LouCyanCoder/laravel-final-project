@@ -21,5 +21,6 @@ class Service extends Model
         'name',
         'description',
         'status',
+        'address',
     ];
 }

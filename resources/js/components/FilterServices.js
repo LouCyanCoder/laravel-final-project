@@ -63,7 +63,6 @@ const FilterServices = ({ selection, setSelection }) => {
         });
     };
 
-    console.log(selection);
     return (
         <div>
             <Form className="nav_filter">

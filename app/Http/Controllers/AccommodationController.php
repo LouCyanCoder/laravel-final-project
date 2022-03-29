@@ -53,7 +53,7 @@ class AccommodationController extends Controller
 
         session()->flash('success_message', 'The accommodation was successfully saved!');
 
-        return redirect()->action('AccommodationController@index');
+        return redirect()->action('/dashboard');
     }
 
     public function show($id)
@@ -75,22 +75,9 @@ class AccommodationController extends Controller
     public function edit($id, Request $request)
     {
         $accommodation = Accommodation::findOrFail($id);
-       
-        $this->validateForm($request);
-        $accommodation->area_address   = $request->input('area_address');
-        $accommodation->type   = $request->input('type');
-        $accommodation->max_person   = $request->input('max_person');
-        $accommodation->pet_friendly   = $request->input('pet_friendly');
-        $accommodation->description   = $request->input('description');
-        $accommodation->start_date   = $request->input('start_date');
-        $accommodation->end_date   = $request->input('end_date');
-        $accommodation->status   = $request->input('status');
-
-        $accommodation->save();
-
         
-        session()->flash('success_message', 'The accommodation was successfully saved!');
-        return view('forms/accommodationform', compact('accommodation'));
+        
+        return view('forms/accommodationFormEdit', compact('accommodation'));
     }
 
     public function update($id, Request $request)
@@ -112,7 +99,7 @@ class AccommodationController extends Controller
 
         session()->flash('success_message', 'The accommodation was successfully updated!');
 
-        return redirect()->action('App\Http\Controllers\AccommodationController@show', ['id' => $accommodation->id]);
+        return redirect()->action('dashboard', ['id' => $accommodation->id]);
     }
     
     private function validateForm($request)

@@ -18,9 +18,6 @@ const MapTransportList = ({ element }) => {
         fetchUser();
     }, []);
 
-    let date = new Date(element.created_at);
-    date = date.toISOString().slice(0, 10);
-
     const handleClick = () => {
         return setSelection(!selection);
     };
@@ -62,13 +59,6 @@ const MapTransportList = ({ element }) => {
                             <strong>Status:</strong>
                         </p>
                         <p>{element.status}</p>
-                    </div>
-
-                    <div className="offerslisted__listitem--dateadded">
-                        <p>
-                            <strong>Offer Created Date:</strong>
-                        </p>
-                        <p>{date}</p>
                     </div>
 
                     <Button variant="outlined" onClick={handleClick}>
