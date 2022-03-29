@@ -33,7 +33,7 @@ Route::get('/transport','Api\TransportController@index');
 
 Route::get('/service','Api\ServiceController@index');
 
-Route::get('/users/{id}','Api\UserController@show');
-Route::get('/users/','Api\UserController@index');
+//Route::get('/users/{id}','Api\UserController@show');
+Route::get('/users/{user_id}','Api\UserController@index');
 
 
