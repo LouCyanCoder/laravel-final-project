@@ -2,7 +2,8 @@
 
 <header>
     <div class="header__logo">
-        <img src="../images/wc_logo_small_v2.png.png" class="header__logo--whocares"/>
+        <a href="http://localhost:3000/">
+        <img src="../images/wc_logo_small_v2.png.png" class="header__logo--whocares"/></a>
         <h2>Who Cares?</h2>
 
     </div>

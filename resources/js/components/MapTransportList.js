@@ -5,16 +5,17 @@ import ContactInfoList from "./ContactInfoList";
 import axios from "axios";
 
 const MapTransportList = ({ element }) => {
-    const [users, setUsers] = useState([]);
+    const [user, setUser] = useState(null);
     const [selection, setSelection] = useState(false);
 
-    const fetchUsers = async () => {
-        const res = await axios.get("/api/users");
-        setUsers(res.data);
+    const fetchUser = async () => {
+        const res = await axios.get("/api/users/" + element.user_id);
+        setUser(res.data);
     };
+    console.log(element);
 
     useEffect(() => {
-        fetchUsers();
+        fetchUser();
     }, []);
 
     let date = new Date(element.created_at);
@@ -30,42 +31,42 @@ const MapTransportList = ({ element }) => {
                 <article className="offerslisted__listitem--transport">
                     <div className="offerslisted__listitem--locationfrom">
                         <p>
-                            <strong>Location From:</strong>
+                            <strong>Location From: </strong>
                         </p>
                         <p>{element.location_from}</p>
                     </div>
 
                     <div className="offerslisted__listitem--destination">
                         <p>
-                            <strong>Destination:</strong>
+                            <strong>Destination: </strong>
                         </p>
                         <p>{element.destination}</p>
                     </div>
 
                     <div className="offerslisted__listitem--date">
                         <p>
-                            <strong>Transport Date:</strong>
+                            <strong>Transport Date: </strong>
                         </p>
                         <p>{element.date}</p>
                     </div>
 
                     <div className="offerslisted__listitem--maxperson">
                         <p>
-                            <strong>Max Person:</strong>
+                            <strong>Max Person: </strong>
                         </p>
                         <p>{element.max_person}</p>
                     </div>
 
                     <div className="offerslisted__listitem--status">
                         <p>
-                            <strong>Status:</strong>
+                            <strong>Status: </strong>
                         </p>
                         <p>{element.status}</p>
                     </div>
 
                     <div className="offerslisted__listitem--dateadded">
                         <p>
-                            <strong>Offer Created Date:</strong>
+                            <strong>Offer Created Date: </strong>
                         </p>
                         <p>{date}</p>
                     </div>
@@ -74,12 +75,8 @@ const MapTransportList = ({ element }) => {
                         Contact Info
                     </Button>
 
-                    {selection && users.length ? (
-                        users.map((user, user_id) => (
-                            <ContactInfoList element={user} key={user_id} />
-                        ))
-                    ) : (
-                        <p></p>
+                    {selection && user && (
+                        <ContactInfoList element={user} key={user.id} />
                     )}
                 </article>
                 <hr></hr>
