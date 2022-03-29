@@ -99,7 +99,7 @@ class AccommodationController extends Controller
 
         session()->flash('success_message', 'The accommodation was successfully updated!');
 
-        return redirect()->action('/dashboard', ['id' => $accommodation->id]);
+        return redirect()->action('dashboard', ['id' => $accommodation->id]);
     }
     
     private function validateForm($request)

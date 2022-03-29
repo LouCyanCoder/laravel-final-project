@@ -1,23 +1,13 @@
 
     @include('components.header')
 
-    {{-- @if ($accommodation->id) --}}
-
-        <h1>{{ $accommodation->user->name }} - edit accommodation</h1>
+   
+        <h1>{{ $accommodation->user }} - edit accommodation</h1>
 
         <form action="{{ route('accommodation', $accommodation->id) }}" method="put">
             @method('PUT')
 
-    {{-- @else
-
-        <h1>Create a new accommodation</h1>
-
-        <form action="{{ route('accommodation.store') }}" method="post">
-
-    @endif --}}
-
-
-
+    
     {{-- <form action="{{ route('accommodation') }}" method="post" class="offer_form"> --}}
  
         @csrf
