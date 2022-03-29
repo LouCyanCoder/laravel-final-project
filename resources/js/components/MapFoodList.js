@@ -4,16 +4,17 @@ import axios from "axios";
 import ContactInfoList from "./ContactInfoList";
 
 const MapFoodList = ({ element }) => {
-    const [users, setUsers] = useState([]);
+    const [user, setUser] = useState(null);
     const [selection, setSelection] = useState(false);
 
-    const fetchUsers = async () => {
-        const res = await axios.get("/api/users");
-        setUsers(res.data);
+    const fetchUser = async () => {
+        const res = await axios.get("/api/users/" + element.user_id);
+        setUser(res.data);
     };
+    console.log(element);
 
     useEffect(() => {
-        fetchUsers();
+        fetchUser();
     }, []);
 
     let date = new Date(element.created_at);
@@ -72,12 +73,8 @@ const MapFoodList = ({ element }) => {
                         Contact Info
                     </Button>
 
-                    {selection && users.length ? (
-                        users.map((user, user_id) => (
-                            <ContactInfoList element={user} key={user_id} />
-                        ))
-                    ) : (
-                        <p></p>
+                    {selection && user && (
+                        <ContactInfoList element={user} key={user.id} />
                     )}
                 </article>
                 <hr></hr>
