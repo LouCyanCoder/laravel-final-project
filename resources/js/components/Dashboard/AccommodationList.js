@@ -21,11 +21,10 @@ const AccommodationList = ({ element }) => {
                         <p>{element.created_at}</p>
                     </div>
 
-                    <div className="offerslisted__listitem--buttons">
-                        <Button variant="outlined"><a href="#">Edit</a></Button>
-                        <Button variant="contained" color="error"><a href="#">Delete</a></Button>
-                    </div>
-                   
+                    
+                    <Button variant="outlined" href={`/accommodation/${element.id}/edit`}>Edit</Button>
+                    <Button variant="outlined">Delete</Button>
+                    <hr></hr>
                 </article>
             </div>
         </div>
