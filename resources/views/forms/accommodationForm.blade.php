@@ -1,6 +1,22 @@
 
     @include('components.header')
 
+    {{-- @if ($accommodation->id)
+
+        <h1>{{ $accommodation->user_id }} - edit accommodation</h1>
+
+        <form action="{{ route('accommodation', $accommodation->id) }}" method="put">
+            @method('PUT')
+
+    @else
+
+        <h1>Create a new accommodationr</h1>
+
+        <form action="{{ route('accommodation.store') }}" method="post">
+
+    @endif --}}
+
+
 
     <form action="{{ route('accommodation') }}" method="post" class="offer_form">
  
@@ -63,8 +79,19 @@
         <br>
 
         <button type="submit" class="confirm">Confirm offer</button>
-
+        
     </form>
+
+    @if(session()->has('success'))
+    <div class="alert alert-success text-center">
+        {{ session()->get('success_message') }}
+        </div>
+    @endif
 
     @include('components.footer')
     
+    {{-- {{ old('area_address', $accommodation->area_address) }}
+    {{ old('max_person', $accommodation->max_person) }}
+    {{ old('description', $accommodation->description) }}
+    {{ old('start_date', $accommodation->start_date) }}
+    {{ old('end_date', $accommodation->end_date) }} --}}
