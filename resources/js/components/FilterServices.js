@@ -34,13 +34,6 @@ const FilterServices = ({ selection, setSelection }) => {
         fetchServices();
     }, []);
 
-    const handleAccommodation = (e) => {
-        const val = e.target.value;
-        if (val === setSelectedAccommodation) {
-        }
-        console.log(val);
-    };
-
     const handleChange = (e) => {
         if (e.target.name === "all") {
             if (selection.all) {
