@@ -22,8 +22,8 @@ const AccommodationList = ({ element }) => {
                     </div>
 
                     <div className="offerslisted__listitem--buttons">
-                        <Button variant="outlined">Update</Button>
-                        <Button variant="contained" color="error">Delete</Button>
+                        <Button variant="outlined"><a href="#">Edit</a></Button>
+                        <Button variant="contained" color="error"><a href="#">Delete</a></Button>
                     </div>
                    
                 </article>
