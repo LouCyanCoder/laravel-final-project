@@ -7,6 +7,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="totally-not-user-id" content="{{ \Auth::user() !== null ? \Auth::user()->id : 0 }}">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+     <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+    
     <title>Who cares ?</title>
 </head>
 <body>
@@ -27,6 +29,7 @@
 
 
         <script src="{{ mix('js/reactapp.js') }}"></script>
+        <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
 
         {{-- <script src="{{mix('js/Landing.js')}}"></script>
         <script src="{{mix('js/Features.js')}}"></script>
