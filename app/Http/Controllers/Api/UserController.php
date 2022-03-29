@@ -10,10 +10,10 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function show(Request $request, $id) {
+    public function index(Request $request) {
         // dd($id);
 
-        $user = User::findOrFail($id);
+        $user = User::get();
         return $user;
     }
 }

@@ -12,11 +12,16 @@ import axios from "axios";
 import AccommodationMarker from "./AccommodationMarker";
 import FoodMarker from "./FoodMarker";
 import ServiceMarker from "./ServiceMarker";
+import MapTransportList from "./MapTransportList";
+import MapAccommodationList from "./MapAccommodationList";
+import MapFoodList from "./MapFoodList";
+import MapServiceList from "./MapServiceList";
 
 function Map({ center, zoom }) {
     const [accommodations, setAccommodations] = useState([]);
     const [services, setServices] = useState([]);
     const [foods, setFoods] = useState([]);
+    const [transports, setTransports] = useState([]);
 
     const fetchAccommodations = async () => {
         const res = await axios.get("/api/accomodation");
@@ -26,7 +31,6 @@ function Map({ center, zoom }) {
     const fetchFood = async () => {
         const res = await axios.get("/api/food");
         setFoods(res.data);
-        console.log(res);
     };
 
     const fetchServices = async () => {
@@ -34,10 +38,16 @@ function Map({ center, zoom }) {
         setServices(res.data);
     };
 
+    const fetchTransport = async () => {
+        const res = await axios.get("/api/transport");
+        setTransports(res.data);
+    };
+
     useEffect(() => {
         fetchAccommodations();
         fetchFood();
         fetchServices();
+        fetchTransport();
     }, []);
 
     const [selection, setSelection] = useState({});
@@ -77,6 +87,50 @@ function Map({ center, zoom }) {
                         ))}
                 </MarkerClusterGroup>
             </MapContainer>
+
+            <div>
+                <h3>Accommodation</h3>
+                {accommodations.length ? (
+                    accommodations.map((accommodation, id) => (
+                        <MapAccommodationList
+                            key={id}
+                            element={accommodation}
+                        />
+                    ))
+                ) : (
+                    <p>Loading...</p>
+                )}
+            </div>
+            <div>
+                <h3>Food</h3>
+                {foods.length ? (
+                    foods.map((foods, id) => (
+                        <MapFoodList key={id} element={foods} />
+                    ))
+                ) : (
+                    <p>Loading...</p>
+                )}
+            </div>
+            <div>
+                <h3>Service</h3>
+                {services.length ? (
+                    services.map((services, id) => (
+                        <MapServiceList key={id} element={services} />
+                    ))
+                ) : (
+                    <p>Loading...</p>
+                )}
+            </div>
+            <div>
+                <h3>Transport</h3>
+                {transports.length ? (
+                    transports.map((transport, id) => (
+                        <MapTransportList key={id} element={transport} />
+                    ))
+                ) : (
+                    <p>Loading...</p>
+                )}
+            </div>
         </>
     );
 }
