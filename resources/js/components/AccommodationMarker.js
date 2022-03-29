@@ -10,41 +10,36 @@ import MarkerClusterGroup from "react-leaflet-markercluster";
 import FilterServices from "./FilterServices";
 import axios from "axios";
 
-
-
 const AccommodationMarker = ({ data }) => {
-
-    const [address, setAddress] = useState(null)
+    const [address, setAddress] = useState(null);
 
     const key = "AIzaSyAjX6oTLphVZDKXvWPAmzOiFRx6lEwK_Sw";
 
-
     const getAddress = async () => {
-        
         const options = {
             params: {
-                address: data.area_address, 
-                key
-            }
-        }
+                address: data.area_address,
+                key,
+            },
+        };
 
-        const res = await axios.get('https://maps.googleapis.com/maps/api/geocode/json', options)
-    
+        const res = await axios.get(
+            "https://maps.googleapis.com/maps/api/geocode/json",
+            options
+        );
+
         // console.log(address) // res.data.results.geometry.location
-        setAddress(res.data.results[0].geometry.location)
+        setAddress(res.data.results[0].geometry.location);
+    };
 
-    }
-
-    const { description, type, pet_friendly, max_person, status  } = data;
-    
+    const { description, type, pet_friendly, max_person, status } = data;
 
     useEffect(() => {
         if (data.area_address) {
-            getAddress()
+            getAddress();
         }
-    }, [data.area_address])
+    }, [data.area_address]);
 
-    
     if (address) {
         return (
             <Fragment>
@@ -54,7 +49,7 @@ const AccommodationMarker = ({ data }) => {
                 >
                     <Popup className="request-popup">
                         <div style={popupContent}>
-                        <div className="m-2" style={popupHead}>
+                            <div className="m-2" style={popupHead}>
                                 Accommodation
                             </div>
                             <img
@@ -63,28 +58,21 @@ const AccommodationMarker = ({ data }) => {
                                 height="150"
                             />
                             <div className="cardonthemap" style={popupText}>
-                                <strong>Description:</strong>{description}
-                                <br/>
-                                <strong>
-                                    Type:
-                                </strong>
-                                    {type}
-                                <br/>
-                                <strong>
-                                    Pet friendly:
-                                </strong>
-                                    {pet_friendly}
-                                <br/>
-                                <strong>
-                                    Max nr. of people:
-                                </strong>
-                                    {max_person}
-                                <br/>
-                                <strong>
-                                    Offer status:
-                                </strong>
-                                    {status}
-                                <br/>
+                                <strong>Description:</strong>
+                                {description}
+                                <br />
+                                <strong>Type:</strong>
+                                {type}
+                                <br />
+                                <strong>Pet friendly:</strong>
+                                {pet_friendly}
+                                <br />
+                                <strong>Max nr. of people:</strong>
+                                {max_person}
+                                <br />
+                                <strong>Offer status:</strong>
+                                {status}
+                                <br />
                             </div>
                             <div className="m-2" style={okText}>
                                 {/* Okay */}
@@ -95,9 +83,8 @@ const AccommodationMarker = ({ data }) => {
             </Fragment>
         );
     } else {
-        return <span>loading...</span>
+        return <span>loading...</span>;
     }
-
-}
+};
 
 export default AccommodationMarker;

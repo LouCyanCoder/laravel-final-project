@@ -1,8 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import { DateTime } from "luxon";
+import ContactInfoList from "./ContactInfoList";
+import axios from "axios";
 
-const TransportList = ({ element }) => {
+const MapTransportList = ({ element }) => {
+    const [users, setUsers] = useState([]);
+    const [selection, setSelection] = useState(false);
+
+    const fetchUsers = async () => {
+        const res = await axios.get("/api/users");
+        setUsers(res.data);
+    };
+
+    useEffect(() => {
+        fetchUsers();
+    }, []);
+
+    let date = new Date(element.created_at);
+    date = date.toISOString().slice(0, 10);
+
+    const handleClick = () => {
+        return setSelection(!selection);
+    };
+
     return (
         <div>
             <div className="offerslisted__list">
@@ -44,19 +65,27 @@ const TransportList = ({ element }) => {
 
                     <div className="offerslisted__listitem--dateadded">
                         <p>
-                            <strong>Offer Created Time:</strong>
+                            <strong>Offer Created Date:</strong>
                         </p>
-                        <p>{element.created_at}</p>
+                        <p>{date}</p>
                     </div>
 
-                    <div className="offerslisted__listitem--buttons">
-                        <Button variant="outlined"><a href="#">Edit</a></Button>
-                        <Button variant="contained" color="error"><a href="#">Delete</a></Button>
-                    </div>
+                    <Button variant="outlined" onClick={handleClick}>
+                        Contact Info
+                    </Button>
+
+                    {selection && users.length ? (
+                        users.map((user, user_id) => (
+                            <ContactInfoList element={user} key={user_id} />
+                        ))
+                    ) : (
+                        <p></p>
+                    )}
                 </article>
+                <hr></hr>
             </div>
         </div>
     );
 };
 
-export default TransportList;
+export default MapTransportList;

@@ -5,26 +5,31 @@ const ServiceList = ({ element }) => {
     return (
         <div>
             <div className="offerslisted__list">
-                <article className="offerslisted__listitem">
+                <article className="offerslisted__listitem--service">
                     <div className="offerslisted__listitem--type">
-                        <p>Service Name: {element.name}</p>
+                        <p><strong>Service Name:</strong></p>
+                        <p>{element.name}</p>
                     </div>
 
                     <div className="offerslisted__listitem--description">
-                        <p>Description: {element.description}</p>
+                        <p><strong>Description:</strong></p>
+                        <p>{element.description}</p>
                     </div>
 
                     <div className="offerslisted__listitem--status">
-                        <p>Status: {element.status}</p>
+                        <p><strong>Status:</strong></p>
+                        <p>{element.status}</p>
                     </div>
 
                     <div className="offerslisted__listitem--dateadded">
-                        <p>Offer Created Time{element.created_at}</p>
+                        <p><strong>Offer Created Time</strong></p>
+                        <p>{element.created_at}</p>
                     </div>
 
-                    <Button variant="outlined">Edit</Button>
-                    <Button variant="outlined">Delete</Button>
-                    <hr></hr>
+                    <div className="offerslisted__listitem--buttons">
+                        <Button variant="outlined"><a href="#">Edit</a></Button>
+                        <Button variant="contained" color="error"><a href="#">Delete</a></Button>
+                    </div>
                 </article>
             </div>
         </div>

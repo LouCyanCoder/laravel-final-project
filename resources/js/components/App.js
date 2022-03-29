@@ -14,7 +14,11 @@ const App = () => {
     const [user, setUser] = useState({});
 
     const fetchUser = async () => {
-        const response = await fetch("/api/user");
+        const response = await fetch("/api/user", {
+            headers: {
+                'Accept': 'application/json',
+            }
+        });
         const result = await response.json();
         result && setUser(result);
         // console.log(result);
