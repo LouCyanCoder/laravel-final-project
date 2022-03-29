@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@mui/material";
-import { DateTime } from "luxon";
-import ContactInfoList from "./ContactInfoList";
 import axios from "axios";
+import ContactInfoList from "./ContactInfoList";
 
-const MapTransportList = ({ element }) => {
+const MapFoodList = ({ element }) => {
     const [users, setUsers] = useState([]);
     const [selection, setSelection] = useState(false);
 
@@ -20,40 +19,39 @@ const MapTransportList = ({ element }) => {
     const handleClick = () => {
         return setSelection(!selection);
     };
-
     return (
         <div>
             <div className="offerslisted__list">
-                <article className="offerslisted__listitem--transport">
-                    <div className="offerslisted__listitem--locationfrom">
+                <article className="offerslisted__listitem--food">
+                    <div className="offerslisted__listitem--type">
                         <p>
-                            <strong>Location From:</strong>
+                            <strong>Food Name:</strong>
                         </p>
-                        <p>{element.location_from}</p>
+                        <p>{element.name}</p>
                     </div>
 
-                    <div className="offerslisted__listitem--destination">
+                    <div className="offerslisted__listitem--type">
                         <p>
-                            <strong>Destination:</strong>
+                            <strong>Address:</strong>
                         </p>
-                        <p>{element.destination}</p>
+                        <p>{element.address}</p>
                     </div>
 
-                    <div className="offerslisted__listitem--date">
+                    <div className="offerslisted__listitem--description">
                         <p>
-                            <strong>Transport Date:</strong>
+                            <strong>Description:</strong>
                         </p>
-                        <p>{element.date}</p>
+                        <p>{element.description}</p>
                     </div>
 
-                    <div className="offerslisted__listitem--maxperson">
+                    <div className="offerslisted__listitem--type">
                         <p>
-                            <strong>Max Person:</strong>
+                            <strong>Day:</strong>
                         </p>
-                        <p>{element.max_person}</p>
+                        <p>{element.day}</p>
                     </div>
 
-                    <div className="offerslisted__listitem--status">
+                    <div className="offerslisted__listitem--type">
                         <p>
                             <strong>Status:</strong>
                         </p>
@@ -84,4 +82,4 @@ const MapTransportList = ({ element }) => {
     );
 };
 
-export default MapTransportList;
+export default MapFoodList;
