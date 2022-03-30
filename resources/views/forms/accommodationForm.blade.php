@@ -24,11 +24,11 @@
         
         <h2 class="form__heading">Fill your accommodation info</h2>
 
-        <label for="area_address">Address: </label><br>
+        <label for="area_address">Address</label><br>
         <input type="text" name="area_address" value="">
         <br>
 
-        <label for="max_person">Max persons: </label><br>
+        <label for="max_person">Max persons</label><br>
         <input type="number" name="max_person" value="">
         <br>
         <br>
@@ -59,12 +59,12 @@
         <br>
         <br>
 
-        <label for="start_date">From: </label><br>
+        <label for="start_date">From</label><br>
         <input type="date" name="start_date" value="">
         <br>
         <br>
 
-        <label for="end_date">Until: </label><br>
+        <label for="end_date">Until</label><br>
         <input type="date" name="end_date" value="">
         <br>
         <br>

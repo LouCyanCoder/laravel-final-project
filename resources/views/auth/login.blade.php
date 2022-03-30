@@ -12,6 +12,7 @@
     <form action="{{ route('login') }}" method="post" class="offer_form">
 
         @csrf
+        <h2>Login</h2>
         
         <label for="">Email:</label><br>
         <input type="email" name="email" value="">

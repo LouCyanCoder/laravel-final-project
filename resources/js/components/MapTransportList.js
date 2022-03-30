@@ -4,6 +4,7 @@ import { DateTime } from "luxon";
 import ContactInfoList from "./ContactInfoList";
 import axios from "axios";
 
+
 const MapTransportList = ({ element }) => {
     const [user, setUser] = useState(null);
     const [selection, setSelection] = useState(false);
@@ -61,7 +62,7 @@ const MapTransportList = ({ element }) => {
                         <p>{element.status}</p>
                     </div>
 
-                    <Button variant="outlined" onClick={handleClick}>
+                    <Button className="button_under_map" variant="outlined" onClick={handleClick}>
                         Contact Info
                     </Button>
 

@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import axios from "axios";
 import ContactInfoList from "./ContactInfoList";
 
+
 const MapAccommodationList = ({ element }) => {
     const [user, setUser] = useState(null);
     const [selection, setSelection] = useState(false);
@@ -51,7 +52,7 @@ const MapAccommodationList = ({ element }) => {
                         <p>{element.end_date}</p>
                     </div>
 
-                    <Button variant="outlined" onClick={handleClick}>
+                    <Button className="button_under_map" variant="outlined" onClick={handleClick}>
                         Contact Info
                     </Button>
                     {selection && user && (
