@@ -15,6 +15,7 @@
 @import "offerslist";
 @import "maplist";
 
+
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
@@ -27,4 +28,6 @@ body {
     max-width: 80%;
     margin: auto;
     background-image: url("../images/background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }

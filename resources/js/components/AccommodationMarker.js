@@ -13,7 +13,7 @@ import axios from "axios";
 const AccommodationMarker = ({ data }) => {
     const [address, setAddress] = useState(null);
 
-    const key = "AIzaSyAjX6oTLphVZDKXvWPAmzOiFRx6lEwK_Sw";
+    const key = "AIzaSyBaq1a7MP5f7Tr6Ruj-IGT9-dGtZtK27G8";
 
     const getAddress = async () => {
         const options = {

@@ -23,7 +23,7 @@ const ServiceList = ({ element }) => {
 
                     <div className="offerslisted__listitem--dateadded">
                         <p><strong>Offer Created Time</strong></p>
-                        <p>{element.created_at}</p>
+                        <p>{(element.created_at.slice(0, 10))}</p>
                     </div>
 
                     <div className="offerslisted__listitem--buttons">

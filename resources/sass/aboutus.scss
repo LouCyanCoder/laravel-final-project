@@ -1,13 +1,61 @@
-.aboutUs {
+.aboutus {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     // border-top: 1px solid $mainColor;
     margin: 25px 0;
+    text-align: center;
+
+    h2{
+        font-size: 3em;
+        margin: 50px 0;
+    }
+    
 
     &__container {
         display: flex;
         flex-direction: column;
-        width: max-content;
+        justify-content: center;
+
+        p {
+            font-size: 1.4em;
+        }
+        
     }
+    &__groupphoto{
+        width:100%;
+        
+        margin: auto;
+
+        img{
+            width:60%;
+            margin-top: 50px;
+            object-fit: contain;
+        }
+    }
+
+    &__team {
+        display:flex;
+        margin:10px;
+        background-color: rgba($body-bg, 0.5);
+        border-radius: 100px;
+
+        h3 {
+            margin: 10px;
+        }
+
+        &--img{
+            width:200px;
+            margin-right: 15px;
+
+            img{
+                width:200px;
+                height: 200px;
+                object-fit: contain;
+                border-radius: 50%;
+            }
+        }
+    }
+
 }

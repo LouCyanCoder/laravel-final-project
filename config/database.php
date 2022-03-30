@@ -78,6 +78,26 @@ return [
             'sslmode' => 'prefer',
         ],
 
+        'remote' => [
+            'driver' => 'mysql',
+            'url' => env('REMOTE_DATABASE_URL'),
+            'host' => env('REMOTE_DB_HOST', '127.0.0.1'),
+            'port' => env('REMOTE_DB_PORT', '3306'),
+            'database' => env('REMOTE_DB_DATABASE', 'forge'),
+            'username' => env('REMOTE_DB_USERNAME', 'forge'),
+            'password' => env('REMOTE_DB_PASSWORD', ''),
+            'unix_socket' => env('REMOTE_DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'url' => env('DATABASE_URL'),
