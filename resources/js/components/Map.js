@@ -123,14 +123,18 @@ function Map({ center, zoom }) {
                         ))}
                 </MarkerClusterGroup>
             </MapContainer>
-            <div>
-                <p>Search Accommodation Available Between: </p>
+            <div className="offerslisted__container">
+                <p>
+                    <strong>Search Accommodation: </strong>
+                </p>
+                <strong>Available From:</strong>
                 <input
                     type="date"
                     name="dateFrom"
                     onChange={handleChangeSearch}
                     value={values.dateFrom}
                 />
+                <strong>Available To:</strong>
                 <input
                     type="date"
                     name="dateTo"
@@ -139,63 +143,65 @@ function Map({ center, zoom }) {
                 />
             </div>
 
-            <div>
-                <h3>Accommodation</h3>
-                {accommodations.length ? (
-                    accommodations
-                        .filter((element) =>
-                            values.dateFrom
-                                ? moment(element.start_date) <=
-                                  moment(values.dateFrom)
-                                : true
-                        )
-                        .filter((element) =>
-                            values.dateTo
-                                ? moment(element.end_date) >=
-                                  moment(values.dateTo)
-                                : true
-                        )
-                        .map((accommodation, id) => (
-                            <MapAccommodationList
-                                key={id}
-                                element={accommodation}
-                            />
-                        ))
-                ) : (
-                    <p>Loading...</p>
-                )}
-            </div>
+            <section className="offerslisted__container">
+                <div className="offerslisted__category">
+                    <h3>Accommodation</h3>
+                    {accommodations.length ? (
+                        accommodations
+                            .filter((element) =>
+                                values.dateFrom
+                                    ? moment(element.start_date) <=
+                                      moment(values.dateFrom)
+                                    : true
+                            )
+                            .filter((element) =>
+                                values.dateTo
+                                    ? moment(element.end_date) >=
+                                      moment(values.dateTo)
+                                    : true
+                            )
+                            .map((accommodation, id) => (
+                                <MapAccommodationList
+                                    key={id}
+                                    element={accommodation}
+                                />
+                            ))
+                    ) : (
+                        <p>Loading...</p>
+                    )}
+                </div>
 
-            <div>
-                <h3>Food</h3>
-                {foods.length ? (
-                    foods.map((foods, id) => (
-                        <MapFoodList key={id} element={foods} />
-                    ))
-                ) : (
-                    <p>Loading...</p>
-                )}
-            </div>
-            <div>
-                <h3>Service</h3>
-                {services.length ? (
-                    services.map((services, id) => (
-                        <MapServiceList key={id} element={services} />
-                    ))
-                ) : (
-                    <p>Loading...</p>
-                )}
-            </div>
-            <div>
-                <h3>Transport</h3>
-                {transports.length ? (
-                    transports.map((transport, id) => (
-                        <MapTransportList key={id} element={transport} />
-                    ))
-                ) : (
-                    <p>Loading...</p>
-                )}
-            </div>
+                <div className="offerslisted__category">
+                    <h3>Food</h3>
+                    {foods.length ? (
+                        foods.map((foods, id) => (
+                            <MapFoodList key={id} element={foods} />
+                        ))
+                    ) : (
+                        <p>Loading...</p>
+                    )}
+                </div>
+                <div className="offerslisted__category">
+                    <h3>Service</h3>
+                    {services.length ? (
+                        services.map((services, id) => (
+                            <MapServiceList key={id} element={services} />
+                        ))
+                    ) : (
+                        <p>Loading...</p>
+                    )}
+                </div>
+                <div className="offerslisted__category">
+                    <h3>Transport</h3>
+                    {transports.length ? (
+                        transports.map((transport, id) => (
+                            <MapTransportList key={id} element={transport} />
+                        ))
+                    ) : (
+                        <p>Loading...</p>
+                    )}
+                </div>
+            </section>
         </>
     );
 }

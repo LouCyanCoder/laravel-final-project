@@ -23973,30 +23973,40 @@ var ContactInfoList = function ContactInfoList(_ref) {
       className: "userslisted_list",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
         className: "userslisted_listitem",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           className: "userslisted_list--name",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Name: ", element.name]
-          })
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("hr", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              children: "Name:"
+            }), " ", element.name]
+          })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "userslisted_list--email",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["E-mail: ", element.email]
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              children: "E-mail:"
+            }), " ", element.email]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "userslisted_list--phone",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Phone Number: ", element.phone_number]
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              children: "Phone Number:"
+            }), " ", element.phone_number]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "userslisted_list--facebook",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Facebook: ", element.facebook_link]
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              children: "Facebook:"
+            }), " ", element.facebook_link]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "userslisted_list--telegram",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Telegram: ", element.telegram_link]
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              children: "Telegram:"
+            }), " ", element.telegram_link]
           })
         })]
       })
@@ -25728,62 +25738,76 @@ function Map(_ref) {
         })]
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
+      className: "offerslisted__container",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
-        children: "Search Accommodation Available Between: "
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("strong", {
+          children: "Search Accommodation: "
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("strong", {
+        children: "Available From:"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("input", {
         type: "date",
         name: "dateFrom",
         onChange: handleChangeSearch,
         value: values.dateFrom
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("strong", {
+        children: "Available To:"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("input", {
         type: "date",
         name: "dateTo",
         onChange: handleChangeSearch,
         value: values.dateTo
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("h3", {
-        children: "Accommodation"
-      }), accommodations.length ? accommodations.filter(function (element) {
-        return values.dateFrom ? moment__WEBPACK_IMPORTED_MODULE_17___default()(element.start_date) <= moment__WEBPACK_IMPORTED_MODULE_17___default()(values.dateFrom) : true;
-      }).filter(function (element) {
-        return values.dateTo ? moment__WEBPACK_IMPORTED_MODULE_17___default()(element.end_date) >= moment__WEBPACK_IMPORTED_MODULE_17___default()(values.dateTo) : true;
-      }).map(function (accommodation, id) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_MapAccommodationList__WEBPACK_IMPORTED_MODULE_14__["default"], {
-          element: accommodation
-        }, id);
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
-        children: "Loading..."
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("h3", {
-        children: "Food"
-      }), foods.length ? foods.map(function (foods, id) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_MapFoodList__WEBPACK_IMPORTED_MODULE_15__["default"], {
-          element: foods
-        }, id);
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
-        children: "Loading..."
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("h3", {
-        children: "Service"
-      }), services.length ? services.map(function (services, id) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_MapServiceList__WEBPACK_IMPORTED_MODULE_16__["default"], {
-          element: services
-        }, id);
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
-        children: "Loading..."
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("h3", {
-        children: "Transport"
-      }), transports.length ? transports.map(function (transport, id) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_MapTransportList__WEBPACK_IMPORTED_MODULE_13__["default"], {
-          element: transport
-        }, id);
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
-        children: "Loading..."
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("section", {
+      className: "offerslisted__container",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
+        className: "offerslisted__category",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("h3", {
+          children: "Accommodation"
+        }), accommodations.length ? accommodations.filter(function (element) {
+          return values.dateFrom ? moment__WEBPACK_IMPORTED_MODULE_17___default()(element.start_date) <= moment__WEBPACK_IMPORTED_MODULE_17___default()(values.dateFrom) : true;
+        }).filter(function (element) {
+          return values.dateTo ? moment__WEBPACK_IMPORTED_MODULE_17___default()(element.end_date) >= moment__WEBPACK_IMPORTED_MODULE_17___default()(values.dateTo) : true;
+        }).map(function (accommodation, id) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_MapAccommodationList__WEBPACK_IMPORTED_MODULE_14__["default"], {
+            element: accommodation
+          }, id);
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
+          children: "Loading..."
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
+        className: "offerslisted__category",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("h3", {
+          children: "Food"
+        }), foods.length ? foods.map(function (foods, id) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_MapFoodList__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            element: foods
+          }, id);
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
+          children: "Loading..."
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
+        className: "offerslisted__category",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("h3", {
+          children: "Service"
+        }), services.length ? services.map(function (services, id) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_MapServiceList__WEBPACK_IMPORTED_MODULE_16__["default"], {
+            element: services
+          }, id);
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
+          children: "Loading..."
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
+        className: "offerslisted__category",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("h3", {
+          children: "Transport"
+        }), transports.length ? transports.map(function (transport, id) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_MapTransportList__WEBPACK_IMPORTED_MODULE_13__["default"], {
+            element: transport
+          }, id);
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
+          children: "Loading..."
+        })]
       })]
     })]
   });
@@ -25832,19 +25856,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var MapAccommodationList = function MapAccommodationList(_ref) {
   var element = _ref.element;
 
-  /* const [user, setUser] = useState(null); */
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       selection = _useState2[0],
       setSelection = _useState2[1];
-  /* const fetchUser = async () => {
-      const res = await axios.get("/api/users/" + element.user_id);
-      setUser(res.data);
-  };
-    useEffect(() => {
-      fetchUser();
-  }, []); */
-
 
   var handleClick = function handleClick() {
     return setSelection(!selection);
@@ -25892,8 +25907,13 @@ var MapAccommodationList = function MapAccommodationList(_ref) {
             children: element.end_date
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          className: "button_under_map",
-          variant: "outlined",
+          style: {
+            borderRadius: 35,
+            backgroundColor: "#21b6ae",
+            padding: "18px 36px",
+            fontSize: "18px"
+          },
+          variant: "contained",
           onClick: handleClick,
           children: "Contact Info"
         }), selection && element.user && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -26046,9 +26066,14 @@ var MapFoodList = function MapFoodList(_ref) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
             children: element.status
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          className: "button_under_map",
-          variant: "outlined",
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          style: {
+            borderRadius: 35,
+            backgroundColor: "#21b6ae",
+            padding: "18px 36px",
+            fontSize: "18px"
+          },
+          variant: "contained",
           onClick: handleClick,
           children: "Contact Info"
         }), selection && element.user && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -26145,9 +26170,14 @@ var MapServiceList = function MapServiceList(_ref) {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               children: element.status
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-            className: "button_under_map",
-            variant: "outlined",
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+            style: {
+              borderRadius: 35,
+              backgroundColor: "#21b6ae",
+              padding: "18px 36px",
+              fontSize: "18px"
+            },
+            variant: "contained",
             onClick: handleClick,
             children: "Contact Info"
           }), selection && element.user && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -26262,9 +26292,14 @@ var MapTransportList = function MapTransportList(_ref) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
             children: element.status
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          className: "button_under_map",
-          variant: "outlined",
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          style: {
+            borderRadius: 35,
+            backgroundColor: "#21b6ae",
+            padding: "18px 36px",
+            fontSize: "18px"
+          },
+          variant: "contained",
           onClick: handleClick,
           children: "Contact Info"
         }), selection && element.user && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_1__["default"], {

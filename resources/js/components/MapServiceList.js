@@ -35,10 +35,15 @@ const MapServiceList = ({ element }) => {
                             </p>
                             <p>{element.status}</p>
                         </div>
-
+                        <br></br>
                         <Button
-                            className="button_under_map"
-                            variant="outlined"
+                            style={{
+                                borderRadius: 35,
+                                backgroundColor: "#21b6ae",
+                                padding: "18px 36px",
+                                fontSize: "18px",
+                            }}
+                            variant="contained"
                             onClick={handleClick}
                         >
                             Contact Info

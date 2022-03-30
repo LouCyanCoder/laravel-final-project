@@ -4,17 +4,7 @@ import axios from "axios";
 import ContactInfoList from "./ContactInfoList";
 
 const MapAccommodationList = ({ element }) => {
-    /* const [user, setUser] = useState(null); */
     const [selection, setSelection] = useState(false);
-
-    /* const fetchUser = async () => {
-        const res = await axios.get("/api/users/" + element.user_id);
-        setUser(res.data);
-    };
-
-    useEffect(() => {
-        fetchUser();
-    }, []); */
 
     const handleClick = () => {
         return setSelection(!selection);
@@ -52,8 +42,13 @@ const MapAccommodationList = ({ element }) => {
                     </div>
 
                     <Button
-                        className="button_under_map"
-                        variant="outlined"
+                        style={{
+                            borderRadius: 35,
+                            backgroundColor: "#21b6ae",
+                            padding: "18px 36px",
+                            fontSize: "18px",
+                        }}
+                        variant="contained"
                         onClick={handleClick}
                     >
                         Contact Info
