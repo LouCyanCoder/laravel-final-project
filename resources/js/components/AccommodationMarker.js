@@ -32,7 +32,7 @@ const AccommodationMarker = ({ data }) => {
         setAddress(res.data.results[0].geometry.location);
     };
 
-    const { description, type, pet_friendly, max_person, status } = data;
+    const { user, description, type, pet_friendly, max_person, status } = data;
 
     useEffect(() => {
         if (data.area_address) {
@@ -58,20 +58,30 @@ const AccommodationMarker = ({ data }) => {
                                 height="150"
                             />
                             <div className="cardonthemap" style={popupText}>
-                                <strong>Description:</strong>
+                                <br/>
+                                <strong>Accomodation Owner's Name: </strong>
+                                {user.name}
+                                <br/>
+                                <strong>Address: </strong>
+                                {user.address}
+                                <br/>
+                                <strong>Description: </strong>
                                 {description}
                                 <br />
-                                <strong>Type:</strong>
+                                <strong>Type: </strong>
                                 {type}
                                 <br />
-                                <strong>Pet friendly:</strong>
+                                <strong>Pet friendly: </strong>
                                 {pet_friendly}
                                 <br />
-                                <strong>Max nr. of people:</strong>
+                                <strong>Max number of people: </strong>
                                 {max_person}
                                 <br />
-                                <strong>Offer status:</strong>
+                                <strong>Offer status: </strong>
                                 {status}
+                                <br />
+                                <strong>Phone number </strong>
+                                {user.phone_number}
                                 <br />
                             </div>
                             <div className="m-2" style={okText}>

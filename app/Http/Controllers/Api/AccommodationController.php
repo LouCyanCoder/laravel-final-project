@@ -10,7 +10,7 @@ class AccommodationController extends Controller
 {
     public function index(Request $request)
     {
-        $accommodation = Accommodation::get();
-        return $accommodation;
+        $accommodations = Accommodation::with('user')->get();
+        return $accommodations;
     }
 }

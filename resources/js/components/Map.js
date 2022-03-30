@@ -22,6 +22,7 @@ function Map({ center, zoom }) {
     const [services, setServices] = useState([]);
     const [foods, setFoods] = useState([]);
     const [transports, setTransports] = useState([]);
+    const [users, setUsers] = useState([]);
 
     const fetchAccommodations = async () => {
         const res = await axios.get("/api/accomodation");
@@ -43,11 +44,17 @@ function Map({ center, zoom }) {
         setTransports(res.data);
     };
 
+    const fetchUsers = async () => {
+      const res = await axios.get("/api/users");
+      setUsers(res.data);
+  };
+
     useEffect(() => {
         fetchAccommodations();
         fetchFood();
         fetchServices();
         fetchTransport();
+        fetchUsers()
     }, []);
 
     const [selection, setSelection] = useState({});
@@ -87,7 +94,12 @@ function Map({ center, zoom }) {
                         ))}
                 </MarkerClusterGroup>
             </MapContainer>
-
+            <div>
+              <input />
+              <input />
+              <input />
+              <input />
+            </div>
             <div>
                 <h3>Accommodation</h3>
                 {accommodations.length ? (
