@@ -10,44 +10,38 @@ import MarkerClusterGroup from "react-leaflet-markercluster";
 import FilterServices from "./FilterServices";
 import axios from "axios";
 
-
-
 const FoodMarker = ({ data }) => {
-
-    const [foodAddress, setFoodAddress] = useState(null)
+    const [foodAddress, setFoodAddress] = useState(null);
 
     const key = "AIzaSyAjX6oTLphVZDKXvWPAmzOiFRx6lEwK_Sw";
 
-    console.log(data)
-
     const getFoodAddress = async () => {
-        
         const options = {
             params: {
-                address: data.address, 
-                key
-            }
-        }
+                address: data.address,
+                key,
+            },
+        };
 
-        const res = await axios.get('https://maps.googleapis.com/maps/api/geocode/json', options)
-    
+        const res = await axios.get(
+            "https://maps.googleapis.com/maps/api/geocode/json",
+            options
+        );
+
         // console.log(address) // res.data.results.geometry.location
-        console.log(res.data.results[0].geometry.location)
-        setFoodAddress(res.data.results[0].geometry.location)
+        // console.log(res.data.results[0].geometry.location);
+        setFoodAddress(res.data.results[0].geometry.location);
+    };
 
-    }
-
-    const { address, name, description, day, status  } = data;
-    
+    const { address, name, description, day, status } = data;
 
     useEffect(() => {
-        console.log(data.address)
+        // console.log(data.address);
         if (data.address) {
-            getFoodAddress()
+            getFoodAddress();
         }
-    }, [data.address])
+    }, [data.address]);
 
-    
     if (foodAddress) {
         return (
             <Fragment>
@@ -57,7 +51,7 @@ const FoodMarker = ({ data }) => {
                 >
                     <Popup className="request-popup">
                         <div style={popupContent}>
-                        <div className="m-2" style={popupHead}>
+                            <div className="m-2" style={popupHead}>
                                 Food offer
                             </div>
                             <img
@@ -66,18 +60,24 @@ const FoodMarker = ({ data }) => {
                                 height="150"
                             />
                             <div className="cardonthemap" style={popupText}>
-                                <strong>Address: </strong>{address}
-                                <br/>
-                                <strong>Establishment: </strong>{name}
-                                <br/>
-                                <strong>Description: </strong>{description}
-                                <br/>
-                                <strong>Date: </strong>{(day.slice(0, 10))}
-                                <br/>
-                                <strong>Offer status: </strong>{status}
-                                <br/>
-                                <strong>dsadasdasdas: </strong>{status}
-                                <br/>
+                                <strong>Address: </strong>
+                                {address}
+                                <br />
+                                <strong>Establishment: </strong>
+                                {name}
+                                <br />
+                                <strong>Description: </strong>
+                                {description}
+                                <br />
+                                <strong>Date: </strong>
+                                {day.slice(0, 10)}
+                                <br />
+                                <strong>Offer status: </strong>
+                                {status}
+                                <br />
+                                <strong>dsadasdasdas: </strong>
+                                {status}
+                                <br />
                             </div>
                             <div className="m-2" style={okText}>
                                 {/* Okay */}
@@ -88,9 +88,8 @@ const FoodMarker = ({ data }) => {
             </Fragment>
         );
     } else {
-        return <span>loading...</span>
+        return <span>loading...</span>;
     }
-
-}
+};
 
 export default FoodMarker;

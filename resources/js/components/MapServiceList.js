@@ -5,18 +5,7 @@ import ContactInfoList from "./ContactInfoList";
 import axios from "axios";
 
 const MapServiceList = ({ element }) => {
-    // const [user, setUser] = useState(null);
     const [selection, setSelection] = useState(false);
-
-    // const fetchUser = async () => {
-    //     const res = await axios.get("/api/users/" + element.user_id);
-    //     setUser(res.data);
-    // };
-    console.log(element);
-
-    // useEffect(() => {
-    //     fetchUser();
-    // }, []);
 
     const handleClick = () => {
         return setSelection(!selection);

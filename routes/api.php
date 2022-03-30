@@ -6,6 +6,7 @@ use App\Http\Controllers\AccommodationController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TransportController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,5 +41,7 @@ Route::get('/service','Api\ServiceController@index');
 
 //Route::get('/users/{id}','Api\UserController@show');
 Route::get('/users/{user_id}','Api\UserController@index');
+
+Route::get('/search','Api\SearchController@index');
 
 

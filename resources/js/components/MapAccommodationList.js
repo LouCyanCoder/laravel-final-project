@@ -6,7 +6,7 @@ import ContactInfoList from "./ContactInfoList";
 const MapAccommodationList = ({ element }) => {
     /* const [user, setUser] = useState(null); */
     const [selection, setSelection] = useState(false);
-    console.log(element);
+
     /* const fetchUser = async () => {
         const res = await axios.get("/api/users/" + element.user_id);
         setUser(res.data);
