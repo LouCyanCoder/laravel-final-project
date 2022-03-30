@@ -11640,6 +11640,7 @@ textarea.form-control-lg {
 body {
   max-width: 80%;
   margin: auto;
+  background-image: url("../images/background.jpg");
 }
 
 /*# sourceMappingURL=app.css.map*/
