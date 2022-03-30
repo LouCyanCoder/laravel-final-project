@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import axios from "axios";
 import ContactInfoList from "./ContactInfoList";
 
+
 const MapFoodList = ({ element }) => {
     const [user, setUser] = useState(null);
     const [selection, setSelection] = useState(false);
@@ -59,7 +60,7 @@ const MapFoodList = ({ element }) => {
                         <p>{element.status}</p>
                     </div>
 
-                    <Button variant="outlined" onClick={handleClick}>
+                    <Button className="button_under_map" variant="outlined" onClick={handleClick}>
                         Contact Info
                     </Button>
 
