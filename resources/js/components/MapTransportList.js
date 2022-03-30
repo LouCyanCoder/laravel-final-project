@@ -28,35 +28,35 @@ const MapTransportList = ({ element }) => {
                 <article className="offerslisted__listitem--transport">
                     <div className="offerslisted__listitem--locationfrom">
                         <p>
-                            <strong>Location From:</strong>
+                            <strong>Location From: </strong>
                         </p>
                         <p>{element.location_from}</p>
                     </div>
 
                     <div className="offerslisted__listitem--destination">
                         <p>
-                            <strong>Destination:</strong>
+                            <strong>Destination: </strong>
                         </p>
                         <p>{element.destination}</p>
                     </div>
 
                     <div className="offerslisted__listitem--date">
                         <p>
-                            <strong>Transport Date:</strong>
+                            <strong>Transport Date: </strong>
                         </p>
                         <p>{element.date}</p>
                     </div>
 
                     <div className="offerslisted__listitem--maxperson">
                         <p>
-                            <strong>Max Person:</strong>
+                            <strong>Max Person: </strong>
                         </p>
                         <p>{element.max_person}</p>
                     </div>
 
                     <div className="offerslisted__listitem--status">
                         <p>
-                            <strong>Status:</strong>
+                            <strong>Status: </strong>
                         </p>
                         <p>{element.status}</p>
                     </div>

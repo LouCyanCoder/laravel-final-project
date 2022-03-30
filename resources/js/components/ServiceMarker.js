@@ -71,9 +71,6 @@ const ServiceMarker = ({ data }) => {
                                 <strong>Description: </strong>
                                 {description}
                                 <br />
-                                <strong>Date: </strong>
-                                {day}
-                                <br />
                                 <strong>Offer status: </strong>
                                 {status}
                                 <br />
