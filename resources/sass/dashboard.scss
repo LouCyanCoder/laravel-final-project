@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
     h2 {
         margin: 40px;
@@ -52,7 +53,8 @@
         border: 2px solid $mainColor;
         border-radius: 10px;
         margin: 20px 0;
-
+        background-color: rgba($body-bg, 0.5);
+        
         img {
             width: 130px;
             padding-bottom: 15px;

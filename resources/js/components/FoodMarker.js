@@ -16,7 +16,7 @@ const FoodMarker = ({ data }) => {
 
     const [foodAddress, setFoodAddress] = useState(null)
 
-    const key = "AIzaSyAjX6oTLphVZDKXvWPAmzOiFRx6lEwK_Sw";
+    const key = "AIzaSyB0Jg0YDZr1THlz8_kauyQjj58J7R88lwo";
 
     console.log(data)
 

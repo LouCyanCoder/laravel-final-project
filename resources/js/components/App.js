@@ -48,7 +48,7 @@ const App = () => {
                         />
                     </Routes>
                 </div>
-                <Features />
+                
             </UserContext.Provider>
         </Router>
     );

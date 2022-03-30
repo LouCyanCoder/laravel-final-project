@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 25px 0;
+    margin: 100px 0;
     width: 100%;
 
     img {
@@ -21,9 +21,10 @@
     &_cards > div {
         display: flex;
         justify-content: flex-start;
+        background-color: rgba($body-bg, 0.5);
         align-items: center;
         flex-direction: column;
-        border-radius: 0.5rem;
+        border-radius: 0.7rem;
         box-shadow: 0.05rem 0.2rem 0.4rem -0.03rem rgba(0, 0, 0, 0.45);
         width: 25%;
     }

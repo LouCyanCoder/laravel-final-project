@@ -49,8 +49,9 @@ const OffersListed = () => {
 
     return (
         <section className="offerslisted__container">
-            <h2>Posted Offers</h2>
-            <div>
+            <h2 className="offerslisted__heading">Posted Offers</h2>
+
+            <div className="offerslisted__category">
                 <h3>Accommodation</h3>
                 {selected_accommodation.length ? (
                     <MapComponents
@@ -62,7 +63,7 @@ const OffersListed = () => {
                 )}
             </div>
 
-            <div>
+            <div className="offerslisted__category">
                 <h3>Transport</h3>
                 {selected_transport.length ? (
                     selected_transport.map((transport, id) => (
@@ -73,7 +74,7 @@ const OffersListed = () => {
                 )}
             </div>
 
-            <div>
+            <div className="offerslisted__category">
                 <h3>Food</h3>
                 {selected_food.length ? (
                     selected_food.map((food, id) => (
@@ -84,8 +85,8 @@ const OffersListed = () => {
                 )}
             </div>
 
-            <div>
-                <h3>Service</h3>
+            <div className="offerslisted__category">
+                <h3>Services</h3>
                 {selected_service.length ? (
                     selected_service.map((service, id) => (
                         <ServiceList key={id} element={service} />
