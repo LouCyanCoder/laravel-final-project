@@ -12,7 +12,7 @@ class AccommodationController extends Controller
     {
         // dd('index');
         $searchString = $request->input('search');
-        $accommodations = Accommodation::where('description', 'like', '%' . $searchString . '%')->get();
+        $accommodations = Accommodation::where('description', 'like', '%' . $searchString . '%')->with('user')->get();
 
         return view('forms.accommodationForm', compact('accommodations'));
     }
