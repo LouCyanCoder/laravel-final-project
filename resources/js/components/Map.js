@@ -16,6 +16,7 @@ import MapTransportList from "./MapTransportList";
 import MapAccommodationList from "./MapAccommodationList";
 import MapFoodList from "./MapFoodList";
 import MapServiceList from "./MapServiceList";
+import moment from "moment";
 
 function Map({ center, zoom }) {
     const [accommodations, setAccommodations] = useState([]);
@@ -23,10 +24,27 @@ function Map({ center, zoom }) {
     const [foods, setFoods] = useState([]);
     const [transports, setTransports] = useState([]);
     const [user, setUser] = useState(null);
+    const [searchResult, setSearchResults] = useState([]);
+    const [values, setValues] = useState({
+        from: {},
+        to: {},
+        dateFrom: "",
+        dateTo: "",
+    });
 
     const fetchAccommodations = async () => {
         const res = await axios.get("/api/accomodation");
         setAccommodations(res.data);
+    };
+
+    const fetchSearch = async () => {
+        const res = await axios.get("/api/search", {
+            from: values.start_date,
+            to: values.end_date,
+            dateFrom: values.dateFrom,
+            dateTo: values.dateTo,
+        });
+        setSearchResults(res.data);
     };
 
     const fetchFood = async () => {
@@ -46,7 +64,7 @@ function Map({ center, zoom }) {
 
     // models and api/controllers connected with user_id
     const fetchUser = async () => {
-        const res = await axios.get("/api/users/" + element.user_id);
+        const res = await axios.get("/api/users/");
         setUser(res.data);
     };
 
@@ -56,10 +74,20 @@ function Map({ center, zoom }) {
         fetchServices();
         fetchTransport();
         fetchUser();
+        fetchSearch();
     }, []);
 
-    const [selection, setSelection] = useState({});
+    const handleChangeSearch = (event) => {
+        setValues((previous_values) => {
+            return {
+                ...previous_values,
+                [event.target.name]: event.target.value,
+            };
+        });
+    };
 
+    const [selection, setSelection] = useState({});
+    // console.log("heyyy", values.dateFrom);
     return (
         <>
             <FilterServices selection={selection} setSelection={setSelection} />
@@ -96,24 +124,48 @@ function Map({ center, zoom }) {
                 </MarkerClusterGroup>
             </MapContainer>
             <div>
-                <input />
-                <input />
-                <input />
-                <input />
+                <p>Search Accommodation Available Between: </p>
+                <input
+                    type="date"
+                    name="dateFrom"
+                    onChange={handleChangeSearch}
+                    value={values.dateFrom}
+                />
+                <input
+                    type="date"
+                    name="dateTo"
+                    onChange={handleChangeSearch}
+                    value={values.dateTo}
+                />
             </div>
+
             <div>
                 <h3>Accommodation</h3>
                 {accommodations.length ? (
-                    accommodations.map((accommodation, id) => (
-                        <MapAccommodationList
-                            key={id}
-                            element={accommodation}
-                        />
-                    ))
+                    accommodations
+                        .filter((element) =>
+                            values.dateFrom
+                                ? moment(element.start_date) <=
+                                  moment(values.dateFrom)
+                                : true
+                        )
+                        .filter((element) =>
+                            values.dateTo
+                                ? moment(element.end_date) >=
+                                  moment(values.dateTo)
+                                : true
+                        )
+                        .map((accommodation, id) => (
+                            <MapAccommodationList
+                                key={id}
+                                element={accommodation}
+                            />
+                        ))
                 ) : (
                     <p>Loading...</p>
                 )}
             </div>
+
             <div>
                 <h3>Food</h3>
                 {foods.length ? (
