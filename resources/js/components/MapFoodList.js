@@ -4,18 +4,17 @@ import axios from "axios";
 import ContactInfoList from "./ContactInfoList";
 
 const MapFoodList = ({ element }) => {
-    const [user, setUser] = useState(null);
+    // const [user, setUser] = useState(null);
     const [selection, setSelection] = useState(false);
 
-    const fetchUser = async () => {
-        const res = await axios.get("/api/users/" + element.user_id);
-        setUser(res.data);
-    };
-    console.log(element);
+    // const fetchUser = async () => {
+    //     const res = await axios.get("/api/users/" + element.user_id);
+    //     setUser(res.data);
+    // };
 
-    useEffect(() => {
-        fetchUser();
-    }, []);
+    // useEffect(() => {
+    //     fetchUser();
+    // }, []);
 
     const handleClick = () => {
         return setSelection(!selection);
@@ -59,12 +58,19 @@ const MapFoodList = ({ element }) => {
                         <p>{element.status}</p>
                     </div>
 
-                    <Button variant="outlined" onClick={handleClick}>
+                    <Button
+                        className="button_under_map"
+                        variant="outlined"
+                        onClick={handleClick}
+                    >
                         Contact Info
                     </Button>
 
-                    {selection && user && (
-                        <ContactInfoList element={user} key={user.id} />
+                    {selection && element.user && (
+                        <ContactInfoList
+                            element={element.user}
+                            key={element.user.id}
+                        />
                     )}
                 </article>
                 <hr></hr>

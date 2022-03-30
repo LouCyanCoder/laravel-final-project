@@ -4,17 +4,17 @@ import axios from "axios";
 import ContactInfoList from "./ContactInfoList";
 
 const MapAccommodationList = ({ element }) => {
-    const [user, setUser] = useState(null);
+    /* const [user, setUser] = useState(null); */
     const [selection, setSelection] = useState(false);
-
-    const fetchUser = async () => {
+    console.log(element);
+    /* const fetchUser = async () => {
         const res = await axios.get("/api/users/" + element.user_id);
         setUser(res.data);
     };
 
     useEffect(() => {
         fetchUser();
-    }, []);
+    }, []); */
 
     const handleClick = () => {
         return setSelection(!selection);
@@ -51,19 +51,19 @@ const MapAccommodationList = ({ element }) => {
                         <p>{element.end_date}</p>
                     </div>
 
-                    <Button variant="outlined" onClick={handleClick}>
+                    <Button
+                        className="button_under_map"
+                        variant="outlined"
+                        onClick={handleClick}
+                    >
                         Contact Info
                     </Button>
-                    {selection && user && (
-                        <ContactInfoList element={user} key={user.id} />
+                    {selection && element.user && (
+                        <ContactInfoList
+                            element={element.user}
+                            key={element.user.id}
+                        />
                     )}
-                    {/* {selection && users.length ? (
-                        users.map((user, user_id) => (
-                            <ContactInfoList element={user} key={user_id} />
-                        ))
-                    ) : (
-                        <p></p>
-                    )} */}
                 </article>
                 <hr></hr>
             </div>

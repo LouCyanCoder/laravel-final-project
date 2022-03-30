@@ -1,31 +1,64 @@
-.offerslisted__listitem {
-    &--food {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
-        width: 100%;
-        justify-content: center;
+.offerslisted {
+    &__container{
+
+        background-color: rgba($body-bg, 0.5);
+        border: 2px solid $mainColor;
+        border-radius: 10px;
+        padding: 2.5em;
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: $mainColor
+        }
+
+        h2 {
+            margin-bottom:30px;
+            text-align: center;
+            text-decoration: underline;
+            font-size: 3em;
+        }
     }
-    &--accommodation {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        width: 100%;
-        justify-content: center;
+    
+    &__category{
+        h3 {
+            text-align: center;
+            margin:30px 0;
+            border-bottom: solid 2px $mainColor;
+            font-size: 2em;
+        }
     }
-    &--service {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        width: 100%;
-        justify-content: center;
-    }
-    &--transport {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
-        width: 100%;
-        justify-content: center;
-    }
-    &--buttons {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+
+    &__listitem {
+
+        &--food {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+            width: 100%;
+            justify-content: center;
+        }
+        &--accommodation {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            width: 100%;
+            justify-content: center;
+        }
+        &--service {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            width: 100%;
+            justify-content: center;
+        }
+        &--transport {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+            width: 100%;
+            justify-content: center;
+        }
+        &--buttons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
     }
 }

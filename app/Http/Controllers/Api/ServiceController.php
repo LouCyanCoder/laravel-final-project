@@ -10,7 +10,7 @@ class ServiceController extends Controller
 {
     public function index(Request $request)
     {
-        $services = Service::get();
+        $services = Service::with('user')->get();
         return $services;
     }
 }

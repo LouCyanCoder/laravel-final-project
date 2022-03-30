@@ -12,7 +12,7 @@ class AccommodationController extends Controller
     {
         // dd('index');
         $searchString = $request->input('search');
-        $accommodations = Accommodation::where('description', 'like', '%' . $searchString . '%')->get();
+        $accommodations = Accommodation::where('description', 'like', '%' . $searchString . '%')->with('user')->get();
 
         return view('forms.accommodationForm', compact('accommodations'));
     }
@@ -53,7 +53,7 @@ class AccommodationController extends Controller
 
         session()->flash('success_message', 'The accommodation was successfully saved!');
 
-        return redirect()->action('/dashboard');
+        return redirect()->action('AccommodationController@index');
     }
 
     public function show($id)
@@ -99,7 +99,7 @@ class AccommodationController extends Controller
 
         session()->flash('success_message', 'The accommodation was successfully updated!');
 
-        return redirect()->action('/dashboard', ['id' => $accommodation->id]);
+        return redirect()->action('dashboard', ['id' => $accommodation->id]);
     }
     
     private function validateForm($request)

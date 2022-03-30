@@ -21,8 +21,8 @@ body {
 }
 
 .markercluster-map span {
-    height: 5vh;
-    width: 5vh;
+    height: 7vh;
+    width: 7vh;
     border-radius: 50%;
     display: inline-block;
     color: black;
@@ -32,8 +32,8 @@ body {
     border-color: blue;
     border-style: solid;
     margin: auto;
-    padding: 8.33px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 30px;
     opacity: 0.55;
     /* border opacity etc */
     box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3);
@@ -55,3 +55,4 @@ body {
   border-radius: 10px;
   display: inline-block;
 }
+

@@ -16,7 +16,7 @@ const FoodMarker = ({ data }) => {
 
     const [foodAddress, setFoodAddress] = useState(null)
 
-    const key = "AIzaSyAjX6oTLphVZDKXvWPAmzOiFRx6lEwK_Sw";
+    const key = "AIzaSyB0Jg0YDZr1THlz8_kauyQjj58J7R88lwo";
 
     console.log(data)
 
@@ -72,9 +72,11 @@ const FoodMarker = ({ data }) => {
                                 <br/>
                                 <strong>Description: </strong>{description}
                                 <br/>
-                                <strong>Date: </strong>{day}
+                                <strong>Date: </strong>{(day.slice(0, 10))}
                                 <br/>
                                 <strong>Offer status: </strong>{status}
+                                <br/>
+                                <strong>dsadasdasdas: </strong>{status}
                                 <br/>
                             </div>
                             <div className="m-2" style={okText}>

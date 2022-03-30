@@ -1,22 +1,13 @@
 
     @include('components.header')
 
-    {{-- @if ($accommodation->id) --}}
+   
+        <h1>{{ $accommodation->user->name}} - edit accommodation</h1>
 
-        <h1>{{ $accommodation->user->name }} - edit accommodation</h1>
+        
 
-        <form action="{{ route('accommodation', $accommodation->id) }}" method="put">
+        <form action="{{ route('accommodation', $accommodation->id) }}" method="put"  class="offer_form">
             @method('PUT')
-
-    {{-- @else
-
-        <h1>Create a new accommodation</h1>
-
-        <form action="{{ route('accommodation.store') }}" method="post">
-
-    @endif --}}
-
-
 
     {{-- <form action="{{ route('accommodation') }}" method="post" class="offer_form"> --}}
  
@@ -24,11 +15,11 @@
         
         <h2 class="form__heading">Fill your accommodation info</h2>
 
-        <label for="area_address">Address: </label><br>
+        <label for="area_address">Address</label><br>
         <input type="text" name="area_address" value="{{ old('area_address', $accommodation->area_address) }}">
         <br>
 
-        <label for="max_person">Max persons: </label><br>
+        <label for="max_person">Max persons</label><br>
         <input type="number" name="max_person" value="{{ old('max_person', $accommodation->max_person) }}">
         <br>
         <br>
@@ -55,16 +46,15 @@
         <br>
     
         <label for="description">Description of the offer</label><br>
-        <input type="text" name="description" value="  {{ old('description', $accommodation->description) }}">
-        <br>
+        <input type="text" name="description" value="{{ old('description', $accommodation->description) }}">
         <br>
 
-        <label for="start_date">From: </label><br>
+        <label for="start_date">From</label><br>
         <input type="date" name="start_date" value="{{ old('start_date', $accommodation->start_date) }}">
         <br>
         <br>
 
-        <label for="end_date">Until: </label><br>
+        <label for="end_date">Until</label><br>
         <input type="date" name="end_date" value="{{ old('end_date', $accommodation->end_date) }}">
         <br>
         <br>

@@ -1,39 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Form from "react-bootstrap/Form";
-import { useState, useEffect } from "react";
 
 const FilterServices = ({ selection, setSelection }) => {
-    const [selected_accommodation, setSelectedAccommodation] = useState(null);
-    const [selected_food, setSelectedFood] = useState(null);
-    const [selected_services, setSelectedServices] = useState(null);
-
-    const fetchAccommodation = async () => {
-        const response = await fetch("/api/accomodation");
-        const result = await response.json();
-        result && setSelectedAccommodation(result);
-        // console.log(result);
-    };
-
-    const fetchFood = async () => {
-        const response = await fetch("/api/food");
-        const result = await response.json();
-        result && setSelectedFood(result);
-        // console.log(result);
-    };
-
-    const fetchServices = async () => {
-        const response = await fetch("/api/services");
-        const result = await response.json();
-        result && setSelectedServices(result);
-        // console.log(result);
-    };
-
-    useEffect(() => {
-        fetchAccommodation();
-        fetchFood();
-        fetchServices();
-    }, []);
-
     const handleChange = (e) => {
         if (e.target.name === "all") {
             if (selection.all) {
@@ -62,6 +30,15 @@ const FilterServices = ({ selection, setSelection }) => {
             [e.target.name]: e.target.checked,
         });
     };
+
+    useEffect(() => {
+        setSelection({
+            all: true,
+            accommodation: true,
+            food: true,
+            service: true,
+        });
+    }, []);
 
     return (
         <div>

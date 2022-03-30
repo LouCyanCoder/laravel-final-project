@@ -25,7 +25,7 @@
         />
         <br />
         
-        <label for="description">Description:</label><br>
+        <label for="description">Description</label><br>
         <textarea name="description" value="" id="" cols="30" rows="10"></textarea>
         <br />
 

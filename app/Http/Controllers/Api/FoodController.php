@@ -10,7 +10,7 @@ class FoodController extends Controller
 {
     public function index(Request $request)
     {
-        $food = Food::get();
+        $food = Food::with('user')->get();
         return $food;
     }
 }

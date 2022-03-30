@@ -13,7 +13,7 @@ import axios from "axios";
 const ServiceMarker = ({ data }) => {
     const [serviceAddress, setServiceAddress] = useState(null);
 
-    const key = "AIzaSyDuV1iHdTBXxJDhIifd0gLV-ln3YTiREl8";
+    const key = "AIzaSyCiiNtM6Ty68mt_4SDkYmccOCI_HqqItvE";
 
     console.log(data);
 
@@ -70,9 +70,6 @@ const ServiceMarker = ({ data }) => {
                                 <br />
                                 <strong>Description: </strong>
                                 {description}
-                                <br />
-                                <strong>Date: </strong>
-                                {day}
                                 <br />
                                 <strong>Offer status: </strong>
                                 {status}
