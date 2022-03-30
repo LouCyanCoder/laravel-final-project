@@ -18,11 +18,11 @@
         </select>
         <br>
 
-        <label for="address">Address: </label><br>
+        <label for="address">Address</label><br>
         <input type="text" name="address" value="">
         <br>
         
-        <label for="description">Description:</label><br>
+        <label for="description">Description</label><br>
         <textarea name="description" value="" id="" cols="30" rows="10"></textarea>
         <br>
         <br>

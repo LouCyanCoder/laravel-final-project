@@ -53,7 +53,7 @@ class AccommodationController extends Controller
 
         session()->flash('success_message', 'The accommodation was successfully saved!');
 
-        return redirect()->action('/dashboard');
+        return redirect()->action('AccommodationController@index');
     }
 
     public function show($id)
