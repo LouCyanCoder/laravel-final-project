@@ -10,7 +10,7 @@ class TransportController extends Controller
 {
     public function index(Request $request)
     {
-        $transports = Transport::get();
+        $transports = Transport::with('user')->get();
         return $transports;
     }
 }

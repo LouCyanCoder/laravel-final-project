@@ -55,8 +55,8 @@ Route::post('/food/create', 'App\Http\Controllers\FoodController@create')->name(
 Route::get('/food/create', 'App\Http\Controllers\FoodController@index')->name('food');
 Route::post('/food', 'App\Http\Controllers\FoodController@store')->name('foodstore');
 Route::get('/food/{id}', 'App\Http\Controllers\FoodController@show');
-Route::get('/food/{id}/edit', 'App\Http\Controllers\FoodController@edit');
-Route::put('/food/{id}', 'App\Http\Controllers\FoodController@update');
+Route::get('/food/{id}/edit', 'App\Http\Controllers\FoodController@edit')->name('food');
+Route::put('/food/{id}', 'App\Http\Controllers\FoodController@update')->name('food');
 
 // service
 Route::post('/service/create', 'App\Http\Controllers\ServiceController@create')->name('service');

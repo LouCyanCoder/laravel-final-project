@@ -75,11 +75,11 @@ class FoodController extends Controller
         return redirect()->action('App\Http\Controllers\FoodController@index');
     }
 
-    public function edit($id)
+    public function edit($id, Request $request)
     {
         $food = Food::findOrFail($id);
 
-        return view('forms/foodform', compact('food'));
+        return view('forms/foodForm', compact('food'));
     }
 
     public function update($id, Request $request)
