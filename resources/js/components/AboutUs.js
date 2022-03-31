@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from 'react-dom';
 
 
 const AboutUs = () => {
+
+
+
     return (
         <section className="aboutus">
             
@@ -41,45 +44,88 @@ const AboutUs = () => {
                 <article className="aboutus__team">
 
                     <div className="aboutus__team--img">
-                        <img src="../images/gheorghi_profile.jfif" alt="#" />
+                        <img src="../images/gheorghi_profile.jfif" alt="gheorghi_profile" />
                     </div>
 
+                <div className="aboutus__team--description">
                     <h3>Gheorghi Ivanciuc</h3>
 
                     <p></p>
+
+                </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="aboutus__team--social-icons">
+                            <li><a class="github" href="#"><i class="fa fa-github"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                        </ul>
+                    </div>
+
                 </article>
 
                 <article className="aboutus__team">
 
                     <div className="aboutus__team--img">
-                    <img src="../images/dejan_profile.jpg" alt="#" />
+                    <img src="../images/dejan_profile.jpg" alt="dejan_profile" />
                     </div>
 
+                <div className="aboutus__team--description">
                     <h3>Dejan Rajković</h3>
 
                     <p></p>
 
+                </div>
+                    
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="aboutus__team--social-icons">
+                            <li><a class="github" href="#"><i class="fa fa-github"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                        </ul>
+                    </div>
+
                 </article>
 
                 <article className="aboutus__team">
 
                     <div className="aboutus__team--img">
-                    <img src="../images/ekin_profile.jfif" alt="#" />
+                    <img src="../images/ekin_profile.jfif" alt="ekin_profile" />
                     </div>
 
+                <div className="aboutus__team--description">
                     <h3>Ekin Cebeci</h3>
                     <p></p>
+                </div>
+                    
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="aboutus__team--social-icons">
+                            <li><a class="github" href="#"><i class="fa fa-github"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                        </ul>
+                    </div>
+
                 </article>
 
                 <article className="aboutus__team">
                     <div className="aboutus__team--img">
-                    <img src="https://media-exp1.licdn.com/dms/image/D4D35AQHYnCO_KXfq2Q/profile-framedphoto-shrink_800_800/0/1648145949352?e=1648738800&v=beta&t=CpO93fySwY_zR2WmFBdPE9Mk91IzmedgZIZtPBTQXvg" alt="#" />
+                        <img src="../images/lucian_profile.jpg" alt="lucian_profile" />                   
                     </div>
 
-                    <h3>Lucian Nguyen</h3>
-
-                    <p></p>
+                <div className="aboutus__team--description">
+                        <h3>Lucian Nguyen</h3>
+    
+                        <p>
+                            Through this project we have became a great team, through success and frustration, we held together to the very end. The projects central idea was based on the desire to see the world change for the better. Now off we go to the development world.
+                        </p>
+                </div>
+                    
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="aboutus__team--social-icons">
+                            <li><a class="github" href="#"><i class="fa fa-github"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                        </ul>
+                    </div>
+                    
                 </article>
+
 
                 
                 
