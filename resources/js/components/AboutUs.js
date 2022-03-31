@@ -88,7 +88,9 @@ const AboutUs = () => {
                     <div className="aboutus__team--description">
                         <h3>Dejan Rajković</h3>
 
-                        <p>I'm Dejan Kokovic &#128540; </p>
+                        <p>
+                            The project "Who Cares?", the idea of a colleague Lucian Nguyen, I liked that we can help people who need information about help. During this project, I learned a lot, from project planning and code writing, working with wonderful people on the team. From the first code, with the idea and work, our project got to the final version.
+                        </p>
                     </div>
 
                     <div class="col-md-4 col-sm-6 col-xs-12">

@@ -24071,7 +24071,7 @@ var AboutUs = function AboutUs() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
             children: "Dejan Rajkovi\u0107"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-            children: "I'm Dejan Kokovic \uD83D\uDE1C "
+            children: "The project \"Who Cares?\", the idea of a colleague Lucian Nguyen, I liked that we can help people who need information about help. During this project, I learned a lot, from project planning and code writing, working with wonderful people on the team. From the first code, with the idea and work, our project got to the final version."
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           "class": "col-md-4 col-sm-6 col-xs-12",
