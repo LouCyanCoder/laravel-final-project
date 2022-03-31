@@ -15,8 +15,6 @@ const ServiceMarker = ({ data }) => {
 
     const key = "AIzaSyCiiNtM6Ty68mt_4SDkYmccOCI_HqqItvE";
 
-    console.log(data);
-
     const getServiceAddress = async () => {
         const options = {
             params: {
@@ -31,14 +29,14 @@ const ServiceMarker = ({ data }) => {
         );
 
         // console.log(address) // res.data.results.geometry.location
-        console.log(res.data.results[0].geometry.location);
+
         setServiceAddress(res.data.results[0].geometry.location);
     };
 
     const { address, name, description, day, status } = data;
 
     useEffect(() => {
-        console.log(data.address);
+        // console.log(data.address);
         if (data.address) {
             getServiceAddress();
         }
