@@ -38,10 +38,12 @@ const MapServiceList = ({ element }) => {
                         <br></br>
                         <Button
                             style={{
-                                borderRadius: 35,
-                                backgroundColor: "#21b6ae",
+                                width: "150px",
+                                height: "55px",
+                                borderRadius: 25,
+                                backgroundColor: "#ba7735",
                                 padding: "18px 36px",
-                                fontSize: "18px",
+                                fontSize: "12px",
                             }}
                             variant="contained"
                             onClick={handleClick}
