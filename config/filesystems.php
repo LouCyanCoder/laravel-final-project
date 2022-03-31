@@ -58,7 +58,7 @@ return [
             'host' => env('FTP_HOST'),
             'username' => env('FTP_USER'),
             'password' => env('FTP_PASS'),
-            'port' => env('FTP_PORT'),
+            'port' => (int)env('FTP_PORT'),
             'root' => env('FTP_ROOT')
         ],
 
