@@ -6,19 +6,31 @@ const ContactInfoList = ({ element }) => {
             <section className="userslisted_list">
                 <article className="userslisted_listitem">
                     <div className="userslisted_list--name">
-                        <p>Name: {element.name}</p>
+                        <hr></hr>
+                        <p>
+                            <strong>Name:</strong> {element.name}
+                        </p>
                     </div>
                     <div className="userslisted_list--email">
-                        <p>E-mail: {element.email}</p>
+                        <p>
+                            <strong>E-mail:</strong> {element.email}
+                        </p>
                     </div>
                     <div className="userslisted_list--phone">
-                        <p>Phone Number: {element.phone_number}</p>
+                        <p>
+                            <strong>Phone Number:</strong>{" "}
+                            {element.phone_number}
+                        </p>
                     </div>
                     <div className="userslisted_list--facebook">
-                        <p>Facebook: {element.facebook_link}</p>
+                        <p>
+                            <strong>Facebook:</strong> {element.facebook_link}
+                        </p>
                     </div>
                     <div className="userslisted_list--telegram">
-                        <p>Telegram: {element.telegram_link}</p>
+                        <p>
+                            <strong>Telegram:</strong> {element.telegram_link}
+                        </p>
                     </div>
                 </article>
             </section>

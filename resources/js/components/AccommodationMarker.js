@@ -60,10 +60,10 @@ const AccommodationMarker = ({ data }) => {
                             <div className="cardonthemap" style={popupText}>
                                 <br/>
                                 <strong>Accomodation Owner's Name: </strong>
-                                {user.name}
+                                {user && user.name}
                                 <br/>
                                 <strong>Address: </strong>
-                                {user.address}
+                                {user && user.address}
                                 <br/>
                                 <strong>Description: </strong>
                                 {description}
@@ -81,7 +81,7 @@ const AccommodationMarker = ({ data }) => {
                                 {status}
                                 <br />
                                 <strong>Phone number </strong>
-                                {user.phone_number}
+                                {user && user.phone_number}
                                 <br />
                             </div>
                             <div className="m-2" style={okText}>

@@ -57,10 +57,17 @@ const MapFoodList = ({ element }) => {
                         </p>
                         <p>{element.status}</p>
                     </div>
-
+                    <br></br>
                     <Button
-                        className="button_under_map"
-                        variant="outlined"
+                        style={{
+                            width: "150px",
+                            height: "55px",
+                            borderRadius: 25,
+                            backgroundColor: "#ba7735",
+                            padding: "18px 36px",
+                            fontSize: "12px",
+                        }}
+                        variant="contained"
                         onClick={handleClick}
                     >
                         Contact Info

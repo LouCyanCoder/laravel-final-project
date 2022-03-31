@@ -7,11 +7,10 @@
     margin: 25px 0;
     text-align: center;
 
-    h2{
+    h2 {
         font-size: 3em;
         margin: 50px 0;
     }
-    
 
     &__container {
         display: flex;
@@ -21,41 +20,61 @@
         p {
             font-size: 1.4em;
         }
-        
     }
-    &__groupphoto{
-        width:100%;
-        
+    &__groupphoto {
+        width: 100%;
+
         margin: auto;
 
-        img{
-            width:60%;
+        img {
+            width: 60%;
             margin-top: 50px;
             object-fit: contain;
         }
     }
 
     &__team {
-        display:flex;
-        margin:10px;
+        display: flex;
+        margin: 10px;
         background-color: rgba($body-bg, 0.5);
         border-radius: 100px;
+        align-items: center;
 
         h3 {
-            margin: 10px;
+            margin: 20px;
         }
 
-        &--img{
-            width:200px;
+        &--img {
+            width: 200px;
             margin-right: 15px;
 
-            img{
-                width:200px;
+            img {
+                width: 200px;
                 height: 200px;
                 object-fit: contain;
                 border-radius: 50%;
             }
         }
-    }
 
+        &--description {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            text-align: right;
+
+            // p {
+            // }
+        }
+    }
+}
+// .fa {
+//     width: 50px;
+//     height: 50px;
+// }
+
+li {
+    list-style-type: none;
+    a {
+        text-decoration: none;
+    }
 }
