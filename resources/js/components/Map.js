@@ -64,7 +64,7 @@ function Map({ center, zoom }) {
 
     // models and api/controllers connected with user_id
     const fetchUser = async () => {
-        const res = await axios.get("/api/users/");
+        const res = await axios.get("/api/users");
         setUser(res.data);
     };
 
@@ -77,7 +77,7 @@ function Map({ center, zoom }) {
         fetchSearch();
     }, []);
 
-    const handleChangeSearch = (event) => {
+    const handleChangeDate = (event) => {
         setValues((previous_values) => {
             return {
                 ...previous_values,
@@ -131,14 +131,14 @@ function Map({ center, zoom }) {
                 <input
                     type="date"
                     name="dateFrom"
-                    onChange={handleChangeSearch}
+                    onChange={handleChangeDate}
                     value={values.dateFrom}
                 />
                 <strong>Available To:</strong>
                 <input
                     type="date"
                     name="dateTo"
-                    onChange={handleChangeSearch}
+                    onChange={handleChangeDate}
                     value={values.dateTo}
                 />
             </div>

@@ -25669,7 +25669,7 @@ function Map(_ref) {
           switch (_context6.prev = _context6.next) {
             case 0:
               _context6.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/users/");
+              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/users");
 
             case 2:
               res = _context6.sent;
@@ -25697,7 +25697,7 @@ function Map(_ref) {
     fetchSearch();
   }, []);
 
-  var handleChangeSearch = function handleChangeSearch(event) {
+  var handleChangeDate = function handleChangeDate(event) {
     setValues(function (previous_values) {
       return _objectSpread(_objectSpread({}, previous_values), {}, _defineProperty({}, event.target.name, event.target.value));
     });
@@ -25748,14 +25748,14 @@ function Map(_ref) {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("input", {
         type: "date",
         name: "dateFrom",
-        onChange: handleChangeSearch,
+        onChange: handleChangeDate,
         value: values.dateFrom
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("strong", {
         children: "Available To:"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("input", {
         type: "date",
         name: "dateTo",
-        onChange: handleChangeSearch,
+        onChange: handleChangeDate,
         value: values.dateTo
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("section", {
