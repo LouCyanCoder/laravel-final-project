@@ -75,9 +75,6 @@ const FoodMarker = ({ data }) => {
                                 <strong>Offer status: </strong>
                                 {status}
                                 <br />
-                                <strong>dsadasdasdas: </strong>
-                                {status}
-                                <br />
                             </div>
                             <div className="m-2" style={okText}>
                                 {/* Okay */}
