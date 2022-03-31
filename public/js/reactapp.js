@@ -24712,10 +24712,8 @@ var FoodList = function FoodList(_ref) {
           className: "offerslisted__listitem--buttons",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
             variant: "outlined",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-              href: "#",
-              children: "Edit"
-            })
+            href: "/food/" + element.id + "/edit",
+            children: "Edit"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
             variant: "contained",
             color: "error",
