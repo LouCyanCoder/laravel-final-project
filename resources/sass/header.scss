@@ -25,11 +25,16 @@ header {
             padding: 0;
             display: flex;
             column-gap: 30px;
-
+            align-items:center;
             a {
                 text-decoration: none;
                 font-size: 22px;
             }
         }
     }
+}
+
+
+.ua_flag {
+    border-radius: 10px;
 }

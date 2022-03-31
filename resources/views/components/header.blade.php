@@ -6,7 +6,10 @@
         <h2>Who Cares?</h2>
 
     </div>
-    
+    <img class="ua_flag"
+    src="../images/ua_flag.jpg"
+    alt="Grapefruit slice atop a pile of other slices">
+
         <nav class="header__nav">
             <ul>
                 <li><a href="/">Home</a></li>
