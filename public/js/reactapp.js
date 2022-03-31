@@ -24179,7 +24179,7 @@ var AboutUs = function AboutUs() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
                 "class": "linkedin",
-                href: "https://www.linkedin.com/in/lucian-nguyen-4aa223162/",
+                href: "https://www.linkedin.com/in/loucyancoder",
                 target: "_blank",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
                   children: "LinkedIn \xA0"

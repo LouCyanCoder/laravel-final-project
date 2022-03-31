@@ -204,7 +204,7 @@ const AboutUs = () => {
                             <li>
                                 <a
                                     class="linkedin"
-                                    href="https://www.linkedin.com/in/lucian-nguyen-4aa223162/"
+                                    href="https://www.linkedin.com/in/loucyancoder"
                                     target="_blank"
                                 >   
                                     <strong>LinkedIn &nbsp;</strong>
