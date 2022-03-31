@@ -26024,10 +26024,12 @@ var MapAccommodationList = function MapAccommodationList(_ref) {
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
           style: {
-            borderRadius: 35,
-            backgroundColor: "#21b6ae",
+            width: "150px",
+            height: "55px",
+            borderRadius: 25,
+            backgroundColor: "#ba7735",
             padding: "18px 36px",
-            fontSize: "18px"
+            fontSize: "12px"
           },
           variant: "contained",
           onClick: handleClick,
@@ -26184,10 +26186,12 @@ var MapFoodList = function MapFoodList(_ref) {
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
           style: {
-            borderRadius: 35,
-            backgroundColor: "#21b6ae",
+            width: "150px",
+            height: "55px",
+            borderRadius: 25,
+            backgroundColor: "#ba7735",
             padding: "18px 36px",
-            fontSize: "18px"
+            fontSize: "12px"
           },
           variant: "contained",
           onClick: handleClick,
@@ -26288,10 +26292,12 @@ var MapServiceList = function MapServiceList(_ref) {
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
             style: {
-              borderRadius: 35,
-              backgroundColor: "#21b6ae",
+              width: "150px",
+              height: "55px",
+              borderRadius: 25,
+              backgroundColor: "#ba7735",
               padding: "18px 36px",
-              fontSize: "18px"
+              fontSize: "12px"
             },
             variant: "contained",
             onClick: handleClick,
@@ -26410,10 +26416,12 @@ var MapTransportList = function MapTransportList(_ref) {
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
           style: {
-            borderRadius: 35,
-            backgroundColor: "#21b6ae",
+            width: "150px",
+            height: "55px",
+            borderRadius: 25,
+            backgroundColor: "#ba7735",
             padding: "18px 36px",
-            fontSize: "18px"
+            fontSize: "12px"
           },
           variant: "contained",
           onClick: handleClick,
