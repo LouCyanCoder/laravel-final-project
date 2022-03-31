@@ -193,6 +193,9 @@ header {
 li {
   list-style-type: none;
 }
+li a {
+  text-decoration: none;
+}
 
 .contactForm {
   display: flex;

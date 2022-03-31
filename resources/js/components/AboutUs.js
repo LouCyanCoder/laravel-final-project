@@ -49,7 +49,7 @@ const AboutUs = () => {
                     <div className="aboutus__team--description">
                         <h3>Gheorghi Ivanciuc</h3>
 
-                        <p>The idea of this project came to me through Lucian's inspiration to help others. Since I am a person affected by the conflict in Ukraine (I have many friends and relatives there), I decided to propose some changes and we started working on such a project that a lot of people need. Whocares brought me a lot of knowledge in terms of backend and I am extremely happy to be part of this team. I hope that in the future we will be able to support and develop the project without any problems, there will be many real examples when our development paid off all the costs (for us, one happy life is the very goal).</p>
+                        <p>The idea for this project came to me through Lucian's inspiration to help others. Since I am a person affected by the conflict in Ukraine (I have many friends and relatives there), I decided to propose some changes and we started working on such a project that a lot of people need. Who Cares brought me a lot of knowledge in terms of backend and I am extremely happy to be part of this team. I hope that in the future we will be able to support and develop the project without any problems, there will be many real examples when our development paid off all the costs (for us, one happy life is the very goal).</p>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <ul class="aboutus__team--social-icons">
@@ -59,6 +59,7 @@ const AboutUs = () => {
                                     href="https://github.com/Geogranula"
                                     target="_blank"
                                 >
+                                    <strong>Github &nbsp;</strong>
                                     <i class="fa fa-github"></i>
                                 </a>
                             </li>
@@ -68,6 +69,7 @@ const AboutUs = () => {
                                     href="https://www.linkedin.com/in/gheorghiivanciuc/"
                                     target="_blank"
                                 >
+                                    <strong>LinkedIn &nbsp;</strong>
                                     <i class="fa fa-linkedin"></i>
                                 </a>
                             </li>
@@ -97,6 +99,7 @@ const AboutUs = () => {
                                     href="https://github.com/dejan-creator"
                                     target="_blank"
                                 >
+                                    <strong>Github &nbsp;</strong>
                                     <i class="fa fa-github"></i>
                                 </a>
                             </li>
@@ -106,6 +109,7 @@ const AboutUs = () => {
                                     href="https://www.linkedin.com/in/dejanrajkovic/"
                                     target="_blank"
                                 >
+                                    <strong>LinkedIn &nbsp;</strong>
                                     <i class="fa fa-linkedin"></i>
                                 </a>
                             </li>
@@ -124,8 +128,8 @@ const AboutUs = () => {
                     <div className="aboutus__team--description">
                         <h3>Ekin Cebeci</h3>
                         <p>
-                            The idea of the project was finding people "who
-                            cares" for the people who needs help. We took this
+                            The idea behind this project was finding people "who
+                            care" for the people who need help. We took this
                             journey to change the world better than it is right
                             now and helping the people who are struggling in
                             Ukraine because of the Russian occupation. Thank you
@@ -143,6 +147,7 @@ const AboutUs = () => {
                                     href="https://github.com/ekincbc"
                                     target="_blank"
                                 >
+                                    <strong>Github &nbsp;</strong>
                                     <i class="fa fa-github"></i>
                                 </a>
                             </li>
@@ -152,6 +157,7 @@ const AboutUs = () => {
                                     href="https://www.linkedin.com/in/ekincebeci/"
                                     target="_blank"
                                 >
+                                    <strong>LinkedIn &nbsp;</strong>
                                     <i class="fa fa-linkedin"></i>
                                 </a>
                             </li>
@@ -175,18 +181,21 @@ const AboutUs = () => {
                             through success and frustration, we held together to
                             the very end. The projects central idea was based on
                             the desire to see the world change for the better.
-                            Now off we go to the development world.
+                            Now off we go to the developers world.
+                            I have learned a lot of how a professional web development is done and all the basics that make the vision become a reality.
                         </p>
                     </div>
 
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <ul class="aboutus__team--social-icons">
                             <li>
+                                
                                 <a
                                     class="github"
                                     href="https://github.com/LouCyanCoder"
                                     target="_blank"
                                 >
+                                    <strong>Github &nbsp;</strong>
                                     <i class="fa fa-github"></i>
                                 </a>
                             </li>
@@ -195,7 +204,8 @@ const AboutUs = () => {
                                     class="linkedin"
                                     href="https://www.linkedin.com/in/lucian-nguyen-4aa223162/"
                                     target="_blank"
-                                >
+                                >   
+                                    <strong>LinkedIn &nbsp;</strong>
                                     <i class="fa fa-linkedin"></i>
                                 </a>
                             </li>
