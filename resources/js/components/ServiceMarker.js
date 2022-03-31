@@ -33,7 +33,7 @@ const ServiceMarker = ({ data }) => {
         setServiceAddress(res.data.results[0].geometry.location);
     };
 
-    const { address, name, description, day, status } = data;
+    const { user, address, name, description, day, status } = data;
 
     useEffect(() => {
         // console.log(data.address);
@@ -60,6 +60,10 @@ const ServiceMarker = ({ data }) => {
                                 height="150"
                             />
                             <div className="cardonthemap" style={popupText}>
+                                <br/>
+                                <strong>Person's name: </strong>
+                                {user && user.name}
+                                <br/>
                                 <strong>Adress: </strong>
                                 {address}
                                 <br />
@@ -71,7 +75,12 @@ const ServiceMarker = ({ data }) => {
                                 <br />
                                 <strong>Offer status: </strong>
                                 {status}
+                                <br/>
+                                <strong>Phone number </strong>
+                                {user && user.phone_number}
                                 <br />
+
+
                             </div>
                             <div className="m-2" style={okText}>
                                 {/* Okay */}
