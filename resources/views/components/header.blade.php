@@ -2,12 +2,12 @@
 
 <header>
     <div class="header__logo">
-        <a href="/" title="Home Page"><img src="../images/wc_logo_small_v2.png.png" class="header__logo--whocares"/></a>
+        <a href="/" title="Home Page"><img src="/images/wc_logo_small_v2.png.png" class="header__logo--whocares"/></a>
         <h2>Who Cares?</h2>
 
     </div>
     <img class="ua_flag"
-    src="../images/ua_flag.jpg"
+    src="/images/ua_flag.jpg"
     alt="Grapefruit slice atop a pile of other slices">
 
         <nav class="header__nav">

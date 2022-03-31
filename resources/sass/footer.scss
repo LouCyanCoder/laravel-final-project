@@ -103,11 +103,14 @@
   font-weight:700;
   font-size:13px
 }
-.social-icons a{
+.social-icons{
+   a {
   background-color:#eceeef;
   color:#818a91;
   font-size:16px;
-  display:inline-block;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   line-height:44px;
   width:44px;
   height:44px;
@@ -117,6 +120,7 @@
   -webkit-transition:all .2s linear;
   -o-transition:all .2s linear;
   transition:all .2s linear
+  }
 }
 .social-icons a:active,.social-icons a:focus,.social-icons a:hover
 {
