@@ -188,10 +188,14 @@ header {
   display: flex;
   flex-direction: column;
   width: 80%;
+  text-align: right;
 }
 
 li {
   list-style-type: none;
+}
+li a {
+  text-decoration: none;
 }
 
 .contactForm {
