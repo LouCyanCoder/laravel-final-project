@@ -33,7 +33,7 @@ const FoodMarker = ({ data }) => {
         setFoodAddress(res.data.results[0].geometry.location);
     };
 
-    const { address, name, description, day, status } = data;
+    const { user, address, name, description, day, status } = data;
 
     useEffect(() => {
         // console.log(data.address);
@@ -60,6 +60,10 @@ const FoodMarker = ({ data }) => {
                                 height="150"
                             />
                             <div className="cardonthemap" style={popupText}>
+                            <br/>
+                                <strong>Name of the person: </strong>
+                                {user && user.name}
+                                <br/>
                                 <strong>Address: </strong>
                                 {address}
                                 <br />
@@ -75,6 +79,12 @@ const FoodMarker = ({ data }) => {
                                 <strong>Offer status: </strong>
                                 {status}
                                 <br />
+<<<<<<< HEAD
+=======
+                                <strong>Phone number </strong>
+                                {user && user.phone_number}
+                                <br />
+>>>>>>> 30ae9f031f3fe37ab9ad13867158915ee2a75a22
                             </div>
                             <div className="m-2" style={okText}>
                                 {/* Okay */}
