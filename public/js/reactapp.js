@@ -23520,7 +23520,9 @@ var AboutUs = function AboutUs() {
           className: "aboutus__team--description",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
             children: "Gheorghi Ivanciuc"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {})]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: "I'm Grisha and crypto is my life \uD83D\uDE0D"
+          })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           "class": "col-md-4 col-sm-6 col-xs-12",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
@@ -23528,7 +23530,8 @@ var AboutUs = function AboutUs() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                 "class": "github",
-                href: "#",
+                href: "https://github.com/Geogranula",
+                target: "_blank",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                   "class": "fa fa-github"
                 })
@@ -23536,7 +23539,8 @@ var AboutUs = function AboutUs() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                 "class": "linkedin",
-                href: "#",
+                href: "https://www.linkedin.com/in/gheorghiivanciuc/",
+                target: "_blank",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                   "class": "fa fa-linkedin"
                 })
@@ -23556,7 +23560,9 @@ var AboutUs = function AboutUs() {
           className: "aboutus__team--description",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
             children: "Dejan Rajkovi\u0107"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {})]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: "I'm Dejan Kokovic \uD83D\uDE1C "
+          })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           "class": "col-md-4 col-sm-6 col-xs-12",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
@@ -23564,7 +23570,8 @@ var AboutUs = function AboutUs() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                 "class": "github",
-                href: "#",
+                href: "https://github.com/dejan-creator",
+                target: "_blank",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                   "class": "fa fa-github"
                 })
@@ -23572,7 +23579,8 @@ var AboutUs = function AboutUs() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                 "class": "linkedin",
-                href: "#",
+                href: "https://www.linkedin.com/in/dejanrajkovic/",
+                target: "_blank",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                   "class": "fa fa-linkedin"
                 })
@@ -23592,7 +23600,9 @@ var AboutUs = function AboutUs() {
           className: "aboutus__team--description",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
             children: "Ekin Cebeci"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {})]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: "The idea of the project was finding people \"who cares\" for the people who needs help. We took this journey to change the world better than it is right now and helping the people who are struggling in Ukraine because of the Russian occupation. Thank you for all of my team mates for pushing their limits to make our baby grow and become online in such a short time."
+          })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           "class": "col-md-4 col-sm-6 col-xs-12",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
@@ -23600,7 +23610,8 @@ var AboutUs = function AboutUs() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                 "class": "github",
-                href: "#",
+                href: "https://github.com/ekincbc",
+                target: "_blank",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                   "class": "fa fa-github"
                 })
@@ -23608,7 +23619,8 @@ var AboutUs = function AboutUs() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                 "class": "linkedin",
-                href: "#",
+                href: "https://www.linkedin.com/in/ekincebeci/",
+                target: "_blank",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                   "class": "fa fa-linkedin"
                 })
@@ -23638,7 +23650,8 @@ var AboutUs = function AboutUs() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                 "class": "github",
-                href: "#",
+                href: "https://github.com/LouCyanCoder",
+                target: "_blank",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                   "class": "fa fa-github"
                 })
@@ -23646,7 +23659,8 @@ var AboutUs = function AboutUs() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                 "class": "linkedin",
-                href: "#",
+                href: "https://www.linkedin.com/in/lucian-nguyen-4aa223162/",
+                target: "_blank",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                   "class": "fa fa-linkedin"
                 })
