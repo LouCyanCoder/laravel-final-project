@@ -49,7 +49,7 @@ const AboutUs = () => {
                     <div className="aboutus__team--description">
                         <h3>Gheorghi Ivanciuc</h3>
 
-                        <p>I'm Grisha and crypto is my life &#128525;</p>
+                        <p>The idea of this project came to me through Lucian's inspiration to help others. Since I am a person affected by the conflict in Ukraine (I have many friends and relatives there), I decided to propose some changes and we started working on such a project that a lot of people need. Whocares brought me a lot of knowledge in terms of backend and I am extremely happy to be part of this team. I hope that in the future we will be able to support and develop the project without any problems, there will be many real examples when our development paid off all the costs (for us, one happy life is the very goal).</p>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <ul class="aboutus__team--social-icons">

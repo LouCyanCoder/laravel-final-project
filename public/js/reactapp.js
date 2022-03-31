@@ -23521,7 +23521,7 @@ var AboutUs = function AboutUs() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
             children: "Gheorghi Ivanciuc"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-            children: "I'm Grisha and crypto is my life \uD83D\uDE0D"
+            children: "The idea of this project came to me through Lucian's inspiration to help others. Since I am a person affected by the conflict in Ukraine (I have many friends and relatives there), I decided to propose some changes and we started working on such a project that a lot of people need. Whocares brought me a lot of knowledge in terms of backend and I am extremely happy to be part of this team. I hope that in the future we will be able to support and develop the project without any problems, there will be many real examples when our development paid off all the costs (for us, one happy life is the very goal)."
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           "class": "col-md-4 col-sm-6 col-xs-12",
