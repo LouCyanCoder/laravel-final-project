@@ -24020,44 +24020,160 @@ var AboutUs = function AboutUs() {
           className: "aboutus__team--img",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
             src: "../images/gheorghi_profile.jfif",
-            alt: "#"
+            alt: "gheorghi_profile"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-          children: "Gheorghi Ivanciuc"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {})]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "aboutus__team--description",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+            children: "Gheorghi Ivanciuc"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: "The idea of this project came to me through Lucian's inspiration to help others. Since I am a person affected by the conflict in Ukraine (I have many friends and relatives there), I decided to propose some changes and we started working on such a project that a lot of people need. Whocares brought me a lot of knowledge in terms of backend and I am extremely happy to be part of this team. I hope that in the future we will be able to support and develop the project without any problems, there will be many real examples when our development paid off all the costs (for us, one happy life is the very goal)."
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          "class": "col-md-4 col-sm-6 col-xs-12",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+            "class": "aboutus__team--social-icons",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                "class": "github",
+                href: "https://github.com/Geogranula",
+                target: "_blank",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  "class": "fa fa-github"
+                })
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                "class": "linkedin",
+                href: "https://www.linkedin.com/in/gheorghiivanciuc/",
+                target: "_blank",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  "class": "fa fa-linkedin"
+                })
+              })
+            })]
+          })
+        })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("article", {
         className: "aboutus__team",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "aboutus__team--img",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
             src: "../images/dejan_profile.jpg",
-            alt: "#"
+            alt: "dejan_profile"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-          children: "Dejan Rajkovi\u0107"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {})]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "aboutus__team--description",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+            children: "Dejan Rajkovi\u0107"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: "I'm Dejan Kokovic \uD83D\uDE1C "
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          "class": "col-md-4 col-sm-6 col-xs-12",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+            "class": "aboutus__team--social-icons",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                "class": "github",
+                href: "https://github.com/dejan-creator",
+                target: "_blank",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  "class": "fa fa-github"
+                })
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                "class": "linkedin",
+                href: "https://www.linkedin.com/in/dejanrajkovic/",
+                target: "_blank",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  "class": "fa fa-linkedin"
+                })
+              })
+            })]
+          })
+        })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("article", {
         className: "aboutus__team",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "aboutus__team--img",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
             src: "../images/ekin_profile.jfif",
-            alt: "#"
+            alt: "ekin_profile"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-          children: "Ekin Cebeci"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {})]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "aboutus__team--description",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+            children: "Ekin Cebeci"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: "The idea of the project was finding people \"who cares\" for the people who needs help. We took this journey to change the world better than it is right now and helping the people who are struggling in Ukraine because of the Russian occupation. Thank you for all of my team mates for pushing their limits to make our baby grow and become online in such a short time."
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          "class": "col-md-4 col-sm-6 col-xs-12",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+            "class": "aboutus__team--social-icons",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                "class": "github",
+                href: "https://github.com/ekincbc",
+                target: "_blank",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  "class": "fa fa-github"
+                })
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                "class": "linkedin",
+                href: "https://www.linkedin.com/in/ekincebeci/",
+                target: "_blank",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  "class": "fa fa-linkedin"
+                })
+              })
+            })]
+          })
+        })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("article", {
         className: "aboutus__team",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "aboutus__team--img",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-            src: "https://media-exp1.licdn.com/dms/image/D4D35AQHYnCO_KXfq2Q/profile-framedphoto-shrink_800_800/0/1648145949352?e=1648738800&v=beta&t=CpO93fySwY_zR2WmFBdPE9Mk91IzmedgZIZtPBTQXvg",
-            alt: "#"
+            src: "../images/lucian_profile.jpg",
+            alt: "lucian_profile"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-          children: "Lucian Nguyen"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {})]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "aboutus__team--description",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+            children: "Lucian Nguyen"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: "Through this project we have became a great team, through success and frustration, we held together to the very end. The projects central idea was based on the desire to see the world change for the better. Now off we go to the development world."
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          "class": "col-md-4 col-sm-6 col-xs-12",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+            "class": "aboutus__team--social-icons",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                "class": "github",
+                href: "https://github.com/LouCyanCoder",
+                target: "_blank",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  "class": "fa fa-github"
+                })
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                "class": "linkedin",
+                href: "https://www.linkedin.com/in/lucian-nguyen-4aa223162/",
+                target: "_blank",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  "class": "fa fa-linkedin"
+                })
+              })
+            })]
+          })
+        })]
       })]
     })]
   });
@@ -24203,9 +24319,9 @@ var AccommodationMarker = function AccommodationMarker(_ref) {
               style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.popupText,
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("strong", {
                 children: "Accomodation Owner's Name: "
-              }), user.name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("strong", {
+              }), user && user.name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("strong", {
                 children: "Address: "
-              }), user.address, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("strong", {
+              }), user && user.address, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("strong", {
                 children: "Description: "
               }), description, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("strong", {
                 children: "Type: "
@@ -24217,7 +24333,7 @@ var AccommodationMarker = function AccommodationMarker(_ref) {
                 children: "Offer status: "
               }), status, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("strong", {
                 children: "Phone number "
-              }), user.phone_number, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {})]
+              }), user && user.phone_number, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {})]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
               className: "m-2",
               style: _popupStyles__WEBPACK_IMPORTED_MODULE_3__.okText
@@ -24479,30 +24595,40 @@ var ContactInfoList = function ContactInfoList(_ref) {
       className: "userslisted_list",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
         className: "userslisted_listitem",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           className: "userslisted_list--name",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Name: ", element.name]
-          })
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("hr", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              children: "Name:"
+            }), " ", element.name]
+          })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "userslisted_list--email",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["E-mail: ", element.email]
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              children: "E-mail:"
+            }), " ", element.email]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "userslisted_list--phone",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Phone Number: ", element.phone_number]
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              children: "Phone Number:"
+            }), " ", element.phone_number]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "userslisted_list--facebook",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Facebook: ", element.facebook_link]
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              children: "Facebook:"
+            }), " ", element.facebook_link]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "userslisted_list--telegram",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Telegram: ", element.telegram_link]
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              children: "Telegram:"
+            }), " ", element.telegram_link]
           })
         })]
       })
@@ -25099,9 +25225,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var Profile = function Profile() {
   var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context_context__WEBPACK_IMPORTED_MODULE_1__.UserContext),
-      user = _useContext.user;
+      user = _useContext.user; // console.log(user)
 
-  console.log(user);
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("section", {
     className: "profile__container",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -25608,7 +25734,6 @@ var FoodMarker = function FoodMarker(_ref) {
       setFoodAddress = _useState2[1];
 
   var key = "AIzaSyB0Jg0YDZr1THlz8_kauyQjj58J7R88lwo";
-  console.log(data);
 
   var getFoodAddress = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -25624,15 +25749,15 @@ var FoodMarker = function FoodMarker(_ref) {
                 }
               };
               _context.next = 3;
-              return axios__WEBPACK_IMPORTED_MODULE_9___default().get('https://maps.googleapis.com/maps/api/geocode/json', options);
+              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("https://maps.googleapis.com/maps/api/geocode/json", options);
 
             case 3:
               res = _context.sent;
               // console.log(address) // res.data.results.geometry.location
-              console.log(res.data.results[0].geometry.location);
+              // console.log(res.data.results[0].geometry.location);
               setFoodAddress(res.data.results[0].geometry.location);
 
-            case 6:
+            case 5:
             case "end":
               return _context.stop();
           }
@@ -25651,8 +25776,7 @@ var FoodMarker = function FoodMarker(_ref) {
       day = data.day,
       status = data.status;
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    console.log(data.address);
-
+    // console.log(data.address);
     if (data.address) {
       getFoodAddress();
     }
@@ -25904,8 +26028,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/MapContainer.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/TileLayer.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/MapContainer.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/TileLayer.js");
 /* harmony import */ var _Map_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Map.css */ "./resources/js/components/Map.css");
 /* harmony import */ var _popupStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./popupStyles */ "./resources/js/components/popupStyles.js");
 /* harmony import */ var _defaultMarker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./defaultMarker */ "./resources/js/components/defaultMarker.js");
@@ -25922,7 +26046,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MapAccommodationList__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./MapAccommodationList */ "./resources/js/components/MapAccommodationList.js");
 /* harmony import */ var _MapFoodList__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./MapFoodList */ "./resources/js/components/MapFoodList.js");
 /* harmony import */ var _MapServiceList__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./MapServiceList */ "./resources/js/components/MapServiceList.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'moment'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -25944,6 +26075,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
  // import './leaflet/dist/leaflet.css';
+
 
 
 
@@ -25992,6 +26124,21 @@ function Map(_ref) {
       user = _useState10[0],
       setUser = _useState10[1];
 
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
+      _useState12 = _slicedToArray(_useState11, 2),
+      searchResult = _useState12[0],
+      setSearchResults = _useState12[1];
+
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({
+    from: {},
+    to: {},
+    dateFrom: "",
+    dateTo: ""
+  }),
+      _useState14 = _slicedToArray(_useState13, 2),
+      values = _useState14[0],
+      setValues = _useState14[1];
+
   var fetchAccommodations = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
       var res;
@@ -26019,7 +26166,7 @@ function Map(_ref) {
     };
   }();
 
-  var fetchFood = /*#__PURE__*/function () {
+  var fetchSearch = /*#__PURE__*/function () {
     var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
       var res;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
@@ -26027,11 +26174,16 @@ function Map(_ref) {
           switch (_context2.prev = _context2.next) {
             case 0:
               _context2.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/food");
+              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/search", {
+                from: values.start_date,
+                to: values.end_date,
+                dateFrom: values.dateFrom,
+                dateTo: values.dateTo
+              });
 
             case 2:
               res = _context2.sent;
-              setFoods(res.data);
+              setSearchResults(res.data);
 
             case 4:
             case "end":
@@ -26041,12 +26193,12 @@ function Map(_ref) {
       }, _callee2);
     }));
 
-    return function fetchFood() {
+    return function fetchSearch() {
       return _ref3.apply(this, arguments);
     };
   }();
 
-  var fetchServices = /*#__PURE__*/function () {
+  var fetchFood = /*#__PURE__*/function () {
     var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
       var res;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
@@ -26054,11 +26206,11 @@ function Map(_ref) {
           switch (_context3.prev = _context3.next) {
             case 0:
               _context3.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/service");
+              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/food");
 
             case 2:
               res = _context3.sent;
-              setServices(res.data);
+              setFoods(res.data);
 
             case 4:
             case "end":
@@ -26068,12 +26220,12 @@ function Map(_ref) {
       }, _callee3);
     }));
 
-    return function fetchServices() {
+    return function fetchFood() {
       return _ref4.apply(this, arguments);
     };
   }();
 
-  var fetchTransport = /*#__PURE__*/function () {
+  var fetchServices = /*#__PURE__*/function () {
     var _ref5 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4() {
       var res;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
@@ -26081,11 +26233,11 @@ function Map(_ref) {
           switch (_context4.prev = _context4.next) {
             case 0:
               _context4.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/transport");
+              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/service");
 
             case 2:
               res = _context4.sent;
-              setTransports(res.data);
+              setServices(res.data);
 
             case 4:
             case "end":
@@ -26095,13 +26247,12 @@ function Map(_ref) {
       }, _callee4);
     }));
 
-    return function fetchTransport() {
+    return function fetchServices() {
       return _ref5.apply(this, arguments);
     };
-  }(); // models and api/controllers connected with user_id
+  }();
 
-
-  var fetchUser = /*#__PURE__*/function () {
+  var fetchTransport = /*#__PURE__*/function () {
     var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5() {
       var res;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
@@ -26109,11 +26260,11 @@ function Map(_ref) {
           switch (_context5.prev = _context5.next) {
             case 0:
               _context5.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/users/" + element.user_id);
+              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/transport");
 
             case 2:
               res = _context5.sent;
-              setUser(res.data);
+              setTransports(res.data);
 
             case 4:
             case "end":
@@ -26123,8 +26274,36 @@ function Map(_ref) {
       }, _callee5);
     }));
 
-    return function fetchUser() {
+    return function fetchTransport() {
       return _ref6.apply(this, arguments);
+    };
+  }(); // models and api/controllers connected with user_id
+
+
+  var fetchUser = /*#__PURE__*/function () {
+    var _ref7 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6() {
+      var res;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee6$(_context6) {
+        while (1) {
+          switch (_context6.prev = _context6.next) {
+            case 0:
+              _context6.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_9___default().get("/api/users");
+
+            case 2:
+              res = _context6.sent;
+              setUser(res.data);
+
+            case 4:
+            case "end":
+              return _context6.stop();
+          }
+        }
+      }, _callee6);
+    }));
+
+    return function fetchUser() {
+      return _ref7.apply(this, arguments);
     };
   }();
 
@@ -26134,82 +26313,120 @@ function Map(_ref) {
     fetchServices();
     fetchTransport();
     fetchUser();
+    fetchSearch();
   }, []);
 
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({}),
-      _useState12 = _slicedToArray(_useState11, 2),
-      selection = _useState12[0],
-      setSelection = _useState12[1];
+  var handleChangeDate = function handleChangeDate(event) {
+    setValues(function (previous_values) {
+      return _objectSpread(_objectSpread({}, previous_values), {}, _defineProperty({}, event.target.name, event.target.value));
+    });
+  };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_FilterServices__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({}),
+      _useState16 = _slicedToArray(_useState15, 2),
+      selection = _useState16[0],
+      setSelection = _useState16[1]; // console.log("heyyy", values.dateFrom);
+
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_FilterServices__WEBPACK_IMPORTED_MODULE_8__["default"], {
       selection: selection,
       setSelection: setSelection
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_18__.MapContainer, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_19__.MapContainer, {
       className: "markercluster-map",
       center: [50.073658, 14.41854],
       zoom: 12,
       maxZoom: 18,
       minZoom: 8,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_19__.TileLayer, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_20__.TileLayer, {
         attribution: "\xA9 <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
         url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_6__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_LeafletControlGeocoder__WEBPACK_IMPORTED_MODULE_6__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(react_leaflet_markercluster__WEBPACK_IMPORTED_MODULE_7__["default"], {
         children: [selection.accommodation && !!accommodations.length && accommodations.map(function (element, index) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_AccommodationMarker__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_AccommodationMarker__WEBPACK_IMPORTED_MODULE_10__["default"], {
             data: element
           }, index);
         }), selection.food && !!foods.length && foods.map(function (element, index) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_FoodMarker__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_FoodMarker__WEBPACK_IMPORTED_MODULE_11__["default"], {
             data: element
           }, index);
         }), selection.service && !!services.length && services.map(function (element, index) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_ServiceMarker__WEBPACK_IMPORTED_MODULE_12__["default"], {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_ServiceMarker__WEBPACK_IMPORTED_MODULE_12__["default"], {
             data: element
           }, index);
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("input", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("input", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("input", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("input", {})]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("h3", {
-        children: "Accommodation"
-      }), accommodations.length ? accommodations.map(function (accommodation, id) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_MapAccommodationList__WEBPACK_IMPORTED_MODULE_14__["default"], {
-          element: accommodation
-        }, id);
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("p", {
-        children: "Loading..."
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
+      className: "offerslisted__container",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("strong", {
+          children: "Search Accommodation: "
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("strong", {
+        children: "Available From:"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("input", {
+        type: "date",
+        name: "dateFrom",
+        onChange: handleChangeDate,
+        value: values.dateFrom
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("strong", {
+        children: "Available To:"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("input", {
+        type: "date",
+        name: "dateTo",
+        onChange: handleChangeDate,
+        value: values.dateTo
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("h3", {
-        children: "Food"
-      }), foods.length ? foods.map(function (foods, id) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_MapFoodList__WEBPACK_IMPORTED_MODULE_15__["default"], {
-          element: foods
-        }, id);
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("p", {
-        children: "Loading..."
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("h3", {
-        children: "Service"
-      }), services.length ? services.map(function (services, id) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_MapServiceList__WEBPACK_IMPORTED_MODULE_16__["default"], {
-          element: services
-        }, id);
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("p", {
-        children: "Loading..."
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("h3", {
-        children: "Transport"
-      }), transports.length ? transports.map(function (transport, id) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_MapTransportList__WEBPACK_IMPORTED_MODULE_13__["default"], {
-          element: transport
-        }, id);
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("p", {
-        children: "Loading..."
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("section", {
+      className: "offerslisted__container",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
+        className: "offerslisted__category",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("h3", {
+          children: "Accommodation"
+        }), accommodations.length ? accommodations.filter(function (element) {
+          return values.dateFrom ? Object(function webpackMissingModule() { var e = new Error("Cannot find module 'moment'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(element.start_date) <= Object(function webpackMissingModule() { var e = new Error("Cannot find module 'moment'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(values.dateFrom) : true;
+        }).filter(function (element) {
+          return values.dateTo ? Object(function webpackMissingModule() { var e = new Error("Cannot find module 'moment'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(element.end_date) >= Object(function webpackMissingModule() { var e = new Error("Cannot find module 'moment'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(values.dateTo) : true;
+        }).map(function (accommodation, id) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_MapAccommodationList__WEBPACK_IMPORTED_MODULE_14__["default"], {
+            element: accommodation
+          }, id);
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
+          children: "Loading..."
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
+        className: "offerslisted__category",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("h3", {
+          children: "Food"
+        }), foods.length ? foods.map(function (foods, id) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_MapFoodList__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            element: foods
+          }, id);
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
+          children: "Loading..."
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
+        className: "offerslisted__category",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("h3", {
+          children: "Service"
+        }), services.length ? services.map(function (services, id) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_MapServiceList__WEBPACK_IMPORTED_MODULE_16__["default"], {
+            element: services
+          }, id);
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
+          children: "Loading..."
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
+        className: "offerslisted__category",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("h3", {
+          children: "Transport"
+        }), transports.length ? transports.map(function (transport, id) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_MapTransportList__WEBPACK_IMPORTED_MODULE_13__["default"], {
+            element: transport
+          }, id);
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("p", {
+          children: "Loading..."
+        })]
       })]
     })]
   });
@@ -26258,20 +26475,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var MapAccommodationList = function MapAccommodationList(_ref) {
   var element = _ref.element;
 
-  /* const [user, setUser] = useState(null); */
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       selection = _useState2[0],
       setSelection = _useState2[1];
-
-  console.log(element);
-  /* const fetchUser = async () => {
-      const res = await axios.get("/api/users/" + element.user_id);
-      setUser(res.data);
-  };
-    useEffect(() => {
-      fetchUser();
-  }, []); */
 
   var handleClick = function handleClick() {
     return setSelection(!selection);
@@ -26319,8 +26526,13 @@ var MapAccommodationList = function MapAccommodationList(_ref) {
             children: element.end_date
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          className: "button_under_map",
-          variant: "outlined",
+          style: {
+            borderRadius: 35,
+            backgroundColor: "#21b6ae",
+            padding: "18px 36px",
+            fontSize: "18px"
+          },
+          variant: "contained",
           onClick: handleClick,
           children: "Contact Info"
         }), selection && element.user && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -26473,9 +26685,14 @@ var MapFoodList = function MapFoodList(_ref) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
             children: element.status
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          className: "button_under_map",
-          variant: "outlined",
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          style: {
+            borderRadius: 35,
+            backgroundColor: "#21b6ae",
+            padding: "18px 36px",
+            fontSize: "18px"
+          },
+          variant: "contained",
           onClick: handleClick,
           children: "Contact Info"
         }), selection && element.user && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -26530,19 +26747,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var MapServiceList = function MapServiceList(_ref) {
   var element = _ref.element;
 
-  // const [user, setUser] = useState(null);
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       selection = _useState2[0],
-      setSelection = _useState2[1]; // const fetchUser = async () => {
-  //     const res = await axios.get("/api/users/" + element.user_id);
-  //     setUser(res.data);
-  // };
-
-
-  console.log(element); // useEffect(() => {
-  //     fetchUser();
-  // }, []);
+      setSelection = _useState2[1];
 
   var handleClick = function handleClick() {
     return setSelection(!selection);
@@ -26581,9 +26789,14 @@ var MapServiceList = function MapServiceList(_ref) {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               children: element.status
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-            className: "button_under_map",
-            variant: "outlined",
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+            style: {
+              borderRadius: 35,
+              backgroundColor: "#21b6ae",
+              padding: "18px 36px",
+              fontSize: "18px"
+            },
+            variant: "contained",
             onClick: handleClick,
             children: "Contact Info"
           }), selection && element.user && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -26639,19 +26852,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var MapTransportList = function MapTransportList(_ref) {
   var element = _ref.element;
 
-  // const [user, setUser] = useState(null);
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       selection = _useState2[0],
-      setSelection = _useState2[1]; // const fetchUser = async () => {
-  //     const res = await axios.get("/api/users/" + element.user_id);
-  //     setUser(res.data);
-  // };
-  // console.log(element);
-  // useEffect(() => {
-  //     fetchUser();
-  // }, []);
-
+      setSelection = _useState2[1];
 
   var handleClick = function handleClick() {
     return setSelection(!selection);
@@ -26707,9 +26911,14 @@ var MapTransportList = function MapTransportList(_ref) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
             children: element.status
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          className: "button_under_map",
-          variant: "outlined",
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          style: {
+            borderRadius: 35,
+            backgroundColor: "#21b6ae",
+            padding: "18px 36px",
+            fontSize: "18px"
+          },
+          variant: "contained",
           onClick: handleClick,
           children: "Contact Info"
         }), selection && element.user && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ContactInfoList__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -26791,7 +27000,6 @@ var ServiceMarker = function ServiceMarker(_ref) {
       setServiceAddress = _useState2[1];
 
   var key = "AIzaSyCiiNtM6Ty68mt_4SDkYmccOCI_HqqItvE";
-  console.log(data);
 
   var getServiceAddress = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -26812,10 +27020,9 @@ var ServiceMarker = function ServiceMarker(_ref) {
             case 3:
               res = _context.sent;
               // console.log(address) // res.data.results.geometry.location
-              console.log(res.data.results[0].geometry.location);
               setServiceAddress(res.data.results[0].geometry.location);
 
-            case 6:
+            case 5:
             case "end":
               return _context.stop();
           }
@@ -26834,8 +27041,7 @@ var ServiceMarker = function ServiceMarker(_ref) {
       day = data.day,
       status = data.status;
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    console.log(data.address);
-
+    // console.log(data.address);
     if (data.address) {
       getServiceAddress();
     }

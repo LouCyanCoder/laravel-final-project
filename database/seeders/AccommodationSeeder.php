@@ -52,7 +52,7 @@ class AccommodationSeeder extends Seeder
         $accommodation->type = "villa";
         $accommodation->max_person = 1;
         $accommodation->pet_friendly = "no";
-        $accommodation->description = "Exclusive accomodation for pretty young woman.";
+        $accommodation->description = "We can offer you a nice double room on 3rd floor with balcony";
         $accommodation->status = "open";
         $accommodation->start_date = new \DateTime;
         $accommodation->end_date = new \DateTime;

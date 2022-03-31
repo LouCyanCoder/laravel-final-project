@@ -31,10 +31,15 @@ header {
   display: flex;
   -moz-column-gap: 30px;
        column-gap: 30px;
+  align-items: center;
 }
 .header__nav ul a {
   text-decoration: none;
   font-size: 22px;
+}
+
+.ua_flag {
+  border-radius: 10px;
 }
 
 .landing_container {
@@ -162,9 +167,10 @@ header {
   margin: 10px;
   background-color: rgba(248, 250, 252, 0.5);
   border-radius: 100px;
+  align-items: center;
 }
 .aboutus__team h3, .aboutus__team .h3 {
-  margin: 10px;
+  margin: 20px;
 }
 .aboutus__team--img {
   width: 200px;
@@ -176,6 +182,15 @@ header {
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 50%;
+}
+.aboutus__team--description {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+li {
+  list-style-type: none;
 }
 
 .contactForm {
